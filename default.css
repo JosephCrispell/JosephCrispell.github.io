@@ -1,0 +1,201 @@
+/* ####################
+ * # Sidebar Settings #
+ * ####################
+ */
+
+#sidebar {
+    position:fixed; /* Position fixed in window - moves with scroll */
+    left:5%;
+    width: 20%;
+    height: auto;
+    
+    background: rgba(0, 0, 0, 0);
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    
+    font-size: 20px;
+    
+    /* List Structure - remove any text style*/
+    list-style-type: none;
+}
+
+/* Sidebar button link */
+pageLink a {
+    display: block;
+    color: #000;
+    
+    padding-top: 10%;
+    padding-bottom:10%;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+pageLink a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* #############
+ * # Main Body #
+ * #############
+ */
+
+#title {
+    position: relative;
+    
+    /*  Position is relative to parent */
+    width: 65%;
+    left: 30%;
+    top: 10%;
+    height: auto;
+    
+    background: rgba(0, 0, 0, 0);
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    
+    padding-top: 0cm;
+    
+    vertical-align: middle;
+    text-align: center;
+}
+
+#mainText {
+    position:relative;
+    left:30%;
+    width: 65%;
+    top: 12.5%;
+    min-height: 100px;
+    max-height: 2000px;
+    
+    background: rgba(0, 0, 0, 0);
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    
+    text-align: center; /* Centre child divs */
+    
+    padding: 10px;
+}
+
+/* ##################
+ * # Image Settings #
+ * ##################
+ */
+
+.thumbnailContainer {
+    position: relative;
+    /*margin: 0 auto;*/
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    display: table-cell; /* Treats height and width as suggested values */
+    width: 31%;
+    display:inline-block; /* Display the thumbnails side by side and centred within parent */
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+.thumbnailContainer:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+    /*transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);*/
+}
+
+/* ####################
+ * # Heading Settings #
+ * ####################
+ */
+
+h1 {
+    font-size: 30px;
+    font-style: bold;
+    text-align: left;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    text-align: left;
+}
+
+/* #####################
+ * # Code Block Format #
+ * #####################
+ */
+
+#codeBlock {
+    position: relative;
+    
+    /*  Position is relative to parent */
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    height: auto;
+    
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    
+    padding: 2%;
+    
+    vertical-align: middle;
+    text-align: left;
+    
+    font-size: 15px;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* #################
+ * # Link Settings #
+ * #################
+ */
+
+a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+

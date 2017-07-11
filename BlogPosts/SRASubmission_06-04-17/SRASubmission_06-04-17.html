@@ -1,0 +1,139 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - SRA Submission</title>
+        <script type="text/javascript" src="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/methods.js" ></script>
+        <link href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/index.html">Home</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/Blog.html">Blog</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/About.html">About</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Submitting FASTQ files onto the Sequence Read Archive (SRA) </h1>
+            
+            <p>
+                FASTQ files are the files containing the raw sequencing data that are produced by Next Generation
+                Sequencing platforms such as those made by Illumina. These files contain all the information
+                produced by a sequencing run and are used in all downstream analyses.<br><br>
+                
+                As there is a drive to make research accessible, making these FASTQ files publicly available
+                is becoming increasingly common. Here I provide a short outline of how to go about uploading
+                FASTQ files to the <a href="https://www.ncbi.nlm.nih.gov/sra/">Sequence Read Archive</a>.<br><br>
+                
+                A more detailed description of this uploading process can be found
+                <a href="https://darencard.net/2014/02/11/sra/">here</a>.
+            </p>
+        
+            <hr>
+                
+            <p>
+                1) Create an NCBI account <a href="https://www.ncbi.nlm.nih.gov/account/">here</a> <br><br>
+                
+                2) Initialise a Bioproject<br>
+                &emsp;&emsp; - Go to the <a href="https://submit.ncbi.nlm.nih.gov/subs/bioproject/">Bioproject page</a><br>
+                &emsp;&emsp; - Login to your NCBI account<br>
+                &emsp;&emsp; - Create a New Submission and fill in the required fields, leaving the Biosample field blank<br><br>
+                
+                3) Initialise a Biosample<br>
+                &emsp;&emsp; - Go to the <a href="https://submit.ncbi.nlm.nih.gov/subs/biosample/">Biosample page</a><br>
+                &emsp;&emsp; - Download the batch submission template as a TSV (tab separated values) file and fill in the required fields<br>
+                &emsp;&emsp; - Create a New Submission and fill in the required fields, including uploading the TSV file<br>
+                &emsp;&emsp; - Wait for the submission to be accepted<br>
+                &emsp;&emsp; - Click on Download a list of objects to get the assigned accession numbers<br><br>
+                
+                4) Prepare metedata file for Sequence Read Archive submission<br>
+                &emsp;&emsp; - Download a SRA_metadata_acc.xlsx file (I had to begin a
+                <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission</a>). I keep a copy
+                <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/sra_subtemplate_v2-7.xlsx">here</a><br>
+                &emsp;&emsp; - Fill in the required fields - using Bioproject number (PRJNA...) and Biosample accessions<br>
+                &emsp;&emsp; - You'll need the FASTQ file md5sum values - these can be found by using the following UNIX command:
+            </p>
+            
+            <div id="codeBlock">
+                $ md5sum [fileName]
+            </div>
+            
+            <p>
+                5) Upload the FASTQ files<br>
+                &emsp;&emsp; - On the <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA page</a> click on the FTP upload link<br>
+                &emsp;&emsp; - Note the server address, username, password and folder to navigate to<br>
+                &emsp;&emsp; - On a UNIX machine navigate to the folder containing (only) your FASTQ files<br>
+                &emsp;&emsp; - Log onto the server
+            </p>
+            
+            <div id="codeBlock">
+                $ ftp -i<br>
+                $ open [server address]<br>
+            </div>
+            
+            <p>
+                &emsp;&emsp; - Note that once logged into server directories are hidden - use full path to folder<br>
+            </p>
+            
+            <div id="codeBlock">
+                $ cd [path to folder]
+            </div>
+            
+            <p>
+                &emsp;&emsp; - Once in correct folder create new directory
+            </p>
+            
+            <div id="codeBlock">
+                $ mkdir [new directory name]
+            </div>
+            
+            <p>
+                &emsp;&emsp; - Upload all FASTQ files
+            </p>
+            
+            <div id="codeBlock">
+                $ mput *
+            </div>
+            
+            <p>
+                6) If step 5 doesn't work, which it didn't for me<br>
+                &emsp;&emsp; - I kept losing connection to the server as my transfer window kept timing out after 60 seconds!<br>
+                &emsp;&emsp; - I used WinSCP on my windows machine<br>
+                &emsp;&emsp; - Log onto the server using the address, username, and password provided<br>
+                &emsp;&emsp; - Click on the navigate to folder icon and paste in full folder path<br>
+                &emsp;&emsp; - Create a new folder<br>
+                &emsp;&emsp; - Drag the FASTQ files into the new folder<br>
+            </p>
+            
+            <hr>
+            
+            <p>
+                Took me more than a few attempts to get this to work. If you run into any issues there is a dedicated NCBI team who are
+                happy to help. Here are their emails:<br>
+                &emsp;&emsp; <a href="mailto:bioprojecthelp@ncbi.nlm.nih.gov">bioprojecthelp@ncbi.nlm.nih.gov</a><br>
+                &emsp;&emsp; <a href="mailto:biosamplehelp@ncbi.nlm.nih.gov">biosamplehelp@ncbi.nlm.nih.gov</a><br>
+                &emsp;&emsp; <a href="mailto:srahelp@ncbi.nlm.nih.gov">srahelp@ncbi.nlm.nih.gov</a><br>
+            </p>
+            
+        </div>
+        
+        
+
+    </body>
+
+</html>

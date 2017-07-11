@@ -1,0 +1,90 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Building a website</title>
+        <script type="text/javascript" src="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/methods.js" ></script>
+        <link href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/index.html">Home</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/Blog.html">Blog</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/About.html">About</a></pageLink>
+            <pageLink><a href="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="/Users/josephcrisp1/DropBox/JosephCrispell.github.io/BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Building my website</h1>
+            
+            <p> I created this website to provide a little insight into my interests and research. My hope is that
+                it will be a useful resource for me and others.
+            </p>
+            
+            <p> This website is built using a combination of html, css and javascript. Part of my motivations for
+                building this site was to prompt me to learn a little about these languages. I have taken my
+                instruction from a large number of online resources but the following were the most useful:<br>
+                - &nbsp;&nbsp;<a href="https://www.w3schools.com/">w3schools</a><br>
+                - &nbsp;&nbsp;<a href="http://stackoverflow.com/">stackoverflow</a><br>
+                - &nbsp;&nbsp;<a href="https://www.tutorialspoint.com/html/">tutorialspoint</a><br>
+            </p>
+            
+            <p> To get started first create a respository with the name: [username].github.io. Once created
+                you'll need to clone the respository on your computer. On a UNIX computer use:
+            </p>
+            
+            <div id="codeBlock">
+                # Clone repository <br>
+                $ git clone https://[username]:[password]@github.com/[username]/[username].github.io <br><br>
+                
+                # Configure username and password <br>
+                $ git config --global user.name "[username]" <br>
+                $ git config --global user.email [email] <br>
+            </div>
+            
+            <p> With the cloned respository you'll be able to add and edit new html pages. Push any changes to
+                github using:
+            </p>
+            
+            <div id="codeBlock">
+                # Add new file to repository <br>
+                $ git add [filename] <br><br>
+                
+                # Remove any deleted files from repository <br>
+                $ git add . -A <br><br>
+                
+                # Commit changes to repository <br>
+                $ git commit -m "[Message referring to commit]" <br><br>
+                
+                # Push commit to repository <br>
+                $ git push <br>
+            </div>
+            
+            <p>
+                I have created a simple bash script that can be ran in the UNIX command line for syncing the
+                changes made on a local repository to gihub. It is available on
+                <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/SyncGitRepository_09-01-17.sh">github</a>.
+                
+            </p>
+            
+        </div>
+        
+        
+
+    </body>
+
+</html>
