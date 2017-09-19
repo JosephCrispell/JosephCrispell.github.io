@@ -1,0 +1,84 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Code Block</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Inserting a LaTeX code block - 13-09-17</h1>
+            
+            <p>
+                I was working on a LaTeX report recently describing how to transfer feature annotations between
+                genomes. I'd never done this before, and when I worked it out I wanted to write it down so that
+                it was easier for others and myself in the future.<br><br>
+                
+                Below is the code that I used in my LaTeX script to insert some BASH code that I used:
+            </p>
+            
+            <div id="codeBlock">
+                %%%% Header Block %%%%<br>
+                % Load the necessary libraries<br>
+                \usepackage{xcolor} % Colours for key words<br>
+                \usepackage{listings}% Package for code block<br>
+                <br>
+                % Add some key words for the specified language<br>
+                \lstdefinelanguage{bashPlusKeyWords}{<br>
+                &emsp;language = bash,<br>
+                &emsp;morekeywords = {sudo,mv,mkdir}<br>
+                }<br>
+                <br>
+                % Set up the style for the code block <br>
+                \lstset{<br>
+                &emsp;basicstyle=\ttfamily,<br>
+                &emsp;basicstyle=\footnotesize,<br>
+                &emsp;showstringspaces=false,<br>
+                &emsp;commentstyle=\color{green},<br>
+                &emsp;keywordstyle=\color{blue},<br>
+                &emsp;backgroundcolor=\color{gray!20}<br>
+                }<br>
+                <br>
+                %%%% Insert code block in artile body %%%%<br>
+                % Insert code block<br>
+                \begin{lstlisting}[language=bashPlusKeyWords]<br>
+                &emsp;<br>
+                &emsp;# Echo statement<br>
+                &emsp;echo "Testing Code Block in LaTeX"<br>
+                \end{lstlisting}
+            </div>
+            
+            <p>
+            The above code will produce a code block in a LaTeX argument looking like this:
+            </p>
+            
+            <img src="LatexCodeBlock.png" height="auto" width="97.5%">
+                
+            <p>
+                I'll note that the code block that I use here in HTML is pretty limited - a work in progress!
+            </p>
+            
+        </div>
+    </body>
+</html>
