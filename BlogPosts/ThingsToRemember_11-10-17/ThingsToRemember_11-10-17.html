@@ -1,0 +1,120 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Remember</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Pieces of code to remember - 11-10-17</h1>
+            
+            <p>
+                Today I am on the train to Belfast to meet with collaborators at the
+                <a href="https://www.afbini.gov.uk/">AFBINI</a>. To pass the time I am taking advantage of
+                the free wifi to add a post to store some useful pieces of code I always forget.<br><br>
+            
+                I am always forgetting simple coding solutions that I need often; I constantly find myself
+                googling something I had looked up just a few days before and the top links are always purple
+                (visited).<br><br>
+            
+                Below are some of the commands that I most frequently forget, although I find them extremely
+                useful:
+            </p>
+            
+            <p>
+                -&emsp;Unpacking a file whose name ends with ".tar.gz" in Ubuntu
+            </p>
+            
+            <div id="codeBlock">
+                # Options used:<br>
+                # x&emsp;Extract files in tar<br>
+                # v&emsp;Verbose - print out progress information<br>
+                # z&emsp;Unzip file (Use if file ends with ".gz")<br>
+                # f&emsp;Filename will follow<br>
+                tar -xvzf fileName.tar.gz<br>
+            </div>
+            
+            <p>
+                -&emsp;Reading a table into R whilst avoiding some annoying R habits
+            </p>
+            
+            <div id="codeBlock">
+                # Options used:<br>
+                # header=TRUE&emsp;There will be column titles in first line of file<br>
+                # stringsAsFactors=FALSE&emsp;Don't convert strings (words/names) into factors (categories)<br>
+                # check.names=FALSE&emsp;Don't let R run checks on column names<br>
+                # Note that check.names = TRUE removes spaces and special chracters - USE WISELY!<br>
+                tableName &lt;- read.table(fileName, header=TRUE, stringsAsFactors=FALSE, check.names=FALSE)<br>
+            </div>
+            
+            <p>
+                -&emsp;Read a file into R line by line (only feasible for small file!)
+            </p>
+            
+            <div id="codeBlock">
+                # Open a connection to a file to read (open="r")<br>
+                conection &lt;- file(fileName, open="r")<br>
+                <br>
+                # Get all lines from file and store in vector<br>
+                fileLines &lt;- readLines(connection)<br>
+                <br>
+                # Close file connection<br>
+                close(connection)<br>
+                <br>
+                # Loop through each of the lines in file<br>
+                for(line in fileLines){<br>
+                &emsp;...<br>
+                }<br>
+            </div>
+            
+            <p>
+                -&emsp;Set the plotting margin sizes in R
+            </p>
+            
+            <div id="codeBlock">
+                # Setting margin sizes: c(bottom, left, top, right)<br>
+                par(mar=c(5.1, 4.1, 4.1, 2.1))<br>
+            </div>
+            
+            <p>
+                -&emsp;Initialise array of zeros in perl
+            </p>
+            
+            <div id="codeBlock">
+                # Initialise an array of 10 zeros<br>
+                arrayName = (0) x 10;<br>
+            </div>
+            
+            <p>
+                -&emsp;Remove special characters from string in perl
+            </p>
+            
+            <div id="codeBlock">
+                $stringName =~ s/\R//g;<br>
+            </div>
+            
+        </div>
+    </body>
+</html>
