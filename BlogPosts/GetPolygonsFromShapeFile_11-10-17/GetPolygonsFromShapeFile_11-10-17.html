@@ -1,0 +1,159 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Polygons</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Getting polygon information from shape files&emsp;11-10-17</h1>
+            
+            <p>
+                On the train back to Dublin after my meeting at <a href="https://www.afbini.gov.uk/">AFBINI</a>
+                and passing the time writing this post.<br><br>
+                
+                I've used polygon data a few times so far. Here, I am using the term "polygon" to refer to a list of
+                coordinates that detail the outline of something in space. For example, polygons are often used
+                in geography to show the outlines of countries, regions, lakes, forests - all sorts of things.
+                <br><br>
+                
+                For my research, I have had access to polygon data detailing the outlines of fields associated
+                with particular farms, territories associated with badger social groups, and counties within
+                the Republic of Ireland. Polygon information is most commonly stored in a shape (file ending
+                with .shp) file, which is usually accompanied with a host of other files.<br><br>
+                
+                Although completely unreadable, for us, the shape file contains the outlines of polygons, as
+                well as some associated information. For example, in the shape file detailing the outlines
+                of all the counties within the Republic of Ireland (freely available
+                <a href="https://www.townlands.ie/page/downloads">here</a>), each polygon has information
+                about the particular county associated with it - name, area, population size, etc.<br><br>
+                
+                Below I've detailed some simple R commands to extract the coordinates and associated
+                information of all polygons within a shape file:
+            </p>
+            
+            <div id="codeBlock">
+                # Install the "maptools" package in order to read a shape file into R<br>
+                install.packages("maptools")<br>
+                <br>
+                # Load the "maptools" package<br>
+                library("maptools")<br>
+                <br>
+                # Read in shape file and store as object with class: SpatialPolygonsDataFrame<br>
+                shapeObject &lt;- readShapePoly(fileName)<br>
+                <br>
+                # Initialise a list to store the coordinates of each polygon within SpatialPolygonsDataFrame<br>
+                polygonCoords &lt;- list()<br>
+                <br>
+                # Get the coordinates of each polygon with the SpatialPolygonsDataFrame and store in list<br>
+                for(i in 1:length(shapeObject)){<br>
+                    <br>
+                    &emsp;# Get ID of current polygon<br>
+                    &emsp;polygonID &lt;- shapeObject[[i]]@ID<br>
+                    <br>
+                    &emsp;# Store coordinates of current polygon in list under ID<br>
+                    &emsp;polygonCoords[[polygonID]] &lt;- shapeObject[[i]]@Polygons[[1]]@coords<br>
+                }<br>
+                <br>
+                # Get the associated information for each polygon<br>
+                # Note that each polygon's ID links to the row names in this table<br>
+                polygonInfo &lt;- shapeObject@data<br>
+            </div>
+            
+            <p>
+                Just a note - there are plenty of tools within R to work directly with the
+                SpatialPolygonsDataFrame object that reading in a shape file produces. I was only
+                interested in generating some simple figures in R, so I used the above code
+                to extract the polygon information from the SpatialPolygonsDataFrame and
+                store it in a more manageable format.<br><br>
+                
+                If nothing else, hopefully working on the above code has given me a little
+                insight into the workings of a shape file and how R can handle it.<br><br>
+                
+                Once I've got the polygon information using the code above, this is the code
+                I would use to plot it:
+            </p>
+            
+            <div id="codeBlock">
+                # Initialise variables to store the minimum and maximum X and Y coordinates<br>
+                minX &lt;- NA<br>
+                maxX &lt;- NA<br>
+                minY &lt;- NA<br>
+                maxY &lt;- NA<br>
+                <br>
+                # Find the minimum and maximum X and Y coordinates across all the polygons<br>
+                for(key in names(polygonCoords)){<br>
+                    <br>
+                    &emsp;# Get the coordinates of the current polygon<br>
+                    &emsp;coords &lt;- polygonCoords[[key]]<br>
+                    <br>
+                    &emsp;# Calculate the ranges of the X and Y coordinates<br>
+                    &emsp;rangeX &lt;- range(coords[, 1])<br>
+                    &emsp;rangeY &lt;- range(coords[, 2])<br>
+                    <br>
+                    &emsp;# Check whether the minimum and maximum X and Y values need to be updated<br>
+                    &emsp;if(is.na(minX) == TRUE || rangeX[1] &lt; minX){<br>
+                        &emsp;&emsp;minX &lt;- rangeX[1]<br>
+                    &emsp;}<br>
+                    &emsp;if(is.na(maxX) == TRUE || rangeX[2] &lt; maxX){<br>
+                        &emsp;&emsp;maxX &lt;- rangeX[2]<br>
+                    &emsp;}<br>
+                    &emsp;if(is.na(minY) == TRUE || rangeY[1] &lt; minY){<br>
+                        &emsp;&emsp;minY &lt;- rangeY[1]<br>
+                    &emsp;}<br>
+                    &emsp;if(is.na(maxY) == TRUE || rangeY[2] &lt; maxY){<br>
+                        &emsp;&emsp;maxY &lt;- rangeY[2]<br>
+                    &emsp;}<br>
+                }<br>
+                <br>
+                # Create an empty plot to add the polygons to<br>
+                # yaxt="n"&emsp;Turns off Y axis<br>
+                # xaxt="n"&emsp;Turns off X axis<br>
+                # bty="n"&emsp;Removes box from around plot<br>
+                # xlim=...&emsp;Setting X axis limits to match minimum and maximum X coordinates<br>
+                # ylim=...&emsp;Setting Y axis limits to match minimum and maximum Y coordinates<br>
+                plot(x=NULL, y=NULL, yaxt="n", "xlab="X", ylab="Y", bty="n",<br>
+                    &emsp;xlim=c(minX, maxX), ylim=c(minY, maxY))<br>
+                <br>
+                # Add polygon shapes to plot<br>
+                for(key in names(polygonCoords)){<br>
+                    <br>
+                    &emsp;# Get the coordinates of the current polygon<br>
+                    &emsp;coords &lt;- polygonCoords[[key]]<br>
+                    <br>
+                    &emsp;# Plot the current polygon<br>
+                    &emsp;polygon(coords)<br>
+                }<br>
+                
+            </div>
+            
+            <p>
+                Yikes that was alot to type! Pulling into Dublin. I hope the above is useful and there
+                aren't too many mistakes in the code/text!
+            </p>
+            
+        </div>
+    </body>
+</html>
