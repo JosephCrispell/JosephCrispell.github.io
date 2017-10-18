@@ -115,7 +115,46 @@
                 my $stringName = "Some string";<br>
                 $stringName =~ s/\R//g;<br>
             </div>
+			
+			<p>
+                -&emsp;Change path to Java jre for Eclipse after Java update - not a piece of code but useful for Java coding!
+            </p>
+			
+			<div id="codeBlock">
+                Edit the "C:/Program Files/Java/jre1.X.X_X/bin" line in eclipse.ini file<br>
+				The eclipse.ini file can be found in the C:\Users\Joseph Crispell\eclipse\java-mars\eclipse\ folder on my windows machine
+				NOTE: if you rremove this line and the line (-vm) before, you'll never have to do this again!
+            </div>
+			
+			<p>
+                -&emsp;Change the amount of memory assigned to heap space for the Java virtual maachine used in Eclipse. The heap space
+				is the memory used in the creation and removal of variables - I think!
+            </p>
+			
+			<div id="codeBlock">
+                Edit the two lines beginning "-Xm" in eclipse.ini file<br>
+				"-Xms" refers to the initial amount of memory to assign to the heap space<br>
+				"-Xmx" refers to the maximum amount of memory to assign to the heap space<br>
+            </div>
+			
+			<p>
+                -&emsp;Function to change the alpha value of colour in R
+            </p>
             
+            <div id="codeBlock">
+				setAlpha <- function(colour, alpha){<br><br>
+					
+					&emsp;# Convert the input colour into rgb values<br>
+					&emsp;rgbValues <- col2rgb(colour)<br><br>
+  
+					&emsp;# Place rgb values within rgb function and insert alpha value<br>
+					&emsp;# Note that col2rgb returns rgbvlues from 0 to 255<br>
+					&emsp;rgbColour <- rgb(rgbValues["red", 1], rgbValues["green", 1], rgbValues["blue", 1],<br>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; alpha=alpha*255, maxColorValue=255)<br>
+  
+					&emsp;return(rgbColour)<br>
+				}
+            </div>
         </div>
     </body>
 </html>
