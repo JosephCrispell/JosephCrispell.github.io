@@ -142,18 +142,26 @@
             </p>
             
             <div id="codeBlock">
-				setAlpha <- function(colour, alpha){<br><br>
+				setAlpha &lt;- function(colour, alpha){<br><br>
 					
 					&emsp;# Convert the input colour into rgb values<br>
-					&emsp;rgbValues <- col2rgb(colour)<br><br>
+					&emsp;rgbValues &lt;- col2rgb(colour)<br><br>
   
 					&emsp;# Place rgb values within rgb function and insert alpha value<br>
 					&emsp;# Note that col2rgb returns rgbvlues from 0 to 255<br>
-					&emsp;rgbColour <- rgb(rgbValues["red", 1], rgbValues["green", 1], rgbValues["blue", 1],<br>
+					&emsp;rgbColour &lt;- rgb(rgbValues["red", 1], rgbValues["green", 1], rgbValues["blue", 1],<br>
 						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; alpha=alpha*255, maxColorValue=255)<br>
   
 					&emsp;return(rgbColour)<br>
 				}
+            </div>
+			
+			<p>
+                -&emsp;Get current date in R
+            </p>
+            
+            <div id="codeBlock">
+				date &lt;- format(Sys.Date(), "%d-%m-%y")
             </div>
         </div>
     </body>

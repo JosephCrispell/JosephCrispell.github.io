@@ -1,0 +1,111 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Virtual Box</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Setting up Ubuntu with VirtualBox&emsp;09-11-17</h1>
+            
+            <p>
+                <a href="https://www.virtualbox.org/wiki/VirtualBox">VirtualBox</a> is an amazing free program! It allows you set up a virtual computer within your computer that has a different operating
+                system. I use VirtualBox to run an Ubuntu computer on my Windows machine. I need the Ubuntu to run a lot of my analyses - especially those dealing with sequencing
+                data.<br><br>
+                Having had to frequently set up Ubuntu using VirtualBox and always running into difficulties, I've written this post to describe how I got it working this time.
+            </p>
+                
+            <p>
+                1) Download an Ubuntu iso file from (I just used Ubuntu v16.04)<a href="https://www.ubuntu.com/download/desktop">here</a><br>
+                <br>
+                2) Download and install VirtualBox<br>
+                &emsp;&emsp; - Download the executable file from <a href="https://www.virtualbox.org/wiki/Downloads">here</a><br>
+                &emsp;&emsp; - <font color="red">Note most recent version 5.2 didn't work for me. I downloaded an older exexcutable (v5.1.30) file from
+                    <a href="https://www.virtualbox.org/wiki/Download_Old_Builds_5_1">here</a></font><br>
+                <br>
+                3) Create a new Ubuntu machine<br>
+                &emsp;&emsp; - Open VirtualBox and select "New"<br>
+                &emsp;&emsp; - Choose a name e.g. "Ubuntu", leave Type: "Linux" and Version: "Ubuntu (64-bit)". Click "Next"<br>
+                &emsp;&emsp; - Assign a maximum amount of RAM (Rapid Access Memory) to the machine - at least 4000MB. Click "Next"<br>
+                &emsp;&emsp; - Leave "Create a virtual hard disk now" selected. Click "Create"<br>
+                &emsp;&emsp; - Leave "VDI (VirutalBox Disk Image) selected. Click "Next"<br>
+                &emsp;&emsp; - Leave "Dynamically allocated" selected. Click "Next"<br>
+                &emsp;&emsp; - Set the hard drive size. I usually assign around 50GB. Click "Create"<br>
+                <br>
+                4) Set up the Ubuntu machine<br>
+                &emsp;&emsp; - Select the machine you just built and click "Start"<br>
+                &emsp;&emsp; - Click on the Folder image on the right and select the Ubuntu iso file from Step 1. Click "Start"<br>
+                &emsp;&emsp; - Wait a few minutes. Select "Install Ubuntu"<br>
+                &emsp;&emsp; - Tick both of the options for updates and third party software. Click "Continue"<br>
+                &emsp;&emsp; - Select "Erase disk and install Ubuntu". Don't panic - this won't remove any files from your computer, it is referring to the virtual computer. Select "Install Now"<br>
+                &emsp;&emsp; - Select "Continue"<br>
+                &emsp;&emsp; - Select the country you are based in. Click "Continue"<br>
+                &emsp;&emsp; - Select the keyboard language you wish to use. Click "Continue"<br>
+                &emsp;&emsp; - Type your name - ideally without spaces - and password. Click "Continue"<br>
+                &emsp;&emsp; - Wait for ages... Click "Restart Now"<br>
+                <br>
+                5) Installing Guest Additions iso file<br>
+                &emsp;&emsp; - Once the Ubuntu has finished restarting, hover the mouse over "Devices" on the bar at the top left. Select "Insert Guest Additions CD image..."<br>
+                &emsp;&emsp; - Select "Run"<br>
+                &emsp;&emsp; - Type in your password (the one you set a few minutes ago). Click "Authenticate"<br>
+                &emsp;&emsp; - Wait for the installation to finish. If there are no errors, press the Enter key to finish. If there were errors try searching online for a solution<br>
+                &emsp;&emsp; - Click the red x in top right corner and select "Power off the machine" to shutdown the machine and close the window<br>
+                <br>
+                6) Setting up the Shared Folder<br>
+                &emsp;&emsp; - Create a folder to share with the Ubuntu machine on your Windows machine<br>
+                &emsp;&emsp; - In VirtualBox select your machine and click on "Settings"<br>
+                &emsp;&emsp; - Select "Shared Folders" on the left. Click on the Folder icon with the plus sign on the right hand side<br>
+                &emsp;&emsp; - In "Folder Path" drop down menu, select "Other" and then select the folder you just created on your Windows machine<br>
+                &emsp;&emsp; - Tick "Auto-mount" and leave "Read-only" unticked. Click "OK"<br>
+                &emsp;&emsp; - Start up your Ubuntu machine again by selecting the machine and clicking "Start"<br>
+                &emsp;&emsp; - Once the machine has started up, click on the swirly symbol in the top left corner and type in "terminal" into the search bar. Click on "Terminal" application<br>
+                &emsp;&emsp; - Type the following command into the terminal:
+            </p>
+            
+            <div id="codeBlock">
+                $ sudo usermod -a -G vboxsf [Username]
+            </div>
+            
+            <p>
+                &emsp;&emsp; - Restart the Ubuntu machine<br>
+                &emsp;&emsp; - Navigate to "/media/" and check if a folder called "sf_[YourSharedFolderName]" is present there or in a sub directory<br>
+                &emsp;&emsp; - If the folder is present - SUCCESS! - type the following to create a shortcut to the folder on the Ubuntu desktop:
+            </p>
+            
+            <div id="codeBlock">
+                $ sudo ln -s /media/sf_[YourSharedFolderName] /home/[YourUserName]/Desktop/[YourSharedFolderName]
+            </div>
+            
+            <p>
+                That's it done! Hopefully all of the above worked - installing the Guest Additions and getting the Shared Folder to work can be a bit temperamental!
+            </p>
+            
+        </div>
+        
+        
+
+    </body>
+
+</html>
