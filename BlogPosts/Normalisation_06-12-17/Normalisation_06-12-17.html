@@ -69,21 +69,16 @@
 			<img src="Normalisation_Thumbnail.png" width="50%" hspace="0.5%" vspace="1%">
 			
 			<p>
-                I messed around with these in <a href="https://www.r-project.org/">R</a> and created the following plots:
+                To me, the least amount of information is lost when you simply divide by the max - the scale of the data isn't lost. The normalise method
+				actually the resets the minimum and maximum values, retaining the relationships between values but destroying the scale. This is 
+				demonstrated in the following plots:
 			</p>
 			
 			<img src="NormalisationThoughts_06-12-17.png" width="100%" hspace="0.5%" vspace="1%">
 			
 			<p>
 				
-				The idea behind these plots is to highlight that understanding how you normalised your data, particularly the scale you used, is
-				very important for any interpretation later on!<br><br>
-				
-				To finish up: Once a vector of numbers (<i>v = [a, b, c]</i>) is normalised, only the relative differences between the values 
-				remain. What you lose is the context. You can't quantify how different <i>a</i> is from <i>b</i>, only how that difference 
-				compares to the differences between <i>a</i> and <i>c</i>, and <i>b</i> and <i>c</i>.<br><br>
-				
-				Also, normalising a vector of only two numbers is pointless and all the information is lost!<br><br>
+				Pay attention to the scales! You really need to think about how the normalisation approach you selected may impact your results!<br><br>
 				
 				All the above was probably pretty obvious, but I guess it can't hurt to think these things through...<br><br>
             </p>
