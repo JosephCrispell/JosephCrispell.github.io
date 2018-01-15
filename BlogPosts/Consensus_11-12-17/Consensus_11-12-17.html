@@ -123,7 +123,6 @@
             
             <p>
                 Now to get to the consensus sequence! Use this <a href="https://www.r-project.org/">R</a> function to generate a consensus sequence from aligned sequences:
-                PROBLEM - FUNCTION BELOW DOESN"T GET CONSENSUS - NEED TO SELECT MOST COMMON ALLELE WHEN >1 PRESENT NOT JUST PUT IN AN "N"
             </p>
             
             <div id="codeBlock">
@@ -146,19 +145,16 @@
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;alleles[i] <- sequences[[sequenceNames[i]]][position]<br>
                 &emsp;&emsp;&emsp;&emsp;}<br><br>
                     
-                &emsp;&emsp;&emsp;&emsp;# Call the consensus allele<br>
-                &emsp;&emsp;&emsp;&emsp;consensus[position] <- "N"<br>
-                &emsp;&emsp;&emsp;&emsp;if(length(unique(alleles)) == 1){<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- alleles[1]<br><br>
-                    
-                &emsp;&emsp;&emsp;&emsp;# If dash present at current position - return allele present as lower case<br>
-                &emsp;&emsp;&emsp;&emsp;}else if(length(unique(alleles)) == 2 && "-" %in% alleles){<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- tolower(alleles[alleles != "-"])<br><br>
-                    
-                &emsp;&emsp;&emsp;&emsp;# If N present at current position - return other allele as lower case<br>
-                &emsp;&emsp;&emsp;&emsp;}else if(length(unique(alleles)) == 2 && "N" %in% alleles){<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- tolower(alleles[alleles != "N"])<br>
-                &emsp;&emsp;&emsp;&emsp;}<br>
+                &emsp;&emsp;&emsp;&emsp;# Get the number of each allele present<br>
+				&emsp;&emsp;&emsp;&emsp;alleleCounts <- table(alleles)<br><br>
+      
+				&emsp;&emsp;&emsp;&emsp;# Find the most frequent allele and assign to consensus<br>
+				&emsp;&emsp;&emsp;&emsp;maxAllele <- names(which(alleleCounts == max(alleleCounts)))<br>
+				&emsp;&emsp;&emsp;&emsp;if(length(maxAllele) == 1){<br>
+				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- maxAllele<br>
+				&emsp;&emsp;&emsp;&emsp;}else{<br>
+				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- "N"<br>
+				&emsp;&emsp;&emsp;&emsp;}<br>
                 &emsp;&emsp;}<br><br>
                     
                 &emsp;&emsp;return(consensus)<br>
@@ -166,7 +162,7 @@
             </div>
             
             <p>
-                This is definitely over complicating things. The important points are how to use Clustal within R, and how to build a simple consensus sequence. All of the above
+                This is definitely over complicating things. The important points are how to use Clustal within R, and how to build a simple consensus sequence. All of the above is available in this <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/GetConsensusFromClustalAlignment_28-09-17.R">script</a>.
             </p>
             
         </div>
