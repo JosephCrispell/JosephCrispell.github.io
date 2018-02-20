@@ -1,0 +1,161 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Phylogeny</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Building a phylogenetic tree in R&emsp;20-02-18</h1>
+            
+            <p>
+                A phylogenetic tree - a diagram describing how similar sequences are - is an extremely useful visualisation tool. Comparing two sequences is simple, the number of differences between the sequences tells you how different they are. Comparing 10s or 100s of sequences is more complicated, you'll end up with a matrix telling you how different each sequence is to every other sequence.<br><br>
+				
+				The phylogenetic tree is a representation of a matrix of sequence similarity. The tree is made up of nodes and edges. Nodes at the tips of the phylogeny represent the sequences, internal nodes represent ancestors. Edges link nodes and represent some measure of similarity.<br><br>
+				
+				For nucleotide sequences, similarity is measured as the number of nucleotides that don't match when the sequences are aligned and compared.<br><br>
+            </p>
+			
+			<img src="Phylogeny_Thumbnail.png" width="50%" hspace="0.5%" vspace="1%">
+            
+            <p>
+                Up until recently I have been using <a href="http://evolution.genetics.washington.edu/phylip.html">phylip</a> to build my phylogenies. I decided recently to change to using <a href="https://www.r-project.org/">R</a>, so that I could integrate building, annotating, and viewing my phylogenies into a single script.<br><br>
+				
+				In <a href="https://www.r-project.org/">R</a>, the <a href="https://cran.r-project.org/web/packages/phangorn/index.html">phangorn</a> package was specifically designed for phylogenetic analyses and, <a href="https://cran.r-project.org/web/packages/ape/index.html">ape</a> for handling and visualising phylogenetic data.<br><br>
+				
+				Firstly, we load these packages:
+            </p>
+            
+            <div id="codeBlock">
+                # Load packages<br>
+                library(ape)<br>
+				ilbrary(phangorn)<br>
+            </div>
+            
+            <p>
+                Once the libraries are loaded the next task is to read in the sequences. Nucleotide sequences are generally stored in a <a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA</a>. You can read a FASTA file into R using the following code:
+            </p>
+            
+            <div id="codeBlock">
+                # Read in the FASTA file<br>
+				sequencesDNAbin <- read.dna("[pathToFastaFile]", format = "fasta", skip=1)
+            </div>
+            
+            <p>
+                The <font face="monospace" color="grey" size=4.5px>read.dna</font> function returns the sequences as a <font face="monospace" color="grey" size="4.5px">DNAbin</font> format.<br><br>
+				
+				Next, we'll compare our sequences and generate a similarity matrix, also called a genetic distance matrix. In the genetic distance matrix, each entry tells you the genetic distance (the number of nucleotide differences) between two sequences. This code will build one:
+            </p>
+            
+            <div id="codeBlock">
+                # Build the distance matrix<br>
+				distanceMatrix <- dist.dna(sequencesDNAbin, model="JC69")
+            </div>
+            
+            <p>
+                In the <font face="monospace" color="grey" size=4.5px>dist.dna</font> function we specified a substitution model "JC69". The substitution model defines the rates that different nucleotide changes occur - how often does a T (Thymine) change to an A (Adenine), C (Cytosine), or G (Guanine)? JC69 refers to first substitution model defined by Jukes and Cantor in 1969. It specifies that all changes between nucleotides occur at the same rate.<br><br>
+				
+				There are loads of alternative models you could use to build your genetic distance matrix. The following code will try and find out which is best:
+            </p>
+			
+			<div id="codeBlock">
+                # Convert the sequences from a DNAbin format into a PhyDat format<br>
+				sequencesPhyDat <- phyDat(sequencesDNAbin, type = "DNA", levels = NULL)<br><br>
+				
+				# Run model testing to select appropriate substitution model<br>
+				modelTestResults <- modelTest(sequencesPhyDat, model = c("JC", "HKY", "GTR"))<br><br>
+  
+				# Get best model<br>
+				cat(paste("Best substitution model:", <br>
+				&emsp;modelTestResults$Model[which.min(modelTestResults$AIC)], "\n"))
+            </div>
+			
+			<p>
+                The above code compares three different types of substitution model, the Jukes and Cantor model ("JC"), the Hasegawa, Kishino, and Yano model developed in 1985, and the Generalised Time Reversible model created in 1986. These models gradually get more complex, allowing the rates of change between nucleotides to vary more.<br><br>
+				
+				Once you've selected the appropriate substitution model, you can re-build your distance matrix, then you can build a <a href="https://en.wikipedia.org/wiki/Neighbor_joining">Neighbour Joining</a> tree:
+            </p>
+			
+			<div id="codeBlock">
+                # Build a neighbour joining tree<br>
+				njTree <- nj(distanceMatrix)
+            </div>
+			
+			<p>
+                To visualise your tree you can plot it using:
+            </p>
+			
+			<div id="codeBlock">
+                # Plot the phylogenetic tree<br>
+				plot.phylo(njTree)
+            </div>
+			
+			<p>
+                The phylogenetic tree represents an approximation of how related sequences are, sometimes many slightly different trees could represent the similarities between your sequences.<br><br>
+				
+				The <a href="https://en.wikipedia.org/wiki/Neighbor_joining">Neighbour Joining</a> tree building algorithm is a really clever way of very quickly converting a distance matrix into a phylogeny. A lot of other algorithms exist, depending on your data, some are more appropriate than others.<br><br>
+				
+				<a href="https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood">Maximum Likelihood</a>, is a different means of generating, potentially a more accurate, phylogenetic tree. This algorithm creates and compares lots of slightly different phylogenetic trees and selects which one best represents your data. Here's how you could build a Maximum Likelihood phylogeny in R:
+            </p>
+			
+			<div id="codeBlock">
+                # Compute likelihood of the initial Neighbour Joining tree given sequences<br>
+				likelihoodObject <- pml(njTree, sequencesPhyDat)<br><br>
+  
+				# Set the controls for the Maximum Likelihood algorithm<br>
+				controls <- pml.control(maxit=100000, trace=0)<br><br>
+  
+				# Run maximum likelihood<br>
+				fittingOutput <- optim.pml(likelihoodObject,<br>
+                &emsp;&emsp;optNni = TRUE, # Optimise topology<br>
+                &emsp;&emsp;optInv = TRUE, # Optimise proportion of variable sites<br>
+                &emsp;&emsp;model = substitutionModel, # Substitution model<br>
+                &emsp;&emsp;rearrangement="NNI", # Nearest Neighbour Interchanges<br>
+                &emsp;&emsp;control=controls)<br>
+				
+				# Get the Maximum Likelihood tree<br>
+				mlTree <- fittingOutput$tree
+            </div>
+			
+			<p>
+                Once you've built a phylogeny, that's just the start. You can dealve into the relationships between particular isolates, how are they different? Why? Do those differences change anything?<br><br>
+				
+				In my work, I look to see how pathogens are spreading. Genetic similarity between two individual's pathogens tells me that those two individuals share a recent transmission history. Could one of them given it to the other?
+            </p>
+            
+        </div>
+
+    </body>
+
+</html>
