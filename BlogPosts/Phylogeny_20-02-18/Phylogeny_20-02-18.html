@@ -148,6 +148,28 @@
 				mlTree <- fittingOutput$tree
             </div>
 			
+            <p>
+            Once you've got a tree, bootstrapping can be used to provide estimates of how confident you can be in its structure. Joseph Felsenstein provides a really good explanation of bootstrapping in his <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1558-5646.1985.tb00420.x/full">article</a>. Here's how you can run bootstrapping in R:
+            </p>
+            
+            <div id="codeBlock">
+                
+                # Bootstrap the result of maximum likelihood<br>
+                bootstrapResults <- bootstrap.pml(<br>
+                &emsp;&emsp;fittingOutput, # Use Maximium Likelihood settings on bootstrapped sequences<br>
+                &emsp;&emsp;bs = nBootstraps, # Number times to bootstrap sequences<br>
+                &emsp;&emsp;optNni = TRUE, # Use Nearest Neighbour Interchanges in tree building<br>
+                &emsp;&emsp;jumble=TRUE) # Jumble bootstrapped sequences before building trees<br><br>
+                    
+                # Get phylogenetic tree with bootstrap values<br>
+                # Returns phylogenetic tree with bootstrap values as node labels<br>
+                treeBS <- plotBS(<br>
+                &emsp;&emsp;fittingOutput$tree,<br>
+                &emsp;&emsp;bootstrapResults,<br>
+                &emsp;&emsp;p = 50, # Plot bootstrap values if node in >=50 bootstrap trees<br>
+                &emsp;&emsp;type="phylogram") # Type of phylogenetic tree shape to plot
+            </div>
+            
 			<p>
                 Once you've built a phylogeny, that's just the start. You can dealve into the relationships between particular isolates, how are they different? Why? Do those differences change anything?<br><br>
 				
