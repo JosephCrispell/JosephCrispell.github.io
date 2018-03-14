@@ -157,7 +157,7 @@
                 # Bootstrap the result of maximum likelihood<br>
                 bootstrapResults <- bootstrap.pml(<br>
                 &emsp;&emsp;fittingOutput, # Use Maximium Likelihood settings on bootstrapped sequences<br>
-                &emsp;&emsp;bs = nBootstraps, # Number times to bootstrap sequences<br>
+                &emsp;&emsp;bs = 100, # Number times to bootstrap sequences<br>
                 &emsp;&emsp;optNni = TRUE, # Use Nearest Neighbour Interchanges in tree building<br>
                 &emsp;&emsp;jumble=TRUE) # Jumble bootstrapped sequences before building trees<br><br>
                     
