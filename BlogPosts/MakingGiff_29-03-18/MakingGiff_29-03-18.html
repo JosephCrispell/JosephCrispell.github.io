@@ -1,0 +1,92 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Consensus</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Making a Giff in R&emsp;29-03-18</h1>
+            
+            <p>
+                Last week I received some new data and since then I have spent my time running my old scripts to see whether these new data change anything. A lot of these scripts are generating summary figures, and a few are dynamic figures.<br><br>
+                
+                Moving figures (and images) are often stored as a GIF file. A GIF file is essentially a slideshow, flicking very quickly through a set of images. When I am creating my dynamic figures, I use <a href="https://www.r-project.org/">R</a> in combination with a program called <a href="http://www.imagemagick.org/">Magick</a>. <a href="http://www.imagemagick.org/">Magick</a> is used to edit images and I use it to combine PNG files into a GIF.<br><br>
+                
+                The first task is to generate some example PNG files:
+            </p>
+            
+            <div id="codeBlock">
+                
+                # Open set of PNG files - each new plot saved to individual PNG file:<br>
+                # ExampleImage_01.png<br>
+                # ExampleImage_02.png<br>
+                # ...<br>
+                png("ExampleImage_%02d.png")<br><br>
+
+                # Create a set of PNG files to demonstrate GIF building<br>
+                for(i in 1:10){<br><br>
+                    
+                &emsp;&emsp;# Simple plot - plotting current i as coordinate<br>
+                &emsp;&emsp;plot(x=i, y=i,<br>
+                &emsp;&emsp;&emsp;&emsp;xlim=c(1,10), ylim=c(1,10), # Set axis limits<br>
+                &emsp;&emsp;&emsp;&emsp;xlab="", ylab="", xaxt="n", yaxt="n", # Remove all axes<br>
+                &emsp;&emsp;&emsp;&emsp;las=1, bty="n", pch=19, cex=2) # Some aesthetics<br>
+                }<br><br>
+                    
+                # Close the PNG files<br>
+                dev.off()
+            </div>
+            
+            <p>
+                Once you've generated your example PNG files. The next step is to use <a href="http://www.imagemagick.org/">Magick</a>. Since <a href="http://www.imagemagick.org/">Magick</a> can be ran from the terminal, I use the <font face="monospace" color="gray"> system()</font> function within <a href="https://www.r-project.org/">R</a>. You'll need to have installed <a href="http://www.imagemagick.org/">Magick</a> from <a href="http://www.imagemagick.org/script/download.php">here</a>. Once installed you'll need to check that "magick" is in your path - you can do this by opening the terminal and typing "magick -version".
+            </p>
+            
+            <div id="codeBlock">
+                    
+                # Use Magick to knit PNG files into GIFF<br>
+                system("magick -delay 50 ExampleImage_*.png Example.gif")
+            </div>
+            
+            <p>
+                Here's what the GIF file will look like:
+            </p>
+            
+            <img src="MakingGiff_Thumbnail.gif" width="60%" hspace="0.5%" vspace="1%">
+            
+        </div>
+
+    </body>
+
+</html>
