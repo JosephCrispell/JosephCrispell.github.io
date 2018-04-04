@@ -152,6 +152,20 @@ p {
     text-align: left;
 }
 
+/* ###############
+ * # List format #
+ * ###############
+ */
+
+ol li   {
+   text-align: left;
+   font-size: 18px;
+}
+ul li   {
+    text-align: left;
+    font-size: 18px;
+}
+
 /* #####################
  * # Code Block Format #
  * #####################
@@ -180,6 +194,11 @@ p {
     font-family: monospace;
     color: rgba(0, 0, 0, 0.5);
 
+}
+
+c {
+    font-family: monospace;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* #################

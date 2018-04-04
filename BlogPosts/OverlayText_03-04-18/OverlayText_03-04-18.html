@@ -1,0 +1,80 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Consensus</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Avoiding overlapping text labels in R plot&emsp;03-04-18</h1>
+            
+            <p>
+                Another post with a GIF!<br><br>
+                
+                Imagine you've got two sets of values you want to compare. For example, Height and weight. Plot the values against one another can help you to see whether there is a relationship between the two. You'll probably find that short individuals are lighter.<br><br>
+                
+                I created some plots (in the GIF below) in <a href="https://www.r-project.org/">R</a>. I am comparing a set of 'X' values to 'Y' values and plotting some example text labels at each point.
+            </p>
+            
+            <img src="OverlayText_Thumbnail.gif" width="80%" hspace="0.5%" vspace="1%">
+            
+            <p>
+                The GIF shows a scatter plot without any labels, with labels that sometimes overlap, and lastly with labels that have been adjusted to avoid overlapping. The current post describes the method used to adjust the labels to avoid overlapping.<br><br>
+                
+                As usual, a method to avoid overlapping text labels already exists within <a href="https://www.r-project.org/">R</a> (<a href="https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html">ggrepel</a>), but I was keen to write my own.<br><br>
+                
+                It took me a wee while to get my method to work but the final version works with the following steps:<br>
+                <ol>
+                    <li>Create a scatter plot without labels</li>
+                    <li>Create a set of points on a grid, within the limits of the scatter plot (use <c>par("usr")</c> to get the axis limits of the scatter plot), as alternative label locations</li>
+                    <li>Remove any of the alternative label locations that fall within the space designated for each point's label (I used the <c>strheight()</c> and <c>strwidth()</c> functions for this)</li>
+                    <li>Add labels to the scatter plot as long as they don't overlap with any other point's label</li>
+                    <li>For those point's whose label overlaps with anothers:</li>
+                    <ul>
+                        <li>Choose the closest location from the alternative label locations</li>
+                        <li>Add a text label at the chosen location and plot a line back to the original point</li>
+                        <li>Remove any of the alternative label locations that would overlap with the chosen location and its label</li>
+                    </ul>
+                </ol>
+            </p>
+            
+            <p>
+                The <a href="https://www.r-project.org/">R</a> script <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/OverlayTextFunctions_08-02-18.R">here</a> implements these steps into an <c>overlayText()</c> function. An interesting problem, and there is plenty of room for improvement!
+            </p>
+            
+        </div>
+
+    </body>
+
+</html>
