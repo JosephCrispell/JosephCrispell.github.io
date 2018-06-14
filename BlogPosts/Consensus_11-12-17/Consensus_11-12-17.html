@@ -48,8 +48,15 @@
                 
                 Before a consensus sequence can be built, the sequences must be aligned. Thankfully there are plenty of alignment tools out there. Here, I use <a href="http://www.clustal.org/">Clustal</a>.
                 <a href="http://www.clustal.org/">Clustal</a> can be used in <a href="https://www.r-project.org/">R</a> but first you'll need to install it (download
-                <a href="http://www.clustal.org/download/current/">here</a>) then add it into your path variable.<br><br>
-                
+                <a href="http://www.clustal.org/download/current/">here</a>) then add it into your path variable (on a Windows machine, this is done automatically on Ubuntu). Or just type the following in the Ubuntu terminal:<br><br>
+			</p>
+			
+			<div id="codeBlock">
+                sudo apt update<br>
+				sudo apt install clustal
+            </div>
+			
+			<p>
                 The path variable is an interesting thing - whenever you call a program by its name (here <a href="https://www.r-project.org/">R</a> is calling <a href="http://www.clustal.org/">Clustal</a>),
                 the computer will search for that program using the path variable. A file path is the ordered list of computer folder names, separated by a slash ("/" on mac and unix or "\" on windows),
                 where a file can be found. For example, "test.txt" can be found using the following path: "/Users/josephcrisp1/Desktop/test.txt". The path variable is list, separated by ":", of the paths to
@@ -64,105 +71,80 @@
                 library(ape)<br><br>
                 
                 # Read in the FASTA sequences<br>
-                sequences <- read.FASTA("pathToFile")<br><br>
+                sequences &lt;- read.FASTA("pathToFile")<br><br>
                 
                 # Run Clustal multiple sequence alignment<br>
-                alignment <- clustal(sequences)<br><br>
+                alignment &lt;- clustal(sequences)
             </div>
             
             <p>
-                I couldn't figure how to retrieve the sequences in a usable simple format in <a href="https://www.r-project.org/">R</a> so I printed the sequences to file using the following code:
+                Now I built an <a href="https://www.r-project.org/">R</a> function that can build a consensus sequence aligned sequences:
             </p>
             
             <div id="codeBlock">
-                # Print out the sequences<br>
-                write.dna(alignment, file="pathToOutputFile", format="fasta", colsep="")
-            </div>
-            
-            <p>
-                And then read that file back into <a href="https://www.r-project.org/">R</a> using the following function (a simpler version of read.FASTA above):
-            </p>
-            
-            <div id="codeBlock">
-                readFASTA <- function(fastaFile){<br><br>
+                getConsensus &lt;- function(sequences){<br><br>
                     
-                &emsp;&emsp;# Open the file and store lines<br>
-                &emsp;&emsp;connection <- file(fastaFile, "r")<br>
-                &emsp;&emsp;fileLines <- readLines(connection)<br>
-                &emsp;&emsp;close(connection)<br><br>
+                &emsp;&emsp;# Convert between ways of storing sequences<br>
+                &emsp;&emsp;sequences &lt;- as.alignment(sequences)<br><br>
                     
-                &emsp;&emsp;# Initialise a list to store the sequences<br>
-                &emsp;&emsp;sequences <- list()<br><br>
+                &emsp;&emsp;# Initialise vector to store the consensus<br>
+                &emsp;&emsp;consensus &lt;- c()<br><br>
+				
+				&emsp;&emsp;# Get the sequences and split them into their nucleotides<br>
+				&emsp;&emsp;nucleotides &lt;- list()<br>
+				&emsp;&emsp;for(i in 1:sequences$nb){<br>
+				&emsp;&emsp;&emsp;&emsp;nucleotides[[sequences$nam[i]]] &lt;- strsplit(sequences$seq[i], split="")[[1]]<br>
+				&emsp;&emsp;}<br><br>
                     
-                &emsp;&emsp;# Examine each of the file lines one by one<br>
-                &emsp;&emsp;for(i in 1:length(fileLines)){<br><br>
+                &emsp;&emsp;# Examine each position in the alignment<br>
+                &emsp;&emsp;for(position in 1:length(nucleotides[[1]])){<br><br>
                     
-                &emsp;&emsp;&emsp;&emsp;# Check if line starts with ">"<br>
-                &emsp;&emsp;&emsp;&emsp;if(grepl(fileLines[i], pattern="^>") == TRUE){<br><br>
+                &emsp;&emsp;&emsp;&emsp;# Initialise a vector to store the alleles at the current position<br>
+                &emsp;&emsp;&emsp;&emsp;alleles &lt;- c()<br><br>
                     
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Store the previous sequence<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if(i != 1){<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sequences[[name]] <- strsplit(sequence, split="")[[1]]<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br><br>
+                &emsp;&emsp;&emsp;&emsp;# Examine the current position in each sequence - store each allele<br>
+                &emsp;&emsp;&emsp;&emsp;for(i in 1:sequences$nb){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;alleles[i] &lt;- nucleotides[[i]][position]<br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
                     
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Initialise variables to store sequence and id<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;name <- substr(fileLines[i], 2, stop=nchar(fileLines[i]))<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sequence <- ""<br><br>
-                &emsp;&emsp;&emsp;&emsp;}else{<br>
-                    
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sequence <- paste(sequence, fileLines[i], sep="")<br>
-                &emsp;&emsp;&emsp;&emsp;}<br>
+                &emsp;&emsp;&emsp;&emsp;# Get the number of each allele present<br>
+				&emsp;&emsp;&emsp;&emsp;alleleCounts &lt;- table(alleles)<br><br>
+      
+				&emsp;&emsp;&emsp;&emsp;# Find the most frequent allele and assign to consensus<br>
+				&emsp;&emsp;&emsp;&emsp;maxAllele &lt;- names(which(alleleCounts == max(alleleCounts)))<br>
+				&emsp;&emsp;&emsp;&emsp;if(length(maxAllele) == 1){<br>
+				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] &lt;- maxAllele<br>
+				&emsp;&emsp;&emsp;&emsp;}else{<br>
+				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] &lt;- "n"<br>
+				&emsp;&emsp;&emsp;&emsp;}<br>
                 &emsp;&emsp;}<br><br>
-                    
-                &emsp;&emsp;# Store the last sequence<br>
-                &emsp;&emsp;sequences[[name]] <- strsplit(sequence, split="")[[1]]<br><br>
+				
+				&emsp;&emsp;# Attach the consensus to the alignment<br>
+				&emsp;&emsp;sequences$seq[sequences$nb + 1] &lt;- paste(consensus, collapse="")<br>
+				&emsp;&emsp;sequences$nb &lt;- sequences$nb + 1<br>
+				&emsp;&emsp;sequences$nam &lt;- c(sequences$nam, "consensus")<br><br>
+				
+				&emsp;&emsp;# Convert between ways of storing sequences<br>
+				&emsp;&emsp;sequences &lt;- as.DNAbin.alignment(sequences)<br><br>
                     
                 &emsp;&emsp;return(sequences)<br>
                 }
             </div>
             
-            <p>
-                Now to get to the consensus sequence! Use this <a href="https://www.r-project.org/">R</a> function to generate a consensus sequence from aligned sequences:
+			<p>
+            	A pretty awful looking function. Basically it first gets the alignment into a manageable format (a list of nucleotide sequences), and then records the most common allele found at each position and builds these into the consensus sequence.<br><br>
+				
+				The <c>getConsensus()</c> function adds the consensus sequence onto the alignment. To save the alignment to file, use the following R code:
             </p>
-            
-            <div id="codeBlock">
-                getConsensus <- function(sequences){<br><br>
-                    
-                &emsp;&emsp;# Get the sequence names<br>
-                &emsp;&emsp;sequenceNames <- names(sequences)<br><br>
-                    
-                &emsp;&emsp;# Initialise vector to store the consensus<br>
-                &emsp;&emsp;consensus <- c()<br><br>
-                    
-                &emsp;&emsp;# Examine each position in the alignment<br>
-                &emsp;&emsp;for(position in 1:length(sequences[[1]])){<br><br>
-                    
-                &emsp;&emsp;&emsp;&emsp;# Initialise a vector to store the alleles at the current position<br>
-                &emsp;&emsp;&emsp;&emsp;alleles <- c()<br><br>
-                    
-                &emsp;&emsp;&emsp;&emsp;# Examine the current position in each sequence - store each allele<br>
-                &emsp;&emsp;&emsp;&emsp;for(i in 1:length(sequenceNames)){<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;alleles[i] <- sequences[[sequenceNames[i]]][position]<br>
-                &emsp;&emsp;&emsp;&emsp;}<br><br>
-                    
-                &emsp;&emsp;&emsp;&emsp;# Get the number of each allele present<br>
-				&emsp;&emsp;&emsp;&emsp;alleleCounts <- table(alleles)<br><br>
-      
-				&emsp;&emsp;&emsp;&emsp;# Find the most frequent allele and assign to consensus<br>
-				&emsp;&emsp;&emsp;&emsp;maxAllele <- names(which(alleleCounts == max(alleleCounts)))<br>
-				&emsp;&emsp;&emsp;&emsp;if(length(maxAllele) == 1){<br>
-				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- maxAllele<br>
-				&emsp;&emsp;&emsp;&emsp;}else{<br>
-				&emsp;&emsp;&emsp;&emsp;&emsp;consensus[position] <- "N"<br>
-				&emsp;&emsp;&emsp;&emsp;}<br>
-                &emsp;&emsp;}<br><br>
-                    
-                &emsp;&emsp;return(consensus)<br>
-                }
+			
+			<div id="codeBlock">
+                # Print out sequences with consensus<br>
+                outputFile &lt;- paste(path, "sequencesWithConsensus.fasta", sep="")<br>
+                write.FASTA(alignment, file=outputFile)
             </div>
-            
+			
             <p>
-                This is definitely over complicating things. The important points are how to use Clustal within R, and how to build a simple consensus sequence. All of the above is available in this <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/GetConsensusFromClustalAlignment_28-09-17.R">script</a>.
+                So that's it! I hope some of the above code is useful, it can all be found in this <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/GetConsensusFromClustalAlignment_28-09-17.R">script</a>.
             </p>
             
         </div>
