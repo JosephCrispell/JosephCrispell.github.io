@@ -1,0 +1,104 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Comparing phylogenies</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Comparing plotting phylogenetic trees&emsp;15-06-18</h1>
+            
+            <p>
+                I've been meaning to write up a post about how I created the plot below. I'm pretty proud of it, simple though it is!<br><br>
+				
+				A phylogenetic tree describes how related a set of tips are to one another. A tree is made up many clades that range from including just one tip (a tip)
+				to containing all the tips (the root). The lengths of branches between tips and clades provides an indication of how similar those tips or clades are to
+				one another.<br><br>
+				
+				The structure of a phylogenetic tree is complex, and comparing different trees is hard. But what if you want to compare two trees that are very 
+				similar to one another? Comparing two similar trees in a nice plot, is what this post will talk about.
+			</p>
+			
+			<img src="ComparingPhylogenies_Thumbnail.png" width="90%" hspace="0.5%" vspace="1%">
+			
+			<p>
+                I've written a wee bit of R code to plot two phylogenetic trees facing one another, and add lines between tips that have changed location in either tree. 
+				The full script is available <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/ComparingPhylogenies_15-06-18.R">here</a>.<br><br>
+				
+				I don't want to delve to much into this script, but I want to highlight a couple of interesting (and hopefully generally useful) things that I do in the 
+				script. Firstly, the script works by:<br>
+				<ul>
+  					<li>Generating a random phylogenetic tree</li>
+  					<li>Copying the random tree and rotating one of its nodes</li>
+  					<li>Adjusting the plotting window settings (using <c>par(mar=c(0,0,0,0))</c> to remove the margins, and <c>par(mfrow=c(1,2))</c> to have two side-by-side plots)</li>
+					<li>Plot the two trees facing one another</li>
+					<li>Draw lines between any tips that have changed location</li>
+				</ul>			
+			</p>
+		
+			<p>			
+				The last step requires the coordinates of each tip in the two trees plotted. These are collected using my <c>getTipCoordinates()</c> function just after 
+				tree is plotted. Within the	<c>getTipCoordinates()</c> function the first line is the most interesting:				
+            </p>
+            
+            <div id="codeBlock">
+                lastPP &lt;- get("last_plot.phylo", envir = .PlotPhyloEnv)
+            </div>
+            
+            <p>
+                The <c>lastPP</c> variable, created above, contains all the information you would ever need to know about your plotted phylogenetic
+				tree! Really useful for when you want to add custom annotations to your plotted trees. Here, I retrieve the X and Y coordinates of each of the tips in 
+				the phylogenetic tree.<br><br>
+				
+				An important step in my <c>getTipCoordinates()</c> function is the retrieval of the tip coordinates. In this step I use the <c>grconvertX()</c> and 
+				<c>grconvertY()</c> functions to convert the X and Y coordinates for tips from relative coordinates within a single plotting panel to actual coordinates
+				in the plotting window.<br><br>
+				
+				With the coordinates of the tips in both phylogenies, lines are added using my <c>plotLinesBetweenTips()</c> function. The code for the 
+				<c>plotLinesBetweenTips()</c> function is a little confusing but it is doing some interesting things. The red lines in the image above actually cross 
+				the between the plotting panels.<br><br>
+				
+				To allow me to plot lines across plotting window panels (which I didn't know was possible!) I use the <c>grid.lines()</c> function 
+				(part of <c>grid</c> package) in a similar way to how you would use the <c>lines()</c> function in a normal R plot. Importantly though,
+				the <c>grid.lines()</c> function use the actual coordinates for the plotting window and so it isn't limited to plotting within a panel.<br><br>
+				
+				That's me harped on about my nice figure enough. A simple plot for sure but it needed some quite interesting pieces of code. Remember the script is 
+				<a href="https://github.com/JosephCrispell/GeneralTools/blob/master/ComparingPhylogenies_15-06-18.R">here</a>, if you want a closer look.
+		</p>
+            
+        </div>
+
+    </body>
+
+</html>

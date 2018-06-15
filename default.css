@@ -190,15 +190,21 @@ ul li   {
     vertical-align: middle;
     text-align: left;
     
-    font-size: 15px;
+    font-size: 12px;
     font-family: monospace;
     color: rgba(0, 0, 0, 0.5);
 
 }
 
+/* #######################
+ * # IN-line code Format #
+ * #######################
+ */
+
 c {
     font-family: monospace;
     color: rgba(0, 0, 0, 0.5);
+	font-size: 14.5px;
 }
 
 /* #################
