@@ -134,6 +134,14 @@
 			<p>
             	A pretty awful looking function. Basically it first gets the alignment into a manageable format (a list of nucleotide sequences), and then records the most common allele found at each position and builds these into the consensus sequence.<br><br>
 				
+			</p>
+			
+			<div id="codeBlock">
+                # Add the consensus sequence into the alignment<br>
+				alignment &lt;- getConsensus(alignment)<br>
+            </div>
+			
+			<p>				
 				The <c>getConsensus()</c> function adds the consensus sequence onto the alignment. To save the alignment to file, use the following R code:
             </p>
 			

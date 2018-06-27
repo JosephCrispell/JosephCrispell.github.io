@@ -69,32 +69,32 @@
             
             <div id="codeBlock">
                 # Read in the FASTA file<br>
-				sequencesDNAbin <- read.dna("[pathToFastaFile]", format = "fasta", skip=1)
+				sequencesDNAbin &lt;- read.dna("[pathToFastaFile]", format = "fasta", skip=1)
             </div>
             
             <p>
-                The <font face="monospace" color="grey" size=4.5px>read.dna</font> function returns the sequences as a <font face="monospace" color="grey" size="4.5px">DNAbin</font> format.<br><br>
+                The <c>read.dna()</c> function returns the sequences as a <c>DNAbin</c> format.<br><br>
 				
 				Next, we'll compare our sequences and generate a similarity matrix, also called a genetic distance matrix. In the genetic distance matrix, each entry tells you the genetic distance (the number of nucleotide differences) between two sequences. This code will build one:
             </p>
             
             <div id="codeBlock">
                 # Build the distance matrix<br>
-				distanceMatrix <- dist.dna(sequencesDNAbin, model="JC69")
+				distanceMatrix &lt;- dist.dna(sequencesDNAbin, model="JC69")
             </div>
             
             <p>
-                In the <font face="monospace" color="grey" size=4.5px>dist.dna</font> function we specified a substitution model "JC69". The substitution model defines the rates that different nucleotide changes occur - how often does a T (Thymine) change to an A (Adenine), C (Cytosine), or G (Guanine)? JC69 refers to first substitution model defined by Jukes and Cantor in 1969. It specifies that all changes between nucleotides occur at the same rate.<br><br>
+                In the <c>dist.dna()</c> function we specified a substitution model "JC69". The substitution model defines the rates that different nucleotide changes occur - how often does a T (Thymine) change to an A (Adenine), C (Cytosine), or G (Guanine)? JC69 refers to first substitution model defined by Jukes and Cantor in 1969. It specifies that all changes between nucleotides occur at the same rate.<br><br>
 				
 				There are loads of alternative models you could use to build your genetic distance matrix. The following code will try and find out which is best:
             </p>
 			
 			<div id="codeBlock">
                 # Convert the sequences from a DNAbin format into a PhyDat format<br>
-				sequencesPhyDat <- phyDat(sequencesDNAbin, type = "DNA", levels = NULL)<br><br>
+				sequencesPhyDat &lt;- phyDat(sequencesDNAbin, type = "DNA", levels = NULL)<br><br>
 				
 				# Run model testing to select appropriate substitution model<br>
-				modelTestResults <- modelTest(sequencesPhyDat, model = c("JC", "HKY", "GTR"))<br><br>
+				modelTestResults &lt;- modelTest(sequencesPhyDat, model = c("JC", "HKY", "GTR"))<br><br>
   
 				# Get best model<br>
 				cat(paste("Best substitution model:", <br>
@@ -109,7 +109,7 @@
 			
 			<div id="codeBlock">
                 # Build a neighbour joining tree<br>
-				njTree <- nj(distanceMatrix)
+				njTree &lt;- nj(distanceMatrix)
             </div>
 			
 			<p>
@@ -131,13 +131,13 @@
 			
 			<div id="codeBlock">
                 # Compute likelihood of the initial Neighbour Joining tree given sequences<br>
-				likelihoodObject <- pml(njTree, sequencesPhyDat)<br><br>
+				likelihoodObject &lt;- pml(njTree, sequencesPhyDat)<br><br>
   
 				# Set the controls for the Maximum Likelihood algorithm<br>
-				controls <- pml.control(maxit=100000, trace=0)<br><br>
+				controls &lt;- pml.control(maxit=100000, trace=0)<br><br>
   
 				# Run maximum likelihood<br>
-				fittingOutput <- optim.pml(likelihoodObject,<br>
+				fittingOutput &lt;- optim.pml(likelihoodObject,<br>
                 &emsp;&emsp;optNni = TRUE, # Optimise topology<br>
                 &emsp;&emsp;optInv = TRUE, # Optimise proportion of variable sites<br>
                 &emsp;&emsp;model = "JC", # Substitution model<br>
@@ -145,7 +145,7 @@
                 &emsp;&emsp;control=controls)<br><br>
 				
 				# Get the Maximum Likelihood tree<br>
-				mlTree <- fittingOutput$tree
+				mlTree &lt;- fittingOutput$tree
             </div>
 			
             <p>
@@ -155,7 +155,7 @@
             <div id="codeBlock">
                 
                 # Bootstrap the result of maximum likelihood<br>
-                bootstrapResults <- bootstrap.pml(<br>
+                bootstrapResults &lt;- bootstrap.pml(<br>
                 &emsp;&emsp;fittingOutput, # Use Maximium Likelihood settings on bootstrapped sequences<br>
                 &emsp;&emsp;bs = 100, # Number times to bootstrap sequences<br>
                 &emsp;&emsp;optNni = TRUE, # Use Nearest Neighbour Interchanges in tree building<br>
@@ -163,7 +163,7 @@
                     
                 # Get phylogenetic tree with bootstrap values<br>
                 # Returns phylogenetic tree with bootstrap values as node labels<br>
-                treeBS <- plotBS(<br>
+                treeBS &lt;- plotBS(<br>
                 &emsp;&emsp;fittingOutput$tree,<br>
                 &emsp;&emsp;bootstrapResults,<br>
                 &emsp;&emsp;p = 50, # Plot bootstrap values if node in >=50 bootstrap trees<br>

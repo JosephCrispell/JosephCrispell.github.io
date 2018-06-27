@@ -1,0 +1,137 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - RAxML</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Building a phylogenetic tree in R using RAxML&emsp;27-06-18</h1>
+            
+            <p>
+                I previously wrote a <a href="https://josephcrispell.github.io/BlogPosts/Phylogeny_20-02-18/Phylogeny_20-02-18.html">post</a> about building a phylogenetic tree in <a href="https://www.r-project.org/">R</a> using the <a href="https://cran.r-project.org/web/packages/phangorn/index.html">phangorn</a> package. In the current post, I'll be describing how to use the popular tree building tool, <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a>.<br><br>
+				
+				<a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> is a powerful and widely used phylogenetic tree building program. Here, I'll show how we can use <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> from within R.<br><br>
+				
+				First, you'll need to install <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a>. In Ubuntu you can type:
+            </p>
+            
+            <div id="codeBlock">
+                sudo apt update<br>
+				sudo apt install raxml
+            </div>
+            
+			<p>
+                On a Windows machine, you'll need to download the executable files from the github <a href="https://github.com/stamatak/standard-RAxML">page</a>. On a Mac machine, I found these <a href="http://www.sfu.ca/biology2/staff/dc/raxml/">instructions</a> that explain how to get things installed correctly.
+            </p>
+			
+            <p>
+                Once you've got <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> installed and running, interacting with it from within R is pretty staight forward - thanks to the <c>system()</c> function. First lets load the <a href="https://cran.r-project.org/web/packages/ape/index.html">ape</a> library, set our working directory and note where the FASTA file is:
+            </p>
+            
+            <div id="codeBlock">
+                # Load the ape library<br>
+				library(ape)<br><br>
+				
+				# Set the working directory - where RAxML will put its output files<br>
+				setwd("/home/josephcrispell/Desktop/")<br><br>
+				
+				# Note the FASTA file name and path<br>
+				fastaFile &lt;- "/home/josephcrispell/Desktop/test.fasta"				
+            </div>
+            
+			<p>
+                Next, we'll create some variables to be used for some of RAxML's settings:
+            </p>
+			
+			<div id="codeBlock">
+                # Build analysis name<br>
+				analysisName &lt;- "RaxML-R_27-06-18"<br><br>
+
+				# Set the input parameters for RAXML<br>
+				model &lt;- "GTRCAT" # The substitution model - this one uses no rate heterogenity<br>
+				seeds &lt;- sample(1:100000000, size=2, replace=FALSE) # For parsimony tree and boostrapping<br>
+				nBootstraps &lt;- 100<br>
+				nThreads &lt;- 4				
+            </div>
+			
+			<p>
+                Note that <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> can use multi-threading making it very quick and also we can run bootstraps to give us an idea of how confident we are in the structure of the tree. Also, interesting <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> requires seeds for building the phylogenetic tree and running the bootstrapping, I used the <c>sample()</c> function to generate these. Next we'll use these parameter settings to build a command:
+            </p>
+			
+			<div id="codeBlock">
+                command &lt;- paste("raxmlHPC-PTHREADS", # On WINDOWS use: /path/to/raxmlHPC-PTHREADS.exe<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -f a", # Algorithm: Rapid boostrap inference<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -N ", nBootstraps,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -T ", nThreads,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -m ", model, " -V", # -V means no rate heterogenity<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -p ", seeds[1], " -x ", seeds[2], # Parsimony and boostrapping seeds<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -n ", analysisName,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" -s ", fastaFile, sep="")			
+            </div>
+			
+			<p>
+                Above we simple built one long string of characters that includes all of the settings that we want to use in <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a>. With our command built we can easily run <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> using:
+            </p>
+			
+			<div id="codeBlock">
+                system(command, intern=TRUE) # intern=TRUE means any printed output will be returned	
+            </div>
+			
+			<p>
+                Lastly, we can find and read in the tree file produced by <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> using the following code:
+            </p>
+			
+			<div id="codeBlock">
+                # Get files in current working directory<br>
+				files &lt;- list.files()<br><br>
+
+				# Select the tree file with BS support values<br>
+				treeBSFile &lt;- files[grepl(files, pattern=paste("RAxML_bipartitions[.]", analysisName, sep="")) == TRUE]<br><br>
+
+				# Open the file<br>
+				treeBS &lt;- read.tree(treeBSFile)<br><br>	
+            </div>
+			
+			<p>
+                Note that all I did with the above code is search all the files in the working directory for the one that matched the boostrap results file. The boostrap results file starts with "RAxML_bipartitions".<br><br>
+				
+				Now we've built the phylogenetic tree, the world is our osyter! By using <a href="https://sco.h-its.org/exelixis/web/software/raxml/index.html">RAxML</a> you'll be able to analyse larger datasets quickly, much faster than you would be able to using the <a href="https://cran.r-project.org/web/packages/phangorn/index.html">phangorn</a> package in R. I'll admit it was a little tricky to get set up but once I got it working, I am saving oodles of time! If you're keen to get it working for yourself, the full script is available <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/RunRAXML_27-06-18.R">here</a>.
+            </p>
+            
+        </div>
+
+    </body>
+
+</html>
