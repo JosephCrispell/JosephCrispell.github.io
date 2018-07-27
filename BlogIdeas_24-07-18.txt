@@ -1,0 +1,26 @@
+Work:
+- Spoligotyping tool
+- Merging VCFs
+- Reading Newick format
+- Simulating phylogenies & transmission trees
+- Convex versus concave hull
+- LatLongs to X and Ys
+- SmithWaterman
+- Building an R package
+- Nucleotides to AAs
+- Ancestral state estimation in R
+- Consistency Index
+
+
+Home:
+- Fingerboard
+- Wheel truing frame
+- Changing name
+- 7 checks for purchasing a bike
+- Transporting fully assembled bike (clicktrans, shiply)
+- Bouncing ball
+- Bicycle diagram
+- Punch bag holder
+- Hibernation
+- Greenhouse
+- Tortoise houses
