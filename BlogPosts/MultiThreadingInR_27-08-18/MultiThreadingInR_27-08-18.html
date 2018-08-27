@@ -1,0 +1,155 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Multithreading in R</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+
+        </div>
+
+        <!-- Insert Text Body -->
+        <div id="mainText">
+
+            <br><br><br>
+
+            <h1>Multithreading in R&emsp;27-08-18</h1>
+
+            <p>
+                Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R. I previously wrote a post about multithreading in <a href="BlogPosts/MultiThreading_04-05-18/MultiThreading_04-05-18.html">Java</a>, but I thought it would be good to know how to do it in R as well.<br><br>
+
+                Multithreading basically means running multiple tasks at the same time. Most modern computers come with multiple cores: dual-core, quad-core, etc... Unfortunately, these cores aren't often used, I especially don't!<br><br>
+
+                Any independent task that you have to do alot should be multithreaded. For example, today I've randomly generated a large set of nucleotide sequences using this function:
+            </p>
+
+            <div id="codeBlock">
+
+              createRandomNucleotideAlignment &lt;- function(n, length){<br><br>
+
+              &emsp;&emsp;# Initialise a dataframe to store the sequences<br>
+              &emsp;&emsp;sequences &lt;- list()<br><br>
+
+              &emsp;&emsp;# Create each sequence<br>
+              &emsp;&emsp;for(i in 1:n){<br><br>
+
+              &emsp;&emsp;&emsp;&emsp;# Randomly sample nucleotides to create a sequence of nucleotides<br>
+              &emsp;&emsp;&emsp;&emsp;nucleotides &lt;- sample(c('A', 'C', 'G', 'T'), size=length, replace=TRUE)<br><br>
+
+              &emsp;&emsp;&emsp;&emsp;# Collapse the vector of characters (nucleotides) into single string<br>
+              &emsp;&emsp;&emsp;&emsp;sequences[[i]] &lt;- paste(nucleotides, collapse="")<br>
+              &emsp;&emsp;}<br><br>
+
+              &emsp;&emsp;return(sequences)<br>
+              }
+
+            </div>
+
+            <p>
+                The above function samples from the nucleotides <c>c('A', 'C', 'G', 'T')</c> to generate a random sequence that is then stored in a <c>list</c> called <c>sequences</c>.<br><br>
+
+                My task is to count the numbers of 'A's, 'C's, 'G's, and 'T's in each of a set of randomly generated sequences. Each sequence is independent and so the counting of the nucleotides in each could be done simultaneously.<br><br>
+
+                So let's get started with multithreading in R!
+            </p>
+
+            <div id="codeBlock">
+
+              # Load the parallel library<br>
+              library(parallel)<br><br>
+
+              # Get the number of threads in the current machine<br>
+              nThreads &lt;- detectCores()<br><br>
+
+              # Initialise the cluster of threads<br>
+              clusterOfThreads &lt;- makeCluster(nThreads)<br><br>
+
+              # Register the cluster of threads<br>
+              registerDoParallel(clusterOfThreads, cores=nThreads)
+
+            </div>
+
+            <p>
+                There is a little bit of set up! Firstly, I'm using the <c>parallel</c>, so that needs to be loaded. Then I used <c>detectCores()</c> function to find out how many threads I have on my computer (12). Then I use <c>makeCluster()</c> and <c>registerDoParallel()</c> to make and register my cluster of threads.<br><br>
+
+                Next I wrote a simple function that, given a sequence, will count the number of times each nucleotide is present:
+            </p>
+
+            <div id="codeBlock">
+
+              calculateNucleotideFrequencies &lt;- function(sequence){<br><br>
+
+              &emsp;&emsp;# Initialise a list to store the nucleotide counts<br>
+              &emsp;&emsp;frequencies &lt;- list('A'=0, 'C'=0, 'G'=0, 'T'=0)<br><br>
+
+              &emsp;&emsp;# Split the sequence into its nucleotides<br>
+              &emsp;&emsp;nucleotides &lt;- strsplit(sequence, split="")[[1]]<br><br>
+
+              &emsp;&emsp;# Count the number of times each nucleotide appears in the given sequence<br>
+              &emsp;&emsp;for(nucleotide in nucleotides){<br>
+              &emsp;&emsp;&emsp;&emsp;frequencies[[nucleotide]] &lt;- frequencies[[nucleotide]] + 1<br>
+              &emsp;&emsp;}<br><br>
+
+              &emsp;&emsp;return(frequencies)<br>
+              }
+
+            </div>
+
+            <p>
+                With the above function, the sequence is split back into nucleotides, and then each nucleotide is examined and the appropriate count is increased. I used a <c>list</c> to store the counts, so that I could each nucleotide as a key.<br><br>
+
+                So we've initialise our cluster and we've got a couple of functions <c>createRandomNucleotideAlignment()</c> and <c>calculateNucleotideFrequencies()</c> to create and examine a set of sequences. So here's how to count those nucleotides in parallel:
+            </p>
+
+            <div id="codeBlock">
+
+              # Create a random set of nucleotide sequences<br>
+              sequences &lt;- createRandomNucleotideAlignment(300, 100000)<br><br>
+
+              # Use multiple threads to count how many times each nucleotide appears in each sequence<br>
+              frequences &lt;- clusterApply(cl=clusterOfThreads,<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;x=sequences,<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;fun=calculateNucleotideFrequencies)<br><br>
+
+              # REMEMBER to close the cluster of threads<br>
+              stopCluster(clusterOfThreads)
+
+            </div>
+
+            <p>
+                The <c>clusterApply()</c> function will automatically assign each of the sequences in <c>sequences</c> to a 100 threads, 12 of which will be run straight away and the rest will be queued. A list of nucleotide frequencies is returned, with each position corresponding the sequence in the same position of <c>sequences</c>.<br><br>
+
+                I spent ages trying to think of a good example to demonstrate the ability of multithreading, and I don't really think I found one! Here, I created very large sequences and with these large sequenes it is faster to count the nucleotides on multiple threads. <br><br>
+
+                Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R">here</a>.
+            </p>
+
+        </div>
+
+    </body>
+
+</html>
