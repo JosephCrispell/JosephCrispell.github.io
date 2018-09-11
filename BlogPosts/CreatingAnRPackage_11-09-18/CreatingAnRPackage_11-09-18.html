@@ -1,0 +1,208 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Creating an R package</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+
+        </div>
+
+        <!-- Insert Text Body -->
+        <div id="mainText">
+
+            <br><br><br>
+
+            <h1>Creating an R package&emsp;11-09-18</h1>
+
+            <p>
+                Today I'm going to write about creating an <a href="https://www.r-project.org/">R</a> package. It's very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:<br>
+                <ul>
+                  <li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a></li>
+                  <li><a href="http://r-pkgs.had.co.nz/description.html">http://r-pkgs.had.co.nz/description.html</a></li>
+                </ul>
+            </p>
+            <p>
+                <b>Why bother?</b> If you're me and you still haven't embraced creating your own R packages then you'll be asking this question. It is going to save you SO MUCH time and make your code cleaner and easier to use. Get on with it Joe!<br><br>
+
+                <b>Why does it save you time?</b> Functions in an R package are in one place and documented. Packages are easy for other people to install and use.<br><br>
+
+                Lastly, packages are the building blocks of the R world. By creating your own, you've joined the community of people continuing to make R the amazing language that it is. So let's get started!<br><br>
+
+                Firstly, you'll need to install and load a couple of packages:
+            </p>
+
+            <div id="codeBlock">
+
+              # Install necessary packages<br>
+              install.packages("devtools")<br>
+              install.packages("digest")<br>
+              devtools::install_github("klutometis/roxygen")<br><br>
+
+              # Load them<br>
+              library("devtools")<br>
+              library("roxygen2")
+            </div>
+
+            <p>
+                Time to create the package folder:
+            </p>
+
+            <div id="codeBlock">
+
+              # Create the package - building the folder for the directory on your computer<br>
+              packageDirectory &lt;- "/home/josephcrispell/Desktop/Research/addTextLabels/"<br>
+              create(packageDirectory)<br>
+              setwd(packageDirectory)<br>
+            </div>
+
+            <p>
+                I'm creating an R package for the code I wrote for <a href="../OverlayText_03-04-18/OverlayText_03-04-18.html">avoiding overlapping text labels</a> in an R plot. My package is going to be called <c>addTextLabels</c>, which is also the name of my main function.<br><br>
+
+                So, we've created our package directory. If you navigate to the directory you'll find the following:
+                <ul>
+                  <li>R/</li>
+                  <ul>
+                    <li>The directory where you are going to put the code for your R functions. Each function can have it's own file ([functionName].R), or you can chuck all your functions into a single file ([packageName].R)</li>
+                  </ul>
+                  <li>addTextLabels.Rproj</li>
+                  <ul>
+                    <li>Some information for R about your package</li>
+                  </ul>
+                  <li>DESCRIPTION</li>
+                  <ul>
+                    <li>Take a look, it's got the information about your package. See the contents of this file below.</li>
+                  </ul>
+                  <li>NAMESPACE</li>
+                  <ul>
+                    <li>A file telling R which functions to provide documentation for with the R package.</li>
+                  </ul>
+                  <li>.gitignore</li>
+                  <ul>
+                    <li>A file to be used if you're putting your package on github, as the name suggests it's what you don't want to put on github</li>
+                  </ul>
+                  <li>.Rbuildignore</li>
+                  <ul>
+                    <li>A file noting what is to be ignored when you're building the R package.</li>
+                  </ul>
+                </ul>
+            </p>
+
+            <p>
+                The DESCRIPTION file. It has the following lines, which I have edited for my package:<br><br>
+                &emsp;&emsp;Package: addTextLabels<br>
+                &emsp;&emsp;Title: Add non-overlapping text labels to an existing plot<br>
+                &emsp;&emsp;Version: 0.0.0.9000<br>
+                &emsp;&emsp;Authors@R: person("Joseph", "Crispell", email = "JosephCrispell@gmail.com", role = "cre")<br>
+                &emsp;&emsp;Description: Plots non-overlapping text labels onto an existing plot<br>
+                &emsp;&emsp;Depends: R (>= 3.4.4)<br>
+                &emsp;&emsp;License: GPL-3<br>
+                &emsp;&emsp;Encoding: UTF-8<br>
+                &emsp;&emsp;LazyData: true<br><br>
+
+                Right, back to working on the package. The first thing we want to do is add some functions. Here is a general format for a function:
+            </p>
+
+            <div id="codeBlock">
+
+              #' Short title for function<br>
+              #'<br>
+              #' Longer description of the function<br>
+              #' @param first An object of class "?". Describe each input parameter<br>
+              #' @param second An object of class "?". Describe each input parameter<br>
+              #' @keywords Add some good keywords for your function here<br>
+              #' @return Returns an object of class "?". Describe what the function returns<br>
+              #' @export<br>
+              #' @examples<br>
+              #' # Add some code here illustrating how to use the function<br>
+              functionName &lt;- function(first, second){<br><br>
+                &emsp;&emsp;# Some code here<br><br>
+                &emsp;&emsp;return(something)<br>
+              }
+            </div>
+
+            <p>
+                The code for the function is the same as for any function, but there is lot's of information about the function above it. The weird <c>#'</c> is a special comment that roxygen recognises. Roxygen is the package that we're using for our build.<br><br>
+
+                Function can be saved in a R script and put in the <c>R/</c> directory. I've created a single R script with all the functions I need for my <c>addTextLabels</c> package.<br><br>
+
+                Flip! It takes a wee while to add the roxygen descriptions above each function - documentation is really important and useful though so it's worth it!<br><br>
+
+                Once you're finished adding your functions, save the file and run the following code to update the package:
+            </p>
+
+            <div id="codeBlock">
+              setwd(packageDirectory)<br>
+              document()
+            </div>
+
+            <p>
+                And you're done!! It is amazingly straight forward and I should be doing it with all my R code. Here are a few notes:
+                <ul>
+                  <li>If you're using functions from other packages in your own functions, use the following format: <c>packageName::functionName()</c>. Also, add <c>@import packageName</c> tag into the roxygen information.</li>
+                  <li>If you've got an internal function, a function that is used within your package but you don't want others to see it or use it. Remove the <c>@export</c> tag and add <c>@keywords internal</c>.</li>
+                  <li>If you're using code in your roxygen information lines, use the <c>\code{}</c> container</li>
+                  <li>If you want to attach data to your package, do the following:</li>
+                  <ul>
+                    <li>Save each object of interest alone in a file: <c>objectName.RData</c></li>
+                    <li>Create a directory: <c>/data/</c> and put all the RData files in it</li>
+                    <li>Add roxygen information into the functions file as if it were a function using the following:</li>
+                    <div id="codeBlock">
+                      #' Description of the object<br>
+                      #'<br>
+                      #' @name objectName<br>
+                      #' @docType data<br>
+                      #' @author Joseph Crispell \email{crispelljoseph@@gmail.com}<br>
+                      #' @keywords data<br>
+                      NULL
+                    </div>
+                    <li>Any data attached to a package can be loaded using <c>data("objectName")</c></li>
+                  </ul>
+                </ul>
+            </p>
+
+            <p>
+                I am now hosting my <c>addTextLabels</c> R package on github (I created a <a href="https://github.com/JosephCrispell/addTextLabels">repository</a> with all my package files in it). You can install it and give it a go with the following code:
+            </p>
+
+            <div id="codeBlock">
+              # Load the devtools library<br>
+              library("devtools")<br><br>
+
+              # Install the addTextLabels package<br>
+              install_github("JosephCrispell/addTextLabels")
+            </div>
+
+            <p>
+                So that's how to create an R package. Start converting your R scripts now!
+            </p>
+
+        </div>
+
+    </body>
+
+</html>
