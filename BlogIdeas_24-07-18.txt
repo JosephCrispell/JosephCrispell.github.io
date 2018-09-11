@@ -5,7 +5,6 @@ Work:
 - Convex versus concave hull
 - LatLongs to X and Ys
 - SmithWaterman
-- Building an R package **
 - Nucleotides to AAs
 - Ancestral state estimation in R
 - Consistency Index
