@@ -56,13 +56,12 @@
 
                 It took me a wee while to get my method to work but the final version works with the following steps:<br>
                 <ol>
-                    <li>Create a scatter plot without labels</li>
+                    <li>Create a scatter plot without labels (or any plot that you want to overlay points onto)</li>
                     <li>Create a set of points on a grid, within the limits of the scatter plot (use <c>par("usr")</c> to get the axis limits of the scatter plot), as alternative label locations</li>
                     <li>Remove any of the alternative label locations that fall within the space designated for each point's label (I used the <c>strheight()</c> and <c>strwidth()</c> functions for this)</li>
-                    <li>Add labels to the scatter plot as long as they don't overlap with any other point's label</li>
-                    <li>For those points whose label overlaps with anothers:</li>
+                    <li>Add labels to the scatter plot as long as they don't overlap with any other point's label. NOTE: can force all labels to be relocated, to avoid labels overlapping with points</li>
+                    <li>For those points whose label overlaps with anothers, examine each alternative location from closest to farthest until you find one that won't overlap with any plotted labels</li>
                     <ul>
-                        <li>Choose the closest location from the alternative label locations</li>
                         <li>Add a text label at the chosen location and plot a line back to the original point</li>
                         <li>Remove any of the alternative label locations that would overlap with the chosen location and its label</li>
                         <li>Change the point's coordinates to be those of the alternative location</li>
