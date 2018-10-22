@@ -1,0 +1,99 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - FASTQ download</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Downloading raw sequencing data (FASTQ) files&emsp;19-10-18</h1>
+            
+            <p>
+                It's been a busy few weeks and a new blog post is overdue. I'm currently travelling up north to visit Joanna's family in Portstewart, we going to meet our new niece Evie Robinson!!<br><br>
+
+                While I'm on the bus, I thought I'd write a quick post about how to download FASTQ files from <a href="https://ncbi.nlm.nih.gov.html">NCBI</a> (National Center for Biotechnology Information). FASTQ files are a type of file that stores raw sequencing data. NCBI is an amazing online database that stores almost all sequence data ever produced!! Importantly it is free and accessible to all :-).<br><br>
+
+                A few weeks ago I was looking for some sequence data to test my new <a href="https://github.com/JosephCrispell/homoplasyFinder/blob/master/">software</a>. I found an interesting <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0189838">study</a> that kindly uploaded their data to NCBI and I needed to work out how to download the raw sequencing data files (FASTQ files).<br><br>
+
+                So here goes...<br><br>
+
+                After much research online I found an easy, but slow, method to download FASTQ files using <a href="https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump">fasterq-dump</a>, which is part of NCBI's <a href="https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/">sratoolkit</a>. First thing you'll need to do is download and install the sratoolkit:
+            </p>
+            
+            <div id="codeBlock">
+            	# Unpack the sratoolkit<br>
+                tar -xvzf sratoolkit.current-ubuntu64.tar.gz
+            </div>
+            
+			<p>
+                Once unpacked, fasterq-dump can be found in the following folder: <c>path/to/sratoolkit.X.X.X-ubuntu64/bin/</c>. Then you can add all the sratoolkit tools into your path variable:
+            </p>
+
+            <div id="codeBlock">
+            	# Add sratoolkit tools MUMmer to path variable - add code below into ~/.bashrc file<br>
+				PATH=$PATH:/path/to/sratoolkit.X.X.X-ubuntu64/bin/
+            </div>
+
+            <p>
+                Then to download the single pair of FASTQ files (forward and reverse sequence data) you can use the following command:
+            </p>
+
+            <div id="codeBlock">
+            	# Download the FASTQ files associated with a single ACCESSION<br>
+                fasterq-dump [ACCESSION] --outdir . --progress --split-files --threads 8
+            </div>
+
+            <p>
+                To explain the input arguments:<br>
+                <ul>
+  					<li>The first argument is the ACCESSION number for the sequence data. These seem to come in different formats - and many don't work :-(</li>
+  					<li><c>--outdir .</c> The output directory where you want to store the sequence data. Here I chose "." which means the current directory.</li>
+  					<li><c>--progress</c> Provide progress information. Useful since the download is quite slow!!</li>
+  					<li><c>--split-files</c> Return the forward and reverse sequence data separately</li>
+  					<li><c>--threads 8</c> Use 8 threads to download the data. fasterq-dump uses multiple threads to try and speed up the downloading.</li>
+				</ul> 
+            </p>
+			
+			<p>
+                If you have a whole load of files to download at one time you can put the above command into a <c>for</c> loop and feed each different accession number into the command. I did this in the following <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/ProcessingPipeline/DownloadFASTQsUsingSRAToolkit_16-08-18.sh">script</a>.<br><br>
+
+                Hopefully the above is useful to you. I found it surprisingly difficult to work out how to do, so I've written this post to make it easier in the future. Meeting Evie was amazing, such a beautiful and content baby!! Joanna and I are just heading back to Dublin now :-).
+            </p>
+            
+            
+        </div>
+
+    </body>
+
+</html>

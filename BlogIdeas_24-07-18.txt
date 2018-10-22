@@ -12,7 +12,8 @@ Work:
 - Downloading FASTQ files
 - New Zealand paper **
 - Updating M. bovis annotations - CHECK with Steve
-
+- Inactivity timer on webpage (also could answer stackoverflow question here: https://stackoverflow.com/questions/667555/how-to-detect-idle-time-in-javascript-elegantly)
+- 60 second description of my work
 
 Home:
 - Hand loom **
@@ -27,3 +28,5 @@ Home:
 - Hibernation
 - Greenhouse **
 - Tortoise houses **
+- Ginger beer
+- Making a long board

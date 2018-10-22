@@ -1,0 +1,18 @@
+# TO DO list for website design
+# Joseph Crispell
+# 03-09-18
+
+Complete website revamp
+* Make it rain matrix style code: https://medium.freecodecamp.org/canmaking-it-rain-code-matrix-style-ec6e1386084e
+* Background animation could be grid of circles that a simulation runs on
+* Change to dark theme
+* Redesign code block
+    - Line numbers
+    - Key words
+    - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
+    - https://idiallo.com/blog/javascript-syntax-highlighter
+* Think about using IDE: https://blog.capterra.com/best-free-html-editors/
+
+Cool website designs:
+  https://www.gitkraken.com/
+  http://www.brennanco.ie/
