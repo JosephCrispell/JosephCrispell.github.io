@@ -107,7 +107,7 @@
                 &emsp;&emsp;&emsp;&emsp;// Create each thread<br>
                 &emsp;&emsp;&emsp;&emsp;for(int i = 0; i &lt; numberOfThreads; i++){<br><br>
 
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Create and start a thread to look at the current position<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Create and start the current thread<br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;thread[i] = new MyThread("thread-" + i, input);<br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;thread[i].start();<br>
                 &emsp;&emsp;&emsp;&emsp;}<br><br>
