@@ -108,8 +108,8 @@
                 &emsp;&emsp;&emsp;&emsp;for(int i = 0; i &lt; numberOfThreads; i++){<br><br>
 
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Create and start the current thread<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;thread[i] = new MyThread("thread-" + i, input);<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;thread[i].start();<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;threads[i] = new MyThread("thread-" + i, input);<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;threads[i].start();<br>
                 &emsp;&emsp;&emsp;&emsp;}<br><br>
 
                 &emsp;&emsp;&emsp;&emsp;// Check the threads are finished<br>
