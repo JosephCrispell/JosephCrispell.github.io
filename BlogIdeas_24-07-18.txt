@@ -14,6 +14,8 @@ Work:
 - Updating M. bovis annotations - CHECK with Steve
 - Inactivity timer on webpage (also could answer stackoverflow question here: https://stackoverflow.com/questions/667555/how-to-detect-idle-time-in-javascript-elegantly)
 - 60 second description of my work
+- Boxplot in R (see R course first lecture)
+- Build new jitter function for adding points to boxplot
 
 Home:
 - Hand loom **
