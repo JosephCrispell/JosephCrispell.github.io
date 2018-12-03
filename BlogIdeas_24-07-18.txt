@@ -32,3 +32,4 @@ Home:
 - Tortoise houses **
 - Ginger beer
 - Making a long board
+- Spell checker code: https://stackoverflow.com/questions/346757/how-do-spell-checkers-work
