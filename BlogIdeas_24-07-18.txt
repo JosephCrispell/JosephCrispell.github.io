@@ -1,24 +1,24 @@
 Work:
-- Spoligotyping tool
+- Spoligotyping tool 
 - Merging VCFs
 - Simulating phylogenies & transmission trees
 - Convex versus concave hull
 - LatLongs to X and Ys
-- SmithWaterman
+- SmithWaterman - make a video
 - Nucleotides to AAs
 - Ancestral state estimation in R
 - Consistency Index
 - Working with RJava
 - Downloading FASTQ files
 - New Zealand paper **
-- Updating M. bovis annotations - CHECK with Steve
-- Inactivity timer on webpage (also could answer stackoverflow question here: https://stackoverflow.com/questions/667555/how-to-detect-idle-time-in-javascript-elegantly)
+- Updating M. bovis annotations - CHECK with Steve - Could just talk about transferring annotations? **
 - 60 second description of my work
-- Boxplot in R (see R course first lecture)
 - Build new jitter function for adding points to boxplot
+- SIR simulation model
+- Work on code block code
 
 Home:
-- Hand loom **
+- Hand loom ** Need photos of threaded and in use
 - Fingerboard **
 - Wheel truing frame
 - Changing name **
@@ -26,10 +26,15 @@ Home:
 - Transporting fully assembled bike (clicktrans, shiply)
 - Bouncing ball
 - Bicycle diagram
-- Punch bag holder **
+- Punch bag holder ** Need photos and measurements
 - Hibernation
 - Greenhouse **
 - Tortoise houses **
 - Ginger beer
 - Making a long board
 - Spell checker code: https://stackoverflow.com/questions/346757/how-do-spell-checkers-work
+- New Zealand trip
+
+
+
+
