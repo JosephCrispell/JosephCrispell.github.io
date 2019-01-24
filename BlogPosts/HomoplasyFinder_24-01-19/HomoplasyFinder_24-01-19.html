@@ -1,0 +1,89 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - HomoplasyFinder</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+
+        </div>
+
+        <!-- Insert Text Body -->
+        <div id="mainText">
+
+            <br><br><br>
+
+            <h1>HomoplasyFinder&emsp;24-01-18</h1>
+
+            <p>
+              On Monday our article describing <i>HomoplasyFinder</i> was published <a href="https://mgen.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000245">here</a>. <i>HomoplasyFinder</i> is a simple tool that can be used to identify homoplasies on a phylogeny. In this post I'm writing a little about how this article came about, if you're wanting to use <i>HomoplasyFinder</i> then I'd go to the <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">wiki</a><br><br>
+
+              Firstly, lets quickly define a phylogeny and a homoplasy.<br><br>
+
+              A phylogeny describes the evolutionary relationships between a set of genetic sequences. There is a little more information in my post <a href="../Phylogeny_20-02-18/Phylogeny_20-02-18.html">here</a>. A homoplasy is a trait that is shared between two tips on the phylogeny that wasn't inherited from their common ancestor. A really good example of a homoplasy is flight, the ability to fly has evolved multiple times independently: in birds, bats, insects, and birds.
+            </p>
+
+            <img src="HomoplasyFinder_Thumbnail.png" width="25%" hspace="0.5%" vspace="1%">
+
+            <p>
+              If we look at the phylogeny above. Here, the homoplasious trait we're interested in colour. Colour is homoplasious because all the reds aren't together, they are found in different areas of the phylogeny.<br><br>
+
+              Next, why are homoplasies important?<br><br>
+
+              Homoplasies can be created naturally through evolutionary changes or could be the result of an error in a genetic sequence. If they're natural, homoplasies can indicate an advantageous change, for example a mutation that confers resistance to an antibiotic. If the homoplasy is caused by an error, recognising this and removing the error is important.<br><br>
+
+              OK, back to the manuscript.<br><br>
+
+              Last year I thought it would be useful to have a fast tool to identify homoplasies. After a quick look (I should have spent longer!), I couldn't find a tool so I decided to created my own.<br><br>
+
+              I spent a bit of time trying to figure out how to make my tool so that it could automatically identify homoplasies and I came up with what I thought was a pretty good solution. I spent a wee bit of time writing the tool (which became <i>HomoplasyFinder</i>) and then spent much longer figuring out whether it worked!<br><br>
+
+              To my surprise, it did work and, happy with my creation, I proceeded to create an R package and write an article. I submitted my article and month later all my hopes were dashed!<br><br>
+
+              The article was rejected...<br><br>
+
+              After a wee bit (a lot) of grumping, I realised that my manuscript was rejected for a very good reason. I hadn't read about the consistency index - a beautifully simple method for identifying homoplasies that was defined in the 1970s. Well, I had read about it but I hadn't understood it! The consistency index is a measure of how consistent each site in a set of genetic sequences is with a given phylogeny. The consistency index can be thought of as a measure of how homoplasious a site is<br><br>
+
+              I took a break from <i>HomoplasyFinder</i>, trying to bury this embarrassing affair.<br><br>
+
+              Then after a month or two, I decided to re-make <i>HomoplasyFinder</i> using the consistency index. I also had a thorough look for tools that could identify homoplasies and I found a few.<br><br>
+
+              Unsurprisingly, my new and improved <i>HomoplasyFinder</i> turned out to be much faster than my previous version and, surprisingly, it was also faster, after some improvements, than the tools I found that did the same thing! (This still worries me a little, maybe I am cheating in some way!)<br><br>
+
+              So, with renewed hope, I updated my manuscript and submitted to a different journal. Following some very helpful reviewers comments it got published!!<br><br>
+
+              And that is the story of <i>HomoplasyFinder</i>. If you're keen to use <i>HomoplasyFinder</i> then take a look at the <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">wiki</a>.<br><br>
+
+              Whilst making <i>HomoplasyFinder</i> was a bumpy journey, I'm pretty happy with how it turned out, and even if I didn't end up publishing my manuscript, I certainly learnt an awful lot along the way!
+            </p>
+
+
+        </div>
+
+    </body>
+
+</html>
