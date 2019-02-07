@@ -4,7 +4,7 @@ Work:
 - Simulating phylogenies & transmission trees
 - Convex versus concave hull
 - LatLongs to X and Ys
-- SmithWaterman - make a video
+- SmithWaterman - make a video - make it in R
 - Nucleotides to AAs
 - Ancestral state estimation in R
 - Consistency Index

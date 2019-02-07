@@ -11,3 +11,4 @@ Ideas for new packages:
 - Jitter on boxplot - symmetric jitter
 - Converting between latLongs and XY coordinates
 - Comparing phylogenies - tangle plot
+- PeakeR - a method to identify local maxima
