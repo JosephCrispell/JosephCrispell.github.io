@@ -13,7 +13,6 @@ Work:
 - New Zealand paper **
 - Updating M. bovis annotations - CHECK with Steve - Could just talk about transferring annotations? **
 - 60 second description of my work
-- Build new jitter function for adding points to boxplot
 - SIR simulation model
 - Work on code block code
 
@@ -34,6 +33,10 @@ Home:
 - Making a long board
 - Spell checker code: https://stackoverflow.com/questions/346757/how-do-spell-checkers-work
 - New Zealand trip
+- Create a twitter bot
+	* Retweets, comments and likes for a selection of topics
+	* Follows individuals who tweet a certain amount of times about a topic
+	* Spider to find articles of interest to tweet (searches news sites looking for keywords)
 
 
 
