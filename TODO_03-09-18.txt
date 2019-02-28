@@ -5,6 +5,7 @@
 Complete website revamp
 * Make it rain matrix style code: https://medium.freecodecamp.org/canmaking-it-rain-code-matrix-style-ec6e1386084e
 	- Drawing canvas tutorials: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API#Guides_and_tutorials
+	- Making the canvas the background of the webpage: https://tympanus.net/Development/AmbientCanvasBackgrounds/index2.html
 * Background animation could be grid of circles that a simulation runs on
 * Change to dark theme
 * Redesign code block
