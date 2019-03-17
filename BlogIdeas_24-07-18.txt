@@ -14,7 +14,6 @@ Work:
 - Updating M. bovis annotations - CHECK with Steve - Could just talk about transferring annotations? **
 - 60 second description of my work
 - SIR simulation model
-- Work on code block code
 
 Home:
 - Hand loom ** Need photos of threaded and in use

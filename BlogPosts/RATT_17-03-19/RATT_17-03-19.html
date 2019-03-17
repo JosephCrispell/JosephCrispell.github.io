@@ -1,0 +1,107 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - RATT</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Transferring annotations from one genome onto another using RATT&emsp;17-03-19</h1>
+            
+            <p>
+                One of the first projects I was involved in when Joanna and I moved to Dublin was investigating the annotations of the <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_002945.4?report=genbank"><i>Mycobacterium bovis</i> reference genome</a>.<br><br>
+
+                <i>M. bovis</i> is a bacteria that causes bovine tuberculosis, a disease found in cattle that I spend almost all my time studying!<br><br>
+
+                The reference genome for <i>M. bovis</i> was sourced from an infected cow in southwest England in the 1997. This genome was sequenced at a very high quality and I use it to compare all the <i>M. bovis</i> sequence data that I analyse. The annotations for the reference genome detail the start and end of every known part (genes, repeat regions, and lots of other things) and its function.<br><br>
+
+                When I was investigating the <i>M. bovis</i> genome, I needed to transfer the annotations from a previously sequenced version of this same genome onto the current one. I used the Rapid Annotation Transfer Tool (<a href="http://ratt.sourceforge.net/">RATT</a>), a handy but quite tricky tool to use.<br><br>
+
+                Since it was quite hard to get RATT to work, and I'll probably need it sometime in the future, I thought I would write a quick post about how I used it.<br><br>
+
+                First step, installation (in Ubuntu - sorry to Windows and Mac users!):
+            </p>
+            
+            <div id="codeBlock">
+                # Install subversion - we'll need it to download RATT<br>
+                sudo apt install subversion<br><br>
+
+                # Retrieve the RATT files<br>
+                svn co "https://svn.code.sf.net/p/ratt/code/" ratt-code<br><br>
+
+                # Install csh - a type of programming language used by RATT<br>
+                sudo apt install csh<br><br>
+
+                # Download tar file for MUMmer3.0 from <a href="https://sourceforge.net/projects/mummer/files/">here</a><br>
+                tar -xvzf MUMmerX.X.tar.gz<br>
+                cd MummerX.X<br>
+                make check<br>
+                make install<br><br>
+
+                # Add MUMmer to path variable - add this code into ~/.bashrc file as well so you don;t haev to keep typing it!<br>
+                PATH=$PATH:/path/to/MummerX.X/<br><br>
+
+                # Create the global variables necessary for RATT - also add this code into your ~/.bashrc file<br>
+                RATT_HOME=/path/to/ratt-code/<br>
+                export RATT_HOME<br>
+                RATT_CONFIG=$RATT_HOME""RATT.config_bac<br>
+                export RATT_CONFIG
+            </div>
+
+            <p>
+                Flip, alot to do to get it installed! I had forgotten!<br><br>
+
+                One thing to note, to get RATT to work I had to delete the line (no. 229 for me) containing <c>defined(...)</c>, as the "defined()" is only used by older versions of <c>perl</c> - the programming language that RATT is written in.<br><br>
+
+                Next, transferring the annotations from one genome (A) to another (B):
+            </p>
+
+            <div id="codeBlock">
+                # Create a folder to store the annotations for genome A - you need to call it embl<br>
+                mkdir embl<br>
+                mv /path/to/annotationsForGenomeA.embl embl/<br><br>
+
+                # Run RATT program to transfer annotations from genome A to genome B<br>
+                $RATT_HOME/start.ratt.sh embl /path/to/genomeA.fasta YourOwnRunIdentifier Assembly
+            </div>
+            
+            <p>
+                You'll notice that RATT likes the annotations in <c>embl</c> (GenBank) format. You can download this type of file from <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_002945.4?report=genbank">NCBI</a>. It is quite an annoying format but it has all the information you need.<br><br>
+
+                So that's how you can transfer annotations from one genome to another using RATT. Take a look at the <a href="http://ratt.sourceforge.net/">RATT</a> page to find out how it works and what else it can do.
+            </p>
+            
+        </div>
+    </body>
+</html>
