@@ -15,7 +15,6 @@ Work:
 - 60 second description of my work
 - SIR simulation model
 - Making a GANTT chart in R
-- Overlapping histograms: https://stackoverflow.com/questions/3541713/how-to-plot-two-histograms-together-in-r
 
 Home:
 - Hand loom ** Need photos of threaded and in use
