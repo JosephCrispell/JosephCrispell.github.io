@@ -5,7 +5,6 @@
 TO DO:
 - Object orientated javascript simulation
 - html elements in front of canvas: http://www.html5gamedevs.com/topic/27365-solved-canvas-on-whole-window-and-behind-all-html-elements/
-- Change background colour of website to black - looks much cooler!
 
 Complete website revamp
 * Make it rain matrix style code: https://medium.freecodecamp.org/canmaking-it-rain-code-matrix-style-ec6e1386084e
