@@ -5,6 +5,8 @@
 TO DO:
 - Object orientated javascript simulation
 - html elements in front of canvas: http://www.html5gamedevs.com/topic/27365-solved-canvas-on-whole-window-and-behind-all-html-elements/
+- Re-design code block
+- Have main blocks written in markdown? https://stackoverflow.com/questions/29368902/how-can-i-wrap-my-markdown-in-an-html-div
 
 Complete website revamp
 * Make it rain matrix style code: https://medium.freecodecamp.org/canmaking-it-rain-code-matrix-style-ec6e1386084e

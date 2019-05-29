@@ -81,7 +81,7 @@
             </div>
 
             <p>
-                I'm creating an R package for the code I wrote for <a href="../OverlayText_03-04-18/OverlayText_03-04-18.html">avoiding overlapping text labels</a> in an R plot. My package is going to be called <c>plotteR</c>.<br><br>
+                I'm creating an R package for the code I wrote for <a href="../OverlayText_03-04-18/OverlayText_03-04-18.html">avoiding overlapping text labels</a> in an R plot. My package is going to be called <c>basicPlotteR</c>.<br><br>
 
                 So, we've created our package directory. If you navigate to the directory you'll find the following:
                 <ul>
@@ -114,7 +114,7 @@
 
             <p>
                 The DESCRIPTION file. It has the following lines, which I have edited for my package:<br><br>
-                &emsp;&emsp;Package: plotteR<br>
+                &emsp;&emsp;Package: basicPlotteR<br>
                 &emsp;&emsp;Title: A collection of tools to help with base R plotting<br>
                 &emsp;&emsp;Version: 0.0.0.9000<br>
                 &emsp;&emsp;Authors@R: person("Joseph", "Crispell", email = "JosephCrispell@gmail.com", role = "cre")<br>
@@ -148,7 +148,7 @@
             <p>
                 The code for the function is the same as for any function, but there is lot's of information about the function above it. The weird <c>#'</c> is a special comment that roxygen recognises. Roxygen is the package that we're using for our build.<br><br>
 
-                Functions can be saved in a R script and put in the <c>R/</c> directory. I've created a single R script for each of the tools in my <c>plotteR</c> package.<br><br>
+                Functions can be saved in a R script and put in the <c>R/</c> directory. I've created a single R script for each of the tools in my <c>basicPlotteR</c> package.<br><br>
 
                 Flip! It takes a wee while to add the roxygen descriptions above each function - documentation is really important and useful though so it's worth it!<br><br>
 
@@ -186,15 +186,15 @@
             </p>
 
             <p>
-                I am now hosting my <c>plotteR</c> R package on github (I created a <a href="https://github.com/JosephCrispell/plotteR">repository</a> with all my package files in it). You can install it and give it a go with the following code:
+                I am now hosting my <c>basicPlotteR</c> R package on github (I created a <a href="https://github.com/JosephCrispell/basicPlotteR">repository</a> with all my package files in it). You can install it and give it a go with the following code:
             </p>
 
             <div id="codeBlock">
               # Load the devtools library<br>
               library("devtools")<br><br>
 
-              # Install the plotteR package<br>
-              install_github("JosephCrispell/plotteR")
+              # Install the basicPlotteR package<br>
+              install_github("JosephCrispell/basicPlotteR")
             </div>
 
             <p>

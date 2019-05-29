@@ -40,7 +40,7 @@
             <h1>A quick post about my new R function: spreadPoints()&emsp;07-02-19</h1>
 
             <p>
-                I've created a new <a href="https://www.r-project.org/">R</a> function called <c>spreadPoints</c>, in my <c>plotteR</c> package.<br><br>
+                I've created a new <a href="https://www.r-project.org/">R</a> function called <c>spreadPoints</c>, in my <c>basicPlotteR</c> package.<br><br>
 
                 The <c>spreadPoints()</c> function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. Here it is at work in R:
             </p>
@@ -50,9 +50,9 @@
                 # Install and load the devtools package<br>
                 install.packages("devtools")<br>
 
-                # Install and load the plotteR package<br>
-                devtools::install_github("JosephCrispell/plotteR")<br>
-                library(plotteR)<br><br>
+                # Install and load the basicPlotteR package<br>
+                devtools::install_github("JosephCrispell/basicPlotteR")<br>
+                library(basicPlotteR)<br><br>
 
                 # Generate some example points - drawn from exponential distribution<br>
                 values &lt;- rnorm(n=50)<br><br>
@@ -123,7 +123,7 @@
             <img src="SpreadPoints_Thumbnail.png" width="75%" hspace="0.5%" vspace="1%">
 
             <p>
-                A pretty handy function for me at least, if you're interested in the code behind <c>spreadPoints()</c>, take a look in its <a href="https://github.com/JosephCrispell/plotteR/blob/master/R/spreadPoints.R">repository</a> on github.
+                A pretty handy function for me at least, if you're interested in the code behind <c>spreadPoints()</c>, take a look in its <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/spreadPoints.R">repository</a> on github.
             </p>
 
         </div>

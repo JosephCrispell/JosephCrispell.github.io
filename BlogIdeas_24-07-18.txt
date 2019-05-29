@@ -17,6 +17,7 @@ Work:
 - Making a GANTT chart in R
 
 Home:
+- Bubble sort versus merge sort
 - Hand loom ** Need photos of threaded and in use
 - Fingerboard **
 - Wheel truing frame
