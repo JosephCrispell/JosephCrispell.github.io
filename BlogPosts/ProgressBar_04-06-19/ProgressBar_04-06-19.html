@@ -1,0 +1,159 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Progress bar</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+
+        </div>
+
+        <!-- Insert Text Body -->
+        <div id="mainText">
+
+            <br><br><br>
+
+            <h1>My new progress bar function in R&emsp;04-06-19</h1>
+
+            <p>
+                We've all been stuck waiting for a <c>for</c> loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my <a href="https://www.r-project.org/">R</a>code. Here they are in the order I found them!<br><br>
+
+                1. The <c>print()</c> function
+            </p>
+            <div id="codeBlock">
+            	n &lt;- 500<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;print(paste("Finished", i, "of", n))<br>
+				}<br>
+				<img src="for_loop_with_print.gif" width="30%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                2. The <c>cat()</c> function
+            </p>
+            <div id="codeBlock">
+            	n &lt;- 500<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;cat("Finished", i, "of", n, "\n")<br>
+				}<br>
+				<img src="for_loop_with_cat.gif" width="25%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                3. The modulus operator (<c>%%</c>)
+            </p>
+            <div id="codeBlock">
+            	n &lt;- 500<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;if(i %% 100 == 0){<br>
+  				&emsp;&emsp;&emsp;&emsp;cat("Finished", i, "of", n, "\n")<br>
+  				&emsp;&emsp;}<br>
+				}<br>
+				<img src="for_loop_with_cat_and_modulus.gif" width="25%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                4. Overwriting a printed line using <c>\r</c>
+            </p>
+            <div id="codeBlock">
+            	n &lt;- 500<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;cat("\rFinished", i, "of", n)<br>
+				}<br>
+				<img src="for_loop_with_cat_and_overwriting.gif" width="25%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                5. My new <c>progress()</c> function :-)
+            </p>
+            <div id="codeBlock">
+            	library(basicPlotteR)<br><br>
+
+            	n &lt;- 500<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;progress(i, n)<br>
+				}<br>
+				<img src="for_loop_with_progress.gif" width="50%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                6. R already has one!!!!
+            </p>
+            <div id="codeBlock">
+            	n &lt;- 500<br><br>
+
+				pb &lt;- txtProgressBar(min = 1, max = n, style = 3)<br><br>
+
+				for(i in seq_len(n)){<br><br>
+  
+  				&emsp;&emsp;# Sleep for 0.1 seconds<br>
+  				&emsp;&emsp;Sys.sleep(0.01)<br><br>
+  
+  				&emsp;&emsp;# Print progress<br>
+  				&emsp;&emsp;setTxtProgressBar(pb, i)<br>
+				}<br><br>
+				close(pb)<br>
+				<img src="for_loop_with_baseRprogress.gif" width="50%" hspace="0.5%" vspace="1%">              
+            </div>
+            <p>
+                Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside <c>for</c> loops. The <c>\r</c> blew my mind and should work in most languages! The modulus (<c>%%</c>) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.<br><br>
+
+                <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">Here</a> is more information about when and why to use the <c>print()</c> and <c>cat()</c> functions in R.<br><br>
+
+                Anyone who would like to use and see the code for my <c>progress()</c> function, you'll find it <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">here</a> on github. It is part of my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package.
+            </p>  
+
+        </div>
+
+    </body>
+
+</html>
