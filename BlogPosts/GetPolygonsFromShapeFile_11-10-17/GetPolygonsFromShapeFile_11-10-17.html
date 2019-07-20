@@ -64,31 +64,50 @@
             </p>
             
             <div id="codeBlock">
-                # Install the "maptools" package in order to read a shape file into R<br>
-                install.packages("maptools")<br>
-                <br>
-                # Load the "maptools" package<br>
-                library("maptools")<br>
-                <br>
+                # Install the "rgdal" package in order to read a shape file into R<br>
+                install.packages("rgdal")<br><br>
+                
+                # Load the "rgdal" package<br>
+                library("rgdal")<br><br>
+                
                 # Read in shape file and store as object with class: SpatialPolygonsDataFrame<br>
-                shapeObject &lt;- readShapePoly(fileName)<br>
-                <br>
+                spatialDataFrame &lt;- readOGR(fileName)<br><br>
+
+                # Note the number of polygon sets - one for each ID<br>
+                nSets &lt;- length(spatialDataFrame@polygons)<br><br>
+                
                 # Initialise a list to store the coordinates of each polygon within SpatialPolygonsDataFrame<br>
-                polygonCoords &lt;- list()<br>
-                <br>
-                # Get the coordinates of each polygon with the SpatialPolygonsDataFrame and store in list<br>
-                for(i in 1:length(shapeObject)){<br>
-                    <br>
-                    &emsp;# Get ID of current polygon<br>
-                    &emsp;polygonID &lt;- shapeObject[[i]]@ID<br>
-                    <br>
-                    &emsp;# Store coordinates of current polygon in list under ID<br>
-                    &emsp;polygonCoords[[polygonID]] &lt;- shapeObject[[i]]@Polygons[[1]]@coords<br>
-                }<br>
-                <br>
+                polygonCoords &lt;- list()<br><br>
+                
+                # Loop through all the sets of polygons<br>
+                for(setIndex in seq_len(nSets)){<br><br>
+    
+                &emsp;&emsp;# Get the ID of the current polygon set<br>
+                &emsp;&emsp;id &lt;- spatialDataFrame@polygons[[setIndex]]@ID<br><br>
+    
+                &emsp;&emsp;# Note the number of polygons in the current set<br>
+                &emsp;&emsp;nPolygons &lt;- length(spatialDataFrame@polygons[[setIndex]]@Polygons)<br><br>
+    
+                &emsp;&emsp;# Initialise a list to store the coordinates of each polygon in current set<br>
+                &emsp;&emsp;polygons &lt;- list()<br><br>
+    
+                &emsp;&emsp;# Examine each polygon in current set<br>
+                &emsp;&emsp;for(polygonIndex in seq_len(nPolygons)){<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Get the coordinates for the current polygon<br>
+                &emsp;&emsp;&emsp;&emsp;coords &lt;- spatialDataFrame@polygons[[setIndex]]@Polygons[[polygonIndex]]@coords<br><br>
+
+                &emsp;&emsp;&emsp;&emsp;# Store the lX and Y coords<br>
+                &emsp;&emsp;&emsp;&emsp;polygons[[polygonIndex]] &lt;- coords<br>
+                &emsp;&emsp;}<br><br>
+    
+                &emsp;&emsp;# Store the polygon coordinates<br>
+                &emsp;&emsp;polygonCoords[[id]] &lt;- polygons<br>
+                }<br><br>
+                
                 # Get the associated information for each polygon<br>
                 # Note that each polygon's ID links to the row names in this table<br>
-                polygonInfo &lt;- shapeObject@data<br>
+                polygonInfo &lt;- spatialDataFrame@data<br>
             </div>
             
             <p>
@@ -107,36 +126,38 @@
             
             <div id="codeBlock">
                 # Initialise variables to store the minimum and maximum X and Y coordinates<br>
-                minX &lt;- NA<br>
-                maxX &lt;- NA<br>
-                minY &lt;- NA<br>
-                maxY &lt;- NA<br>
-                <br>
+                ranges &lt;- list("X"=c(Inf, -Inf), "Y"=c(Inf, -Inf))<br><br>
+                
                 # Find the minimum and maximum X and Y coordinates across all the polygons<br>
-                for(key in names(polygonCoords)){<br>
-                    <br>
-                    &emsp;# Get the coordinates of the current polygon<br>
-                    &emsp;coords &lt;- polygonCoords[[key]]<br>
-                    <br>
-                    &emsp;# Calculate the ranges of the X and Y coordinates<br>
-                    &emsp;rangeX &lt;- range(coords[, 1])<br>
-                    &emsp;rangeY &lt;- range(coords[, 2])<br>
-                    <br>
-                    &emsp;# Check whether the minimum and maximum X and Y values need to be updated<br>
-                    &emsp;if(is.na(minX) == TRUE || rangeX[1] &lt; minX){<br>
-                        &emsp;&emsp;minX &lt;- rangeX[1]<br>
-                    &emsp;}<br>
-                    &emsp;if(is.na(maxX) == TRUE || rangeX[2] &lt; maxX){<br>
-                        &emsp;&emsp;maxX &lt;- rangeX[2]<br>
-                    &emsp;}<br>
-                    &emsp;if(is.na(minY) == TRUE || rangeY[1] &lt; minY){<br>
-                        &emsp;&emsp;minY &lt;- rangeY[1]<br>
-                    &emsp;}<br>
-                    &emsp;if(is.na(maxY) == TRUE || rangeY[2] &lt; maxY){<br>
-                        &emsp;&emsp;maxY &lt;- rangeY[2]<br>
-                    &emsp;}<br>
-                }<br>
-                <br>
+                for(key in names(coords)){<br>
+                &emsp;&emsp;for(polygonIndex in seq_len(length(polygonCoords[[key]]))){<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Note the ranges of the X and Y axes of the current polygon<br>
+                &emsp;&emsp;&emsp;&emsp;xRange &lt;- range(polygonCoords[[key]][[polygonIndex]][, 1])<br>
+                &emsp;&emsp;&emsp;&emsp;yRange &lt;- range(polygonCoords[[key]][[polygonIndex]][, 2])<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Update X min if necessary<br>
+                &emsp;&emsp;&emsp;&emsp;if(xRange[1] &lt; ranges$X[1]){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ranges$X[1] &lt;- xRange[1]<br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Update X max if necessary<br>
+                &emsp;&emsp;&emsp;&emsp;if(xRange[2] &gt; ranges$X[2]){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ranges$X[2] &lt;- xRange[2]<br><br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Update Y min if necessary<br>
+                &emsp;&emsp;&emsp;&emsp;if(yRange[1] &lt; ranges$Y[1]){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ranges$Y[1] &lt;- yRange[1]<br><br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;# Update Y max if necessary<br>
+                &emsp;&emsp;&emsp;&emsp;if(yRange[1] &gt; ranges$Y[2]){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ranges$Y[2] &lt;- yRange[2]<br>
+                &emsp;&emsp;&emsp;&emsp;}<br>
+                &emsp;&emsp;}<br>
+                }<br><br>
+
                 # Create an empty plot to add the polygons to<br>
                 # yaxt="n"&emsp;Turns off Y axis<br>
                 # xaxt="n"&emsp;Turns off X axis<br>
@@ -144,17 +165,19 @@
                 # xlim=...&emsp;Setting X axis limits to match minimum and maximum X coordinates<br>
                 # ylim=...&emsp;Setting Y axis limits to match minimum and maximum Y coordinates<br>
                 plot(x=NULL, y=NULL, yaxt="n", "xlab="X", ylab="Y", bty="n",<br>
-                    &emsp;xlim=c(minX, maxX), ylim=c(minY, maxY))<br>
-                <br>
+                    &emsp;xlim=ranges$X, ylim=ranges$Y)<br><br>
+
                 # Add polygon shapes to plot<br>
-                for(key in names(polygonCoords)){<br>
-                    <br>
-                    &emsp;# Get the coordinates of the current polygon<br>
-                    &emsp;coords &lt;- polygonCoords[[key]]<br>
-                    <br>
-                    &emsp;# Plot the current polygon<br>
-                    &emsp;polygon(coords)<br>
-                }<br>
+                for(key in names(coords)){<br>
+                &emsp;&emsp;for(polygonIndex in seq_len(length(polygonCoords[[key]]))){<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;# Get the coordinates of the current polygon<br>
+                    &emsp;&emsp;&emsp;&emsp;coords &lt;- polygonCoords[[key]][[polygonIndex]]<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;# Plot the current polygon<br>
+                    &emsp;&emsp;&emsp;&emsp;polygon(coords)<br>
+                &emsp;&emsp;}<br>
+                }
                 
             </div>
             
