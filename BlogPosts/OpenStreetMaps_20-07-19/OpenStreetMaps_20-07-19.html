@@ -71,7 +71,9 @@
                 Sometimes, if a particular area isn't available in a certain style, you'll get an error something like this:<br>
                 &emsp;&emsp;<c><font color="red">Error in osmtile(x%%nX, y, zoom, type) : could not obtain tile: ...</font></c><br><br>
 
-                You can try different options for the <c>type</c> parameter to fix this issue. I quite like the "opencyclemap" option. <a href="https://www.r-bloggers.com/the-openstreetmap-package-opens-up/">Here</a> is a great tutorial that you can a bit more help from. Enjoy!
+                You can try different options for the <c>type</c> parameter to fix this issue. I quite like the "opencyclemap" option. <a href="https://www.r-bloggers.com/the-openstreetmap-package-opens-up/">Here</a> is a great tutorial that you can a bit more help from. Enjoy!<br><br>
+
+                One thing you'll have to get use to is hopping between different map projections (like latitude and longitudes, national grids, or spherical mercator projections). THe <c>openproj()</c> is a handy function for converting between projections.
                 
             </p>
         </div>
