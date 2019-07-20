@@ -1,0 +1,6 @@
+# A list of resources for teaching
+- Set of bioinformatics problems to work on: http://rosalind.info/problems/list-view/
+- Stanford Computer Science lectures: https://www.youtube.com/playlist?list=PLvJoKWRPIu8G6Si7LlvmBPA5rOJ9BA29R
+- Getting started in any language: https://www.tutorialspoint.com/
+- Getting started in building websites and a few languages: https://www.w3schools.com/
+- Statistics in R - online book: https://www.huber.embl.de/msmb/introduction.html
