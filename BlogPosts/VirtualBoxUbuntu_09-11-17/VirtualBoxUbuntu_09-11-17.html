@@ -104,7 +104,19 @@
             </p>
             
             <div id="codeBlock">
-                $ sudo ln -s /media/sf_[Your shared folder name] /home/[YourUserName]/Desktop/[Your shared folder name]
+                $ sudo ln -s /media/sf_[YourSharedFolderName] /home/[YourUserName]/Desktop/[YourSharedFolderName]
+            </div>
+
+            <p>
+                &emsp;&emsp; - if the folder isn't present you could try mounting it manually with the following commands (taken from <a href="https://askubuntu.com/questions/161759/how-to-access-a-shared-folder-in-virtualbox">here</a>:
+            </p>
+
+            <div id="codeBlock">
+                $ # Create a mount point<br>
+                $ sudo mkdir /home/[YourUserName]/Desktop/[YourSharedFolderName]<br><br>
+
+                $ # Mount the shared folder<br>
+                $ sudo mount -t vboxsf [YourSharedFolderName] /home/[YourUserName]/Desktop/[YourSharedFolderName]
             </div>
             
             <p>
