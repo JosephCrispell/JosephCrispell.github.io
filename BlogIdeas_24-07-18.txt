@@ -8,16 +8,13 @@ Work:
 - Nucleotides to AAs
 - Ancestral state estimation in R
 - Consistency Index
-- Working with RJava
 - Downloading FASTQ files
 - New Zealand paper **
 - 60 second description of my work
 - SIR simulation model
 - Making a GANTT chart in R
 - Fitting a curve to points: https://stackoverflow.com/questions/45235970/fitting-a-curve-in-the-points
-DO: - Plotting satellite photo in R: see - see - PlotBadgerTerritoriesAndPrevalence_21-06-19.R (code for ESM figures) (tutorial: https://www.r-bloggers.com/the-openstreetmap-package-opens-up/)
 DO: - Converting X and Y coords to lat longs: see - PlotBadgerTerritoriesAndPrevalence_21-06-19.R (code for ESM figures)
-DO: - FIX plotting polygon coords in R: see - PlotBadgerTerritoriesAndPrevalence_21-06-19.R (code for ESM figures)
 
 Home:
 - A tour of the garden
