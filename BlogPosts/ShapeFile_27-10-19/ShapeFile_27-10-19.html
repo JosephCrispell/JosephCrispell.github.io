@@ -1,0 +1,198 @@
+
+<html>
+
+    <head>
+        <title>Joseph Crispell | Blog - Polygons</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109829558-1');
+        </script>
+    </head>
+
+    <body>
+        
+        <!-- Insert Sidebar box -->
+        <div id="sidebar" style="top: 43.5%">
+            
+            <pageLink><a href="../../index.html">Home</a></pageLink>
+            <pageLink><a href="../../Blog.html">Blog</a></pageLink>
+            <pageLink><a href="../../About.html">About</a></pageLink>
+            <pageLink><a href="../../Outputs.html">Outputs</a></pageLink>
+        </div>
+        
+        <!-- Insert Title -->
+        <div id="title">
+            <img src="../../BlogThumbnail.png" width="40%">
+                
+        </div>
+        
+        <!-- Insert Text Body -->
+        <div id="mainText">
+            
+            <br><br><br>
+            
+            <h1>Reading and plotting shape files in R&emsp;27-10-19</h1>
+            
+            <p>
+                A couple of years ago I wrote about reading a shape file into R (<a href="https://josephcrispell.github.io/BlogPosts/GetPolygonsFromShapeFile_11-10-17/GetPolygonsFromShapeFile_11-10-17.html">here</a>).<br><br>
+
+                Over the last couple of years I have been working with all sorts of spatial data, badger social group territories, cattle farm field outlines, tick sampling locations, and many more!<br><br>
+
+                I've learnt a little about the structure of shape files and how to best handle them in R.<br><br>
+
+                Today, I thought it would be cool to work with the outlines of the counties on the island of Ireland. You can download their shape file <a href="https://www.townlands.ie/page/download/">here</a>.<br><br>
+
+                To read in the shape file in you'll need to install the <c>rgdal</c> R package and the following code:
+            </p>
+            
+            <div id="codeBlock">
+                # Read in the shape file<br>
+                shapeFile &lt;- file.path("~", "Desktop", "ROI_CountyBoundaries", "counties.shp")<br>
+                spatialData &lt;- readOGR(dsn = shapeFile)<br><br>
+
+                # Extract the polygon information<br>
+                polygonInfo <- spatialData@data
+            </div>
+            
+            <p>
+                The above code reads the country outlines shape file into a <c>SpatialPolygonsDataFrame</c>. It also extracts the polygon information - here that is the names of the counties.<br><br>
+
+                As I have said before, there are plenty of tools that work directly with the <c>SpatialPolygonsDataFrame</c> (the object that stores the data from a shape file). However, I find the <c>SpatialPolygonsDataFrame</c> quite complicated to deal with so I like to use the following function to extract the polygon data:
+            </p>
+            
+            <div id="codeBlock">
+                
+                getPolygonCoords &lt;- function(spatialDataFrame){<br><br>
+  
+                &emsp;&emsp;# Note the number of polygon sets - one for each ID<br>
+                &emsp;&emsp;nSets &lt;- length(spatialDataFrame@polygons)<br><br>
+  
+                &emsp;&emsp;# Initialise a list to store the IDs and coordinates of each polygon<br>
+                &emsp;&emsp;polygonCoords &lt;- list()<br><br>
+  
+                &emsp;&emsp;# Loop through all the sets of polygons<br>
+                &emsp;&emsp;for(setIndex in seq_len(nSets)){<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Get the ID of the current polygon set<br>
+                &emsp;&emsp;&emsp;&emsp;id &lt;- spatialDataFrame@polygons[[setIndex]]@ID<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Note the number of polygons in the current set<br>
+                &emsp;&emsp;&emsp;&emsp;nPolygons &lt;- length(spatialDataFrame@polygons[[setIndex]]@Polygons)<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Initialise a list to store the coordinates of each polygon in current set<br>
+                &emsp;&emsp;&emsp;&emsp;polygons &lt;- list()<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Examine each polygon in current set<br>
+                &emsp;&emsp;&emsp;&emsp;for(polygonIndex in seq_len(nPolygons)){<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Get the coordinates for the current polygon<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;coords &lt;- spatialDataFrame@polygons[[setIndex]]@Polygons[[polygonIndex]]@coords<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Store the coordinates<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;polygons[[polygonIndex]] &lt;- coords<br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Store the polygon coordinates<br>
+                &emsp;&emsp;&emsp;&emsp;polygonCoords[[id]] &lt;- polygons<br>
+                &emsp;&emsp;}<br><br>
+  
+                &emsp;&emsp;# Store the boundary coordinates for the polygon<br>
+                &emsp;&emsp;polygonCoords$BoundaryLimits &lt;- spatialDataFrame@bbox<br><br>
+  
+                &emsp;&emsp;return(polygonCoords)<br><br>
+                }
+            </div>
+            
+            <p>
+                With the above function you can extract the polygon data from the <c>SpatialPolygonsDataFrame</c> with the following code:
+            </p>
+
+            <div id="codeBlock">
+                polygonCoords &lt;- getPolygonCoords(spatialData)
+            </div>
+
+            <p>
+                Now to plotting. So I have stored the coordinates in a list containing sets of polygons. Each set of polygons represents a county, which can contain multiple polygons where there are islands or other land features. Each set stores its polygons as coordinates in a list.<br><br>
+
+                To plot the polygons from the <c>polygonCoords</c> list we can use the following function:
+            </p>
+
+            <div id="codeBlock">
+                plotPolygons &lt;- function(polygonCoords, ...){<br><br>
+  
+                &emsp;&emsp;# Get and set the plotting margins<br>
+                &emsp;&emsp;currentMar &lt;- par()$mar<br>
+                &emsp;&emsp;par(mar=c(0,0,0,0))<br><br>
+  
+                &emsp;&emsp;# Create an empty plot<br>
+                &emsp;&emsp;plot(x=NULL, y=NULL,<br>
+                &emsp;&emsp;&emsp;&emsp;xlim=polygonCoords$BoundaryLimits[1, ],<br>
+                &emsp;&emsp;&emsp;&emsp;ylim=polygonCoords$BoundaryLimits[2, ],<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;bty="n", xlab="", ylab="", xaxt="n", yaxt="n")<br><br>
+  
+                &emsp;&emsp;# Get the names of the sets of polygons<br>
+                &emsp;&emsp;setNames &lt;- names(polygonCoords)<br><br>
+  
+                &emsp;&emsp;# Examine each set of polygons<br>
+                &emsp;&emsp;for(setID in setNames){<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Ignore the Boundary Limits<br>
+                &emsp;&emsp;&emsp;&emsp;if(setID == "BoundaryLimits"){<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;next<br>
+                &emsp;&emsp;&emsp;&emsp;}<br><br>
+    
+                &emsp;&emsp;&emsp;&emsp;# Examine each of the polygons in the current set<br>
+                &emsp;&emsp;&emsp;&emsp;for(polygonIndex in seq_along(polygonCoords[[setID]])){<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Get the coordinates for the current polygon<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;coords &lt;- polygonCoords[[setID]][[polygonIndex]]<br><br>
+      
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Plot the current polygon<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;polygon(coords, ...)<br>
+                &emsp;&emsp;&emsp;&emsp;}<br>
+                &emsp;&emsp;}<br><br><br>
+  
+                &emsp;&emsp;# Reset the plotting margins<br>
+                &emsp;&emsp;par(mar=currentMar)<br>
+                }
+            </div>
+
+            <p>
+                Now we can the <c>plotPolygons()</c> function to create a nice plot like this:
+            </p>
+
+            <div id="codeBlock">
+                # Plot the polygons<br>
+                plotPolygons(polygonCoords)<br><br>
+
+                # Note my current location - Coleraine in Northern Ireland
+                myLocation <- c(-6.7008791,55.1319208)<br><br>
+
+                # Add an arrow onto the map to show where I am<br>
+                arrows(x0=myLocation[1]+0.1, x1=myLocation[1],<br>
+                &emsp;&emsp;y0=myLocation[2]+0.3, y1=myLocation[2],<br>
+                &emsp;&emsp;lwd=2, col="red", length=0.1)<br><br>
+                
+                # Add a label for the arrow<br>
+                text(x=myLocation[1]+0.1, y=myLocation[2]+0.4, labels="I am here!")
+            </div>
+
+            <img src="ShapeFile_Thumbnail.png" width="70%" hspace="0.5%" vspace="1%">
+            
+            <p>
+                I really love working with spatial data, it makes such amazing plots. To think, someone has recorded the coordinates of each of these many thousands of points!<br><br>
+
+                So that's another post about shape files. A lot of code, as before, but hopefully a little clearer and easier to use. The code is also available <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/ReadingAndPlottingShapeFile_27-10-19.R">here</a> on github.<br><br>
+
+                I hope this post is useful! Get out there and find some other free online shape files!<br>
+            </p>
+
+        </div>
+    </body>
+</html>
