@@ -14,7 +14,8 @@ Work:
 - SIR simulation model
 - Making a GANTT chart in R
 - Fitting a curve to points: https://stackoverflow.com/questions/45235970/fitting-a-curve-in-the-points
-DO: - Converting X and Y coords to lat longs: see - PlotBadgerTerritoriesAndPrevalence_21-06-19.R (code for ESM figures)
+- Re-do plotting polygons - use UK outline
+- Show how Ns in sequences can lead to misleading phylogenies
 
 Home:
 - A tour of the garden
