@@ -16,6 +16,8 @@ Work:
 - Fitting a curve to points: https://stackoverflow.com/questions/45235970/fitting-a-curve-in-the-points
 - Re-do plotting polygons - use UK outline
 - Show how Ns in sequences can lead to misleading phylogenies
+- County bTB prevalence (see https://github.com/JosephCrispell/GeneralTools/blob/master/RepublicOfIreland/Wicklow/PlotTBHerdIncidenceInROI_20-10-17.R)
+	* Create javascript plotly to show in space and time
 
 Home:
 - A tour of the garden

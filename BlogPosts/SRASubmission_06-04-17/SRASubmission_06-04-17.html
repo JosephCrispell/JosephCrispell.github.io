@@ -71,10 +71,10 @@
                 
                 4) Prepare metadata file for Sequence Read Archive submission<br>
                 &emsp;&emsp; - Download a SRA_metadata_acc.xlsx file (I had to begin a
-                <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission</a>). I keep a copy
-                <a href="https://github.com/JosephCrispell/GeneralTools/NewZealand/sra_subtemplate_v2-7.xlsx">here</a><br>
+                <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission</a>).<br>
                 &emsp;&emsp; - Fill in the required fields - using Bioproject number (PRJNA...) and Biosample accessions<br>
-                $emsp;&emsp; - You used to need the FASTQ file md5sum values (BUT I DIDN'T FOR MY RECENT SUBMISSION) - these can be found by using the following UNIX command:
+                &emsp;&emsp; - You used to need the FASTQ file md5sum values (BUT I DIDN'T FOR MY RECENT SUBMISSION)<br>
+                &emsp;&emsp; - You can get md5sum values using the following UNIX command:
             </p>
             
             <div id="codeBlock">
@@ -86,6 +86,7 @@
                 &emsp;&emsp; - At this point you can upload the metadata file you created in step 4<br>
                 <br><br>
                 5) Upload the FASTQ files<br>
+                &emsp;&emsp; - If your files are <10GB and you have less than 300 of them, upload your FASTQ files via the web browser. This is so much easier! Or:
                 &emsp;&emsp; - On the <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA page</a> click on the FTP upload link<br>
                 &emsp;&emsp; - Note the server address, username, password and folder to navigate to<br>
                 &emsp;&emsp; - On a UNIX machine navigate to the folder containing (only) your FASTQ files<br>
@@ -122,17 +123,11 @@
             </div>
             
             <p>
-                6) If step 5 doesn't work, which it didn't for me<br>
-                &emsp;&emsp; - I kept losing connection to the server as my transfer window kept timing out after 60 seconds!<br>
-                &emsp;&emsp; - I used WinSCP on my Windows machine and more recently I used FileZilla on my Ubuntu machine<br>
-                &emsp;&emsp; - Log onto the server using the address, username, and password provided<br>
-                &emsp;&emsp; - Click on the navigate to folder icon and paste in full folder path<br>
-                &emsp;&emsp; - Create a new folder<br>
-                &emsp;&emsp; - Drag the FASTQ files into the new folder<br>
-
-                7) Completing the Sequence Read Archive submission<br>
-                &emsp;&emsp; - Go back to the Sequence Read Archive submission page
-                &emsp;&emsp; - On the data uploading tab the folder you created to upload your FASTQ files into should exist. Select this folder and click continue.
+                <br><br>
+                6) Completing the Sequence Read Archive submission<br>
+                &emsp;&emsp; - Go back to the Sequence Read Archive submission page<br>
+                &emsp;&emsp; - On the data uploading tab the folder you created to upload your FASTQ files into should exist.<br>
+                &emsp;&emsp; - Select this folder and click continue.<br>
                 &emsp;&emsp; - If no errors appear, it means all the FASTQ files were successfully linked to the metadata you provided and you can submit!
             </p>
             
