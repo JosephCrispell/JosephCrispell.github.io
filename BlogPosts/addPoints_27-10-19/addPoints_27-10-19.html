@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Joseph Crispell | Blog - Multiple histograms</title>
+        <title>Joseph Crispell | Blog - addPoints()</title>
         <link href="../../default.css" rel="stylesheet" type="text/css">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -80,7 +80,7 @@
                 # Create an empty plot for the points<br>
                 plot(x=NULL, y=NULL, xlim=range(coords$X), ylim=range(coords$Y), xaxt="n", <br>
                 &emsp;&emsp;yaxt="n", cex=5, xlab="", ylab="", main="points()")<br><br>
-                
+
                 # Add the points onto the empty plot<br>
                 points(coords$X, coords$Y, cex=5, col="blue")<br><br>
 
@@ -100,7 +100,7 @@
                 It is a lot of effort for a subtle change! I created the <c>addPoints()</c> function for a plot where I had a lot of overlapping points so it was pretty helpful.<br><br>
 
                 Take a look at the <c>addPoints()</c> function <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/addNonOverlappingTestLabelsOrPoints.R">here</a>. Let me know if it works for you!<br>
-            </p>  
+            </p>
 
         </div>
 
