@@ -1,0 +1,46 @@
+.site-footer {
+  @extend %padding-post;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: lighten($text-color, 24%);
+  font-size: 0.9em;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-icons .icon {
+    color: #337ab7;
+    text-align: center;
+}
+
+.header-icons .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    padding: 3px;
+
+    border-radius: 50%;
+    border: 2px solid #337ab7;
+    transition: all .7s;
+    margin: 5px;
+}
+
+.header-icons .icon:active,
+.header-icons .icon:hover {
+    color: white;
+    background: #337ab7;
+}
+
+@media only screen and (min-width:550px) {
+    .header-icons .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        padding: 5px;
+    };
+}

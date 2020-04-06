@@ -1,0 +1,17 @@
+# Icons on the footer
+email_address: crispelljoseph@gmail.com   # Full email address, e.g. "sam@example.com"
+github: "josephcrispell"
+twitter: "josephcrispell"        # "twitter username"
+scholar: "https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ" # Full URL
+
+# Share button options
+share:
+  facebook:
+  twitter: true
+  tumblr:
+  pinterest:
+  pocket:
+  reddit:
+  linkedin:
+  wordpress:
+  email:

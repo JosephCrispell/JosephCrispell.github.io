@@ -1,0 +1,44 @@
+/* NAVIGATION BAR */
+
+/* A lot of help from: https://www.w3schools.com/css/css_navbar.asp*/
+
+ul.navBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  left: 77%;
+  width: 23%;
+  height: auto;
+  position: absolute;
+}
+
+li.navBar, li.navBarPost {
+  float: right;
+}
+
+li.navBar a, li.navBarPost a {
+  display: block;
+  font-size: 1.5rem;
+  font-family: $header-font;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+li.navBarPost a {
+  background-color: $main-bg-colour;
+}
+
+li.navBar a:hover, li.navBarPost a:hover {
+  background-color: white;
+  color: $body-colour;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
