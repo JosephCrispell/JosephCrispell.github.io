@@ -1,5 +1,5 @@
 Work:
-- Spoligotyping tool 
+- Spoligotyping tool
 - Merging VCFs
 - Simulating phylogenies & transmission trees
 - Convex versus concave hull
@@ -18,6 +18,12 @@ Work:
 - Show how Ns in sequences can lead to misleading phylogenies
 - County bTB prevalence (see https://github.com/JosephCrispell/GeneralTools/blob/master/RepublicOfIreland/Wicklow/PlotTBHerdIncidenceInROI_20-10-17.R)
 	* Create javascript plotly to show in space and time
+- Shapiro Wilk test:
+  - Compare distributions (normal, exponential, uniform) using increasing sample sizes
+  - Fill in matrix:
+     				     Reality:	True 	False (sample drawn from normal distribution?)
+    		 SW result:	True    -     -
+										False		-			-
 
 Home:
 - A tour of the garden
@@ -42,7 +48,3 @@ Home:
 	* Retweets, comments and likes for a selection of topics
 	* Follows individuals who tweet a certain amount of times about a topic
 	* Spider to find articles of interest to tweet (searches news sites looking for keywords)
-
-
-
-
