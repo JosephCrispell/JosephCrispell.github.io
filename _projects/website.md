@@ -7,5 +7,20 @@ date: 11 April 2020
 tags: [website, jekyll, github pages]
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a>quia voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius <a>modi tempora incidunt</a> ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+My website is a place for me to take note of my interests, both inside and outside of work. I'll keep adding to, and improving, it!
+
+Most recently I've re-designed my website, changing from a simple html and css structure to a more complex [Jekyll](https://jekyllrb.com/) themed website. Jekyll still uses html and css, but it also does some clever automated steps behind the scenes to make blogging a little easier. 
+
+To build my new Jekyll based website, I chose a couple of Jekyll themes (from [here](https://jekyllrb.com/)) and spent a bit of time extracting the bits of these that I liked and combining them into my own. The two templates I used were: 
+
+- The <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> theme to give me the blogging template (posts, projects, tagging and searching)
+- And the <a href='https://github.com/nrandecker/particle'>particle</a> theme for the (interactive!!) front page, which uses the amazing [`particle.js`](https://vincentgarreau.com/particles.js/) library.
+
+Jekyll works really well with github pages, so I was able to branch my existing website repository and get to work on the new one. Take a look at the code [here](https://github.com/JosephCrispell/JosephCrispell.github.io).
+
+I owe a lot of thanks to the documentation of the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes, helping me to understand how a Jekyll page works. Nothing better than a well commented and structured piece of open-source code!! ❤️
+
+The next project for this website is to clean up all the code, removing anything unnecessary for my website and then I plan on releasing it as a website template. There are so many cool templates out there, and maybe mine could be one of them! 😀
+
+Take a look around and let me know what you think.
+

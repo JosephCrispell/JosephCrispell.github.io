@@ -7,5 +7,25 @@ date: 23 Mar 2019
 tags: [plot, base, R, package]
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a>quia voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius <a>modi tempora incidunt</a> ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+`basicPlotteR` is an R package designed to help you making plots in `base` R. The `base` R package is the package that comes with R, it contains all those functions that makes R what it is.
+
+There are loads of plotting functions available in the `base` R package. I try to use these as much as possible as I think they give me the most flexibility in how I create my plots. I designed `basicPlotteR` package to be a collection of additional plotting functions that add a little bit extra to the `base` plotting functions.
+
+I'll keep adding functions to `basicPlotteR`, for the moment though my favourite is `addTextLabels()`. It mimics the `base` R function `text()` by adding text labels to an existing plot, but it re-positions text to avoiding any overlapping.
+
+![addTextLabels]({{ "assets/img/projects/addTextLabels.gif" | relative_url}} "addTextLabels() function at work!")
+
+There are loads more functions to play around with. Download the package and get started with the following code:
+
+    # Install the devtools R package - for downloading packages from github
+    install.packages("devtools")
+
+    # Install basicPlotteR
+    devtools::install_github("JosephCrispell/basicPlotteR")
+
+    # Load the basicPlotteR package
+    library(basicPlotteR)
+
+    ...
+
+To learn more, take a look at the github page [here](https://github.com/JosephCrispell/basicPlotteR).
