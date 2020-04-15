@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: My teaching projects
 feature-img: "assets/img/projects/teachingProjectsLogo.png"
 img: "assets/img/projects/teachingProjectsLogo.png"
@@ -7,5 +7,12 @@ date: 3 Oct 2019
 tags: [teaching]
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a>quia voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius <a>modi tempora incidunt</a> ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+Teaching data science is one of my passions. Here is where I am going to keep a note of the teaching materials that I've developed.
+
+So far, here's the online materials that I've created:
+
+- [Pathogen Genomics Workshop](https://github.com/JosephCrispell/pathogenGenomicsWorkshop) - a workshop designed around an R package. I'm trying to introduce the topic of building phylogenetic trees in R.
+- An [introduction](https://github.com/datasciencecampus/gov-uk-rap-materials/blob/master/gov-uk-rap-materials_intro-to-rap.pdf) to creating a **R**eproducible **A**nalytical **P**ipeline (**RAP**). Well worth a look and built using the Rmarkdown [ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html) presentation tool.
+- A quick [tutorial](https://github.com/datasciencecampus/gov-uk-rap-materials/blob/master/gov-uk-rap-materials_intro-to-RMySQL.Rmd) about using the [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html) R package. [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html) is a cool package that allows you to interact with a local SQL server from within R.
+
+Hopefully I'll continue adding to these materials. Let me know what you think!

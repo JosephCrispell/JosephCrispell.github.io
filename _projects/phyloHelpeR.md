@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: phyloHelpeR
 feature-img: "assets/img/projects/phyloHelpeRLogo.png"
 img: "assets/img/projects/phyloHelpeRLogo.png"
@@ -7,5 +7,14 @@ date: 21 Nov 2019
 tags: [plot, base, R, package, phylogenetics]
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a>quia voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius <a>modi tempora incidunt</a> ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+I've been working with phylogenies in R for a long time. I find the [`ape`](https://cran.r-project.org/web/packages/ape/ape.pdf) and [`phytools`](https://cran.r-project.org/web/packages/phytools/phytools.pdf) to be the most useful.
+
+The [`phyloHelpeR`](https://github.com/JosephCrispell/phyloHelpeR/tree/master/R) is an R package to make a home for some of the functions I use a lot when building and plotting phylogenies in R. At the moment it is home to the following functions:
+
+- `tanglePlot()` a function to plot two phylogenies based on the same sequences opposite one another so you can see how they differ.
+- `runRAXML()` a function to interact with the command line phylogenetic tree building tool [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/)
+- `addSNPScale()` a function to add a scale to a phylogeny whos branch lengths are scaled to the number of **S**ingle **N**ucleotide **P**olymorphisms.
+
+As you can see, this R package is a work in progress... As I don't work on phylogenetics anymore my contributions will be slow but hopefully I'll still add a few more helpful functions. 👍
+
+

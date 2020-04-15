@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Possums, cows, and bovine tuberculosis in New Zealand
 feature-img: "assets/img/projects/newZealandLogo.png"
 img: "assets/img/projects/newZealandLogo.png"
@@ -7,5 +7,16 @@ date: 16 Feb 2017
 tags: [New Zealand, genomics, bovine tuberculosis, PhD, research, Mycobacterium bovis, badgers, cattle]
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a>quia voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius <a>modi tempora incidunt</a> ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+My first published research looked at bovine tubeculosis in cattle and widlife in New Zealand. Take a look at it [here](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3569-x).
+
+We used whole genome sequencing to trace the transmission of *Mycobacterium bovis*, a bacteria that causes bovine tuberculosis, between cattle and wildlife.
+
+In New Zealand, the brushtail possum (see my impression below 😳) is a pest species - originally imported for the fur industry. There are 30 million possums in New Zealand and they can be infected by the *M. bovis* bacteria. Their infection can spread into cattle, especially where cattle live close to the bush (dense forested areas), where possums live.
+
+![possum]({{ "assets/img/projects/possum.png" | relative_url}} "A brushtail possum")
+
+Our research showed that the *M. bovis* bacteria was frequently being transmitted between cattle and wildlife populations in New Zealand. Given that there were less than 50 infected cattle herds in New Zealand at the time, this suggested that the possum population were acting as the main source of infection.
+
+For me, this research was an amazing opportunity to work some incredible researchers in New Zealand - as well as meet them in person! [Marian Price-Carter](https://loop.frontiersin.org/people/583694/overview) led this research project and continues to amazing work in the bovine tuberculosis program in New Zealand.
+
+Have a look at the [research](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3569-x) here and let me know what you think.

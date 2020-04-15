@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Badgers, cattle, and bovine tuberculosis in South West England
 feature-img: "assets/img/projects/woodchesterLogo.png"
 img: "assets/img/projects/woodchesterLogo.png"

@@ -3,18 +3,27 @@ layout: default
 ---
 {% include share_thumbnail.html page=page %}
 
-<article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
-  <header id="main" style="">
-    {% unless page.hide_title %}
-      <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
+<article class="feature-image">
 
-      <p class="meta">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </p>
-    {% endunless %}
+  {% if page.feature-img and page.feature-img != "interactive" %}
+  <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
+    
+    <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title">
+  {% else %}
+  <div id="particles-js">
+    <h1>
+      <span class="site-description">
+  {% endif %}
+        {{ page.title }}
+  {% if page.feature-img and page.feature-img != "interactive"  %}
+    </h1>
   </header>
+  {% else %}
+      </span>
+    </h1>
+  </div>
+  {% endif %}
 
-  
   <section class="post-content">
   {% if page.bootstrap %}
     <div class="bootstrap-iso">
