@@ -3,13 +3,13 @@ layout: default
 ---
 {% include share_thumbnail.html page=page %}
 
-<article class="feature-image">
+<article {% if page.feature-img or page.color%}class="feature-image"{% endif %}>
 
   {% if page.feature-img and page.feature-img != "interactive" %}
   <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
     
     <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title">
-  {% else %}
+  {% else if page.feature-img and page.feature-img == "interactive" %}
   <div id="particles-js">
     <h1>
       <span class="site-description">
@@ -18,7 +18,7 @@ layout: default
   {% if page.feature-img and page.feature-img != "interactive"  %}
     </h1>
   </header>
-  {% else %}
+  {% else if page.feature-img == "interactive" %}
       </span>
     </h1>
   </div>

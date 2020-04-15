@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Website
-feature-img: "interactive"
 img: "assets/img/projects/websiteLogo.png"
 date: 11 April 2020
 tags: [website, jekyll, github pages]
