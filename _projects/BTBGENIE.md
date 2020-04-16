@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: Bovine TuBerculosis Genomics IrEland
 feature-img: "assets/img/projects/BTBGENIELogo.png"
 img: "assets/img/projects/BTBGENIELogo.png"

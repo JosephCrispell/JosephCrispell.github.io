@@ -4,6 +4,14 @@ layout: default
 {% include share_thumbnail.html page=page %}
 
 <article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
+
+  {% if page.feature-img and page.feature-img == "interactive" %}
+  <div id="particles-js">
+    <h1>
+      <span class="site-description">{{page.title}}</span>
+    </h1>
+  </div>
+  {% else %}
   <header id="main" style="">
     {% unless page.hide_title %}
       <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
@@ -13,6 +21,7 @@ layout: default
       </p>
     {% endunless %}
   </header>
+  {% endif %}
 
   
   <section class="post-content">

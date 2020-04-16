@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: Possums, cows, and bovine tuberculosis in New Zealand
 feature-img: "assets/img/projects/newZealandLogo.png"
 img: "assets/img/projects/newZealandLogo.png"

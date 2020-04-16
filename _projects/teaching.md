@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: My teaching projects
 feature-img: "assets/img/projects/teachingProjectsLogo.png"
 img: "assets/img/projects/teachingProjectsLogo.png"

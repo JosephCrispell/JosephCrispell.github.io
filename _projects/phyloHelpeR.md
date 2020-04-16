@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: phyloHelpeR
 feature-img: "assets/img/projects/phyloHelpeRLogo.png"
 img: "assets/img/projects/phyloHelpeRLogo.png"

@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: basicPlotteR
 feature-img: "assets/img/projects/basicPlotteRLogo.png"
 img: "assets/img/projects/basicPlotteRLogo.png"

@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: homoplasyFinder
 feature-img: "assets/img/projects/homoplasyFinderLogo.png"
 img: "assets/img/projects/homoplasyFinderLogo.png"
