@@ -14,4 +14,4 @@ share:
   reddit:
   linkedin:
   wordpress:
-  email:
+  email: true

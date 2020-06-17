@@ -6,12 +6,12 @@ url: "https://josephcrispell.github.io"
 title: Joseph Crispell                              # site's title
 user_title: Data Scientist
 user_description: Programmer interested in all types of data and analyses
-description: "Bits from a data scientist"      # used by search engines
+description: "Blog about things that interest me"      # used by search engines
 avatar: assets/img/WebsiteLogo.png                         # Empty for no avatar in navbar
 favicon: assets/img/WebsiteLogo.png                            # Icon displayed in the tab
 
 # Header and footer text
-header_text: Bits from a data scientist                                         # Change Blog header text
+header_text: Interesting things                                          # Change Blog header text
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
