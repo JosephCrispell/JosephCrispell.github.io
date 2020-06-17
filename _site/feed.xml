@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T21:04:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Bits from a data scientist</subtitle><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T21:21:37+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Bits from a data scientist</subtitle><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
 Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
 &lt;!--more--&gt;
 Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
@@ -23,35 +23,7 @@ Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit 
 
 &lt;p&gt;Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.&lt;/p&gt;
 
-&lt;p&gt;Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.&lt;/p&gt;
-
-&lt;div class=&quot;slideshow-container&quot;&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/pexels/travel.jpeg&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Travel&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/pexels/desk-messy.jpeg&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Messy Desk&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/pexels/circuit.jpeg&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Circuit&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
-    &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
-
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;span class=&quot;slideDot&quot; onclick=&quot;currentSlide(1)&quot;&gt;&lt;/span&gt; 
-    &lt;span class=&quot;slideDot&quot; onclick=&quot;currentSlide(2)&quot;&gt;&lt;/span&gt; 
-    &lt;span class=&quot;slideDot&quot; onclick=&quot;currentSlide(3)&quot;&gt;&lt;/span&gt; 
-&lt;/div&gt;</content><author><name></name></author><category term="A Tag" /><category term="Test" /><category term="Lorem" /><category term="Ipsum" /><summary type="html">Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</summary></entry><entry><title type="html">Color Post</title><link href="http://localhost:4000/2019/05/18/color-post.html" rel="alternate" type="text/html" title="Color Post" /><published>2019-05-18T00:00:00+01:00</published><updated>2019-05-18T00:00:00+01:00</updated><id>http://localhost:4000/2019/05/18/color-post</id><content type="html" xml:base="http://localhost:4000/2019/05/18/color-post.html">&lt;h1 id=&quot;what-a-colorful-post&quot;&gt;What a colorful post!&lt;/h1&gt;
+&lt;p&gt;Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.&lt;/p&gt;</content><author><name></name></author><category term="A Tag" /><category term="Test" /><category term="Lorem" /><category term="Ipsum" /><summary type="html">Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</summary></entry><entry><title type="html">Color Post</title><link href="http://localhost:4000/2019/05/18/color-post.html" rel="alternate" type="text/html" title="Color Post" /><published>2019-05-18T00:00:00+01:00</published><updated>2019-05-18T00:00:00+01:00</updated><id>http://localhost:4000/2019/05/18/color-post</id><content type="html" xml:base="http://localhost:4000/2019/05/18/color-post.html">&lt;h1 id=&quot;what-a-colorful-post&quot;&gt;What a colorful post!&lt;/h1&gt;
 
 &lt;p&gt;This is an idea that came from &lt;a href=&quot;https://github.com/xukimseven/HardCandy-Jekyll&quot;&gt;xukimseven/HardCandy-Jekyll&lt;/a&gt; 
 looking at this cheerful and colorful them, I wanted to enable something similar for mine.&lt;/p&gt;

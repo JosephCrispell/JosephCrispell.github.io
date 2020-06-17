@@ -14,4 +14,38 @@ I have a passion for Data Science, teaching and science communication. I also lo
 
 My wife and I have just moved back to Glasgow, where we both studied for almost ten years, and we're excited to settle back into life here with our new baby (Aven)!
 
-[PICTURE HERE]
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="/assets/img/about/Sunshine.jpg" style="width:100%">
+        <div class="slideCaption">Us in the sun!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/assets/img/about/AvenInCarrier.jpg" style="width:100%">
+        <div class="slideCaption">Out and about</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/assets/img/about/JoannaAndAvenMatching.jpg" style="width:100%">
+        <div class="slideCaption">Matching is critical!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/assets/img/about/MeAndAven.jpg" style="width:100%">
+        <div class="slideCaption">Sleepy and Happy!</div>
+    </div>
+
+    <a class="prevSlide" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="nextSlide" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div style="text-align:center">
+    <span class="slideDot" onclick="currentSlide(1)"></span> 
+    <span class="slideDot" onclick="currentSlide(2)"></span> 
+    <span class="slideDot" onclick="currentSlide(3)"></span> 
+    <span class="slideDot" onclick="currentSlide(4)"></span> 
+</div>
+
+<br>
