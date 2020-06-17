@@ -27,3 +27,31 @@ Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenat
 Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.
 
 Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="/assets/img/pexels/travel.jpeg" style="width:100%">
+        <div class="slideCaption">Travel</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/assets/img/pexels/desk-messy.jpeg" style="width:100%">
+        <div class="slideCaption">Messy Desk</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/assets/img/pexels/circuit.jpeg" style="width:100%">
+        <div class="slideCaption">Circuit</div>
+    </div>
+
+    <a class="prevSlide" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="nextSlide" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div style="text-align:center">
+    <span class="slideDot" onclick="currentSlide(1)"></span> 
+    <span class="slideDot" onclick="currentSlide(2)"></span> 
+    <span class="slideDot" onclick="currentSlide(3)"></span> 
+</div>
