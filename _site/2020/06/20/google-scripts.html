@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2020/06/20/google-scripts.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Getting started with Google Apps Script | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Getting started with Google Apps Script" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="So I’ve just started working with Google Apps Script." />
+<meta property="og:description" content="So I’ve just started working with Google Apps Script." />
+<link rel="canonical" href="http://localhost:4000/2020/06/20/google-scripts.html" />
+<meta property="og:url" content="http://localhost:4000/2020/06/20/google-scripts.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-20T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-06-20T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/06/20/google-scripts.html"},"description":"So I’ve just started working with Google Apps Script.","@type":"BlogPosting","url":"http://localhost:4000/2020/06/20/google-scripts.html","headline":"Getting started with Google Apps Script","dateModified":"2020-06-20T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2020/06/20/google-scripts.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Getting started with Google Apps Script" />
+<meta property="og:description"  content="So I’ve just started working with Google Apps Script.
+" />
+<meta property="og:image"        content="" />
+
+
+<article >
+
+  
+  <header id="main" style="">
+    
+      <h1 id="Getting+started+with+Google+Apps+Script" class="title">Getting started with Google Apps Script</h1>
+
+      <p class="meta">
+        June 20, 2020
+      </p>
+    
+  </header>
+  
+
+  
+  <section class="post-content">
+  
+      <p>So I’ve just started working with <a href="https://www.google.com/script/start/">Google Apps Script</a>.</p>
+
+<blockquote>
+  <p>Google Apps Script is a <a href="https://www.w3schools.com/js/">Javascript</a> based programming language that seemlessly links to google docs.</p>
+</blockquote>
+
+<p>I’m creating a tool to update a <a href="https://www.google.co.uk/sheets/about/">googlesheet</a> based on information entered into other googlesheets - ideally it’ll save some time as before the updates were done manually every day.</p>
+
+<p>I’m relatively new to Javascript and I am brand new to Google Apps Script. Thankfully there’s plenty of help online. For general Javascript help check out the following:</p>
+<ul>
+  <li><a href="https://www.w3schools.com/js/">w3schools</a> provides a huge amount of training materials</li>
+  <li><a href="https://stackoverflow.com/questions/tagged/javascript">StackOverflow</a> never fails to disappoint to answer every weird and wonderful question</li>
+</ul>
+
+<p>And Google has written some comprehensive documentation <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app">here</a>. You find that Google has created objects and methods for all the Google linked tools (docs, googlesheets, calendar, mail, etc.).</p>
+
+<p><em>So a few notes from me.</em></p>
+
+<p>Firstly, get started you can visit <a href="https://www.google.com/script/start/">here</a> or create a new script by right clicking in your google drive, selecting <em>More</em> and then <em>Google Apps Script</em>.</p>
+
+<p>Then you’ll be working on Googles IDE (<strong>I</strong>nteractive <strong>D</strong>evelopment <strong>E</strong>nvironment). It’s pretty basic, but it does the job and the code runs nice and quick for me.</p>
+
+<p><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScript.png" alt="IDE" /></p>
+
+<p>First thing to note is that you need to used a log file for print statements as a console doesn’t exist:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">I am a bit slow!</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>To view the log file, click <em>View</em> and then <em>Logs</em>. These are quite <a href="https://stackoverflow.com/questions/60404784/very-slow-logs-with-google-apps-script-v8-vs-rhino">slow</a> to appear! 😔</p>
+
+<p><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScript_slow.png" alt="Slow!" /></p>
+
+<p>So I’ve used it for a day and it has worked great. If you find yourself working on google documents then definitely consider automating your work with <a href="https://www.google.com/script/start/">Google Apps Scripts</a>!</p>
+
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Getting+started+with+Google+Apps+Script%20http%3A%2F%2Flocalhost%3A4000%2F2020%2F06%2F20%2Fgoogle-scripts.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Getting+started+with+Google+Apps+Script%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2020/06/20/google-scripts.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#google">
+      <p><i class="fa fa-tag fa-fw"></i> google</p>
+    </a>
+    
+    <a class="button" href="/tags#javascript">
+      <p><i class="fa fa-tag fa-fw"></i> javascript</p>
+    </a>
+    
+    <a class="button" href="/tags#programming">
+      <p><i class="fa fa-tag fa-fw"></i> programming</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+
+    
+    <div id="next-post">
+        <a alt="Sample post" href="/2019/06/30/sample-post.html">
+            <p>Next post</p>
+            Sample post
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>

@@ -1,6 +1,16 @@
 [
   
   {
+    "title"    : "Getting started with Google Apps Script",
+    "category" : "",
+    "tags"     : " google, programming, javascript",
+    "url"      : "/2020/06/20/google-scripts.html",
+    "date"     : "June 20, 2020",
+    "excerpt"  : "So I’ve just started working with Google Apps Script.\n\n\n  Google Apps Script is a Javascript based programming language that seemlessly links to google docs.\n\n\nI’m creating a tool to update a googlesheet based on information entered into other goo...",
+  "content"  : "So I’ve just started working with Google Apps Script.\n\n\n  Google Apps Script is a Javascript based programming language that seemlessly links to google docs.\n\n\nI’m creating a tool to update a googlesheet based on information entered into other googlesheets - ideally it’ll save some time as before the updates were done manually every day.\n\nI’m relatively new to Javascript and I am brand new to Google Apps Script. Thankfully there’s plenty of help online. For general Javascript help check out the following:\n\n  w3schools provides a huge amount of training materials\n  StackOverflow never fails to disappoint to answer every weird and wonderful question\n\n\nAnd Google has written some comprehensive documentation here. You find that Google has created objects and methods for all the Google linked tools (docs, googlesheets, calendar, mail, etc.).\n\nSo a few notes from me.\n\nFirstly, get started you can visit here or create a new script by right clicking in your google drive, selecting More and then Google Apps Script.\n\nThen you’ll be working on Googles IDE (Interactive Development Environment). It’s pretty basic, but it does the job and the code runs nice and quick for me.\n\n\n\nFirst thing to note is that you need to used a log file for print statements as a console doesn’t exist:\n    Logger.log(&quot;I am a bit slow!&quot;);\n\n\nTo view the log file, click View and then Logs. These are quite slow to appear! 😔\n\n\n\nSo I’ve used it for a day and it has worked great. If you find yourself working on google documents then definitely consider automating your work with Google Apps Scripts!\n\n"
+} ,
+  
+  {
     "title"    : "Sample post",
     "category" : "",
     "tags"     : " A Tag, Test, Lorem, Ipsum",
@@ -132,18 +142,6 @@
   
   {
   
-  "title"    : "Badgers, cattle, and bovine tuberculosis in South West England",
-  "category" : "",
-  "tags"     : " genomics, bovine tuberculosis, PhD, research, Mycobacterium bovis, badgers, cattle",
-  "url"      : "/projects/woodchester",
-  "date"     : "October 3, 2019",
-  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
-  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\nUse this area of the page to describe your project. The icon above is part of a free icon set by Flat Icons. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!\n"
-  
-} ,
-  
-  {
-  
   "title"    : "phyloHelpeR",
   "category" : "",
   "tags"     : " plot, base, R, package, phylogenetics",
@@ -151,6 +149,18 @@
   "date"     : "November 21, 2019",
   "excerpt"  : "I’ve been working with phylogenies in R for a long time. I find the ape and phytools to be the most useful.\n\nThe phyloHelpeR is an R package to make a home for some of the functions I use a lot when building and plotting phylogenies in R. At the m...",
   "content"  : "I’ve been working with phylogenies in R for a long time. I find the ape and phytools to be the most useful.\n\nThe phyloHelpeR is an R package to make a home for some of the functions I use a lot when building and plotting phylogenies in R. At the moment it is home to the following functions:\n\n\n  tanglePlot() a function to plot two phylogenies based on the same sequences opposite one another so you can see how they differ.\n  runRAXML() a function to interact with the command line phylogenetic tree building tool RAxML\n  addSNPScale() a function to add a scale to a phylogeny whos branch lengths are scaled to the number of Single Nucleotide Polymorphisms.\n\n\nAs you can see, this R package is a work in progress… As I don’t work on phylogenetics anymore my contributions will be slow but hopefully I’ll still add a few more helpful functions. 👍\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Badgers, cattle, and bovine tuberculosis in South West England",
+  "category" : "",
+  "tags"     : " genomics, bovine tuberculosis, PhD, research, Mycobacterium bovis, badgers, cattle",
+  "url"      : "/projects/woodchester",
+  "date"     : "December 16, 2019",
+  "excerpt"  : "Today, after a huge amount of work over many years, our research using genomics to look at how often Mycobacterium bovis was transmitted within and between cattle and badgers in Woodchester Park has been published!\n\n\n  Mycobacterium bovis is a bac...",
+  "content"  : "Today, after a huge amount of work over many years, our research using genomics to look at how often Mycobacterium bovis was transmitted within and between cattle and badgers in Woodchester Park has been published!\n\n\n  Mycobacterium bovis is a bacteria that infects cattle causing bovine tuberculosis. It costs the UK goverment tens of millions of pounds every year to control. It can infect many different species. In fact, in the UK, badger populations are can be infected and research has shown that infection can spread between cattle and badgers.\n\n\nTake a look at the article here! You can also read a nice summary in The Guardian.\n\nWoodchester Park, shown below, is a reserve in the south west of England. In this park there is a mixture of fertile farmland pasture, woodland and small ponds - the perfect place for a badger to live! 🦡\n\n\n\nAround three hundred badgers live in Woodchester Park in small social groups of 5-12 individuals. There are also cattle that graze on the fields in and around the park.\n\nOur research used samples of Mycobacterium bovis bacteria from infected cattle and badgers living in and around Woodchester Park. We sequenced the genomes of these bacteria and  found that the badgers and cattle were infected with very similar strains of the bacteria, sometimes even the exact same strain! This meant that infection was being transmitted between the badgers and cattle, and it must have been happening quite frequently.\n\n\n  But who was giving it to whom?\n\n\nTo estimate how often infection was transmitted from cattle to badgers, and in the other direction, we used a tool called BASTA.\n\n\n\n\n  We found that badgers were transmitting infection to cattle more frequently. We also found that transmission between animals of the same species was more common. So cattle were more likely to infect other cattle and badgers other badgers, than cattle infect badgers or vice versa.\n\n\nOur research relied upon a very large collaboration between institutions across the United Kingdom and Republic of Ireland. The main institutions involved were:\n\n  University of Glasgow\n  University of Edinburgh\n  University College Dublin\n  Agri-Food and Biosciences Institute\n  Animal &amp;amp; Plant Health Agency\n\n\n\n  Our data was only from Woodchester Park, a small area in the South West of England. Without further research, we don’t know if what we found here is true elsewhere.\n\n\nTake a look at the paper! 🦡🐄🦠🧬\n\n"
   
 } ,
   

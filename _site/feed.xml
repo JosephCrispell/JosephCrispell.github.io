@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T22:20:19+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-20T19:32:47+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Google Apps Script is a &lt;a href=&quot;https://www.w3schools.com/js/&quot;&gt;Javascript&lt;/a&gt; based programming language that seemlessly links to google docs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’m creating a tool to update a &lt;a href=&quot;https://www.google.co.uk/sheets/about/&quot;&gt;googlesheet&lt;/a&gt; based on information entered into other googlesheets - ideally it’ll save some time as before the updates were done manually every day.&lt;/p&gt;
+
+&lt;p&gt;I’m relatively new to Javascript and I am brand new to Google Apps Script. Thankfully there’s plenty of help online. For general Javascript help check out the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.w3schools.com/js/&quot;&gt;w3schools&lt;/a&gt; provides a huge amount of training materials&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/tagged/javascript&quot;&gt;StackOverflow&lt;/a&gt; never fails to disappoint to answer every weird and wonderful question&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And Google has written some comprehensive documentation &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app&quot;&gt;here&lt;/a&gt;. You find that Google has created objects and methods for all the Google linked tools (docs, googlesheets, calendar, mail, etc.).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;So a few notes from me.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Firstly, get started you can visit &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;here&lt;/a&gt; or create a new script by right clicking in your google drive, selecting &lt;em&gt;More&lt;/em&gt; and then &lt;em&gt;Google Apps Script&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then you’ll be working on Googles IDE (&lt;strong&gt;I&lt;/strong&gt;nteractive &lt;strong&gt;D&lt;/strong&gt;evelopment &lt;strong&gt;E&lt;/strong&gt;nvironment). It’s pretty basic, but it does the job and the code runs nice and quick for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/GoogleAppsScript/GoogleAppsScript.png&quot; alt=&quot;IDE&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First thing to note is that you need to used a log file for print statements as a console doesn’t exist:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;I am a bit slow!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To view the log file, click &lt;em&gt;View&lt;/em&gt; and then &lt;em&gt;Logs&lt;/em&gt;. These are quite &lt;a href=&quot;https://stackoverflow.com/questions/60404784/very-slow-logs-with-google-apps-script-v8-vs-rhino&quot;&gt;slow&lt;/a&gt; to appear! 😔&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/GoogleAppsScript/GoogleAppsScript_slow.png&quot; alt=&quot;Slow!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I’ve used it for a day and it has worked great. If you find yourself working on google documents then definitely consider automating your work with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Scripts&lt;/a&gt;!&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary></entry><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
 Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
 &lt;!--more--&gt;
 Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
