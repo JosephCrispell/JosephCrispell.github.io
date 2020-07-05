@@ -70,10 +70,11 @@
 <link rel="canonical" href="http://localhost:4000/2020/06/20/google-scripts.html" />
 <meta property="og:url" content="http://localhost:4000/2020/06/20/google-scripts.html" />
 <meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-20T00:00:00+01:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-06-20T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/06/20/google-scripts.html"},"description":"So I’ve just started working with Google Apps Script.","@type":"BlogPosting","url":"http://localhost:4000/2020/06/20/google-scripts.html","headline":"Getting started with Google Apps Script","dateModified":"2020-06-20T00:00:00+01:00","@context":"https://schema.org"}</script>
+{"datePublished":"2020-06-20T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/06/20/google-scripts.html"},"description":"So I’ve just started working with Google Apps Script.","@type":"BlogPosting","url":"http://localhost:4000/2020/06/20/google-scripts.html","headline":"Getting started with Google Apps Script","dateModified":"2020-06-20T00:00:00+01:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -196,10 +197,10 @@
 <meta property="og:title"        content="Getting started with Google Apps Script" />
 <meta property="og:description"  content="So I’ve just started working with Google Apps Script.
 " />
-<meta property="og:image"        content="" />
+<meta property="og:image"        content="assets/img/blog/GoogleAppsScript/feature.jpg" />
 
 
-<article >
+<article class="feature-image">
 
   
   <header id="main" style="">
@@ -230,26 +231,51 @@
   <li><a href="https://stackoverflow.com/questions/tagged/javascript">StackOverflow</a> never fails to disappoint to answer every weird and wonderful question</li>
 </ul>
 
-<p>And Google has written some comprehensive documentation <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app">here</a>. You find that Google has created objects and methods for all the Google linked tools (docs, googlesheets, calendar, mail, etc.).</p>
+<p>And Google has written some comprehensive documentation <a href="https://developers.google.com/apps-script/reference/spreadsheet">here</a>. You find that Google has created objects and methods for all the Google linked tools (docs, googlesheets, calendar, mail, etc.).</p>
 
-<p><em>So a few notes from me.</em></p>
+<p>I’ve created a <em>DEMO</em> workbook <a href="https://docs.google.com/spreadsheets/d/1q7hWKZesEybEiQSCEUKbUtMFz8f4WAdPAnfSrrQodEE/edit?usp=sharing">here</a>. Here is a quick gif of it in action:</p>
 
-<p>Firstly, get started you can visit <a href="https://www.google.com/script/start/">here</a> or create a new script by right clicking in your google drive, selecting <em>More</em> and then <em>Google Apps Script</em>.</p>
+<p><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScriptsDemo_04-07-20.gif" alt="DEMO" /></p>
 
-<p>Then you’ll be working on Googles IDE (<strong>I</strong>nteractive <strong>D</strong>evelopment <strong>E</strong>nvironment). It’s pretty basic, but it does the job and the code runs nice and quick for me.</p>
+<p>Here are a few useful pieces of code I picked up during my work:</p>
 
-<p><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScript.png" alt="IDE" /></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Open a workbook by URL</span>
+<span class="kd">var</span> <span class="nx">workbook</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">();</span>
 
-<p>First thing to note is that you need to used a log file for print statements as a console doesn’t exist:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">I am a bit slow!</span><span class="dl">"</span><span class="p">);</span>
+<span class="c1">// Open the attached workbook</span>
+<span class="kd">var</span> <span class="nx">workbook</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">openByUrl</span><span class="p">();</span>
+
+<span class="c1">// Get a sheet by name</span>
+<span class="kd">var</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">workbook</span><span class="p">.</span><span class="nx">getSheetByName</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sheet1</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Get values from sheet</span>
+<span class="kd">var</span> <span class="nx">values</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">row</span><span class="p">,</span> <span class="nx">column</span><span class="p">,</span> <span class="nx">numRows</span><span class="p">,</span> <span class="nx">numColumns</span><span class="p">);</span>
+
+<span class="c1">// Change font colour of values in sheet</span>
+<span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">row</span><span class="p">,</span> <span class="nx">column</span><span class="p">,</span> <span class="nx">numRows</span><span class="p">,</span> <span class="nx">numColumns</span><span class="p">).</span><span class="nx">setFontColor</span><span class="p">(</span><span class="nx">colour</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>To view the log file, click <em>View</em> and then <em>Logs</em>. These are quite <a href="https://stackoverflow.com/questions/60404784/very-slow-logs-with-google-apps-script-v8-vs-rhino">slow</a> to appear! 😔</p>
+<p>The main quirk to working with Google Apps Scripts is that there isn’t a terminal. Instead you can use the <code class="highlighter-rouge">Logger.log("string")</code> function to print to logs, which you can view by selecting “View” and then “logs” - this is surprisingly slow!! 😕 The other solution, which I use in my demo above, is to print to a google document. Here, I print messages to a sheet within a googlesheets workbook:</p>
 
-<p><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScript_slow.png" alt="Slow!" /></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">printToLog</span><span class="p">(</span><span class="nx">logSheet</span><span class="p">,</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">colour</span><span class="o">=</span><span class="dl">"</span><span class="s2">black</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+  
+  <span class="c1">// Get the number of rows in the log sheet</span>
+  <span class="kd">var</span> <span class="nx">nRows</span> <span class="o">=</span> <span class="nx">logSheet</span><span class="p">.</span><span class="nx">getLastRow</span><span class="p">();</span>
+  
+  <span class="c1">// Get the current time</span>
+  <span class="kd">var</span> <span class="nx">timeStamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  
+  <span class="c1">// Pring to log</span>
+  <span class="nx">logSheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">nRows</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">timeStamp</span><span class="p">);</span>
+  <span class="nx">logSheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">nRows</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">string</span><span class="p">).</span><span class="nx">setFontColor</span><span class="p">(</span><span class="nx">colour</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p>So I’ve used it for a day and it has worked great. If you find yourself working on google documents then definitely consider automating your work with <a href="https://www.google.com/script/start/">Google Apps Scripts</a>!</p>
+<p>I’d recommend taking a look at my <a href="https://docs.google.com/spreadsheets/d/1q7hWKZesEybEiQSCEUKbUtMFz8f4WAdPAnfSrrQodEE/edit?usp=sharing">demo</a> workbook, it is amazing how easy it is to create menus and attach functions! Also, because Google Apps Scripts is based on Javascript there are no limits to what you can do!!</p>
 
+<p><em>Note that the demo is read only, so you’ll need to make a cpoy before you can play around with it.</em></p>
+
+<p>Lastly, get into the Google <a href="https://developers.google.com/apps-script/reference/spreadsheet">documentation</a>, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀</p>
 
     
   </section>
@@ -337,6 +363,7 @@
 
   header#main {
     background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/GoogleAppsScript/feature.jpg');
     
   }
 </style>
