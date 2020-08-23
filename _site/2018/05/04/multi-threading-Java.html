@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2018/05/04/multi-threading-Java.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Multi-threading in Java | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Multi-threading in Java" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java." />
+<meta property="og:description" content="Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java." />
+<link rel="canonical" href="http://localhost:4000/2018/05/04/multi-threading-Java.html" />
+<meta property="og:url" content="http://localhost:4000/2018/05/04/multi-threading-Java.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/MultiThreadingInJava/thumbnail.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-04T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2018-05-04T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/MultiThreadingInJava/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/04/multi-threading-Java.html"},"description":"Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.","@type":"BlogPosting","url":"http://localhost:4000/2018/05/04/multi-threading-Java.html","headline":"Multi-threading in Java","dateModified":"2018-05-04T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2018/05/04/multi-threading-Java.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Multi-threading in Java" />
+<meta property="og:description"  content="Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.
+" />
+<meta property="og:image"        content="assets/img/blog/MultiThreadingInJava/thumbnail.svg" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main" style="">
+    
+      <h1 id="Multi-threading+in+Java" class="title">Multi-threading in Java</h1>
+
+      <p class="meta">
+        May 4, 2018
+      </p>
+    
+  </header>
+  
+
+  
+  <section class="post-content">
+  
+      <p>Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.</p>
+
+<p>Multithreading, as the name suggests, involves running multiple threads. A thread can be thought of as something that can run a single task. Multithreading is using multiple threads to complete multiple tasks in parrallel.</p>
+
+<p>Up until last week I hadn’t used any multithreading, but I got stuck trying to speed up some code and I thought it was time to learn. Also I built myself a new computer with 6 cores!</p>
+
+<p>Multithreading in Java is amazingly well supported (although the code below looks pretty daunting) and it uses the <code class="highlighter-rouge">Thread</code> class. The <code class="highlighter-rouge">Thread</code> class, like any other Java class, can be modified (extended) to suit a particular task. Here is a general class structure for a task to be completed in parallel:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create the class and give it a name</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="nc">Thread</span><span class="o">{</span>
+
+  <span class="c1">// Initialise variables you want to be able to access throughout class here</span>
+  <span class="kd">public</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span><span class="o">;</span>
+
+  <span class="c1">// Define how the current class can be created</span>
+  <span class="kd">public</span> <span class="nf">MyThread</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span><span class="o">){</span>
+
+    <span class="c1">// Assign a name to the current thread - using the position</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+
+    <span class="c1">// Store other inputs here</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="n">input</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a run method - this will execute when thread started</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(){</span>
+
+    <span class="c1">// Complete your task here - using the inputs provided</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Create a method to retrieve whatever your task creates</span>
+  <span class="kd">public</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="nf">getInput</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">input</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Once you’ve created your <code class="highlighter-rouge">Thread</code> class, then you need conduct your multithreading. You’ll need a different class, which might look something like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Create the class and give it a name</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MultiThreading</span><span class="o">{</span>
+
+  <span class="c1">// Define your main method - the place where you'll do the multithreading</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+
+    <span class="c1">// Define the number of threads to be created (if more than number of</span>
+    <span class="c1">// threads available, Java will automatically queue)</span>
+    <span class="kt">int</span> <span class="n">numberOfThreads</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+
+    <span class="c1">// Initialise an array to store each thread object</span>
+    <span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyThread</span><span class="o">[</span><span class="n">numberOfThreads</span><span class="o">];</span>
+
+    <span class="c1">// Define inputs for the thread to work on here;</span>
+    <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="o">...;</span>
+
+    <span class="c1">// Create each thread</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">numberOfThreads</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+
+      <span class="c1">// Create and start the current thread</span>
+      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyThread</span><span class="o">(</span><span class="s">"thread-"</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span>
+      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">start</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Check the threads are finished</span>
+    <span class="n">waitUntilAllFinished</span><span class="o">(</span><span class="n">threads</span><span class="o">)</span>
+
+    <span class="c1">// Do something with the output from each thread</span>
+    <span class="k">for</span><span class="o">(</span><span class="nc">MyThread</span> <span class="n">thread</span> <span class="o">:</span> <span class="n">threads</span><span class="o">){</span>
+      <span class="o">...</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a method to check whether threads are finished</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">finished</span><span class="o">(</span><span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span><span class="o">){</span>
+
+    <span class="c1">// Initialise a variable to record whether all finished</span>
+    <span class="kt">boolean</span> <span class="n">finished</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+    <span class="c1">// Examine each of the threads to see if any aren't finished</span>
+    <span class="k">for</span><span class="o">(</span><span class="nc">ExaminePosition</span> <span class="n">thread</span> <span class="o">:</span> <span class="n">threads</span><span class="o">){</span>
+
+      <span class="c1">// Check if current thread finished</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">thread</span><span class="o">.</span><span class="na">isAlive</span><span class="o">()</span> <span class="o">==</span> <span class="kc">true</span><span class="o">){</span>
+
+        <span class="n">finished</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">finished</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a method to wait until threads finished</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">waitUntilAllFinished</span><span class="o">(</span><span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span><span class="o">){</span>
+
+    <span class="c1">// Initialise a variable to record whether all threads finished</span>
+    <span class="kt">boolean</span> <span class="n">allFinished</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+    <span class="c1">// Keep checking the threads until they're all finished</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">allFinished</span> <span class="o">==</span> <span class="kc">false</span><span class="o">){</span>
+
+      <span class="c1">// Check whether all threads finished</span>
+      <span class="n">allFinished</span> <span class="o">=</span> <span class="n">finished</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The above class looks pretty long, but I’ve added in some extra functions to check and wait until threads are finished. The code I’ve given is a skeleton for getting started with multithreading in Java. Thanks for reading, and good luck if you’re going to be doing some multithreading of your own. I’m off to Milan!</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Multi-threading+in+Java%20http%3A%2F%2Flocalhost%3A4000%2F2018%2F05%2F04%2Fmulti-threading-Java.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Multi-threading+in+Java%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2018/05/04/multi-threading-Java.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#Java">
+      <p><i class="fa fa-tag fa-fw"></i> Java</p>
+    </a>
+    
+    <a class="button" href="/tags#parallel">
+      <p><i class="fa fa-tag fa-fw"></i> parallel</p>
+    </a>
+    
+    <a class="button" href="/tags#programming">
+      <p><i class="fa fa-tag fa-fw"></i> programming</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Multi-threading in R" href="/2018/08/27/multi-threading-R.html">
+            <p>Previous post</p>
+            Multi-threading in R
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="addTextLabels()" href="/2018/04/03/addTextLabels.html">
+            <p>Next post</p>
+            addTextLabels()
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/MultiThreadingInJava/thumbnail.svg');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>

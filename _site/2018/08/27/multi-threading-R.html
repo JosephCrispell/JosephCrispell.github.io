@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2018/08/27/multi-threading-R.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Multi-threading in R | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Multi-threading in R" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R." />
+<meta property="og:description" content="Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R." />
+<link rel="canonical" href="http://localhost:4000/2018/08/27/multi-threading-R.html" />
+<meta property="og:url" content="http://localhost:4000/2018/08/27/multi-threading-R.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-27T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2018-08-27T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/08/27/multi-threading-R.html"},"description":"Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.","@type":"BlogPosting","url":"http://localhost:4000/2018/08/27/multi-threading-R.html","headline":"Multi-threading in R","dateModified":"2018-08-27T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2018/08/27/multi-threading-R.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Multi-threading in R" />
+<meta property="og:description"  content="Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.
+" />
+<meta property="og:image"        content="assets/img/blog/MultiThreadingInR/thumbnail.svg" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main" style="">
+    
+      <h1 id="Multi-threading+in+R" class="title">Multi-threading in R</h1>
+
+      <p class="meta">
+        August 27, 2018
+      </p>
+    
+  </header>
+  
+
+  
+  <section class="post-content">
+  
+      <p>Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.</p>
+
+<p>Multithreading basically means running multiple tasks at the same time. It is also called parallel programming. Most modern computers come with multiple cores: dual-core, quad-core, etc… Unfortunately, these cores aren’t often used, I especially don’t! 👀</p>
+
+<p>Any independent task that you have to do alot should be multithreaded. For example, today I’ve randomly generated a large set of nucleotide sequences using this function:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">createRandomNucleotideAlignment</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">){</span><span class="w">
+
+  </span><span class="c1"># Initialise a dataframe to store the sequences</span><span class="w">
+  </span><span class="n">sequences</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span><span class="w">
+
+  </span><span class="c1"># Create each sequence</span><span class="w">
+  </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">n</span><span class="p">){</span><span class="w">
+
+    </span><span class="c1"># Randomly sample nucleotides to create a sequence of nucleotides</span><span class="w">
+    </span><span class="n">nucleotides</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span><span class="w"> </span><span class="s1">'C'</span><span class="p">,</span><span class="w"> </span><span class="s1">'G'</span><span class="p">,</span><span class="w"> </span><span class="s1">'T'</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1"># Collapse the vector of characters (nucleotides) into single string</span><span class="w">
+    </span><span class="n">sequences</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">nucleotides</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>The above function samples from the nucleotides <code class="highlighter-rouge">c('A', 'C', 'G', 'T')</code> to generate a random sequence that is then stored in a <code class="highlighter-rouge">list</code> called <code class="highlighter-rouge">sequences</code>.</p>
+
+<p>My task is to count the numbers of <code class="highlighter-rouge">A</code>s, <code class="highlighter-rouge">C</code>s, <code class="highlighter-rouge">G</code>s, and <code class="highlighter-rouge">T</code>s in each of a set of randomly generated sequences. Each sequence is independent and so the counting of the nucleotides in each could be done simultaneously.</p>
+
+<p>So let’s get started with multithreading in R!</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load the parallel library</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">parallel</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Get the number of threads in the current machine</span><span class="w">
+</span><span class="n">nThreads</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">detectCores</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># Initialise the cluster of threads</span><span class="w">
+</span><span class="n">clusterOfThreads</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">makeCluster</span><span class="p">(</span><span class="n">nThreads</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Register the cluster of threads</span><span class="w">
+</span><span class="n">registerDoParallel</span><span class="p">(</span><span class="n">clusterOfThreads</span><span class="p">,</span><span class="w"> </span><span class="n">cores</span><span class="o">=</span><span class="n">nThreads</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There is a little bit of set up! Firstly, I’m using the <code class="highlighter-rouge">parallel</code>, so that needs to be loaded. Then I used <code class="highlighter-rouge">detectCores()</code> function to find out how many threads I have on my computer (12). Then I use <code class="highlighter-rouge">makeCluster()</code> and <code class="highlighter-rouge">registerDoParallel()</code> to make and register my cluster of threads.</p>
+
+<p>Next I wrote a simple function that, given a sequence, will count the number of times each nucleotide is present:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="n">calculateNucleotideFrequencies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">sequence</span><span class="p">){</span><span class="w">
+
+  </span><span class="c1"># Initialise a list to store the nucleotide counts</span><span class="w">
+  </span><span class="n">frequencies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="s1">'A'</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s1">'C'</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s1">'G'</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s1">'T'</span><span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="w">
+
+  </span><span class="c1"># Split the sequence into its nucleotides</span><span class="w">
+  </span><span class="n">nucleotides</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">strsplit</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="o">=</span><span class="s2">""</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+
+  </span><span class="c1"># Count the number of times each nucleotide appears in the given sequence</span><span class="w">
+  </span><span class="k">for</span><span class="p">(</span><span class="n">nucleotide</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">nucleotides</span><span class="p">){</span><span class="w">
+    </span><span class="n">frequencies</span><span class="p">[[</span><span class="n">nucleotide</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">frequencies</span><span class="p">[[</span><span class="n">nucleotide</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>With the above function, the sequence is split back into nucleotides, and then each nucleotide is examined and the appropriate count is increased. I used a <code class="highlighter-rouge">list</code> to store the counts, so that I could each nucleotide as a key.</p>
+
+<p>So we’ve initialise our cluster and we’ve got a couple of functions <code class="highlighter-rouge">createRandomNucleotideAlignment()</code> and <code class="highlighter-rouge">calculateNucleotideFrequencies()</code> to create and examine a set of sequences. So here’s how to count those nucleotides in parallel:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a random set of nucleotide sequences</span><span class="w">
+</span><span class="n">sequences</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">createRandomNucleotideAlignment</span><span class="p">(</span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">100000</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Use multiple threads to count how many times each nucleotide appears in each sequence</span><span class="w">
+</span><span class="n">frequences</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">clusterApply</span><span class="p">(</span><span class="n">cl</span><span class="o">=</span><span class="n">clusterOfThreads</span><span class="p">,</span><span class="w">
+                           </span><span class="n">x</span><span class="o">=</span><span class="n">sequences</span><span class="p">,</span><span class="w">
+                           </span><span class="n">fun</span><span class="o">=</span><span class="n">calculateNucleotideFrequencies</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># REMEMBER to close the cluster of threads</span><span class="w">
+</span><span class="n">stopCluster</span><span class="p">(</span><span class="n">clusterOfThreads</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">clusterApply()</code> function will automatically assign each of the sequences in <code class="highlighter-rouge">sequences</code> to a 100 threads, 12 of which will be run straight away and the rest will be queued. A list of nucleotide frequencies is returned, with each position corresponding the sequence in the same position of <code class="highlighter-rouge">sequences</code>.</p>
+
+<p>I spent ages trying to think of a good example to demonstrate the ability of multithreading, and I don’t really think I found one! Here, I created very large sequences and with these large sequenes it is faster to count the nucleotides on multiple threads.</p>
+
+<p>Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available <a href="https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R">here</a>.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Multi-threading+in+R%20http%3A%2F%2Flocalhost%3A4000%2F2018%2F08%2F27%2Fmulti-threading-R.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Multi-threading+in+R%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2018/08/27/multi-threading-R.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#R">
+      <p><i class="fa fa-tag fa-fw"></i> R</p>
+    </a>
+    
+    <a class="button" href="/tags#parallel">
+      <p><i class="fa fa-tag fa-fw"></i> parallel</p>
+    </a>
+    
+    <a class="button" href="/tags#programming">
+      <p><i class="fa fa-tag fa-fw"></i> programming</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Ben Vorlich hike" href="/2019/02/07/benVorlich.html">
+            <p>Previous post</p>
+            Ben Vorlich hike
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Multi-threading in Java" href="/2018/05/04/multi-threading-Java.html">
+            <p>Next post</p>
+            Multi-threading in Java
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/MultiThreadingInR/thumbnail.svg');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>
