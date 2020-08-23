@@ -62,6 +62,6 @@ function printToLog(logSheet, string, colour="black") {
 
 I'd recommend taking a look at my [demo](https://docs.google.com/spreadsheets/d/1q7hWKZesEybEiQSCEUKbUtMFz8f4WAdPAnfSrrQodEE/edit?usp=sharing) workbook, it is amazing how easy it is to create menus and attach functions! Also, because Google Apps Scripts is based on Javascript there are no limits to what you can do!! 
 
-*Note that the demo is read only, so you'll need to make a cpoy before you can play around with it.*
+> Note that the demo is read only, so you'll need to make a cpoy before you can play around with it.
 
 Lastly, get into the Google [documentation](https://developers.google.com/apps-script/reference/spreadsheet), it is easy to search and well presented with great examples of how each function works. Enjoy! 😀

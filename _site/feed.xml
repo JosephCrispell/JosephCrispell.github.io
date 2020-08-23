@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-05T13:23:43+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-23T13:58:53+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Google Apps Script is a &lt;a href=&quot;https://www.w3schools.com/js/&quot;&gt;Javascript&lt;/a&gt; based programming language that seemlessly links to google docs.&lt;/p&gt;
@@ -54,7 +54,9 @@
 
 &lt;p&gt;I’d recommend taking a look at my &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1q7hWKZesEybEiQSCEUKbUtMFz8f4WAdPAnfSrrQodEE/edit?usp=sharing&quot;&gt;demo&lt;/a&gt; workbook, it is amazing how easy it is to create menus and attach functions! Also, because Google Apps Scripts is based on Javascript there are no limits to what you can do!!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note that the demo is read only, so you’ll need to make a cpoy before you can play around with it.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Note that the demo is read only, so you’ll need to make a cpoy before you can play around with it.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Lastly, get into the Google &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet&quot;&gt;documentation&lt;/a&gt;, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
 Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
@@ -114,7 +116,100 @@ looking at this cheerful and colorful them, I wanted to enable something similar
 If you want another one, put it in &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/img&lt;/code&gt; as well.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;⚠️ It’s a bit hacking the css in the &lt;code class=&quot;highlighter-rouge&quot;&gt;post.html&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>sylhare</name></author><category term="Test" /><category term="Color" /><category term="Markdown" /><summary type="html">What a colorful post! This is an idea that came from xukimseven/HardCandy-Jekyll looking at this cheerful and colorful them, I wanted to enable something similar for mine. You can go fork and star hers too! 😉</summary></entry><entry><title type="html">addTextLabels()</title><link href="http://localhost:4000/2018/04/03/addTextLabels.html" rel="alternate" type="text/html" title="addTextLabels()" /><published>2018-04-03T00:00:00+01:00</published><updated>2018-04-03T00:00:00+01:00</updated><id>http://localhost:4000/2018/04/03/addTextLabels</id><content type="html" xml:base="http://localhost:4000/2018/04/03/addTextLabels.html">&lt;p&gt;We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my &lt;code class=&quot;highlighter-rouge&quot;&gt;addTextLabels()&lt;/code&gt; function.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>sylhare</name></author><category term="Test" /><category term="Color" /><category term="Markdown" /><summary type="html">What a colorful post! This is an idea that came from xukimseven/HardCandy-Jekyll looking at this cheerful and colorful them, I wanted to enable something similar for mine. You can go fork and star hers too! 😉</summary></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
+
+&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
+  &lt;li&gt;Assign each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
+  &lt;li&gt;Examine each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
+ a. Count the points in current bin&lt;br /&gt;
+ b. Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
+ c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Plot the points with modified &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
+
+&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://www.google.com/maps/d/embed?mid=1cSersw6rEKk8DgMkhu3idM_rHfg&amp;amp;z=13&quot; width=&quot;100%&quot; height=&quot;480&quot; style=&quot;border:none;&quot;&gt;Browser not compatible.&lt;/iframe&gt;
+
+&lt;p&gt;Despite mixed opinions about whether we’d reach the top by the people we met along the way, we all made it. We enjoyed some spectacular views and deep snow.&lt;/p&gt;
+
+&lt;div class=&quot;slideshow-container&quot;&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/Carpark.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Just about to head off!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/Icicles.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Spotted a frozen burst pipe&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/SnowFree.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;On the steep section!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/OnTheWayUp.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Past the snow line!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/Snow.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Deep snow!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/BenVorlich_Thumbnail.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Testing Steven's photography&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/NearTheTop.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Almost there!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/benVorlich/Top.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Made it!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
+    &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">addTextLabels()</title><link href="http://localhost:4000/2018/04/03/addTextLabels.html" rel="alternate" type="text/html" title="addTextLabels()" /><published>2018-04-03T00:00:00+01:00</published><updated>2018-04-03T00:00:00+01:00</updated><id>http://localhost:4000/2018/04/03/addTextLabels</id><content type="html" xml:base="http://localhost:4000/2018/04/03/addTextLabels.html">&lt;p&gt;We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my &lt;code class=&quot;highlighter-rouge&quot;&gt;addTextLabels()&lt;/code&gt; function.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;addTextLabels()&lt;/code&gt; is part of my &lt;a href=&quot;/projects/basicPlotter&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; R package and allows you to add non-overlapping labels to points on a plot.&lt;/p&gt;
 
@@ -322,199 +417,4 @@ Syntax highlighting is a feature that displays source code, in different colors 
 
 &lt;script src=&quot;https://gist.github.com/mmistakes/77c68fbb07731a456805a7b473f47841.js&quot;&gt;&lt;/script&gt;
 
-&lt;h3 id=&quot;source&quot;&gt;Source&lt;/h3&gt;</content><author><name>mmistakes</name></author><category term="code" /><summary type="html">From Michael’s Rose Minimal Mistakes. Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.</summary></entry><entry><title type="html">Generate a table of content</title><link href="http://localhost:4000/2013/12/12/Generate-a-table-of-content.html" rel="alternate" type="text/html" title="Generate a table of content" /><published>2013-12-12T00:00:00+00:00</published><updated>2013-12-12T00:00:00+00:00</updated><id>http://localhost:4000/2013/12/12/Generate-a-table-of-content</id><content type="html" xml:base="http://localhost:4000/2013/12/12/Generate-a-table-of-content.html">&lt;p&gt;Test article, get the source on &lt;a href=&quot;https://github.com/Sylhare/Type-on-Strap/blob/gh-pages/_posts/2013-12-12-toc.js-for-table-of-content.md&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;using-kramdown-gfm-&quot;&gt;Using Kramdown GFM &lt;!--more--&gt;&lt;/h1&gt;
-
-&lt;!-- To be placed at the beginning of the post, it is where the table of content will be generated --&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#using-kramdown-gfm-&quot; id=&quot;markdown-toc-using-kramdown-gfm-&quot;&gt;Using Kramdown GFM &lt;!--more--&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#basic-usage&quot; id=&quot;markdown-toc-basic-usage&quot;&gt;Basic Usage&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#using-tocjs&quot; id=&quot;markdown-toc-using-tocjs&quot;&gt;Using toc.js&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#customize-with-tocjs&quot; id=&quot;markdown-toc-customize-with-tocjs&quot;&gt;Customize with toc.js&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#use-with-this-jekyll-template&quot; id=&quot;markdown-toc-use-with-this-jekyll-template&quot;&gt;Use with this jekyll template&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#basic-usage-1&quot; id=&quot;markdown-toc-basic-usage-1&quot;&gt;Basic Usage&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#how-it-would-look-like&quot; id=&quot;markdown-toc-how-it-would-look-like&quot;&gt;How it would look like&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h2&gt;
-
-&lt;p&gt;You need to put this at the beginning of the page where you want the table of content to be displayed&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* TOC
-{:toc}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It will then render the markdown and html titles (lines that begins with &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; or using the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt; tages)&lt;/p&gt;
-
-&lt;h1 id=&quot;using-tocjs&quot;&gt;Using toc.js&lt;/h1&gt;
-
-&lt;p&gt;Demo display of &lt;a href=&quot;https://github.com/ghiculescu/jekyll-table-of-contents&quot;&gt;jekyll-table-of-contents&lt;/a&gt; by ghiculescu.&lt;/p&gt;
-
-&lt;!-- To be placed at the beginning of the post, it is where the table of content will be generated --&gt;
-&lt;div id=&quot;toc&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;customize-with-tocjs&quot;&gt;Customize with toc.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ghiculescu/jekyll-table-of-contents&quot;&gt;toc.js&lt;/a&gt; stands for table of content, it is a js plugin that generates automatically a table of content of a post.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-with-this-jekyll-template&quot;&gt;Use with this jekyll template&lt;/h3&gt;
-
-&lt;p&gt;If you want to customize the theme it is up to you, you can add the &lt;code class=&quot;highlighter-rouge&quot;&gt;toc.js&lt;/code&gt; file into the &lt;code class=&quot;highlighter-rouge&quot;&gt;asset &amp;gt; js&lt;/code&gt; and add it into the &lt;code class=&quot;highlighter-rouge&quot;&gt;page.html&lt;/code&gt; layout with:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/toc.js&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Then you can use it as it is said on the repository.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage-1&quot;&gt;Basic Usage&lt;/h2&gt;
-
-&lt;p&gt;The script requires jQuery. First, reference toc.js in templates where you would like to add the table of content. Then, create an HTML element wherever you want your table of contents to appear:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;toc&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then you put your post with titles and all like:&lt;/p&gt;
-
-&lt;div class=&quot;language-apiblueprint highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;## Title&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;## Mid title 1&lt;/span&gt;
-This is text on page one
-&lt;span class=&quot;gu&quot;&gt;## Mid title 2&lt;/span&gt;
-This is text for page two
-&lt;span class=&quot;gu&quot;&gt;### Sub title 2.a&lt;/span&gt;
-Some more text
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then at the end of your post, you call the .toc() function using:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ready&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#toc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;how-it-would-look-like&quot;&gt;How it would look like&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/20642750/39189661-c22099f2-47a0-11e8-826e-2ec3ef4cc4f4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;script&gt;
-// toc.js 
-// Copied here for the example, can be placed in assets/js for real use in your template.
-// https://github.com/ghiculescu/jekyll-table-of-contents
-(function($){
-  $.fn.toc = function(options) {
-    var defaults = {
-      noBackToTopLinks: false,
-      title: '&lt;i&gt;Jump to...&lt;/i&gt;',
-      minimumHeaders: 3,
-      headers: 'h1, h2, h3, h4, h5, h6',
-      listType: 'ol', // values: [ol|ul]
-      showEffect: 'show', // values: [show|slideDown|fadeIn|none]
-      showSpeed: 'slow', // set to 0 to deactivate effect
-      classes: { list: '',
-                 item: ''
-               }
-    },
-    settings = $.extend(defaults, options);
-
-    function fixedEncodeURIComponent (str) {
-      return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-        return '%' + c.charCodeAt(0).toString(16);
-      });
-    }
-
-    function createLink (header) {
-      var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
-      return &quot;&lt;a href='#&quot; + fixedEncodeURIComponent(header.id) + &quot;'&gt;&quot; + innerText + &quot;&lt;/a&gt;&quot;;
-    }
-
-    var headers = $(settings.headers).filter(function() {
-      // get all headers with an ID
-      var previousSiblingName = $(this).prev().attr( &quot;name&quot; );
-      if (!this.id &amp;&amp; previousSiblingName) {
-        this.id = $(this).attr( &quot;id&quot;, previousSiblingName.replace(/\./g, &quot;-&quot;) );
-      }
-      return this.id;
-    }), output = $(this);
-    if (!headers.length || headers.length &lt; settings.minimumHeaders || !output.length) {
-      $(this).hide();
-      return;
-    }
-
-    if (0 === settings.showSpeed) {
-      settings.showEffect = 'none';
-    }
-
-    var render = {
-      show: function() { output.hide().html(html).show(settings.showSpeed); },
-      slideDown: function() { output.hide().html(html).slideDown(settings.showSpeed); },
-      fadeIn: function() { output.hide().html(html).fadeIn(settings.showSpeed); },
-      none: function() { output.html(html); }
-    };
-
-    var get_level = function(ele) { return parseInt(ele.nodeName.replace(&quot;H&quot;, &quot;&quot;), 10); };
-    var highest_level = headers.map(function(_, ele) { return get_level(ele); }).get().sort()[0];
-    var return_to_top = '&lt;i class=&quot;icon-arrow-up back-to-top&quot;&gt; &lt;/i&gt;';
-
-    var level = get_level(headers[0]),
-      this_level,
-      html = settings.title + &quot; &lt;&quot; +settings.listType + &quot; class=\&quot;&quot; + settings.classes.list +&quot;\&quot;&gt;&quot;;
-    headers.on('click', function() {
-      if (!settings.noBackToTopLinks) {
-        window.location.hash = this.id;
-      }
-    })
-    .addClass('clickable-header')
-    .each(function(_, header) {
-      this_level = get_level(header);
-      if (!settings.noBackToTopLinks &amp;&amp; this_level === highest_level) {
-        $(header).addClass('top-level-header').after(return_to_top);
-      }
-      if (this_level === level) // same level as before; same indenting
-        html += &quot;&lt;li class=\&quot;&quot; + settings.classes.item + &quot;\&quot;&gt;&quot; + createLink(header);
-      else if (this_level &lt;= level){ // higher level than before; end parent ol
-        for(var i = this_level; i &lt; level; i++) {
-          html += &quot;&lt;/li&gt;&lt;/&quot;+settings.listType+&quot;&gt;&quot;
-        }
-        html += &quot;&lt;li class=\&quot;&quot; + settings.classes.item + &quot;\&quot;&gt;&quot; + createLink(header);
-      }
-      else if (this_level &gt; level) { // lower level than before; expand the previous to contain a ol
-        for(i = this_level; i &gt; level; i--) {
-          html += &quot;&lt;&quot; + settings.listType + &quot; class=\&quot;&quot; + settings.classes.list +&quot;\&quot;&gt;&quot; +
-                  &quot;&lt;li class=\&quot;&quot; + settings.classes.item + &quot;\&quot;&gt;&quot;
-        }
-        html += createLink(header);
-      }
-      level = this_level; // update for the next one
-    });
-    html += &quot;&lt;/&quot;+settings.listType+&quot;&gt;&quot;;
-    if (!settings.noBackToTopLinks) {
-      $(document).on('click', '.back-to-top', function() {
-        $(window).scrollTop(0);
-        window.location.hash = '';
-      });
-    }
-
-    render[settings.showEffect]();
-  };
-})(jQuery);
-&lt;/script&gt;
-
-&lt;!-- To be copied at the end of the post to render the table of content --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-$(document).ready(function() {
-    $('#toc').toc();
-});
-&lt;/script&gt;</content><author><name>sylhare</name></author><category term="toc.js" /><category term="kramdown" /><category term="Markdown" /><category term="Customization" /><summary type="html">Test article, get the source on github. Using Kramdown GFM</summary></entry><entry><title type="html">Blogging with title</title><link href="http://localhost:4000/2013/11/18/blogging-with-title.html" rel="alternate" type="text/html" title="Blogging with title" /><published>2013-11-18T00:00:00+00:00</published><updated>2013-11-18T00:00:00+00:00</updated><id>http://localhost:4000/2013/11/18/blogging-with-title</id><content type="html" xml:base="http://localhost:4000/2013/11/18/blogging-with-title.html">&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;Search should be working even for complicated escape symbols&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sed -i 's/\&quot;hostname\&quot;\:.*$/\&quot;hostname\&quot;\: \&quot;'$IPADDR'\&quot;\,/g' open-falcon/agent/config/cfg.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Test" /><category term="Ipsum" /><category term="Markdown" /><category term="Portfolio" /><summary type="html">I am a BIG title</summary></entry></feed>
+&lt;h3 id=&quot;source&quot;&gt;Source&lt;/h3&gt;</content><author><name>mmistakes</name></author><category term="code" /><summary type="html">From Michael’s Rose Minimal Mistakes. Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.</summary></entry></feed>
