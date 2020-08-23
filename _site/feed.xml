@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-23T17:04:01+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-23T17:08:26+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Google Apps Script is a &lt;a href=&quot;https://www.w3schools.com/js/&quot;&gt;Javascript&lt;/a&gt; based programming language that seemlessly links to google docs.&lt;/p&gt;
@@ -58,105 +58,7 @@
   &lt;p&gt;Note that the demo is read only, so you’ll need to make a cpoy before you can play around with it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Lastly, get into the Google &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet&quot;&gt;documentation&lt;/a&gt;, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+01:00</published><updated>2019-06-30T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html">&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
-Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
-&lt;!--more--&gt;
-Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
-  &lt;li&gt;Donec a diam lectus&lt;/li&gt;
-  &lt;li&gt;Sed sit amet ipsum mauris&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.&lt;/p&gt;
-
-&lt;p&gt;Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula &lt;em&gt;semper consectetur sagittis&lt;/em&gt;, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/pexels/travel.jpeg&quot; alt=&quot;Travel&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.&lt;/p&gt;
-
-&lt;p&gt;Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.&lt;/p&gt;</content><author><name></name></author><category term="A Tag" /><category term="Test" /><category term="Lorem" /><category term="Ipsum" /><summary type="html">Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</summary></entry><entry><title type="html">Color Post</title><link href="http://localhost:4000/2019/05/18/color-post.html" rel="alternate" type="text/html" title="Color Post" /><published>2019-05-18T00:00:00+01:00</published><updated>2019-05-18T00:00:00+01:00</updated><id>http://localhost:4000/2019/05/18/color-post</id><content type="html" xml:base="http://localhost:4000/2019/05/18/color-post.html">&lt;h1 id=&quot;what-a-colorful-post&quot;&gt;What a colorful post!&lt;/h1&gt;
-
-&lt;p&gt;This is an idea that came from &lt;a href=&quot;https://github.com/xukimseven/HardCandy-Jekyll&quot;&gt;xukimseven/HardCandy-Jekyll&lt;/a&gt; 
-looking at this cheerful and colorful them, I wanted to enable something similar for mine.&lt;/p&gt;
-
-&lt;p&gt;You can go fork and star hers too! 😉&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
-
-&lt;p&gt;Basically you need to add just one thing, the color:&lt;/p&gt;
-
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Color Post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;brown&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It can either be a html color like &lt;code class=&quot;highlighter-rouge&quot;&gt;brown&lt;/code&gt; (which look like red to me). Or with the rgb:&lt;/p&gt;
-
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Color Post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rgb(165,42,42)&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The background used is &lt;code class=&quot;highlighter-rouge&quot;&gt;lineart.png&lt;/code&gt; from &lt;a href=&quot;https://github.com/xukimseven&quot;&gt;xukimseven&lt;/a&gt; you can edit it in the config file. 
-If you want another one, put it in &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/img&lt;/code&gt; as well.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;⚠️ It’s a bit hacking the css in the &lt;code class=&quot;highlighter-rouge&quot;&gt;post.html&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>sylhare</name></author><category term="Test" /><category term="Color" /><category term="Markdown" /><summary type="html">What a colorful post! This is an idea that came from xukimseven/HardCandy-Jekyll looking at this cheerful and colorful them, I wanted to enable something similar for mine. You can go fork and star hers too! 😉</summary></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
-
-&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
-
-&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-       
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
-  &lt;li&gt;Assign each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
-  &lt;li&gt;Examine each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
- a. Count the points in current bin&lt;br /&gt;
- b. Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
- c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Plot the points with modified &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
-
-&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lastly, get into the Google &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet&quot;&gt;documentation&lt;/a&gt;, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;iframe src=&quot;https://www.google.com/maps/d/embed?mid=1cSersw6rEKk8DgMkhu3idM_rHfg&amp;amp;z=13&quot; width=&quot;100%&quot; height=&quot;480&quot; style=&quot;border:none;&quot;&gt;Browser not compatible.&lt;/iframe&gt;
 
@@ -209,7 +111,47 @@ If you want another one, put it in &lt;code class=&quot;highlighter-rouge&quot;&
 
 &lt;/div&gt;
 
-&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
+&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
+
+&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
+  &lt;li&gt;Assign each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
+  &lt;li&gt;Examine each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
+ a. Count the points in current bin&lt;br /&gt;
+ b. Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
+ c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Plot the points with modified &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
+
+&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
 
 &lt;p&gt;Multithreading basically means running multiple tasks at the same time. It is also called parallel programming. Most modern computers come with multiple cores: dual-core, quad-core, etc… Unfortunately, these cores aren’t often used, I especially don’t! 👀&lt;/p&gt;
 
@@ -480,49 +422,4 @@ If you want another one, put it in &lt;code class=&quot;highlighter-rouge&quot;&
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Get cracking!!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my addTextLabels() function.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Feature images</title><link href="http://localhost:4000/2014/11/29/feature-images.html" rel="alternate" type="text/html" title="Feature images" /><published>2014-11-29T00:00:00+00:00</published><updated>2014-11-29T00:00:00+00:00</updated><id>http://localhost:4000/2014/11/29/feature-images</id><content type="html" xml:base="http://localhost:4000/2014/11/29/feature-images.html">&lt;p&gt;This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.&lt;/p&gt;</content><author><name></name></author><category term="Test" /><category term="Lorem" /><summary type="html">This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/thumbnails/desk-messy.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/thumbnails/desk-messy.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown and HTML</title><link href="http://localhost:4000/2014/11/28/markdown-and-html.html" rel="alternate" type="text/html" title="Markdown and HTML" /><published>2014-11-28T00:00:00+00:00</published><updated>2014-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2014/11/28/markdown-and-html</id><content type="html" xml:base="http://localhost:4000/2014/11/28/markdown-and-html.html">&lt;p&gt;Jekyll supports the use of &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.&lt;/p&gt;
-
-&lt;p&gt;Tables have also been extended from Markdown:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;First Header&lt;/th&gt;
-      &lt;th&gt;Second Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Here’s an example of an image, which is included using Markdown:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/pexels/book-glass.jpeg&quot; alt=&quot;Image of a glass on a book&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// count to ten&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// count to twenty&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Type on Strap uses KaTeX to display maths. Equations such as &lt;script type=&quot;math/tex&quot;&gt;S_n = a \times \frac{1-r^n}{1-r}&lt;/script&gt; can be displayed inline.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, they can be shown on a new line:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x) = \int \frac{2x^2+4x+6}{x-2}&lt;/script&gt;</content><author><name>rohanchandra</name></author><category term="Test" /><category term="Markdown" /><summary type="html">Jekyll supports the use of Markdown with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.</summary></entry></feed>
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my addTextLabels() function.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
