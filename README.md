@@ -22,8 +22,8 @@ jekyll-theme-basically-basic
 ├── assets                      # Files to be called when building site
 |  ├── js                           # Javascript code for different site elements: particle, Katex, jquery, bootstrap, jekyll search,
 |  ├── css                          # css code for different site elements: Bootstrap, font-awesome, katex and main css
-|  ├── fonts		                    # Fonts to be used in site
-|  └── img		                      # Images used in site
+|  ├── fonts                        # Fonts to be used in site
+|  └── img                          # Images used in site
 ├── pages                       # Pages of site
 |   ├── 404.md                      # To be displayed when url is wrong
 |   ├── about.md                    # About me page
