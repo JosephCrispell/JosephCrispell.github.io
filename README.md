@@ -4,7 +4,7 @@
 
 ## Description
 
-The website is built using [Jekyll](https://jekyllrb.com) combining code from the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes.
+The website is built using [Jekyll](https://jekyllrb.com) combining code from the [Type on Strap](https://github.com/sylhare/Type-on-Strap) and [particle](https://github.com/nrandecker/particle) themes.
 
 ![The landing page (particle)](assets/img/README/LandingPage.PNG)
 ![The blog (Type On Strap)](assets/img/README/Blog.PNG)

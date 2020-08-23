@@ -3,21 +3,21 @@ baseurl:
 url: "https://josephcrispell.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Joseph Crispell                              # site's title
+title: Joseph Crispell
 user_title: Data Scientist
 user_description: Programmer interested in all types of data and analyses
-description: "Blog about things that interest me"      # used by search engines
-avatar: assets/img/WebsiteLogo.png                         # Empty for no avatar in navbar
-favicon: assets/img/WebsiteLogo.png                            # Icon displayed in the tab
+description: "Blog about things that interest me"
+avatar: assets/img/WebsiteLogo.png
+favicon: assets/img/WebsiteLogo.png  
 
 # Header and footer text
-header_text: Interesting things                                          # Change Blog header text
+header_text: Interesting things
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes.
 
 # Blog
-excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
-post_navigation: true
+excerpt: true                                           # Create excerpt of blog content (first 250 characters). "false" to disable
+post_navigation: true                                   # Add previous and next buttons
 color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
 # Features
@@ -49,6 +49,3 @@ sass:
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
           "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
-
-# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
-remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
