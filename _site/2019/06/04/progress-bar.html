@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2019/06/04/progress-bar.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Creating a progress bar in R | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Creating a progress bar in R" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!" />
+<meta property="og:description" content="We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!" />
+<link rel="canonical" href="http://localhost:4000/2019/06/04/progress-bar.html" />
+<meta property="og:url" content="http://localhost:4000/2019/06/04/progress-bar.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-04T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2019-06-04T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/04/progress-bar.html"},"description":"We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!","@type":"BlogPosting","url":"http://localhost:4000/2019/06/04/progress-bar.html","headline":"Creating a progress bar in R","dateModified":"2019-06-04T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2019/06/04/progress-bar.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Creating a progress bar in R" />
+<meta property="og:description"  content="We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!
+" />
+<meta property="og:image"        content="assets/img/blog/progressBar/thumbnail.gif" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main" style="">
+    
+      <h1 id="Creating+a+progress+bar+in+R" class="title">Creating a progress bar in R</h1>
+
+      <p class="meta">
+        June 4, 2019
+      </p>
+    
+  </header>
+  
+
+  
+  <section class="post-content">
+  
+      <p>We’ve all been stuck waiting for a <code class="highlighter-rouge">for</code> loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my <a href="https://www.r-project.org/">R</a> code. Here they are in the order I found them!</p>
+
+<ol>
+  <li>The <code class="highlighter-rouge">print()</code> function</li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+  
+  </span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+  </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+  </span><span class="c1"># Print progress</span><span class="w">
+  </span><span class="n">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">  
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_print.gif" alt="print" /></p>
+
+<ol>
+  <li>The <code class="highlighter-rouge">cat()</code> function</li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+ 
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="n">cat</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_cat.gif" alt="cat" /></p>
+
+<ol>
+  <li>The modulus operator (<code class="highlighter-rouge">%%</code>)</li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+  
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%%</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">){</span><span class="w">
+		</span><span class="n">cat</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_cat_and_modulus.gif" alt="modulus" /></p>
+
+<ol>
+  <li>Overwriting a printed line using <code class="highlighter-rouge">\r</code></li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+  
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="n">cat</span><span class="p">(</span><span class="s2">"\rFinished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_cat_and_overwriting.gif" alt="overwrite" /></p>
+
+<ol>
+  <li>My new <code class="highlighter-rouge">progress()</code> function 😊</li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">basicPlotteR</span><span class="p">)</span><span class="w">
+
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+  
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="n">progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_progress.gif" alt="overwrite" /></p>
+
+<ol>
+  <li>R already has one!!!! 😱</li>
+</ol>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise a progress bar</span><span class="w">
+</span><span class="n">pb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">txtProgressBar</span><span class="p">(</span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
+  
+  </span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+  </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+  
+  </span><span class="c1"># Print progress</span><span class="w">
+  </span><span class="n">setTxtProgressBar</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">close</span><span class="p">(</span><span class="n">pb</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/progressBar/for_loop_with_baseRprogress.gif" alt="overwrite" /></p>
+
+<p>Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside <code class="highlighter-rouge">for</code> loops. The <code class="highlighter-rouge">\r</code> blew my mind and should work in most languages! The modulus (<code class="highlighter-rouge">%%</code>) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.</p>
+
+<p><a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">Here</a> is more information about when and why to use the <code class="highlighter-rouge">print()</code> and <code class="highlighter-rouge">cat()</code> functions in R.</p>
+
+<p>Anyone who would like to use and see the code for my <code class="highlighter-rouge">progress()</code> function, you’ll find it <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">here</a> on github. It is part of my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Creating+a+progress+bar+in+R%20http%3A%2F%2Flocalhost%3A4000%2F2019%2F06%2F04%2Fprogress-bar.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Creating+a+progress+bar+in+R%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2019/06/04/progress-bar.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#R">
+      <p><i class="fa fa-tag fa-fw"></i> R</p>
+    </a>
+    
+    <a class="button" href="/tags#basicPlotteR">
+      <p><i class="fa fa-tag fa-fw"></i> basicPlotteR</p>
+    </a>
+    
+    <a class="button" href="/tags#progress">
+      <p><i class="fa fa-tag fa-fw"></i> progress</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Open Street Map tiles in R" href="/2019/07/20/openstreetmaps.html">
+            <p>Previous post</p>
+            Open Street Map tiles in R
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="spreadPoints()" href="/2019/02/07/speadPoints.html">
+            <p>Next post</p>
+            spreadPoints()
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/progressBar/thumbnail.gif');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>

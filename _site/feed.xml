@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-23T17:10:41+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-24T20:41:55+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with Google Apps Script</title><link href="http://localhost:4000/2020/06/20/google-scripts.html" rel="alternate" type="text/html" title="Getting started with Google Apps Script" /><published>2020-06-20T00:00:00+01:00</published><updated>2020-06-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/20/google-scripts</id><content type="html" xml:base="http://localhost:4000/2020/06/20/google-scripts.html">&lt;p&gt;So I’ve just started working with &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Google Apps Script is a &lt;a href=&quot;https://www.w3schools.com/js/&quot;&gt;Javascript&lt;/a&gt; based programming language that seemlessly links to google docs.&lt;/p&gt;
@@ -58,7 +58,182 @@
   &lt;p&gt;Note that the demo is read only, so you’ll need to make a cpoy before you can play around with it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Lastly, get into the Google &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet&quot;&gt;documentation&lt;/a&gt;, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lastly, get into the Google &lt;a href=&quot;https://developers.google.com/apps-script/reference/spreadsheet&quot;&gt;documentation&lt;/a&gt;, it is easy to search and well presented with great examples of how each function works. Enjoy! 😀&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="programming" /><category term="javascript" /><summary type="html">So I’ve just started working with Google Apps Script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/GoogleAppsScript/feature.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Open Street Map tiles in R</title><link href="http://localhost:4000/2019/07/20/openstreetmaps.html" rel="alternate" type="text/html" title="Open Street Map tiles in R" /><published>2019-07-20T00:00:00+01:00</published><updated>2019-07-20T00:00:00+01:00</updated><id>http://localhost:4000/2019/07/20/openstreetmaps</id><content type="html" xml:base="http://localhost:4000/2019/07/20/openstreetmaps.html">&lt;p&gt;Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt;, I have happily fallen upon the &lt;a href=&quot;https://cran.r-project.org/web/packages/OpenStreetMap/index.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OpenStreetMap&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;p&gt;A great package that can return a map in a variety of styles. Also, all the maps are &lt;a href=&quot;https://opensource.org/&quot;&gt;open source&lt;/a&gt; and available to everyone for free!! Here is some code to get you started:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Load required libraries&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OpenStreetMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# I had to run sudo R CMD javareconf to get rJava to load&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Note latitude and longitude of location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upperLeft&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;56.022457&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-4.5969357&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lowerRight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;56.014888&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-4.5780147&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Get a satellite image of area of interest&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;openmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upperLeft&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upperLeft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+               &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lowerRight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lowerRight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+               &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You’ll get the following image - this is where Joanna and I got engaged! 💍 On the shores of Loch Lomond, just outside Glasgow.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/osm/thumbnail.png&quot; alt=&quot;print&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; parameter of the &lt;code class=&quot;highlighter-rouge&quot;&gt;openmap()&lt;/code&gt; function, you can change the style of the map being returned. The “bing” option returns a satellite image of the map - my favourite!&lt;/p&gt;
+
+&lt;p&gt;Sometimes, if a particular area isn’t available in a certain style, you’ll get an error something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Error in osmtile(x%%nX, y, zoom, type) : could not obtain tile: ...&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can try different options for the &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; parameter to fix this issue. I quite like the &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;opencyclemap&quot;&lt;/code&gt; option. &lt;a href=&quot;https://www.r-bloggers.com/the-openstreetmap-package-opens-up/&quot;&gt;Here&lt;/a&gt; is a great tutorial that you can a bit more help from. Enjoy!&lt;/p&gt;
+
+&lt;p&gt;One thing you’ll have to get use to is hopping between different map projections (like latitude and longitudes, national grids, or spherical mercator projections). The &lt;code class=&quot;highlighter-rouge&quot;&gt;openproj()&lt;/code&gt; is a handy function for converting between projections.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="osm" /><summary type="html">Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in R, I have happily fallen upon the OpenStreetMap package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/osm/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/osm/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Creating a progress bar in R</title><link href="http://localhost:4000/2019/06/04/progress-bar.html" rel="alternate" type="text/html" title="Creating a progress bar in R" /><published>2019-06-04T00:00:00+01:00</published><updated>2019-06-04T00:00:00+01:00</updated><id>http://localhost:4000/2019/06/04/progress-bar</id><content type="html" xml:base="http://localhost:4000/2019/06/04/progress-bar.html">&lt;p&gt;We’ve all been stuck waiting for a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; code. Here they are in the order I found them!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; function&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paste&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_print.gif&quot; alt=&quot;print&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;cat()&lt;/code&gt; function&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_cat.gif&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The modulus operator (&lt;code class=&quot;highlighter-rouge&quot;&gt;%%&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+		&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_cat_and_modulus.gif&quot; alt=&quot;modulus&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Overwriting a printed line using &lt;code class=&quot;highlighter-rouge&quot;&gt;\r&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\rFinished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_cat_and_overwriting.gif&quot; alt=&quot;overwrite&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;My new &lt;code class=&quot;highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function 😊&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_progress.gif&quot; alt=&quot;overwrite&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;R already has one!!!! 😱&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Initialise a progress bar&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txtProgressBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setTxtProgressBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_baseRprogress.gif&quot; alt=&quot;overwrite&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loops. The &lt;code class=&quot;highlighter-rouge&quot;&gt;\r&lt;/code&gt; blew my mind and should work in most languages! The modulus (&lt;code class=&quot;highlighter-rouge&quot;&gt;%%&lt;/code&gt;) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;Here&lt;/a&gt; is more information about when and why to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;cat()&lt;/code&gt; functions in R.&lt;/p&gt;
+
+&lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
+
+&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
+  &lt;li&gt;Assign each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
+  &lt;li&gt;Examine each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
+ a. Count the points in current bin&lt;br /&gt;
+ b. Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
+ c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Plot the points with modified &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
+
+&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;iframe src=&quot;https://www.google.com/maps/d/embed?mid=1cSersw6rEKk8DgMkhu3idM_rHfg&amp;amp;z=13&quot; width=&quot;100%&quot; height=&quot;480&quot; style=&quot;border:none;&quot;&gt;Browser not compatible.&lt;/iframe&gt;
 
@@ -111,47 +286,7 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
-
-&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
-
-&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-       
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
-  &lt;li&gt;Assign each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
-  &lt;li&gt;Examine each &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
- a. Count the points in current bin&lt;br /&gt;
- b. Split the &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
- c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Plot the points with modified &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
-
-&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
+&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
 
 &lt;p&gt;Multithreading basically means running multiple tasks at the same time. It is also called parallel programming. Most modern computers come with multiple cores: dual-core, quad-core, etc… Unfortunately, these cores aren’t often used, I especially don’t! 👀&lt;/p&gt;
 
@@ -236,7 +371,108 @@
 
 &lt;p&gt;I spent ages trying to think of a good example to demonstrate the ability of multithreading, and I don’t really think I found one! Here, I created very large sequences and with these large sequenes it is faster to count the nucleotides on multiple threads.&lt;/p&gt;
 
-&lt;p&gt;Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available &lt;a href=&quot;https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="programming" /><category term="parallel" /><summary type="html">Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in Java</title><link href="http://localhost:4000/2018/05/04/multi-threading-Java.html" rel="alternate" type="text/html" title="Multi-threading in Java" /><published>2018-05-04T00:00:00+01:00</published><updated>2018-05-04T00:00:00+01:00</updated><id>http://localhost:4000/2018/05/04/multi-threading-Java</id><content type="html" xml:base="http://localhost:4000/2018/05/04/multi-threading-Java.html">&lt;p&gt;Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.&lt;/p&gt;
+&lt;p&gt;Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available &lt;a href=&quot;https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="programming" /><category term="parallel" /><summary type="html">Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/MultiThreadingInR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building a computer</title><link href="http://localhost:4000/2018/05/09/building-computer.html" rel="alternate" type="text/html" title="Building a computer" /><published>2018-05-09T00:00:00+01:00</published><updated>2018-05-09T00:00:00+01:00</updated><id>http://localhost:4000/2018/05/09/building-computer</id><content type="html" xml:base="http://localhost:4000/2018/05/09/building-computer.html">&lt;p&gt;I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using &lt;a href=&quot;https://pcpartpicker.com/&quot;&gt;pcpartpicker&lt;/a&gt; until I landed on the following parts, which I bought from &lt;a href=&quot;www.komplett.ie&quot;&gt;komplett&lt;/a&gt;:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Source&lt;/th&gt;
+      &lt;th&gt;Component&lt;/th&gt;
+      &lt;th&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/crucial-16gb-pc4-19200-dimm/20801915/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/RAM.jpeg&quot; title=&quot;16GB RAM&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;16GB RAM card&lt;/td&gt;
+      &lt;td&gt;€169&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/cooler-master-force-500/20187454/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Tower.jpeg&quot; title=&quot;Computer case&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Computer case - mid-tower&lt;/td&gt;
+      &lt;td&gt;€44.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/fsp-fortron-raider-550-550-watt/80012046/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/PowerSupply.jpeg&quot; title=&quot;Power supply - 550watt&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Power supply - 550watt&lt;/td&gt;
+      &lt;td&gt;€58&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/asus-prime-x370-pro/80047048/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Motherboard.jpeg&quot; title=&quot;AMD motherboard - ASUS PRIME X370-PRO&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;AMD motherboard - Asus prime X370-PRO&lt;/td&gt;
+      &lt;td&gt;€139&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/amd-ryzen-5-1600x/80047264/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Processor.jpeg&quot; title=&quot;AMD Ryzen 5 1600X processor&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;AMD processor - Ryzen 5 1600X&lt;/td&gt;
+      &lt;td&gt;€215&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/gelid-solutions-phantom-120mm/80049239/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Cooler.jpeg&quot; title=&quot;Processor cooler&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Processor cooler&lt;/td&gt;
+      &lt;td&gt;€47.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.ebay.ie/itm/3TB-Seagata-Barracuda-3-5-inch-SATA-6G-Internal-Desktop-HDD-64MB-cache-7200-RPM/182509508780?ssPageName=STRK%3AMEBIDX%3AIT&amp;amp;_trksid=p2057872.m2749.l2649&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Harddrive.jpeg&quot; title=&quot;3TB harddrive&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;3TB harddrive&lt;/td&gt;
+      &lt;td&gt;€103.94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.pc-canada.com/item/4X60M97031.html&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/GraphicsCard.jpeg&quot; title=&quot;3TB harddrive&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;2GB Lenovo graphics card&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;€777.74&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;My aim was to build a completely upgradable improvement to my current machine - a windows computer with 32GB of RAM, a i7-3770 quad-core processor and a 1TB harddrive that will continue to be used.&lt;/p&gt;
+
+&lt;p&gt;Being my first build, I made a blunder. I covered the processor and motherboard with thermal paste!! Note to self, with this cooler it is easier to attach it to its braces and then the braces to the motherboard! Aside from that, just a few plugs not in the right place.&lt;/p&gt;
+
+&lt;p&gt;After working out how to attach the cooler and changing a couple of plugs, I am happy to say the new machine is running perfectly. It is extremely fast and I am looking forward to taking full advantage of its six cores!!! Here are some photos of the final build:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A quick note, almost two years later. I broke the motherboard (in transit I think), and got a replacement through warranty (thank you &lt;a href=&quot;www.komplett.ie&quot;&gt;komplett&lt;/a&gt;!). This computer has worked amazingly and helped me out with some really interesting work at UCD. The photos below are of the re-build with the replacement motherboard. The case is a little dusty! 😅&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;slideshow-container&quot;&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_1.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;The empty case&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_2.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Motherboard, straight out the box!&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_3.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Monster cooler! 😐&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_4.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Got the cooler on! 😅&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mySlides fade&quot;&gt;
+        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_5.JPG&quot; style=&quot;width:100%&quot; /&gt;
+        &lt;div class=&quot;slideCaption&quot;&gt;Good to go! 👍&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
+    &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
+
+&lt;/div&gt;</content><author><name></name></author><category term="building" /><summary type="html">I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using pcpartpicker until I landed on the following parts, which I bought from komplett:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in Java</title><link href="http://localhost:4000/2018/05/04/multi-threading-Java.html" rel="alternate" type="text/html" title="Multi-threading in Java" /><published>2018-05-04T00:00:00+01:00</published><updated>2018-05-04T00:00:00+01:00</updated><id>http://localhost:4000/2018/05/04/multi-threading-Java</id><content type="html" xml:base="http://localhost:4000/2018/05/04/multi-threading-Java.html">&lt;p&gt;Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.&lt;/p&gt;
 
 &lt;p&gt;Multithreading, as the name suggests, involves running multiple threads. A thread can be thought of as something that can run a single task. Multithreading is using multiple threads to complete multiple tasks in parrallel.&lt;/p&gt;
 
@@ -422,4 +658,28 @@
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Get cracking!!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my addTextLabels() function.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">We’re frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my addTextLabels() function.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/addTextLabels/addTextLabels.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Creating a local BLAST database</title><link href="http://localhost:4000/2017/08/03/blast.html" rel="alternate" type="text/html" title="Creating a local BLAST database" /><published>2017-08-03T00:00:00+01:00</published><updated>2017-08-03T00:00:00+01:00</updated><id>http://localhost:4000/2017/08/03/blast</id><content type="html" xml:base="http://localhost:4000/2017/08/03/blast.html">&lt;p&gt;&lt;a href=&quot;https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;&gt;BLAST&lt;/a&gt; is a powerful tool that can be used to compare genetic sequences. &lt;a href=&quot;https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;&gt;BLAST&lt;/a&gt; works by comparing a genetic sequence of nucleotides (&lt;code class=&quot;highlighter-rouge&quot;&gt;A&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;G&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt;) to a database of sequences.&lt;/p&gt;
+
+&lt;p&gt;In the UNIX environment &lt;a href=&quot;https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;&gt;BLAST&lt;/a&gt; can easily be installed using the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install BLAST&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ncbi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once installed &lt;a href=&quot;https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;&gt;BLAST&lt;/a&gt; can be executed from the UNIX terminal. You can either compare your sequences to all the nucleotide data available in the online databases, using the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Compare query sequences to online databases&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blastn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;querySequences.fasta&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blastOutput.txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nr&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remote&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or you can create a local database on your computer containing the sequences that you are interested in comparing your query sequences against, using the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Make local database&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;makeblastdb&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databaseSequences.fasta&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_seqids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbtype&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nucl&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With your local database created, you can compare your query sequences against it using the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Compare sequences to local database&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blastn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;querySequences.fasta&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blastOutput.txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databaseSequences&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outfmt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="blast" /><summary type="html">BLAST is a powerful tool that can be used to compare genetic sequences. BLAST works by comparing a genetic sequence of nucleotides (A, C, G, and T) to a database of sequences.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blast/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blast/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
