@@ -1,11 +1,10 @@
 PATH
   remote: .
   specs:
-    type-on-strap (2.0.2)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-paginate (~> 1.1)
-      jekyll-seo-tag (~> 2.6)
+    jekyll (>= 3.5, < 5.0)
+    jekyll-feed (~> 0.9)
+    jekyll-paginate (~> 1.1)
+    jekyll-seo-tag (~> 2.6)
 
 GEM
   remote: https://rubygems.org/
@@ -73,7 +72,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  type-on-strap!
 
 BUNDLED WITH
    2.1.2

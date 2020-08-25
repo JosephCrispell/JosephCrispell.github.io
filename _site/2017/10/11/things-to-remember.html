@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2017/10/11/things-to-remember.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Things to remember | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Things to remember" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today I am on the train to Belfast to meet with collaborators at the AFBINI. To pass the time I am taking advantage of the free wifi to add a post to store some useful pieces of code I always forget." />
+<meta property="og:description" content="Today I am on the train to Belfast to meet with collaborators at the AFBINI. To pass the time I am taking advantage of the free wifi to add a post to store some useful pieces of code I always forget." />
+<link rel="canonical" href="http://localhost:4000/2017/10/11/things-to-remember.html" />
+<meta property="og:url" content="http://localhost:4000/2017/10/11/things-to-remember.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/thingsToRemeber/thumbnail.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-11T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2017-10-11T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/thingsToRemeber/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2017/10/11/things-to-remember.html"},"description":"Today I am on the train to Belfast to meet with collaborators at the AFBINI. To pass the time I am taking advantage of the free wifi to add a post to store some useful pieces of code I always forget.","@type":"BlogPosting","url":"http://localhost:4000/2017/10/11/things-to-remember.html","headline":"Things to remember","dateModified":"2017-10-11T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2017/10/11/things-to-remember.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Things to remember" />
+<meta property="og:description"  content="Today I am on the train to Belfast to meet with collaborators at the
+AFBINI. To pass the time I am taking advantage of
+the free wifi to add a post to store some useful pieces of code I always forget.
+" />
+<meta property="og:image"        content="assets/img/blog/thingsToRemeber/thumbnail.svg" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Things+to+remember" class="title">Things to remember</h1>
+
+      <p class="meta">
+        October 11, 2017
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>Today I am on the train to Belfast to meet with collaborators at the
+<a href="https://www.afbini.gov.uk/">AFBINI</a>. To pass the time I am taking advantage of
+the free wifi to add a post to store some useful pieces of code I always forget.</p>
+
+<p>I am always forgetting simple coding solutions that I need often; I constantly find myself
+googling something I had looked up just a few days before and the top links are always purple
+(visited).</p>
+
+<p>Below are some of the commands that I most frequently forget, although I find them extremely
+useful:</p>
+
+<ul>
+  <li>Unpacking a file whose name ends with “.tar.gz” in Ubuntu</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Options used:</span>
+<span class="c"># x    Extract files in tar</span>
+<span class="c"># v    Verbose - print out progress information</span>
+<span class="c"># z    Unzip file (Use if file ends with ".gz")</span>
+<span class="c"># f    Filename will follow</span>
+<span class="nb">tar</span> <span class="nt">-xvzf</span> fileName.tar.gz
+</code></pre></div></div>
+
+<ul>
+  <li>Reading a table into R whilst avoiding some annoying R habits</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Options used:</span><span class="w">
+</span><span class="c1"># header=TRUE    There will be column titles in first line of file</span><span class="w">
+</span><span class="c1"># stringsAsFactors=FALSE    Don't convert strings (words/names) into factors (categories)</span><span class="w">
+</span><span class="c1"># check.names=FALSE    Don't let R run checks on column names</span><span class="w">
+</span><span class="c1"># Note that check.names = TRUE removes spaces and special chracters - USE WISELY!</span><span class="w">
+</span><span class="n">tableName</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">check.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Read a file into R line by line (only feasible for small file!)</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Open a connection to a file to read (open="r")</span><span class="w">
+</span><span class="n">connection</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">file</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">open</span><span class="o">=</span><span class="s2">"r"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Get all lines from file and store in vector</span><span class="w">
+</span><span class="n">fileLines</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Close file connection</span><span class="w">
+</span><span class="n">close</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Loop through each of the lines in file</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">fileLines</span><span class="p">){</span><span class="w">
+    </span><span class="n">...</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Set the plotting margin sizes in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Setting margin sizes: c(bottom, left, top, right)</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5.1</span><span class="p">,</span><span class="w"> </span><span class="m">4.1</span><span class="p">,</span><span class="w"> </span><span class="m">4.1</span><span class="p">,</span><span class="w"> </span><span class="m">2.1</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Initialise array of zeros in perl</li>
+</ul>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise an array of 10 zeros</span>
+<span class="k">my</span> <span class="nv">@arrayName</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="nv">x</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Remove special characters from string in perl</li>
+</ul>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">my</span> <span class="nv">$stringName</span> <span class="o">=</span> <span class="p">"</span><span class="s2">Some string</span><span class="p">";</span>
+<span class="nv">$stringName</span> <span class="o">=~</span> <span class="sr">s/\R//g</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Change path to Java jre for Eclipse after Java update - not a piece of code but useful for Java coding!</p>
+
+    <ul>
+      <li>Edit the <code class="highlighter-rouge">C:/Program Files/Java/jre1.X.X_X/bin</code> line in <code class="highlighter-rouge">eclipse.ini</code> file.</li>
+      <li>The eclipse.ini file can be found in the <code class="highlighter-rouge">C:\Users\Joseph Crispell\eclipse\java-mars\eclipse\</code> folder on my Windows machine</li>
+      <li>NOTE: if you remove this line and the line (<code class="highlighter-rouge">-vm</code>) before, you’ll never have to do this again!</li>
+    </ul>
+  </li>
+  <li>
+    <p>Change the amount of memory assigned to heap space for the Java virtual maachine used in Eclipse. The heap space is the memory used in the creation and removal of variables - I think!</p>
+
+    <ul>
+      <li>Edit the two lines beginning <code class="highlighter-rouge">-Xm</code> in eclipse.ini file</li>
+      <li><code class="highlighter-rouge">-Xms</code> refers to the initial amount of memory to assign to the heap space</li>
+      <li><code class="highlighter-rouge">-Xmx</code> refers to the maximum amount of memory to assign to the heap space</li>
+    </ul>
+  </li>
+  <li>
+    <p>Function to change the alpha value of colour in R</p>
+  </li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">setAlpha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">colour</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">){</span><span class="w">
+
+    </span><span class="c1"># Convert the input colour into rgb values</span><span class="w">
+    </span><span class="n">rgbValues</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">col2rgb</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1"># Place rgb values within rgb function and insert alpha value</span><span class="w">
+    </span><span class="c1"># Note that col2rgb returns rgbvlues from 0 to 255</span><span class="w">
+    </span><span class="n">rgbColour</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rgb</span><span class="p">(</span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"green"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="m">255</span><span class="p">,</span><span class="w"> </span><span class="n">maxColorValue</span><span class="o">=</span><span class="m">255</span><span class="p">)</span><span class="w">
+
+    </span><span class="nf">return</span><span class="p">(</span><span class="n">rgbColour</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Get current date in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">today</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">Sys.Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">"%d-%m-%y"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Laying out plots in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set the layout of the plots within the plotting window</span><span class="w">
+</span><span class="n">layout</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Set the margin sizes</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Create the plots</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">){</span><span class="w">
+    </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">xaxt</span><span class="o">=</span><span class="s2">"n"</span><span class="p">,</span><span class="w"> </span><span class="n">yaxt</span><span class="o">=</span><span class="s2">"n"</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+         </span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/thingsToRemeber/plottingLayout.png" alt="plot layout" /></p>
+
+<ul>
+  <li>Syncing a github repository</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="k">*</span>
+git add <span class="nb">.</span> <span class="nt">-A</span> <span class="c"># Removes deleted files</span>
+git commit <span class="nt">-m</span> <span class="s2">"Write commit message here"</span>
+git push
+</code></pre></div></div>
+
+<ul>
+  <li>Get axis limits of current plot in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Returns vector: c(xMin, xMax, yMin, yMax)</span><span class="w">
+</span><span class="n">axisLimits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">par</span><span class="p">(</span><span class="s2">"usr"</span><span class="p">)</span><span class="w"> 
+</span></code></pre></div></div>
+
+<ul>
+  <li>Overwriting your progress statements in R using <code class="highlighter-rouge">\r</code></li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise for loop to demonstrate progress printing</span><span class="w">
+ </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">){</span><span class="w">
+
+    </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span><span class="w">
+    </span><span class="n">cat</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"\rFinished step "</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">" of "</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Things+to+remember%20http%3A%2F%2Flocalhost%3A4000%2F2017%2F10%2F11%2Fthings-to-remember.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Things+to+remember%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2017/10/11/things-to-remember.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#programming">
+      <p><i class="fa fa-tag fa-fw"></i> programming</p>
+    </a>
+    
+    <a class="button" href="/tags#remember">
+      <p><i class="fa fa-tag fa-fw"></i> remember</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="addTextLabels()" href="/2018/04/03/addTextLabels.html">
+            <p>Previous post</p>
+            addTextLabels()
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Creating a local BLAST database" href="/2017/08/03/blast.html">
+            <p>Next post</p>
+            Creating a local BLAST database
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/thingsToRemeber/thumbnail.svg');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>
