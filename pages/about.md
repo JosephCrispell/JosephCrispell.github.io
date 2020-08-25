@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: post
 title: About
 permalink: /about/
-fulltitle: "About me"
+fulltitle: About
 feature-img: "assets/img/AboutFeatureImage-Cropped.jpeg"
 ---
 
