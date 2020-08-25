@@ -7,12 +7,14 @@ layout: default
 
   {% if page.feature-img and page.feature-img == "interactive" %}
   <div id="particles-js">
-    <h1>
-      <span class="site-description">{{page.title}}</span>
-    </h1>
   </div>
   {% else %}
-  <header id="main" style="">
+  <header id="main">
+
+  </header>
+  {% endif %}
+
+  <center>
     {% unless page.hide_title %}
       <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
 
@@ -20,11 +22,10 @@ layout: default
         {{ page.date | date: "%B %-d, %Y" }}
       </p>
     {% endunless %}
-  </header>
-  {% endif %}
-
+  </center>
   
   <section class="post-content">
+
   {% if page.bootstrap %}
     <div class="bootstrap-iso">
     {% endif %}

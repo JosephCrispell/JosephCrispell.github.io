@@ -91,6 +91,7 @@ header {
     color: $feature-image-text-color;
     margin-bottom: 0;
     padding: $padding-large/2.5 $padding-large;
+    height: $feature-image-height; /* SET THIS HERE FOR THE BLOG */
 
     .meta {
       color: rgba($feature-image-text-color, .7);
