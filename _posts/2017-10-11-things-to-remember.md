@@ -9,16 +9,11 @@ tags: [remember, programming]
 ---
 
 
-Today I am on the train to Belfast to meet with collaborators at the
-<a href="https://www.afbini.gov.uk/">AFBINI</a>. To pass the time I am taking advantage of
-the free wifi to add a post to store some useful pieces of code I always forget.
+Today I am on the train to Belfast to meet with collaborators at the [AFBINI](https://www.afbini.gov.uk/). To pass the time I am taking advantage of the free wifi to add a post to store some useful pieces of code I always forget.💡
 
-I am always forgetting simple coding solutions that I need often; I constantly find myself
-googling something I had looked up just a few days before and the top links are always purple
-(visited).
+I am always forgetting simple coding solutions that I need often; I constantly find myself googling something I had looked up just a few days before and the top links are always purple (visited).
 
-Below are some of the commands that I most frequently forget, although I find them extremely
-useful:
+Below are some of the commands that I most frequently forget, although I find them extremely useful: 🤔
 
 - Unpacking a file whose name ends with ".tar.gz" in Ubuntu
 

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2018/07/25/newick.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Parsing newick formatted phylogenetic tree | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Parsing newick formatted phylogenetic tree" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:" />
+<meta property="og:description" content="Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:" />
+<link rel="canonical" href="http://localhost:4000/2018/07/25/newick.html" />
+<meta property="og:url" content="http://localhost:4000/2018/07/25/newick.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-25T00:00:00+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2018-07-25T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/newick/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/07/25/newick.html"},"description":"Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:","@type":"BlogPosting","url":"http://localhost:4000/2018/07/25/newick.html","headline":"Parsing newick formatted phylogenetic tree","dateModified":"2018-07-25T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2018/07/25/newick.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Parsing newick formatted phylogenetic tree" />
+<meta property="og:description"  content="Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought..." />
+<meta property="og:image"        content="assets/img/blog/newick/thumbnail.svg" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Parsing+newick+formatted+phylogenetic+tree" class="title">Parsing newick formatted phylogenetic tree</h1>
+
+      <p class="meta">
+        July 25, 2018
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!!</p>
+
+<p>A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>. The Newick format looks like this:</p>
+
+<p><img src="/assets/img/blog/newick/thumbnail.svg" alt="plot layout" /></p>
+
+<p>In the above diagram, each node of the phylogenetic tree can be represented as a simple string of characters (brackets, tip names, and branch lengths). Each string of characters details what is below the node. The string of characters (or label) for the root node (at the base of the rooted phylogenetic tree) describes the entire phylogenetic tree.</p>
+
+<p>So that means, the whole phylogenetic tree can be stored using only the root label:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(B:3, (C:1, (A:1, D:2):2):1);
+</code></pre></div></div>
+
+<p>My Java program (I’m still improving it, but it is available <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>) is designed to read this format and store the phylogenetic tree as a set of traversable (easy to move among) nodes. The trick to doing this, is in counting your brackets!!</p>
+
+<p>An amazingly simple (in hindsight) format that was developed in the 1980s and remains the standard phylogenetic tree format today. Perfect timing, that’s the bus just pulling into Belfast.</p>
+
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Parsing+newick+formatted+phylogenetic+tree%20http%3A%2F%2Flocalhost%3A4000%2F2018%2F07%2F25%2Fnewick.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Parsing+newick+formatted+phylogenetic+tree%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2018/07/25/newick.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tag</div>
+    
+
+    
+    <a class="button" href="/tags#phylogenetics">
+      <p><i class="fa fa-tag fa-fw"></i> phylogenetics</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Multi-threading in R" href="/2018/08/27/multi-threading-R.html">
+            <p>Previous post</p>
+            Multi-threading in R
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Building a computer" href="/2018/05/09/building-computer.html">
+            <p>Next post</p>
+            Building a computer
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/newick/thumbnail.svg');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>
