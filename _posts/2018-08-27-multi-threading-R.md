@@ -2,9 +2,9 @@
 layout: post
 title: Multi-threading in R
 date: 27 Aug 2018
-feature-img: "assets/img/blog/MultiThreadingInR/thumbnail.svg"
-thumbnail: "assets/img/blog/MultiThreadingInR/thumbnail.svg"
-image: "assets/img/blog/MultiThreadingInR/thumbnail.svg" 
+feature-img: "assets/img/blog/multiThreadingInR/thumbnail.svg"
+thumbnail: "assets/img/blog/multiThreadingInR/thumbnail.svg"
+image: "assets/img/blog/multiThreadingInR/thumbnail.svg" 
 tags: [R, programming, parallel]
 ---
 
