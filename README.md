@@ -35,6 +35,18 @@ jekyll-theme-basically-basic
     └── index.html              # Type on strap landing page
 ```
 
+## Building
+
+There's a few steps to replicate [my website](https://josephcrispell.github.io/) on your own computer:
+
+- Install Jekyll (see [instructions](https://jekyllrb.com/docs/installation/))
+    * Note that you should using [bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
+- Clone the [repository](https://github.com/JosephCrispell/JosephCrispell.github.io)
+- Navigate to cloned repository and run `bundle install`
+- Run website on local server with: `bundle exec jekyll serve --watch`
+
+Clone the respository
+
 ## License
 
 There are some fonts and component on this theme going under the MIT licence as well in this theme.
