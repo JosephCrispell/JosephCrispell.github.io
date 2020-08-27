@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    joseph-crispell (2.0.2)
+    joseph-crispell (1.0.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-paginate (~> 1.1)

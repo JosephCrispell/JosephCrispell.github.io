@@ -20,7 +20,7 @@
 		"_sass/external/font-awesome/_stacked.scss",
 		"_sass/external/font-awesome/_icons.scss",
 		"_sass/external/font-awesome/_screen-reader.scss",
-		"_sass/external/_normalize-particle.css",
+		"_sass/external/_normalize-particle.scss",
 		"_sass/base/_base-particle.scss",
 		"_sass/includes/_about-particle.scss",
 		"_sass/includes/_footer-particle.scss",
