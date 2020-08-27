@@ -62,7 +62,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Multi-threading in Java | Joseph Crispell</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Multi-threading in Java" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java." />
@@ -74,7 +74,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-04T00:00:00+01:00" />
 <script type="application/ld+json">
-{"datePublished":"2018-05-04T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/MultiThreadingInJava/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/04/multi-threading-Java.html"},"description":"Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.","@type":"BlogPosting","url":"http://localhost:4000/2018/05/04/multi-threading-Java.html","headline":"Multi-threading in Java","dateModified":"2018-05-04T00:00:00+01:00","@context":"https://schema.org"}</script>
+{"image":"http://localhost:4000/assets/img/blog/MultiThreadingInJava/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/04/multi-threading-Java.html"},"description":"Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.","@type":"BlogPosting","headline":"Multi-threading in Java","url":"http://localhost:4000/2018/05/04/multi-threading-Java.html","datePublished":"2018-05-04T00:00:00+01:00","dateModified":"2018-05-04T00:00:00+01:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -230,7 +230,7 @@
 
 <p>Up until last week I hadn’t used any multithreading, but I got stuck trying to speed up some code and I thought it was time to learn. Also I built myself a new computer with 6 cores!</p>
 
-<p>Multithreading in Java is amazingly well supported (although the code below looks pretty daunting) and it uses the <code class="highlighter-rouge">Thread</code> class. The <code class="highlighter-rouge">Thread</code> class, like any other Java class, can be modified (extended) to suit a particular task. Here is a general class structure for a task to be completed in parallel:</p>
+<p>Multithreading in Java is amazingly well supported (although the code below looks pretty daunting) and it uses the <code class="language-plaintext highlighter-rouge">Thread</code> class. The <code class="language-plaintext highlighter-rouge">Thread</code> class, like any other Java class, can be modified (extended) to suit a particular task. Here is a general class structure for a task to be completed in parallel:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create the class and give it a name</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="nc">Thread</span><span class="o">{</span>
@@ -262,7 +262,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Once you’ve created your <code class="highlighter-rouge">Thread</code> class, then you need conduct your multithreading. You’ll need a different class, which might look something like this:</p>
+<p>Once you’ve created your <code class="language-plaintext highlighter-rouge">Thread</code> class, then you need conduct your multithreading. You’ll need a different class, which might look something like this:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// Create the class and give it a name</span>

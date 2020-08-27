@@ -62,7 +62,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Parsing newick formatted phylogenetic tree | Joseph Crispell</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Parsing newick formatted phylogenetic tree" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:" />
@@ -74,7 +74,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-25T00:00:00+01:00" />
 <script type="application/ld+json">
-{"datePublished":"2018-07-25T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/newick/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/07/25/newick.html"},"description":"Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:","@type":"BlogPosting","url":"http://localhost:4000/2018/07/25/newick.html","headline":"Parsing newick formatted phylogenetic tree","dateModified":"2018-07-25T00:00:00+01:00","@context":"https://schema.org"}</script>
+{"image":"http://localhost:4000/assets/img/blog/newick/thumbnail.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/07/25/newick.html"},"description":"Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:","@type":"BlogPosting","headline":"Parsing newick formatted phylogenetic tree","url":"http://localhost:4000/2018/07/25/newick.html","datePublished":"2018-07-25T00:00:00+01:00","dateModified":"2018-07-25T00:00:00+01:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -233,7 +233,7 @@
 
 <p>So that means, the whole phylogenetic tree can be stored using only the root label:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(B:3, (C:1, (A:1, D:2):2):1);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(B:3, (C:1, (A:1, D:2):2):1);
 </code></pre></div></div>
 
 <p>My Java program (I’m still improving it, but it is available <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>) is designed to read this format and store the phylogenetic tree as a set of traversable (easy to move among) nodes. The trick to doing this, is in counting your brackets!!</p>

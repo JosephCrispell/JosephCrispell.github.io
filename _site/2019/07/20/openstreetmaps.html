@@ -62,7 +62,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Open Street Map tiles in R | Joseph Crispell</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Open Street Map tiles in R" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in R, I have happily fallen upon the OpenStreetMap package." />
@@ -74,7 +74,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-20T00:00:00+01:00" />
 <script type="application/ld+json">
-{"datePublished":"2019-07-20T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/osm/thumbnail.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/07/20/openstreetmaps.html"},"description":"Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in R, I have happily fallen upon the OpenStreetMap package.","@type":"BlogPosting","url":"http://localhost:4000/2019/07/20/openstreetmaps.html","headline":"Open Street Map tiles in R","dateModified":"2019-07-20T00:00:00+01:00","@context":"https://schema.org"}</script>
+{"image":"http://localhost:4000/assets/img/blog/osm/thumbnail.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/07/20/openstreetmaps.html"},"description":"Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in R, I have happily fallen upon the OpenStreetMap package.","@type":"BlogPosting","headline":"Open Street Map tiles in R","url":"http://localhost:4000/2019/07/20/openstreetmaps.html","datePublished":"2019-07-20T00:00:00+01:00","dateModified":"2019-07-20T00:00:00+01:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -223,7 +223,7 @@
   <section class="post-content">
 
   
-      <p>Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in <a href="https://www.r-project.org/">R</a>, I have happily fallen upon the <a href="https://cran.r-project.org/web/packages/OpenStreetMap/index.html"><code class="highlighter-rouge">OpenStreetMap</code></a> package.</p>
+      <p>Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in <a href="https://www.r-project.org/">R</a>, I have happily fallen upon the <a href="https://cran.r-project.org/web/packages/OpenStreetMap/index.html"><code class="language-plaintext highlighter-rouge">OpenStreetMap</code></a> package.</p>
 
 <p>A great package that can return a map in a variety of styles. Also, all the maps are <a href="https://opensource.org/">open source</a> and available to everyone for free!! Here is some code to get you started:</p>
 
@@ -246,15 +246,15 @@
 
 <p><img src="/assets/img/blog/osm/thumbnail.png" alt="print" /></p>
 
-<p>Using the <code class="highlighter-rouge">type</code> parameter of the <code class="highlighter-rouge">openmap()</code> function, you can change the style of the map being returned. The “bing” option returns a satellite image of the map - my favourite!</p>
+<p>Using the <code class="language-plaintext highlighter-rouge">type</code> parameter of the <code class="language-plaintext highlighter-rouge">openmap()</code> function, you can change the style of the map being returned. The “bing” option returns a satellite image of the map - my favourite!</p>
 
 <p>Sometimes, if a particular area isn’t available in a certain style, you’ll get an error something like this:</p>
 
-<p><code class="highlighter-rouge">Error in osmtile(x%%nX, y, zoom, type) : could not obtain tile: ...</code></p>
+<p><code class="language-plaintext highlighter-rouge">Error in osmtile(x%%nX, y, zoom, type) : could not obtain tile: ...</code></p>
 
-<p>You can try different options for the <code class="highlighter-rouge">type</code> parameter to fix this issue. I quite like the <code class="highlighter-rouge">"opencyclemap"</code> option. <a href="https://www.r-bloggers.com/the-openstreetmap-package-opens-up/">Here</a> is a great tutorial that you can a bit more help from. Enjoy!</p>
+<p>You can try different options for the <code class="language-plaintext highlighter-rouge">type</code> parameter to fix this issue. I quite like the <code class="language-plaintext highlighter-rouge">"opencyclemap"</code> option. <a href="https://www.r-bloggers.com/the-openstreetmap-package-opens-up/">Here</a> is a great tutorial that you can a bit more help from. Enjoy!</p>
 
-<p>One thing you’ll have to get use to is hopping between different map projections (like latitude and longitudes, national grids, or spherical mercator projections). The <code class="highlighter-rouge">openproj()</code> is a handy function for converting between projections.</p>
+<p>One thing you’ll have to get use to is hopping between different map projections (like latitude and longitudes, national grids, or spherical mercator projections). The <code class="language-plaintext highlighter-rouge">openproj()</code> is a handy function for converting between projections.</p>
 
 
     

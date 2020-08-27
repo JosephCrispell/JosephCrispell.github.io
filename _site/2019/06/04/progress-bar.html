@@ -62,7 +62,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Creating a progress bar in R | Joseph Crispell</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Creating a progress bar in R" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!" />
@@ -74,7 +74,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-06-04T00:00:00+01:00" />
 <script type="application/ld+json">
-{"datePublished":"2019-06-04T00:00:00+01:00","image":"http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/04/progress-bar.html"},"description":"We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!","@type":"BlogPosting","url":"http://localhost:4000/2019/06/04/progress-bar.html","headline":"Creating a progress bar in R","dateModified":"2019-06-04T00:00:00+01:00","@context":"https://schema.org"}</script>
+{"image":"http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/04/progress-bar.html"},"description":"We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!","@type":"BlogPosting","headline":"Creating a progress bar in R","url":"http://localhost:4000/2019/06/04/progress-bar.html","datePublished":"2019-06-04T00:00:00+01:00","dateModified":"2019-06-04T00:00:00+01:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -224,10 +224,10 @@
   <section class="post-content">
 
   
-      <p>We’ve all been stuck waiting for a <code class="highlighter-rouge">for</code> loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my <a href="https://www.r-project.org/">R</a> code. Here they are in the order I found them!</p>
+      <p>We’ve all been stuck waiting for a <code class="language-plaintext highlighter-rouge">for</code> loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my <a href="https://www.r-project.org/">R</a> code. Here they are in the order I found them!</p>
 
 <ol>
-  <li>The <code class="highlighter-rouge">print()</code> function</li>
+  <li>The <code class="language-plaintext highlighter-rouge">print()</code> function</li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
@@ -242,7 +242,7 @@
 <p><img src="/assets/img/blog/progressBar/for_loop_with_print.gif" alt="print" /></p>
 
 <ol>
-  <li>The <code class="highlighter-rouge">cat()</code> function</li>
+  <li>The <code class="language-plaintext highlighter-rouge">cat()</code> function</li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
@@ -257,7 +257,7 @@
 <p><img src="/assets/img/blog/progressBar/for_loop_with_cat.gif" alt="cat" /></p>
 
 <ol>
-  <li>The modulus operator (<code class="highlighter-rouge">%%</code>)</li>
+  <li>The modulus operator (<code class="language-plaintext highlighter-rouge">%%</code>)</li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
@@ -274,7 +274,7 @@
 <p><img src="/assets/img/blog/progressBar/for_loop_with_cat_and_modulus.gif" alt="modulus" /></p>
 
 <ol>
-  <li>Overwriting a printed line using <code class="highlighter-rouge">\r</code></li>
+  <li>Overwriting a printed line using <code class="language-plaintext highlighter-rouge">\r</code></li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
@@ -289,7 +289,7 @@
 <p><img src="/assets/img/blog/progressBar/for_loop_with_cat_and_overwriting.gif" alt="overwrite" /></p>
 
 <ol>
-  <li>My new <code class="highlighter-rouge">progress()</code> function 😊</li>
+  <li>My new <code class="language-plaintext highlighter-rouge">progress()</code> function 😊</li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">basicPlotteR</span><span class="p">)</span><span class="w">
@@ -324,11 +324,11 @@
 </span></code></pre></div></div>
 <p><img src="/assets/img/blog/progressBar/for_loop_with_baseRprogress.gif" alt="overwrite" /></p>
 
-<p>Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside <code class="highlighter-rouge">for</code> loops. The <code class="highlighter-rouge">\r</code> blew my mind and should work in most languages! The modulus (<code class="highlighter-rouge">%%</code>) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.</p>
+<p>Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside <code class="language-plaintext highlighter-rouge">for</code> loops. The <code class="language-plaintext highlighter-rouge">\r</code> blew my mind and should work in most languages! The modulus (<code class="language-plaintext highlighter-rouge">%%</code>) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.</p>
 
-<p><a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">Here</a> is more information about when and why to use the <code class="highlighter-rouge">print()</code> and <code class="highlighter-rouge">cat()</code> functions in R.</p>
+<p><a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">Here</a> is more information about when and why to use the <code class="language-plaintext highlighter-rouge">print()</code> and <code class="language-plaintext highlighter-rouge">cat()</code> functions in R.</p>
 
-<p>Anyone who would like to use and see the code for my <code class="highlighter-rouge">progress()</code> function, you’ll find it <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">here</a> on github. It is part of my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package.</p>
+<p>Anyone who would like to use and see the code for my <code class="language-plaintext highlighter-rouge">progress()</code> function, you’ll find it <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">here</a> on github. It is part of my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package.</p>
 
     
   </section>
