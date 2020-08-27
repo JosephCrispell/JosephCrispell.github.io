@@ -3,7 +3,7 @@ layout: post
 title: About
 permalink: /about/
 fulltitle: About
-feature-img: "assets/img/AboutFeatureImage-Cropped.jpeg"
+feature-img: "assets/img/AboutFeatureImage.jpeg"
 ---
 
 I've spent the last seven years studying pathogen transmission. I studied how *Mycobacterium bovis*, a bacteria that causes bovine tuberculosis, is transmitted between cattle and wildlife.
