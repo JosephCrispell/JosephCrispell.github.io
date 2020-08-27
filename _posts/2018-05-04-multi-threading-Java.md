@@ -2,9 +2,9 @@
 layout: post
 title: Multi-threading in Java
 date: 04 May 2018
-feature-img: "assets/img/blog/MultiThreadingInJava/thumbnail.svg"
-thumbnail: "assets/img/blog/MultiThreadingInJava/thumbnail.svg"
-image: "assets/img/blog/MultiThreadingInJava/thumbnail.svg" 
+feature-img: "assets/img/blog/multiThreadingInJava/thumbnail.svg"
+thumbnail: "assets/img/blog/multiThreadingInJava/thumbnail.svg"
+image: "assets/img/blog/multiThreadingInJava/thumbnail.svg" 
 tags: [Java, programming, parallel]
 ---
 
