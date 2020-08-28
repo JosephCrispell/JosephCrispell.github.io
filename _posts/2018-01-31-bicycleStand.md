@@ -2,9 +2,9 @@
 layout: post
 title: Building a bicycle stand
 date: 31 Jan 2018
-feature-img: "assets/img/blog/bicycleStand/thumbnail.png"
-thumbnail: "assets/img/blog/bicycleStand/thumbnail.png"
-image: "assets/img/blog/bicycleStand/thumbnail.png" 
+feature-img: "assets/img/blog/bicycleStand/thumbnail.svg"
+thumbnail: "assets/img/blog/bicycleStand/thumbnail.svg"
+image: "assets/img/blog/bicycleStand/thumbnail.svg" 
 tags: [bicycle]
 ---
 
