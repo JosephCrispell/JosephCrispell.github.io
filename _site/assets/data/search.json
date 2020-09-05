@@ -1,6 +1,16 @@
 [
   
   {
+    "title"    : "Using python&#39;s googletrans library in R",
+    "category" : "",
+    "tags"     : " google, python, R",
+    "url"      : "/2020/09/05/googletrans.html",
+    "date"     : "September 5, 2020",
+    "excerpt"  : "I’ve recently been exploring a survey dataset that is in French. I found a python library googletrans that uses the Google Translate Ajax API to translate text.\n\nFor me, the appeal of googletrans is that it works out of the box without an API key,...",
+  "content"  : "I’ve recently been exploring a survey dataset that is in French. I found a python library googletrans that uses the Google Translate Ajax API to translate text.\n\nFor me, the appeal of googletrans is that it works out of the box without an API key, unlike it’s R counterpart TranslateR. Ideally though, I’d still like to translate text in R…\n\nThe amazing reticulate package in R provides a way of running python code from R. 🎉\n\nSo, we can create a simple python function to translate text and store it in a python script (TranslateUsingGoogleTrans.py):\ndef translate(text, translateTo):\n\n  # Load the googletrans library\n  from googletrans import Translator\n\n  # Initialise the translator\n  translator = Translator()\n\n  # Translate the text provided\n  return translator.translate(text, dest=translateTo).text\n\n\nThen we can use that code in R to translate some text:\n# Load libraries\nlibrary(reticulate)\n\n# Source the python translation code\nsource_python(&quot;TranslateUsingGoogleTrans.py&quot;)\n\n# Translate some text\ntext &amp;lt;- &quot;Je suis étonné que cela fonctionne si bien!&quot;\ntranslate(text, &#39;en&#39;)\n\n\n&amp;gt; [1] &quot;I am amazed that it works so well!&quot;\n\nI’m amazed at how well the googletrans package works and excited to adapt the code above for my survey data. I’ve also hopefully demonstrated how easy it is to link python and R code with reticulate, which I often use to take advantage of some of python’s amazing libraries! 😊\n"
+} ,
+  
+  {
     "title"    : "Getting started with Google Apps Script",
     "category" : "",
     "tags"     : " google, programming, javascript",
