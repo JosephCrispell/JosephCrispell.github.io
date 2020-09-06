@@ -15,11 +15,11 @@ We've all been stuck waiting for a `for` loop to finish, or a particularly compl
 ```R
 for(i in 1:500){
   
-  # Sleep for 0.1 seconds
-  Sys.sleep(0.01)
+	# Sleep for 0.1 seconds
+	Sys.sleep(0.01)
   
-  # Print progress
-  print(paste("Finished", i, "of", n))
+	# Print progress
+	print(paste("Finished", i, "of", n))
 }  
 ```
 ![print]({{ "assets/img/blog/progressBar/for_loop_with_print.gif" | relative_url}})
@@ -31,7 +31,7 @@ for(i in 1:500){
  
 	# Sleep for 0.1 seconds
 	Sys.sleep(0.01)
-  
+
 	# Print progress
 	cat("Finished", i, "of", n, "\n")
 }
@@ -45,7 +45,7 @@ for(i in 1:500){
   
 	# Sleep for 0.1 seconds
 	Sys.sleep(0.01)
-  
+
 	# Print progress
 	if(i %% 100 == 0){
 		cat("Finished", i, "of", n, "\n")
@@ -61,7 +61,7 @@ for(i in 1:500){
   
 	# Sleep for 0.1 seconds
 	Sys.sleep(0.01)
-  
+
 	# Print progress
 	cat("\rFinished", i, "of", n)
 }
@@ -77,7 +77,7 @@ for(i in 1:500){
   
 	# Sleep for 0.1 seconds
 	Sys.sleep(0.01)
-  
+
 	# Print progress
 	progress(i, n)
 }
@@ -92,18 +92,16 @@ pb <- txtProgressBar(min = 1, max = n, style = 3)
 
 for(i in 1:500){
   
-  # Sleep for 0.1 seconds
-  Sys.sleep(0.01)
-  
-  # Print progress
-  setTxtProgressBar(pb, i)
+	# Sleep for 0.1 seconds
+	Sys.sleep(0.01)
+
+	# Print progress
+	setTxtProgressBar(pb, i)
 }
 close(pb)
 ```
 ![overwrite]({{ "assets/img/blog/progressBar/for_loop_with_baseRprogress.gif" | relative_url}}) 
 
 Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside `for` loops. The `\r` blew my mind and should work in most languages! The modulus (`%%`) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.
-
-[Here](https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R) is more information about when and why to use the `print()` and `cat()` functions in R.
 
 Anyone who would like to use and see the code for my `progress()` function, you'll find it [here](https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R) on github. It is part of my [basicPlotteR](https://github.com/JosephCrispell/basicPlotteR) package.
