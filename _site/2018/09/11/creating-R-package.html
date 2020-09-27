@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2018/09/11/creating-R-package.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Creating an R package | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Creating an R package" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package: Writing an R package from scratch Hadley Wickham’s R package documentation" />
+<meta property="og:description" content="Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package: Writing an R package from scratch Hadley Wickham’s R package documentation" />
+<link rel="canonical" href="http://localhost:4000/2018/09/11/creating-R-package.html" />
+<meta property="og:url" content="http://localhost:4000/2018/09/11/creating-R-package.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/packageR/thumbnail.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-11T00:00:00+01:00" />
+<script type="application/ld+json">
+{"headline":"Creating an R package","dateModified":"2018-09-11T00:00:00+01:00","datePublished":"2018-09-11T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/09/11/creating-R-package.html"},"image":"http://localhost:4000/assets/img/blog/packageR/thumbnail.svg","description":"Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package: Writing an R package from scratch Hadley Wickham’s R package documentation","@type":"BlogPosting","url":"http://localhost:4000/2018/09/11/creating-R-package.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2018/09/11/creating-R-package.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Creating an R package" />
+<meta property="og:description"  content="Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:
+
+  Writing an R package from scratch
+  ..." />
+<meta property="og:image"        content="assets/img/blog/packageR/thumbnail.svg" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Creating+an+R+package" class="title">Creating an R package</h1>
+
+      <p class="meta">
+        September 11, 2018
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>Today I’m going to write about creating an <a href="https://www.r-project.org/">R</a> package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:</p>
+<ul>
+  <li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Writing an R package from scratch</a></li>
+  <li><a href="http://r-pkgs.had.co.nz/description.html">Hadley Wickham’s R package documentation</a></li>
+</ul>
+
+<p><strong>Why bother?</strong> If you’re like me and you still haven’t embraced creating your own R packages then you’ll be asking this question. It is going to save you <em>SO MUCH</em> time and make your code cleaner and easier to use. Get on with it!</p>
+
+<p><strong>Why does it save you time?</strong> Functions in an R package are in one place and documented. Packages are easy for other people to install and use.</p>
+
+<p>Lastly, <strong>packages are the building blocks of the R world</strong>. By creating your own, you’ve joined the community of people continuing to make R the amazing language that it is. So let’s get started!</p>
+
+<p>To get started, you’ll need to install and load a couple of packages:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install necessary packages</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"digest"</span><span class="p">)</span><span class="w">
+</span><span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"klutometis/roxygen"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Load them</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"roxygen2"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Then create the package folder:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">packageDirectory</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">file.path</span><span class="p">(</span><span class="s2">"basicPlotteR"</span><span class="p">)</span><span class="w">
+</span><span class="n">create</span><span class="p">(</span><span class="n">packageDirectory</span><span class="p">)</span><span class="w">
+</span><span class="n">setwd</span><span class="p">(</span><span class="n">packageDirectory</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>I’m creating an R package for the code I wrote for a few functions I’ve developed to help with plotting in R. My package is going to be called <a href="https://josephcrispell.github.io/projects/basicplotter">basicPlotteR</a>.</p>
+
+<p>So, we’ve created our package directory. If you navigate to the directory you’ll find the following:<br /></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">R/</code> - The directory where you are going to put the code for your R functions. Each function can have it’s own file (<code class="language-plaintext highlighter-rouge">functionName.R</code>), or you can chuck all your functions into a single file (<code class="language-plaintext highlighter-rouge">packageName.R</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">basicPlotteR.Rproj</code> - Some information for R about your package</li>
+  <li><code class="language-plaintext highlighter-rouge">DESCRIPTION</code> - Take a look, it’s got the information about your package. See the contents of this file below.</li>
+  <li><code class="language-plaintext highlighter-rouge">NAMESPACE</code> - A file telling R which functions to provide documentation for with the R package.</li>
+  <li><code class="language-plaintext highlighter-rouge">.gitignore</code> - A file to be used if you’re putting your package on github, as the name suggests it’s what you don’t want to put on github.</li>
+  <li><code class="language-plaintext highlighter-rouge">.Rbuildignore</code> - A file noting what is to be ignored when you’re building the R package.</li>
+</ul>
+
+<p>The DESCRIPTION file. It has the following lines, which I have edited for my package:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package: basicPlotteR
+Title: A collection of tools to help with base R plotting
+Version: 0.0.0.9000
+Authors@R: person("Joseph", "Crispell", email = "JosephCrispell@gmail.com", role = "cre")
+Description: An R package containing all the tools I have developed to make plotting with base R a little easier
+Depends: R (&gt;= 3.4.4)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+</code></pre></div></div>
+
+<p>Right, back to working on the package. The first thing we want to do is add some functions. Here is a general format for a function:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cd">#' Short title for function</span><span class="w">
+</span><span class="cd">#'</span><span class="w">
+</span><span class="cd">#' Longer description of the function</span><span class="w">
+</span><span class="cd">#' @param first An object of class "?". Describe each input parameter</span><span class="w">
+</span><span class="cd">#' @param second An object of class "?". Describe each input parameter</span><span class="w">
+</span><span class="cd">#' @keywords Add some good keywords for your function here</span><span class="w">
+</span><span class="cd">#' @return Returns an object of class "?". Describe what the function returns</span><span class="w">
+</span><span class="cd">#' @export</span><span class="w">
+</span><span class="cd">#' @examples</span><span class="w">
+</span><span class="cd">#' # Add some code here illustrating how to use the function</span><span class="w">
+</span><span class="n">functionName</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">second</span><span class="p">){</span><span class="w">
+	</span><span class="c1"># Some code here</span><span class="w">
+	</span><span class="nf">return</span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The code for the function is the same as for any function, but there is lot’s of information about the function above it. The weird <code class="language-plaintext highlighter-rouge">#'</code> is a special comment that roxygen recognises. Roxygen is the package that we’re using for our build.</p>
+
+<p>Functions can be saved in a R script and put in the <code class="language-plaintext highlighter-rouge">R/</code> directory. I’ve created a single R script for each of the tools in my <code class="language-plaintext highlighter-rouge">basicPlotteR</code> package.</p>
+
+<p>Flip! It takes a wee while to add the roxygen descriptions above each function - documentation is really important and useful though so it’s worth it!</p>
+
+<p>Once you’re finished adding your functions, save the file and run the following code to update the package:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">setwd</span><span class="p">(</span><span class="n">packageDirectory</span><span class="p">)</span><span class="w">
+</span><span class="n">document</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<p>And you’re done!! 🎉 It is amazingly straight forward and I should be doing it with all my R code.</p>
+
+<p>Here are a few extra notes of things I’ve learnt when building my packages:</p>
+<ul>
+  <li>When using functions from other packages in your own functions, use the following format: <code class="language-plaintext highlighter-rouge">packageName::functionName()</code>. Also, add <code class="language-plaintext highlighter-rouge">@import packageName</code> tag into the roxygen information.</li>
+  <li>For an internal function, a function that is used within your package but you don’t want others to see it or use it. Remove the <code class="language-plaintext highlighter-rouge">@export</code> tag and add <code class="language-plaintext highlighter-rouge">@keywords internal</code>.</li>
+  <li>To format code into roxygen function documentation lines, use the <code class="language-plaintext highlighter-rouge">\code{}</code> container</li>
+  <li>If you want to attach data to your package, do the following:
+    <ul>
+      <li>Save each object of interest alone in a file: <code class="language-plaintext highlighter-rouge">objectName.RData</code></li>
+      <li>Create a directory: <code class="language-plaintext highlighter-rouge">/data/</code> and put all the RData files in it</li>
+      <li>Add roxygen information into the functions file as if it were a function using the following:
+        <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cd">#' Description of the object</span><span class="w">
+</span><span class="cd">#'</span><span class="w">
+</span><span class="cd">#' @name objectName</span><span class="w">
+</span><span class="cd">#' @docType data</span><span class="w">
+</span><span class="cd">#' @author Joseph Crispell \email{crispelljoseph@@gmail.com}</span><span class="w">
+</span><span class="cd">#' @keywords data</span><span class="w">
+</span><span class="kc">NULL</span><span class="w">
+</span></code></pre></div>        </div>
+      </li>
+      <li>Any data attached to a package can be loaded using <code class="language-plaintext highlighter-rouge">data("objectName")</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>I am now hosting my <code class="language-plaintext highlighter-rouge">basicPlotteR</code> R package on github (I created a <a href="https://github.com/JosephCrispell/basicPlotteR">repository</a> with all my package files in it). You can install it and give it a go with the following code:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load the devtools library</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Install the basicPlotteR package</span><span class="w">
+</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"JosephCrispell/basicPlotteR"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>So that’s how to create an R package. Start converting your R scripts now! 😊</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Creating+an+R+package%20http%3A%2F%2Flocalhost%3A4000%2F2018%2F09%2F11%2Fcreating-R-package.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Creating+an+R+package%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2018/09/11/creating-R-package.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#R">
+      <p><i class="fa fa-tag fa-fw"></i> R</p>
+    </a>
+    
+    <a class="button" href="/tags#basicPlotteR">
+      <p><i class="fa fa-tag fa-fw"></i> basicPlotteR</p>
+    </a>
+    
+    <a class="button" href="/tags#package">
+      <p><i class="fa fa-tag fa-fw"></i> package</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Ben Vorlich hike" href="/2019/02/07/benVorlich.html">
+            <p>Previous post</p>
+            Ben Vorlich hike
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Multi-threading in R" href="/2018/08/27/multi-threading-R.html">
+            <p>Next post</p>
+            Multi-threading in R
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/packageR/thumbnail.svg');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>
