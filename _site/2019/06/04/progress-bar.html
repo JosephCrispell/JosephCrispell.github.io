@@ -187,6 +187,9 @@
             
             
         
+            
+            
+        
     </ul>
 
 	</nav>
@@ -232,11 +235,11 @@
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
   
-  </span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
-  </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
   
-  </span><span class="c1"># Print progress</span><span class="w">
-  </span><span class="n">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w">
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="n">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w">
 </span><span class="p">}</span><span class="w">  
 </span></code></pre></div></div>
 <p><img src="/assets/img/blog/progressBar/for_loop_with_print.gif" alt="print" /></p>
@@ -249,7 +252,7 @@
  
 	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
 	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
-  
+
 	</span><span class="c1"># Print progress</span><span class="w">
 	</span><span class="n">cat</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -264,7 +267,7 @@
   
 	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
 	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
-  
+
 	</span><span class="c1"># Print progress</span><span class="w">
 	</span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%%</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">){</span><span class="w">
 		</span><span class="n">cat</span><span class="p">(</span><span class="s2">"Finished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
@@ -281,7 +284,7 @@
   
 	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
 	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
-  
+
 	</span><span class="c1"># Print progress</span><span class="w">
 	</span><span class="n">cat</span><span class="p">(</span><span class="s2">"\rFinished"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -298,7 +301,7 @@
   
 	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
 	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
-  
+
 	</span><span class="c1"># Print progress</span><span class="w">
 	</span><span class="n">progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -314,19 +317,17 @@
 
 </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">){</span><span class="w">
   
-  </span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
-  </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
-  
-  </span><span class="c1"># Print progress</span><span class="w">
-  </span><span class="n">setTxtProgressBar</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w">
+	</span><span class="c1"># Sleep for 0.1 seconds</span><span class="w">
+	</span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+
+	</span><span class="c1"># Print progress</span><span class="w">
+	</span><span class="n">setTxtProgressBar</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span><span class="n">close</span><span class="p">(</span><span class="n">pb</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 <p><img src="/assets/img/blog/progressBar/for_loop_with_baseRprogress.gif" alt="overwrite" /></p>
 
 <p>Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside <code class="language-plaintext highlighter-rouge">for</code> loops. The <code class="language-plaintext highlighter-rouge">\r</code> blew my mind and should work in most languages! The modulus (<code class="language-plaintext highlighter-rouge">%%</code>) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.</p>
-
-<p><a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">Here</a> is more information about when and why to use the <code class="language-plaintext highlighter-rouge">print()</code> and <code class="language-plaintext highlighter-rouge">cat()</code> functions in R.</p>
 
 <p>Anyone who would like to use and see the code for my <code class="language-plaintext highlighter-rouge">progress()</code> function, you’ll find it <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R">here</a> on github. It is part of my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package.</p>
 

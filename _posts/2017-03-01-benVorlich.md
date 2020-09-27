@@ -61,4 +61,4 @@ Despite mixed opinions about whether we'd reach the top by the people we met alo
 
 </div>
 
-Loads of amazing hikes around Loch Lomond to enjoy, check them out [here](https://www.walkhighlands.co.uk/lochlomond/)) ⛰️
+Loads of amazing hikes around Loch Lomond to enjoy, check them out [here](https://www.walkhighlands.co.uk/lochlomond/) ⛰️

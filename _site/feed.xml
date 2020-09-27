@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-05T20:26:02+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Using python’s googletrans library in R</title><link href="http://localhost:4000/2020/09/05/googletrans.html" rel="alternate" type="text/html" title="Using python's googletrans library in R" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/09/05/googletrans</id><content type="html" xml:base="http://localhost:4000/2020/09/05/googletrans.html">&lt;p&gt;I’ve recently been exploring a survey dataset that is in French. I found a python library &lt;a href=&quot;https://pypi.org/project/googletrans/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt;&lt;/a&gt; that uses the &lt;a href=&quot;https://translate.google.com/&quot;&gt;Google Translate Ajax API&lt;/a&gt; to translate text.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-27T20:19:45+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Using python’s googletrans library in R</title><link href="http://localhost:4000/2020/09/05/googletrans.html" rel="alternate" type="text/html" title="Using python's googletrans library in R" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/09/05/googletrans</id><content type="html" xml:base="http://localhost:4000/2020/09/05/googletrans.html">&lt;p&gt;I’ve recently been exploring a survey dataset that is in French. I found a python library &lt;a href=&quot;https://pypi.org/project/googletrans/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt;&lt;/a&gt; that uses the &lt;a href=&quot;https://translate.google.com/&quot;&gt;Google Translate Ajax API&lt;/a&gt; to translate text.&lt;/p&gt;
 
 &lt;p&gt;For me, the appeal of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt; is that it works out of the box without an API key, unlike it’s R counterpart &lt;a href=&quot;https://cran.r-project.org/web/packages/translateR/translateR.pdf&quot;&gt;TranslateR&lt;/a&gt;. Ideally though, I’d still like to translate text in R…&lt;/p&gt;
 
@@ -130,11 +130,11 @@
 
 &lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paste&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paste&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_print.gif&quot; alt=&quot;print&quot; /&gt;&lt;/p&gt;
@@ -147,7 +147,7 @@
  
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  
+
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -162,7 +162,7 @@
   
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  
+
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 		&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -179,7 +179,7 @@
   
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  
+
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\rFinished&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -196,7 +196,7 @@
   
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  
+
 	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -212,19 +212,17 @@
 
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setTxtProgressBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Sleep for 0.1 seconds&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Print progress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setTxtProgressBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/blog/progressBar/for_loop_with_baseRprogress.gif&quot; alt=&quot;overwrite&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loops. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r&lt;/code&gt; blew my mind and should work in most languages! The modulus (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%%&lt;/code&gt;) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;Here&lt;/a&gt; is more information about when and why to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat()&lt;/code&gt; functions in R.&lt;/p&gt;
 
 &lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
 
@@ -319,7 +317,127 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt;) ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
+&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt; ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Creating an R package</title><link href="http://localhost:4000/2018/09/11/creating-R-package.html" rel="alternate" type="text/html" title="Creating an R package" /><published>2018-09-11T00:00:00+01:00</published><updated>2018-09-11T00:00:00+01:00</updated><id>http://localhost:4000/2018/09/11/creating-R-package</id><content type="html" xml:base="http://localhost:4000/2018/09/11/creating-R-package.html">&lt;p&gt;Today I’m going to write about creating an &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/&quot;&gt;Writing an R package from scratch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://r-pkgs.had.co.nz/description.html&quot;&gt;Hadley Wickham’s R package documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Why bother?&lt;/strong&gt; If you’re like me and you still haven’t embraced creating your own R packages then you’ll be asking this question. It is going to save you &lt;em&gt;SO MUCH&lt;/em&gt; time and make your code cleaner and easier to use. Get on with it!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why does it save you time?&lt;/strong&gt; Functions in an R package are in one place and documented. Packages are easy for other people to install and use.&lt;/p&gt;
+
+&lt;p&gt;Lastly, &lt;strong&gt;packages are the building blocks of the R world&lt;/strong&gt;. By creating your own, you’ve joined the community of people continuing to make R the amazing language that it is. So let’s get started!&lt;/p&gt;
+
+&lt;p&gt;To get started, you’ll need to install and load a couple of packages:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install necessary packages&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;digest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;klutometis/roxygen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load them&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;roxygen2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then create the package folder:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file.path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’m creating an R package for the code I wrote for a few functions I’ve developed to help with plotting in R. My package is going to be called &lt;a href=&quot;https://josephcrispell.github.io/projects/basicplotter&quot;&gt;basicPlotteR&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, we’ve created our package directory. If you navigate to the directory you’ll find the following:&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/&lt;/code&gt; - The directory where you are going to put the code for your R functions. Each function can have it’s own file (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;functionName.R&lt;/code&gt;), or you can chuck all your functions into a single file (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packageName.R&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR.Rproj&lt;/code&gt; - Some information for R about your package&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DESCRIPTION&lt;/code&gt; - Take a look, it’s got the information about your package. See the contents of this file below.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NAMESPACE&lt;/code&gt; - A file telling R which functions to provide documentation for with the R package.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; - A file to be used if you’re putting your package on github, as the name suggests it’s what you don’t want to put on github.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.Rbuildignore&lt;/code&gt; - A file noting what is to be ignored when you’re building the R package.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The DESCRIPTION file. It has the following lines, which I have edited for my package:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Package: basicPlotteR
+Title: A collection of tools to help with base R plotting
+Version: 0.0.0.9000
+Authors@R: person(&quot;Joseph&quot;, &quot;Crispell&quot;, email = &quot;JosephCrispell@gmail.com&quot;, role = &quot;cre&quot;)
+Description: An R package containing all the tools I have developed to make plotting with base R a little easier
+Depends: R (&amp;gt;= 3.4.4)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Right, back to working on the package. The first thing we want to do is add some functions. Here is a general format for a function:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cd&quot;&gt;#' Short title for function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' Longer description of the function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @param first An object of class &quot;?&quot;. Describe each input parameter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @param second An object of class &quot;?&quot;. Describe each input parameter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @keywords Add some good keywords for your function here&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @return Returns an object of class &quot;?&quot;. Describe what the function returns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @export&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @examples&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' # Add some code here illustrating how to use the function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;functionName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Some code here&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The code for the function is the same as for any function, but there is lot’s of information about the function above it. The weird &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#'&lt;/code&gt; is a special comment that roxygen recognises. Roxygen is the package that we’re using for our build.&lt;/p&gt;
+
+&lt;p&gt;Functions can be saved in a R script and put in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/&lt;/code&gt; directory. I’ve created a single R script for each of the tools in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;p&gt;Flip! It takes a wee while to add the roxygen descriptions above each function - documentation is really important and useful though so it’s worth it!&lt;/p&gt;
+
+&lt;p&gt;Once you’re finished adding your functions, save the file and run the following code to update the package:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And you’re done!! 🎉 It is amazingly straight forward and I should be doing it with all my R code.&lt;/p&gt;
+
+&lt;p&gt;Here are a few extra notes of things I’ve learnt when building my packages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When using functions from other packages in your own functions, use the following format: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packageName::functionName()&lt;/code&gt;. Also, add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@import packageName&lt;/code&gt; tag into the roxygen information.&lt;/li&gt;
+  &lt;li&gt;For an internal function, a function that is used within your package but you don’t want others to see it or use it. Remove the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@export&lt;/code&gt; tag and add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@keywords internal&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;To format code into roxygen function documentation lines, use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\code{}&lt;/code&gt; container&lt;/li&gt;
+  &lt;li&gt;If you want to attach data to your package, do the following:
+    &lt;ul&gt;
+      &lt;li&gt;Save each object of interest alone in a file: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;objectName.RData&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Create a directory: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/data/&lt;/code&gt; and put all the RData files in it&lt;/li&gt;
+      &lt;li&gt;Add roxygen information into the functions file as if it were a function using the following:
+        &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cd&quot;&gt;#' Description of the object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @name objectName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @docType data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @author Joseph Crispell \email{crispelljoseph@@gmail.com}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @keywords data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Any data attached to a package can be loaded using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data(&quot;objectName&quot;)&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am now hosting my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; R package on github (I created a &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;repository&lt;/a&gt; with all my package files in it). You can install it and give it a go with the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Load the devtools library&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install the basicPlotteR package&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So that’s how to create an R package. Start converting your R scripts now! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="basicPlotteR" /><summary type="html">Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package: Writing an R package from scratch Hadley Wickham’s R package documentation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/packageR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/packageR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in R</title><link href="http://localhost:4000/2018/08/27/multi-threading-R.html" rel="alternate" type="text/html" title="Multi-threading in R" /><published>2018-08-27T00:00:00+01:00</published><updated>2018-08-27T00:00:00+01:00</updated><id>http://localhost:4000/2018/08/27/multi-threading-R</id><content type="html" xml:base="http://localhost:4000/2018/08/27/multi-threading-R.html">&lt;p&gt;Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.&lt;/p&gt;
 
 &lt;p&gt;Multithreading basically means running multiple tasks at the same time. It is also called parallel programming. Most modern computers come with multiple cores: dual-core, quad-core, etc… Unfortunately, these cores aren’t often used, I especially don’t! 👀&lt;/p&gt;
 
@@ -520,114 +638,4 @@
     &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
     &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
 
-&lt;/div&gt;</content><author><name></name></author><category term="building" /><summary type="html">I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using pcpartpicker until I landed on the following parts, which I bought from komplett:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-threading in Java</title><link href="http://localhost:4000/2018/05/04/multi-threading-Java.html" rel="alternate" type="text/html" title="Multi-threading in Java" /><published>2018-05-04T00:00:00+01:00</published><updated>2018-05-04T00:00:00+01:00</updated><id>http://localhost:4000/2018/05/04/multi-threading-Java</id><content type="html" xml:base="http://localhost:4000/2018/05/04/multi-threading-Java.html">&lt;p&gt;Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.&lt;/p&gt;
-
-&lt;p&gt;Multithreading, as the name suggests, involves running multiple threads. A thread can be thought of as something that can run a single task. Multithreading is using multiple threads to complete multiple tasks in parrallel.&lt;/p&gt;
-
-&lt;p&gt;Up until last week I hadn’t used any multithreading, but I got stuck trying to speed up some code and I thought it was time to learn. Also I built myself a new computer with 6 cores!&lt;/p&gt;
-
-&lt;p&gt;Multithreading in Java is amazingly well supported (although the code below looks pretty daunting) and it uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Thread&lt;/code&gt; class. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Thread&lt;/code&gt; class, like any other Java class, can be modified (extended) to suit a particular task. Here is a general class structure for a task to be completed in parallel:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Create the class and give it a name&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Initialise variables you want to be able to access throughout class here&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Define how the current class can be created&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Assign a name to the current thread - using the position&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Store other inputs here&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Define a run method - this will execute when thread started&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Complete your task here - using the inputs provided&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Create a method to retrieve whatever your task creates&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Once you’ve created your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Thread&lt;/code&gt; class, then you need conduct your multithreading. You’ll need a different class, which might look something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// Create the class and give it a name&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MultiThreading&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Define your main method - the place where you'll do the multithreading&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Define the number of threads to be created (if more than number of&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// threads available, Java will automatically queue)&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numberOfThreads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Initialise an array to store each thread object&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numberOfThreads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Define inputs for the thread to work on here;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Create each thread&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numberOfThreads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++){&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;// Create and start the current thread&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thread-&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Check the threads are finished&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;waitUntilAllFinished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Do something with the output from each thread&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Define a method to check whether threads are finished&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Initialise a variable to record whether all finished&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Examine each of the threads to see if any aren't finished&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ExaminePosition&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;// Check if current thread finished&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isAlive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Define a method to wait until threads finished&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;waitUntilAllFinished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MyThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Initialise a variable to record whether all threads finished&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allFinished&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Keep checking the threads until they're all finished&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allFinished&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;// Check whether all threads finished&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;allFinished&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The above class looks pretty long, but I’ve added in some extra functions to check and wait until threads are finished. The code I’ve given is a skeleton for getting started with multithreading in Java. Thanks for reading, and good luck if you’re going to be doing some multithreading of your own. I’m off to Milan!&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="programming" /><category term="parallel" /><summary type="html">Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/multiThreadingInJava/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/multiThreadingInJava/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="building" /><summary type="html">I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using pcpartpicker until I landed on the following parts, which I bought from komplett:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
