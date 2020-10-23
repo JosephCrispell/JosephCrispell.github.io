@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-27T20:19:45+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Using python’s googletrans library in R</title><link href="http://localhost:4000/2020/09/05/googletrans.html" rel="alternate" type="text/html" title="Using python's googletrans library in R" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/09/05/googletrans</id><content type="html" xml:base="http://localhost:4000/2020/09/05/googletrans.html">&lt;p&gt;I’ve recently been exploring a survey dataset that is in French. I found a python library &lt;a href=&quot;https://pypi.org/project/googletrans/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt;&lt;/a&gt; that uses the &lt;a href=&quot;https://translate.google.com/&quot;&gt;Google Translate Ajax API&lt;/a&gt; to translate text.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-23T20:30:21+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Mapping my skills development with a radar chart</title><link href="http://localhost:4000/2020/10/23/radar-chart.html" rel="alternate" type="text/html" title="Mapping my skills development with a radar chart" /><published>2020-10-23T00:00:00+01:00</published><updated>2020-10-23T00:00:00+01:00</updated><id>http://localhost:4000/2020/10/23/radar-chart</id><content type="html" xml:base="http://localhost:4000/2020/10/23/radar-chart.html">&lt;p&gt;I’ve recently added the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarChart()&lt;/code&gt; function into my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md#radarchart&quot;&gt;basicPlotteR&lt;/a&gt; R package. &lt;a href=&quot;https://en.wikipedia.org/wiki/Radar_chart#:~:text=A%20radar%20chart%20is%20a,starting%20from%20the%20same%20point.&quot;&gt;Radar Charts&lt;/a&gt; provide a way that we can map scores in different qualitative categories.&lt;/p&gt;
+
+&lt;p&gt;I am currently developing my &lt;a href=&quot;https://www.reed.co.uk/career-advice/personal-development-planning-what-you-need-to-know/&quot;&gt;Personal Development Plan&lt;/a&gt; and I wanted to reflect on my current skills and what I’d like to develop.&lt;/p&gt;
+
+&lt;p&gt;I was inspired to learn more about the radar chart by the existing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarchart()&lt;/code&gt; function in the &lt;a href=&quot;https://cran.r-project.org/web/packages/fmsb/fmsb.pdf&quot;&gt;fmsb&lt;/a&gt; R package. The key the radar chart is positioning the axes equidistantly around a circle, and thanks to &lt;a href=&quot;https://stackoverflow.com/questions/5300938/calculating-the-position-of-points-in-a-circle&quot;&gt;Stackoverflow&lt;/a&gt; I didn’t have to work this out myself! 💡&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarChart()&lt;/code&gt; function in action illustrating my current level for a range of skills and where I’d like to be over the next 6 months:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/radarChart/thumbnail.png&quot; alt=&quot;radar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I consider these themes to be integral to my work as a data scientist and over the next 6 months I’ll be doing the following to improve my skills:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Programming&lt;/strong&gt; - I’m happy where I am at the moment. I can confidently program in a range of languages.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Statistics&lt;/strong&gt; - A skillI’d like to improve. Currently I’m learning about geospatial statistics and &lt;a href=&quot;https://www.adb.org/sites/default/files/publication/609476/small-area-estimation-guide-nsos.pdf&quot;&gt;Small Area Estimation&lt;/a&gt; techniques to extrapolate statistics to small local areas with limited sampling.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Databases&lt;/strong&gt; - I’ve worked with big data sources for many years, but not much with databases. I’d like to learn more about how we create, manage, and query large databases. I’m getting started by using &lt;a href=&quot;https://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; to store and query trade statistics data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Projects&lt;/strong&gt; - As a data scientist, I’m involved in many different projects. Managing my own and other’s time is becoming increasingly important. I’ve just completed a &lt;a href=&quot;http://www.scrumguides.org/index.html&quot;&gt;Scrum Master&lt;/a&gt; training course and I am excited to learn more!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web&lt;/strong&gt; - Web development is essential to disseminating and exploring data and an area I need to improve but for the moment I am happy with my current skill level. Most recently I used the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; presentation framework &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; for a presentation about &lt;em&gt;Data Ethics in practice&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Versioning&lt;/strong&gt; - Understanding version control and writing high quality robust code is something I am continually working on. At the moment I am exploring &lt;a href=&quot;https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort&quot;&gt;unit testing&lt;/a&gt; and I’d like to learn more about &lt;a href=&quot;https://github.com/features/actions&quot;&gt;GitHub Actions&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For me, this has been a really useful exercise. Taking time to reflect on my current skills and learning about the mathematics behind radial charts. The code for my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR#radarchart&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarChart()&lt;/code&gt;&lt;/a&gt; function is available &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/radarChart.R&quot;&gt;here&lt;/a&gt;. Install my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package and give it a go! 🏁&lt;/p&gt;</content><author><name></name></author><category term="basicPlotteR" /><category term="radar" /><category term="skills" /><category term="R" /><summary type="html">I’ve recently added the radarChart() function into my basicPlotteR R package. Radar Charts provide a way that we can map scores in different qualitative categories.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/radarChart/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/radarChart/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using python’s googletrans library in R</title><link href="http://localhost:4000/2020/09/05/googletrans.html" rel="alternate" type="text/html" title="Using python's googletrans library in R" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/09/05/googletrans</id><content type="html" xml:base="http://localhost:4000/2020/09/05/googletrans.html">&lt;p&gt;I’ve recently been exploring a survey dataset that is in French. I found a python library &lt;a href=&quot;https://pypi.org/project/googletrans/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt;&lt;/a&gt; that uses the &lt;a href=&quot;https://translate.google.com/&quot;&gt;Google Translate Ajax API&lt;/a&gt; to translate text.&lt;/p&gt;
 
 &lt;p&gt;For me, the appeal of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;googletrans&lt;/code&gt; is that it works out of the box without an API key, unlike it’s R counterpart &lt;a href=&quot;https://cran.r-project.org/web/packages/translateR/translateR.pdf&quot;&gt;TranslateR&lt;/a&gt;. Ideally though, I’d still like to translate text in R…&lt;/p&gt;
 
@@ -537,105 +557,4 @@ LazyData: true
 
 &lt;p&gt;My Java program (I’m still improving it, but it is available &lt;a href=&quot;https://en.wikipedia.org/wiki/Newick_format&quot;&gt;here&lt;/a&gt;) is designed to read this format and store the phylogenetic tree as a set of traversable (easy to move among) nodes. The trick to doing this, is in counting your brackets!!&lt;/p&gt;
 
-&lt;p&gt;An amazingly simple (in hindsight) format that was developed in the 1980s and remains the standard phylogenetic tree format today. Perfect timing, that’s the bus just pulling into Belfast.&lt;/p&gt;</content><author><name></name></author><category term="phylogenetics" /><summary type="html">Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building a computer</title><link href="http://localhost:4000/2018/05/09/building-computer.html" rel="alternate" type="text/html" title="Building a computer" /><published>2018-05-09T00:00:00+01:00</published><updated>2018-05-09T00:00:00+01:00</updated><id>http://localhost:4000/2018/05/09/building-computer</id><content type="html" xml:base="http://localhost:4000/2018/05/09/building-computer.html">&lt;p&gt;I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using &lt;a href=&quot;https://pcpartpicker.com/&quot;&gt;pcpartpicker&lt;/a&gt; until I landed on the following parts, which I bought from &lt;a href=&quot;www.komplett.ie&quot;&gt;komplett&lt;/a&gt;:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Source&lt;/th&gt;
-      &lt;th&gt;Component&lt;/th&gt;
-      &lt;th&gt;Price&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/crucial-16gb-pc4-19200-dimm/20801915/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/RAM.jpeg&quot; title=&quot;16GB RAM&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;16GB RAM card&lt;/td&gt;
-      &lt;td&gt;€169&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/cooler-master-force-500/20187454/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Tower.jpeg&quot; title=&quot;Computer case&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;Computer case - mid-tower&lt;/td&gt;
-      &lt;td&gt;€44.90&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/fsp-fortron-raider-550-550-watt/80012046/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/PowerSupply.jpeg&quot; title=&quot;Power supply - 550watt&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;Power supply - 550watt&lt;/td&gt;
-      &lt;td&gt;€58&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/asus-prime-x370-pro/80047048/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Motherboard.jpeg&quot; title=&quot;AMD motherboard - ASUS PRIME X370-PRO&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;AMD motherboard - Asus prime X370-PRO&lt;/td&gt;
-      &lt;td&gt;€139&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/amd-ryzen-5-1600x/80047264/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Processor.jpeg&quot; title=&quot;AMD Ryzen 5 1600X processor&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;AMD processor - Ryzen 5 1600X&lt;/td&gt;
-      &lt;td&gt;€215&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.komplett.ie/gelid-solutions-phantom-120mm/80049239/product&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Cooler.jpeg&quot; title=&quot;Processor cooler&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;Processor cooler&lt;/td&gt;
-      &lt;td&gt;€47.90&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.ebay.ie/itm/3TB-Seagata-Barracuda-3-5-inch-SATA-6G-Internal-Desktop-HDD-64MB-cache-7200-RPM/182509508780?ssPageName=STRK%3AMEBIDX%3AIT&amp;amp;_trksid=p2057872.m2749.l2649&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/Harddrive.jpeg&quot; title=&quot;3TB harddrive&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;3TB harddrive&lt;/td&gt;
-      &lt;td&gt;€103.94&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.pc-canada.com/item/4X60M97031.html&quot;&gt;&lt;img src=&quot;/assets/img/blog/buildingComputer/parts/GraphicsCard.jpeg&quot; title=&quot;3TB harddrive&quot; style=&quot;float: left; margin-right: 1%; margin-bottom: 0.5em;&quot; height=&quot;50&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;2GB Lenovo graphics card&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;€777.74&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;My aim was to build a completely upgradable improvement to my current machine - a windows computer with 32GB of RAM, a i7-3770 quad-core processor and a 1TB harddrive that will continue to be used.&lt;/p&gt;
-
-&lt;p&gt;Being my first build, I made a blunder. I covered the processor and motherboard with thermal paste!! Note to self, with this cooler it is easier to attach it to its braces and then the braces to the motherboard! Aside from that, just a few plugs not in the right place.&lt;/p&gt;
-
-&lt;p&gt;After working out how to attach the cooler and changing a couple of plugs, I am happy to say the new machine is running perfectly. It is extremely fast and I am looking forward to taking full advantage of its six cores!!! Here are some photos of the final build:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A quick note, almost two years later. I broke the motherboard (in transit I think), and got a replacement through warranty (thank you &lt;a href=&quot;www.komplett.ie&quot;&gt;komplett&lt;/a&gt;!). This computer has worked amazingly and helped me out with some really interesting work at UCD. The photos below are of the re-build with the replacement motherboard. The case is a little dusty! 😅&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;slideshow-container&quot;&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_1.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;The empty case&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_2.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Motherboard, straight out the box!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_3.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Monster cooler! 😐&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_4.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Got the cooler on! 😅&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/buildingComputer/Build_5.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Good to go! 👍&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
-    &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
-
-&lt;/div&gt;</content><author><name></name></author><category term="building" /><summary type="html">I finally decided to upgrade my work computer and build a new one! After spending loads of time reading and comparing (mostly using pcpartpicker until I landed on the following parts, which I bought from komplett:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/buildingComputer/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;An amazingly simple (in hindsight) format that was developed in the 1980s and remains the standard phylogenetic tree format today. Perfect timing, that’s the bus just pulling into Belfast.&lt;/p&gt;</content><author><name></name></author><category term="phylogenetics" /><summary type="html">Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

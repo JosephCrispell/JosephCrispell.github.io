@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2020/10/23/radar-chart.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Mapping my skills development with a radar chart | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Mapping my skills development with a radar chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve recently added the radarChart() function into my basicPlotteR R package. Radar Charts provide a way that we can map scores in different qualitative categories." />
+<meta property="og:description" content="I’ve recently added the radarChart() function into my basicPlotteR R package. Radar Charts provide a way that we can map scores in different qualitative categories." />
+<link rel="canonical" href="http://localhost:4000/2020/10/23/radar-chart.html" />
+<meta property="og:url" content="http://localhost:4000/2020/10/23/radar-chart.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/radarChart/thumbnail.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-23T00:00:00+01:00" />
+<script type="application/ld+json">
+{"headline":"Mapping my skills development with a radar chart","dateModified":"2020-10-23T00:00:00+01:00","datePublished":"2020-10-23T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/10/23/radar-chart.html"},"image":"http://localhost:4000/assets/img/blog/radarChart/thumbnail.png","description":"I’ve recently added the radarChart() function into my basicPlotteR R package. Radar Charts provide a way that we can map scores in different qualitative categories.","@type":"BlogPosting","url":"http://localhost:4000/2020/10/23/radar-chart.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2020/10/23/radar-chart.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Mapping my skills development with a radar chart" />
+<meta property="og:description"  content="I’ve recently added the radarChart() function into my basicPlotteR R package. Radar Charts provide a way that we can map scores in different qualitative categories.
+" />
+<meta property="og:image"        content="assets/img/blog/radarChart/thumbnail.png" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Mapping+my+skills+development+with+a+radar+chart" class="title">Mapping my skills development with a radar chart</h1>
+
+      <p class="meta">
+        October 23, 2020
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>I’ve recently added the <code class="language-plaintext highlighter-rouge">radarChart()</code> function into my <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md#radarchart">basicPlotteR</a> R package. <a href="https://en.wikipedia.org/wiki/Radar_chart#:~:text=A%20radar%20chart%20is%20a,starting%20from%20the%20same%20point.">Radar Charts</a> provide a way that we can map scores in different qualitative categories.</p>
+
+<p>I am currently developing my <a href="https://www.reed.co.uk/career-advice/personal-development-planning-what-you-need-to-know/">Personal Development Plan</a> and I wanted to reflect on my current skills and what I’d like to develop.</p>
+
+<p>I was inspired to learn more about the radar chart by the existing <code class="language-plaintext highlighter-rouge">radarchart()</code> function in the <a href="https://cran.r-project.org/web/packages/fmsb/fmsb.pdf">fmsb</a> R package. The key the radar chart is positioning the axes equidistantly around a circle, and thanks to <a href="https://stackoverflow.com/questions/5300938/calculating-the-position-of-points-in-a-circle">Stackoverflow</a> I didn’t have to work this out myself! 💡</p>
+
+<p>Here is my <code class="language-plaintext highlighter-rouge">radarChart()</code> function in action illustrating my current level for a range of skills and where I’d like to be over the next 6 months:</p>
+
+<p><img src="/assets/img/blog/radarChart/thumbnail.png" alt="radar" /></p>
+
+<p>I consider these themes to be integral to my work as a data scientist and over the next 6 months I’ll be doing the following to improve my skills:</p>
+<ul>
+  <li><strong>Programming</strong> - I’m happy where I am at the moment. I can confidently program in a range of languages.</li>
+  <li><strong>Statistics</strong> - A skillI’d like to improve. Currently I’m learning about geospatial statistics and <a href="https://www.adb.org/sites/default/files/publication/609476/small-area-estimation-guide-nsos.pdf">Small Area Estimation</a> techniques to extrapolate statistics to small local areas with limited sampling.</li>
+  <li><strong>Databases</strong> - I’ve worked with big data sources for many years, but not much with databases. I’d like to learn more about how we create, manage, and query large databases. I’m getting started by using <a href="https://www.mysql.com/">MySQL</a> to store and query trade statistics data.</li>
+  <li><strong>Projects</strong> - As a data scientist, I’m involved in many different projects. Managing my own and other’s time is becoming increasingly important. I’ve just completed a <a href="http://www.scrumguides.org/index.html">Scrum Master</a> training course and I am excited to learn more!</li>
+  <li><strong>Web</strong> - Web development is essential to disseminating and exploring data and an area I need to improve but for the moment I am happy with my current skill level. Most recently I used the <code class="language-plaintext highlighter-rouge">html</code> presentation framework <a href="https://revealjs.com/">reveal.js</a> for a presentation about <em>Data Ethics in practice</em>.</li>
+  <li><strong>Versioning</strong> - Understanding version control and writing high quality robust code is something I am continually working on. At the moment I am exploring <a href="https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort">unit testing</a> and I’d like to learn more about <a href="https://github.com/features/actions">GitHub Actions</a>.</li>
+</ul>
+
+<p>For me, this has been a really useful exercise. Taking time to reflect on my current skills and learning about the mathematics behind radial charts. The code for my <a href="https://github.com/JosephCrispell/basicPlotteR#radarchart"><code class="language-plaintext highlighter-rouge">radarChart()</code></a> function is available <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/R/radarChart.R">here</a>. Install my <a href="https://github.com/JosephCrispell/basicPlotteR"><code class="language-plaintext highlighter-rouge">basicPlotteR</code></a> package and give it a go! 🏁</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Mapping+my+skills+development+with+a+radar+chart%20http%3A%2F%2Flocalhost%3A4000%2F2020%2F10%2F23%2Fradar-chart.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Mapping+my+skills+development+with+a+radar+chart%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2020/10/23/radar-chart.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#R">
+      <p><i class="fa fa-tag fa-fw"></i> R</p>
+    </a>
+    
+    <a class="button" href="/tags#basicPlotteR">
+      <p><i class="fa fa-tag fa-fw"></i> basicPlotteR</p>
+    </a>
+    
+    <a class="button" href="/tags#radar">
+      <p><i class="fa fa-tag fa-fw"></i> radar</p>
+    </a>
+    
+    <a class="button" href="/tags#skills">
+      <p><i class="fa fa-tag fa-fw"></i> skills</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+
+    
+    <div id="next-post">
+        <a alt="Using python's googletrans library in R" href="/2020/09/05/googletrans.html">
+            <p>Next post</p>
+            Using python's googletrans library in R
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/radarChart/thumbnail.png');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>
