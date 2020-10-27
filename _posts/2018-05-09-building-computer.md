@@ -2,9 +2,9 @@
 layout: post
 title: Building a computer
 date: 09 May 2018
-feature-img: "assets/img/blog/buildingComputer/thumbnail.png"
-thumbnail: "assets/img/blog/buildingComputer/thumbnail.png"
-image: "assets/img/blog/buildingComputer/thumbnail.png" 
+feature-img: "assets/img/blog/buildingComputer/thumbnail.svg"
+thumbnail: "assets/img/blog/buildingComputer/thumbnail.svg"
+image: "assets/img/blog/buildingComputer/thumbnail.svg" 
 tags: [building]
 ---
 
