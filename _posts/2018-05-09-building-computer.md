@@ -34,27 +34,27 @@ After working out how to attach the cooler and changing a couple of plugs, I am 
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/buildingComputer/Build_1.JPG" style="width:100%">
+        <img src="/assets/img/blog/buildingComputer/build_1.JPG" style="width:100%">
         <div class="slideCaption">The empty case</div>
     </div>
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/buildingComputer/Build_2.JPG" style="width:100%">
+        <img src="/assets/img/blog/buildingComputer/build_2.JPG" style="width:100%">
         <div class="slideCaption">Motherboard, straight out the box!</div>
     </div>
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/buildingComputer/Build_3.JPG" style="width:100%">
+        <img src="/assets/img/blog/buildingComputer/build_3.JPG" style="width:100%">
         <div class="slideCaption">Monster cooler! 😐</div>
     </div>
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/buildingComputer/Build_4.JPG" style="width:100%">
+        <img src="/assets/img/blog/buildingComputer/build_4.JPG" style="width:100%">
         <div class="slideCaption">Got the cooler on! 😅</div>
     </div>
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/buildingComputer/Build_5.JPG" style="width:100%">
+        <img src="/assets/img/blog/buildingComputer/build_5.JPG" style="width:100%">
         <div class="slideCaption">Good to go! 👍</div>
     </div>
 
