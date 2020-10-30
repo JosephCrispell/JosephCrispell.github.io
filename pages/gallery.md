@@ -14,10 +14,12 @@ Here's a collection of the images I've used across my website. Click an image to
     <!-- Images from blog posts -->
     <a href="/2020/10/23/radar-chart"><img src="/assets/img/blog/radarChart/thumbnail.png" alt="" class="grid-item" style="padding: 0"></a>
     <a href="/2020/09/05/googletrans"><img src="/assets/img/blog/googletrans/GoogleTranslation.gif" alt="" class="grid-item" style="padding: 0"></a>
-    <a href="/2020/05/20/google-scripts"><img src="/assets/img/blog/GoogleAppsScript/feature.jpg" alt="" class="grid-item" style="padding: 0"></a>
     <a href="/2020/05/20/google-scripts"><img src="/assets/img/blog/GoogleAppsScript/GoogleAppsScriptsDemo_04-07-20.gif" alt="" class="grid-item" style="padding: 0"></a>
     <a href="/2019/07/20/openstreetmaps"><img src="/assets/img/blog/osm/thumbnail.png" alt="" class="grid-item" style="padding: 0"></a>
     <a href="/2019/06/04/progress-bar"><img src="/assets/img/blog/progressBar/thumbnail.gif" alt="" class="grid-item" style="padding: 0"></a>
+    <a href="/2019/02/07/spreadPoints"><img src="/assets/img/blog/spreadPoints/spreadPoints.png" alt="" class="grid-item" style="padding: 0"></a>
+    <a href="/2019/02/07/benVorlich"><img src="/assets/img/blog/benVorlich/BenVorlich_Thumbnail.JPG" alt="" class="grid-item" style="padding: 0"></a>
+    <a href="/2018/09/11/creating-R-package"><img src="/assets/img/blog/packageR/thumbnail.svg" alt="" class="grid-item" style="padding: 0"></a>
     <!-- Images from about page -->
     <a href="/about/"><img src="/assets/img/about/AvenInCarrier.jpg" alt="" class="grid-item" style="padding: 0"></a>
     <a href="/about/"><img src="/assets/img/about/JoannaAndAvenMatching.jpg" alt="" class="grid-item" style="padding: 0"></a>

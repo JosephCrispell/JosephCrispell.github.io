@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2020/10/30/github-actions.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Getting started with GitHub Actions | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Getting started with GitHub Actions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today is the day I’ve started using GitHub Actions. I found the following two resources really helpful:" />
+<meta property="og:description" content="Today is the day I’ve started using GitHub Actions. I found the following two resources really helpful:" />
+<link rel="canonical" href="http://localhost:4000/2020/10/30/github-actions.html" />
+<meta property="og:url" content="http://localhost:4000/2020/10/30/github-actions.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/githubActions/thumbnail.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-30T00:00:00+00:00" />
+<script type="application/ld+json">
+{"headline":"Getting started with GitHub Actions","dateModified":"2020-10-30T00:00:00+00:00","datePublished":"2020-10-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/10/30/github-actions.html"},"image":"http://localhost:4000/assets/img/blog/githubActions/thumbnail.png","description":"Today is the day I’ve started using GitHub Actions. I found the following two resources really helpful:","@type":"BlogPosting","url":"http://localhost:4000/2020/10/30/github-actions.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Gallery" title="Gallery" href="/gallery/">
+                     Gallery 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2020/10/30/github-actions.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Getting started with GitHub Actions" />
+<meta property="og:description"  content="Today is the day I’ve started using GitHub Actions. I found the following two resources really helpful:
+" />
+<meta property="og:image"        content="assets/img/blog/githubActions/thumbnail.png" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Getting+started+with+GitHub+Actions" class="title">Getting started with GitHub Actions</h1>
+
+      <p class="meta">
+        October 30, 2020
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>Today is the day I’ve started using <a href="https://docs.github.com/en/free-pro-team@latest/actions">GitHub Actions</a>. I found the following two resources really helpful:</p>
+
+<ul>
+  <li><a href="https://github.com/r-lib/actions/tree/master/examples">Workflows specifically designed for R code</a></li>
+  <li><a href="https://www.rostrum.blog/2020/08/09/ghactions-pkgs/">A great blog post about R workflows in action</a></li>
+</ul>
+
+<p>GitHub Actions allow you to create workflows that will execute tasks on a certain action, like <a href="https://docs.github.com/en/free-pro-team@latest/github/using-git/pushing-commits-to-a-remote-repository"><code class="language-plaintext highlighter-rouge">push</code></a>ing changes onto GitHub.</p>
+
+<p>Each time you complete an action (<code class="language-plaintext highlighter-rouge">push</code> changes to your repository), the workflow will be executed. For example, today I’ve added a workflow (<a href="https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow">Quickstart Continuous Integration workflow</a>) to my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package, which does the following:</p>
+
+<ul>
+  <li>Boots up a mac OS computer</li>
+  <li>Checks R is installed</li>
+  <li>Installs two packages:
+    <ul>
+      <li><a href="https://cran.r-project.org/package=remotes"><code class="language-plaintext highlighter-rouge">remotes</code></a> for installing packages from GitHub</li>
+      <li><a href="https://cran.r-project.org/web/packages/rcmdcheck/index.html">rcmdcheck</a> - for checking R code</li>
+    </ul>
+  </li>
+  <li>Installs my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package</li>
+  <li>Runs <code class="language-plaintext highlighter-rouge">rcmdcheck()</code> from the <a href="https://cran.r-project.org/web/packages/rcmdcheck/index.html">rcmdcheck</a> package, which:
+    <ul>
+      <li>Checks all the function documentation</li>
+      <li>Runs all the examples for the functions to check they work</li>
+      <li>Checks all functions dependencies</li>
+      <li>Checks the R package structure</li>
+      <li>And many more!!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>With this workflow in place, every time I edit the code for my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package, the above checks will be run and I’ll know straight away if I have caused any problems!</p>
+
+<p>GitHub Actions require a <a href="https://www.tutorialspoint.com/yaml/yaml_basics.htm">YAML</a> formatted file to define the workflow. The <em>Quickstart Continuous Integration workflow</em> (available <a href="https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow">here</a>) looks like this:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+      <span class="pi">-</span> <span class="s">master</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+      <span class="pi">-</span> <span class="s">master</span>
+
+<span class="na">name</span><span class="pi">:</span> <span class="s">R-CMD-check</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">R-CMD-check</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">macOS-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">r-lib/actions/setup-r@v1</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">install.packages(c("remotes", "rcmdcheck"))</span>
+          <span class="s">remotes::install_deps(dependencies = TRUE)</span>
+        <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")</span>
+        <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
+</code></pre></div></div>
+
+<p>I saved the above YAML code in a file called <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/.github/workflows/R-CMD-check.yaml"><code class="language-plaintext highlighter-rouge">.github/workflows/R-CMD-check.yaml</code></a> in my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> repository. Note, that I had to create the <code class="language-plaintext highlighter-rouge">.github</code> and <code class="language-plaintext highlighter-rouge">workflows</code> folders and explicitely push them onto GitHub using <code class="language-plaintext highlighter-rouge">git add .github/workflows/R-CMD-check.yaml</code>.</p>
+
+<p>With the workflow pushed online, GitHub automatically started running the workflow!</p>
+
+<p><img src="/assets/img/blog/githubActions/thumbnail.png" alt="actions" /></p>
+
+<p>As the above screenshot shows, the code for my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package needed some tidying up to get it to pass the <code class="language-plaintext highlighter-rouge">rcmdcheck()</code> checks! 😨</p>
+
+<p>I then added a status badge to the repository <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md"><code class="language-plaintext highlighter-rouge">README.md</code></a> using the following markdown code in the top line:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![R build status](https://github.com/JosephCrispell/basicPlotteR/workflows/R-CMD-check/badge.svg)](https://github.com/JosephCrispell/basicPlotteR/actions?workflow=R-CMD-check)
+</code></pre></div></div>
+<p>A couple of things you’ll notice in the above code:</p>
+
+<ul>
+  <li>The extra <code class="language-plaintext highlighter-rouge">[</code> at the start - I think this is needed!</li>
+  <li>The path to the <code class="language-plaintext highlighter-rouge">badge.svg</code> file is in my repository but you’ll no trace of it - I am not sure why this is but the badger is working, so I’ll not question it! 🤔</li>
+</ul>
+
+<p>Well, I’ve been amazed by the power of <a href="https://docs.github.com/en/free-pro-team@latest/actions">GitHub Actions</a> and I’ve only just started! I can’t wait to introduce more complex checks and add workflows to all my repositories!!!</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Getting+started+with+GitHub+Actions%20http%3A%2F%2Flocalhost%3A4000%2F2020%2F10%2F30%2Fgithub-actions.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Getting+started+with+GitHub+Actions%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2020/10/30/github-actions.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#actions">
+      <p><i class="fa fa-tag fa-fw"></i> actions</p>
+    </a>
+    
+    <a class="button" href="/tags#basicplotteR">
+      <p><i class="fa fa-tag fa-fw"></i> basicplotteR</p>
+    </a>
+    
+    <a class="button" href="/tags#github">
+      <p><i class="fa fa-tag fa-fw"></i> github</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+
+    
+    <div id="next-post">
+        <a alt="Mapping my skills development with a radar chart" href="/2020/10/23/radar-chart.html">
+            <p>Next post</p>
+            Mapping my skills development with a radar chart
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/githubActions/thumbnail.png');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>

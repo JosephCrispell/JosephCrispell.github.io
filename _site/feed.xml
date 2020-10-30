@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-27T21:21:09+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Mapping my skills development with a radar chart</title><link href="http://localhost:4000/2020/10/23/radar-chart.html" rel="alternate" type="text/html" title="Mapping my skills development with a radar chart" /><published>2020-10-23T00:00:00+01:00</published><updated>2020-10-23T00:00:00+01:00</updated><id>http://localhost:4000/2020/10/23/radar-chart</id><content type="html" xml:base="http://localhost:4000/2020/10/23/radar-chart.html">&lt;p&gt;I’ve recently added the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarChart()&lt;/code&gt; function into my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md#radarchart&quot;&gt;basicPlotteR&lt;/a&gt; R package. &lt;a href=&quot;https://en.wikipedia.org/wiki/Radar_chart#:~:text=A%20radar%20chart%20is%20a,starting%20from%20the%20same%20point.&quot;&gt;Radar Charts&lt;/a&gt; provide a way that we can map scores in different qualitative categories.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-30T21:23:07+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Getting started with GitHub Actions</title><link href="http://localhost:4000/2020/10/30/github-actions.html" rel="alternate" type="text/html" title="Getting started with GitHub Actions" /><published>2020-10-30T00:00:00+00:00</published><updated>2020-10-30T00:00:00+00:00</updated><id>http://localhost:4000/2020/10/30/github-actions</id><content type="html" xml:base="http://localhost:4000/2020/10/30/github-actions.html">&lt;p&gt;Today is the day I’ve started using &lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/actions&quot;&gt;GitHub Actions&lt;/a&gt;. I found the following two resources really helpful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/r-lib/actions/tree/master/examples&quot;&gt;Workflows specifically designed for R code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rostrum.blog/2020/08/09/ghactions-pkgs/&quot;&gt;A great blog post about R workflows in action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GitHub Actions allow you to create workflows that will execute tasks on a certain action, like &lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/using-git/pushing-commits-to-a-remote-repository&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;&lt;/a&gt;ing changes onto GitHub.&lt;/p&gt;
+
+&lt;p&gt;Each time you complete an action (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; changes to your repository), the workflow will be executed. For example, today I’ve added a workflow (&lt;a href=&quot;https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow&quot;&gt;Quickstart Continuous Integration workflow&lt;/a&gt;) to my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package, which does the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Boots up a mac OS computer&lt;/li&gt;
+  &lt;li&gt;Checks R is installed&lt;/li&gt;
+  &lt;li&gt;Installs two packages:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://cran.r-project.org/package=remotes&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remotes&lt;/code&gt;&lt;/a&gt; for installing packages from GitHub&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/rcmdcheck/index.html&quot;&gt;rcmdcheck&lt;/a&gt; - for checking R code&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Installs my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package&lt;/li&gt;
+  &lt;li&gt;Runs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rcmdcheck()&lt;/code&gt; from the &lt;a href=&quot;https://cran.r-project.org/web/packages/rcmdcheck/index.html&quot;&gt;rcmdcheck&lt;/a&gt; package, which:
+    &lt;ul&gt;
+      &lt;li&gt;Checks all the function documentation&lt;/li&gt;
+      &lt;li&gt;Runs all the examples for the functions to check they work&lt;/li&gt;
+      &lt;li&gt;Checks all functions dependencies&lt;/li&gt;
+      &lt;li&gt;Checks the R package structure&lt;/li&gt;
+      &lt;li&gt;And many more!!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this workflow in place, every time I edit the code for my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package, the above checks will be run and I’ll know straight away if I have caused any problems!&lt;/p&gt;
+
+&lt;p&gt;GitHub Actions require a &lt;a href=&quot;https://www.tutorialspoint.com/yaml/yaml_basics.htm&quot;&gt;YAML&lt;/a&gt; formatted file to define the workflow. The &lt;em&gt;Quickstart Continuous Integration workflow&lt;/em&gt; (available &lt;a href=&quot;https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow&quot;&gt;here&lt;/a&gt;) looks like this:&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;main&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;pull_request&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;main&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;R-CMD-check&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;R-CMD-check&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;macOS-latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v2&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r-lib/actions/setup-r@v1&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Install dependencies&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;install.packages(c(&quot;remotes&quot;, &quot;rcmdcheck&quot;))&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;remotes::install_deps(dependencies = TRUE)&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Rscript {0}&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Check&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rcmdcheck::rcmdcheck(args = &quot;--no-manual&quot;, error_on = &quot;error&quot;)&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Rscript {0}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I saved the above YAML code in a file called &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/.github/workflows/R-CMD-check.yaml&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.github/workflows/R-CMD-check.yaml&lt;/code&gt;&lt;/a&gt; in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; repository. Note, that I had to create the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.github&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;workflows&lt;/code&gt; folders and explicitely push them onto GitHub using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .github/workflows/R-CMD-check.yaml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the workflow pushed online, GitHub automatically started running the workflow!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/githubActions/thumbnail.png&quot; alt=&quot;actions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the above screenshot shows, the code for my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package needed some tidying up to get it to pass the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rcmdcheck()&lt;/code&gt; checks! 😨&lt;/p&gt;
+
+&lt;p&gt;I then added a status badge to the repository &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README.md&lt;/code&gt;&lt;/a&gt; using the following markdown code in the top line:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[![R build status](https://github.com/JosephCrispell/basicPlotteR/workflows/R-CMD-check/badge.svg)](https://github.com/JosephCrispell/basicPlotteR/actions?workflow=R-CMD-check)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A couple of things you’ll notice in the above code:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The extra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[&lt;/code&gt; at the start - I think this is needed!&lt;/li&gt;
+  &lt;li&gt;The path to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;badge.svg&lt;/code&gt; file is in my repository but you’ll no trace of it - I am not sure why this is but the badger is working, so I’ll not question it! 🤔&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Well, I’ve been amazed by the power of &lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/actions&quot;&gt;GitHub Actions&lt;/a&gt; and I’ve only just started! I can’t wait to introduce more complex checks and add workflows to all my repositories!!!&lt;/p&gt;</content><author><name></name></author><category term="github" /><category term="actions" /><category term="basicplotteR" /><summary type="html">Today is the day I’ve started using GitHub Actions. I found the following two resources really helpful:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/githubActions/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/githubActions/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mapping my skills development with a radar chart</title><link href="http://localhost:4000/2020/10/23/radar-chart.html" rel="alternate" type="text/html" title="Mapping my skills development with a radar chart" /><published>2020-10-23T00:00:00+01:00</published><updated>2020-10-23T00:00:00+01:00</updated><id>http://localhost:4000/2020/10/23/radar-chart</id><content type="html" xml:base="http://localhost:4000/2020/10/23/radar-chart.html">&lt;p&gt;I’ve recently added the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;radarChart()&lt;/code&gt; function into my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md#radarchart&quot;&gt;basicPlotteR&lt;/a&gt; R package. &lt;a href=&quot;https://en.wikipedia.org/wiki/Radar_chart#:~:text=A%20radar%20chart%20is%20a,starting%20from%20the%20same%20point.&quot;&gt;Radar Charts&lt;/a&gt; provide a way that we can map scores in different qualitative categories.&lt;/p&gt;
 
 &lt;p&gt;I am currently developing my &lt;a href=&quot;https://www.reed.co.uk/career-advice/personal-development-planning-what-you-need-to-know/&quot;&gt;Personal Development Plan&lt;/a&gt; and I wanted to reflect on my current skills and what I’d like to develop.&lt;/p&gt;
 
@@ -542,19 +623,4 @@ LazyData: true
 
 &lt;p&gt;I spent ages trying to think of a good example to demonstrate the ability of multithreading, and I don’t really think I found one! Here, I created very large sequences and with these large sequenes it is faster to count the nucleotides on multiple threads.&lt;/p&gt;
 
-&lt;p&gt;Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available &lt;a href=&quot;https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="programming" /><category term="parallel" /><summary type="html">Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/multiThreadingInR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/multiThreadingInR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Parsing newick formatted phylogenetic tree</title><link href="http://localhost:4000/2018/07/25/newick.html" rel="alternate" type="text/html" title="Parsing newick formatted phylogenetic tree" /><published>2018-07-25T00:00:00+01:00</published><updated>2018-07-25T00:00:00+01:00</updated><id>http://localhost:4000/2018/07/25/newick</id><content type="html" xml:base="http://localhost:4000/2018/07/25/newick.html">&lt;p&gt;Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!!&lt;/p&gt;
-
-&lt;p&gt;A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found &lt;a href=&quot;https://en.wikipedia.org/wiki/Newick_format&quot;&gt;here&lt;/a&gt;. The Newick format looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/newick/thumbnail.svg&quot; alt=&quot;plot layout&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the above diagram, each node of the phylogenetic tree can be represented as a simple string of characters (brackets, tip names, and branch lengths). Each string of characters details what is below the node. The string of characters (or label) for the root node (at the base of the rooted phylogenetic tree) describes the entire phylogenetic tree.&lt;/p&gt;
-
-&lt;p&gt;So that means, the whole phylogenetic tree can be stored using only the root label:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(B:3, (C:1, (A:1, D:2):2):1);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;My Java program (I’m still improving it, but it is available &lt;a href=&quot;https://en.wikipedia.org/wiki/Newick_format&quot;&gt;here&lt;/a&gt;) is designed to read this format and store the phylogenetic tree as a set of traversable (easy to move among) nodes. The trick to doing this, is in counting your brackets!!&lt;/p&gt;
-
-&lt;p&gt;An amazingly simple (in hindsight) format that was developed in the 1980s and remains the standard phylogenetic tree format today. Perfect timing, that’s the bus just pulling into Belfast.&lt;/p&gt;</content><author><name></name></author><category term="phylogenetics" /><summary type="html">Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!! A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found here. The Newick format looks like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/newick/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Regardless of the example, hopefully what I have demonstrated here is that multithreading in R is very easy and I should be doing it more often!! All of the above R code is available &lt;a href=&quot;https://github.com/JosephCrispell/GeneralTools/blob/master/MultithreadingInR_27-08-18.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="programming" /><category term="parallel" /><summary type="html">Whilst I wait for a set of around sequences to be processed, I thought I would remind myself how to do multithreading in R.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/multiThreadingInR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/multiThreadingInR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
