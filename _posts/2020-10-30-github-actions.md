@@ -70,13 +70,19 @@ With the workflow pushed online, GitHub automatically started running the workfl
 
 As the above screenshot shows, the code for my [basicPlotteR](https://github.com/JosephCrispell/basicPlotteR) package needed some tidying up to get it to pass the `rcmdcheck()` checks! 😨
 
-I then added a status badge to the repository [`README.md`](https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md) using the following markdown code in the top line:
+But I got there in the end!!! 🎉
+
+![actions]({{ "/assets/img/blog/githubActions/badge.png" | relative_url}})
+
+I added the status badge to the repository [`README.md`](https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md) using the following markdown code in the top line:
 ```
 [![R build status](https://github.com/JosephCrispell/basicPlotteR/workflows/R-CMD-check/badge.svg)](https://github.com/JosephCrispell/basicPlotteR/actions?workflow=R-CMD-check)
 ```
 A couple of things you'll notice in the above code:
 
 - The extra `[` at the start - I think this is needed!
-- The path to the `badge.svg` file is in my repository but you'll no trace of it - I am not sure why this is but the badger is working, so I'll not question it! 🤔
+- The path to the `badge.svg` file is in my repository but you'll no trace of it - I am not sure why this is but the badge is working, so I'll not question it! 🤔
 
-Well, I've been amazed by the power of [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) and I've only just started! I can't wait to introduce more complex checks and add workflows to all my repositories!!!  
+Well, I've been amazed by the power of [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) and I've only just started! I can't wait to introduce more complex checks and add workflows to all my repositories!!! 
+
+Oh, and Happy Halloween!!! 🧡
