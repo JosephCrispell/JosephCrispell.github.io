@@ -6,7 +6,7 @@ permalink: /gallery/
 tags: [Gallery, Photo]
 ---
 
-Here's a collection of the images I've used across my website. Click an image to go to where it is used. 📷
+Here's the thumbnails for each of my blog posts. Click an image to go to it's blog post. 📷
 
 <div id='masonry' class="grid">
     <div class="grid-sizer"></div>
