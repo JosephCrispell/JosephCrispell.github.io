@@ -16,6 +16,27 @@ I was inspired to learn more about the radar chart by the existing `radarchart()
 
 Here is my `radarChart()` function in action illustrating my current level for a range of skills and where I'd like to be over the next 6 months:
 
+```r
+# Create a chart illustrating my current skills levels
+radarChart(scores=c(4,3.5,2,3,3,3), 
+           names=c("Programming", "Statistics", "Databases", "Projects",
+                   "Web", "Versioning"),
+           levels=c("Unaware","Aware","Working","Practitioner", "Expert"))
+
+# Add where I aim to get to
+radarChart(scores=c(4,3.75,3,4,3,4), 
+           names=c("Programming", "Statistics", "Databases", "Projects",
+                   "Web", "Versioning"),
+           levels=c("Unaware","Aware","Working","Practitioner", "Expert"),
+           polygon.col="blue", add=TRUE)
+
+# Add a legend
+legend("topright", 
+       legend=c("Current", "Aim"), 
+       text.col=c(rgb(1,0,0, 0.5), rgb(0,0,1, 0.5)), 
+       bty="n", text.font=2, cex=1.5, xpd=TRUE)
+```
+
 ![radar]({{ "/assets/img/blog/radarChart/thumbnail.png" | relative_url}})
 
 I consider these themes to be integral to my work as a data scientist and over the next 6 months I'll be doing the following to improve my skills:
