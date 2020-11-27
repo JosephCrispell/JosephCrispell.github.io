@@ -16,10 +16,10 @@ The [reveal.js](https://revealjs.com/) framework represents a wacky new way to c
 
 Here are the slides I put together:
 <iframe src="https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html#/" width="100%" height="480" style="border:none;">Browser not compatible.</iframe>
-
+<br>
 I've also put a recording of my presentation on [youtube](https://www.youtube.com/embed/vcZUtzn3z70):
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/vcZUtzn3z70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
 I'm not great at writing `html`, so it took me a while to get used to the reveal.js framework. Once I did though, I found it amazing and I learnt a lot! 💡
 
 If you're keen to try itself then head over the [reveal.js](https://revealjs.com/) page. Also, here's the [code](https://github.com/JosephCrispell/reveal.js/tree/master/data-ethics-in-practice) for my data ethics presentation on GitHub.
