@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Set the presentation title -->
+		<title>Data ethics in practice</title>
+
+		<!-- Add a favicon-->
+		<link type="image/x-icon" rel="shortcut icon" href="logos/DataScienceCampus_logo_square.png" />
+
+		<link rel="stylesheet" href="reveal/reset.css">
+		<link rel="stylesheet" href="reveal/reveal.css">
+		<link rel="stylesheet" href="reveal/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/monokai.css" id="highlight-theme">
+
+		<!-- Local overrides of styles -->
+		<!--<link rel="stylesheet" href="reveal-override.css"/>-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<!-- Slide 1: title -->
+				<section data-background="branding/background.png">
+
+					<div style="position: fixed; top: 750%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Data ethics in practice</h2>
+						<p>Created by <a href="https://josephcrispell.github.io/">Joseph Crispell</a> using <a href="https://revealjs.com/">reveal.js</a></p>
+					</div>
+
+					<aside class="notes">
+						Hi everyone<br><br>
+
+						Thanks Olivia for that great presentation and thanks to the organisers for inviting me to talk today.<br><br>
+
+						Today, I'm going to talk about data ethics in practice. How I've considered different aspects of data ethics in the data science projects I've been involved in<br><br>
+					</aside>
+				</section>
+
+				<!-- Section 2 -->
+				<section>
+
+					<!-- Slide 2.1: my career -->
+					<section>
+						<br>
+
+						<h2>My Career</h2>
+						<ul>
+							<li>Zoology</li>
+							<li>Pathogen transmission</li>
+							<li>Pathogen genomics</li>
+							<li>Office for National Statistics - <a href="https://datasciencecampus.ons.gov.uk/"> data science campus</a></li>
+						</ul>
+
+						<br><br><br>
+
+						<img align="left" src="logos/DataScienceCampus_logo.png" width="20%">&nbsp;
+						<img src="logos/ONS_logo.webp" width="30%">&nbsp;
+						<img align="right" src="logos/FCDO-white_logo.png" width="20%">
+
+						<aside class="notes">
+
+							First, a bit of background about my career.<br><br>
+
+							I grew up in the highlands of Scotland and came down to Glasgow to study Zoology<br><br>
+
+							I then went on to study pathogen transmission during my PhD<br><br>
+
+							As my studies continued, I started to learn about programming and data and went on to use genomic data to track transmission.<br><br>
+
+							I continued this research and then recently I joined part of the Office for National Statistics data science campus that's using data science to help AID operations around the world.
+						</aside>
+					</section>
+
+					<!-- Slide 2.2: my website -->
+					<section data-background-iframe="https://josephcrispell.github.io/" data-background-interactive data-preload></section>
+				</section>
+
+				<!-- Slide 3: what is data ethics -->
+				<section>
+					<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Words drawn from: <a href="http://doi.org/10.5281/zenodo.3233986">Data Ethics Framework</a></p>
+					<a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework"><img src="images/dataEthics_wordcloud.png" alt="snp array" style="height: 80%; width: auto"></a>
+
+					<aside class="notes">
+						Olivia has a done a great job of defining and exploring data ethics.<br><br>
+
+						What I wanted to do here was reflect on what I consider to be data ethics.<br><br>
+
+						For me, it's about exploring and understanding the good and bad of working with data.<br><br>
+						
+						What should we be considering as we store, process and report our data and analyses?<br><br>
+
+						Today I'm hopefully going to illustrate some important data ethics concepts and how they arose in different projects I've worked on.
+					</aside>
+				</section>
+
+				<!-- Section 4 -->
+				<section>
+
+					<!-- Slide 4.1: cancer panels - start with a simpler title?? Detewrmining the accuracy of cancer mutation detection - UNCERTAINTY-->
+					<section>
+						<h2>Improving Cancer mutation detection</h2>
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ACCURACY</p>
+
+						<aside class="notes">
+							One of the first projects I worked on was looking at methods to improve the way we identify mutations associated with different cancers<br><br>
+
+							Cancers can be caused by a range of factors, sometimes mutations in our genomes can causes cancers. If we can identify these mutation,s we can use them to understand whether an individual might develop a cancer and what treatments might work best.<br><br>
+
+							The team wanted to understand the accuracy of the data used to identify mutations.<br><br>
+							
+							Accuracy is a key data ethics consideration, here we needed to be confident that the mutations we identified were actually associated with cancers. Otherwise we might be causing unnecessary treatments or stress to future patients.
+						</aside>
+					</section>
+
+					<!-- Slide 4.2: SNP array -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://www.illumina.com/techniques/popular-applications/genotyping.html">Illumina</a></p>
+						<img src="https://www.illumina.com/content/dam/illumina-marketing/images/techniques/infinium-xt-web-graphic.jpg" alt="snp array" style="height: 80%; width: auto">
+
+						<aside class="notes">
+							The aim was to identify a panel of mutations in people's genomes that were linked to cancers.<br><br>
+
+							When we think about accuracy here, we are thinking about those people undergoing tests and treatments because they have a particular mutation we've identified.
+						</aside>
+					</section>
+
+					<!-- Slide 4.3: false positives -->
+					<section>
+						<table>
+							<thead>
+								<tr>
+									<th>Result \ Truth</th>
+									<th>Positive</th>
+									<th>Negative</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Positive</td>
+									<td>True positive</td>
+									<td>False positive</td>
+								</tr>
+								<tr>
+									<td>Negative</td>
+									<td>False negative</td>
+									<td>True negative</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							If we tell someone they are at risk of particular cancer when they are not - a false positive - that could have devastating consequences.<br><br>
+
+							If we don't identify an individual at risk - a false negative - then we may have missed an opportunity to catch a cancer early.<br><br>
+
+							The ethical consequences of accurately identifying mutations associated with cancers are massive!
+						</aside>
+					</section>
+
+					<!-- Slide 4.4: VCF file -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Variant Call Format (VCF) file <a href="https://en.wikipedia.org/wiki/Variant_Call_Format#:~:text=The%20Variant%20Call%20Format%20(VCF,as%20the%201000%20Genomes%20Project.">specification</a></p>
+						
+						<pre><code class="plaintext" data-trim data-line-numbers="19-24">
+							##fileformat=VCFv4.3
+							##fileDate=20090805
+							##source=myImputationProgramV3.1
+							##reference=file:///seq/references/1000GenomesPilot-NCBI36.fasta
+							##contig=&lt;ID=20,length=62435964,assembly=B36,md5=f126cdf8a6e0c7f379d618ff66beb2da,species="Homo sapiens",taxonomy=x&gt;
+							##phasing=partial
+							##INFO=&lt;ID=NS,Number=1,Type=Integer,Description="Number of Samples With Data"&gt;
+							##INFO=&lt;ID=DP,Number=1,Type=Integer,Description="Total Depth"&gt;
+							##INFO=&lt;ID=AF,Number=A,Type=Float,Description="Allele Frequency"&gt;
+							##INFO=&lt;ID=AA,Number=1,Type=String,Description="Ancestral Allele"&gt;
+							##INFO=&lt;ID=DB,Number=0,Type=Flag,Description="dbSNP membership, build 129"&gt;
+							##INFO=&lt;ID=H2,Number=0,Type=Flag,Description="HapMap2 membership"&gt;
+							##FILTER=&lt;ID=q10,Description="Quality below 10"&gt;
+							##FILTER=&lt;ID=s50,Description="Less than 50% of samples have data"&gt;
+							##FORMAT=&lt;ID=GT,Number=1,Type=String,Description="Genotype"&gt;
+							##FORMAT=&lt;ID=GQ,Number=1,Type=Integer,Description="Genotype Quality"&gt;
+							##FORMAT=&lt;ID=DP,Number=1,Type=Integer,Description="Read Depth"&gt;
+							##FORMAT=&lt;ID=HQ,Number=2,Type=Integer,Description="Haplotype Quality"&gt;
+							#CHROM POS      ID         REF   ALT    QUAL  FILTER   INFO                             FORMAT       NA00001         NA00002          NA00003
+							20     14370    rs6054257  G     A      29    PASS    NS=3;DP=14;AF=0.5;DB;H2           GT:GQ:DP:HQ  0|0:48:1:51,51  1|0:48:8:51,51   1/1:43:5:.,.
+							20     17330    .          T     A      3     q10     NS=3;DP=11;AF=0.017               GT:GQ:DP:HQ  0|0:49:3:58,50  0|1:3:5:65,3     0/0:41:3
+							20     1110696  rs6040355  A     G,T    67    PASS    NS=2;DP=10;AF=0.333,0.667;AA=T;DB GT:GQ:DP:HQ  1|2:21:6:23,27  2|1:2:0:18,2     2/2:35:4
+							20     1230237  .          T     .      47    PASS    NS=3;DP=13;AA=T                   GT:GQ:DP:HQ  0|0:54:7:56,60  0|0:48:4:51,51   0/0:61:2
+							20     1234567  microsat1  GTC   G,GTCT 50    PASS    NS=3;DP=9;AA=G                    GT:GQ:DP     0/1:35:4        0/2:17:2         1/1:40:3
+						</code></pre>
+
+						<aside class="notes">
+							To identify mutations, we use sequencing data. We take samples from people with and without cancers and sequence their genomes.<br><br>
+
+							A key consideration here is that sequencing machines can make mistakes. Thankfully they do provide indicators of quality.<br><br>
+
+							Here we have some processed sequencing data reporting the position and type of a range of mutations. Alongside this there are measures of quality that we used to understand when and why sequencing occurred to help us remove the false positive mutations that were actually sequencing errors rather than mutations associated with cancers.
+						</aside>
+					</section>
+				</section>
+
+				<!-- Section 5 -->
+				<section>
+					<!-- Slide 5.1: TB in New Zealand -->
+					<section>
+						<h2>Cattle, possums, and bTB in New Zealand</h2>
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">SAMPLING</p>
+
+						<aside class="notes">
+							A later project I worked on was investigating bovine tuberculosis. A disease of cattle that affects their lungs.<br><br>
+
+							Bovine tuberculosis is a big problem around the world and what's interesting is that it doesn't just affect cows. It can affect us and many other animals.<br><br>
+
+							Our project aimed to understand what role wildlife playing in bovine tuberculosis in cattle in New Zealand<br><br>
+
+							The key ethics consideration here was sampling - it was crucial we understood the limitations of the data available.
+						</aside>
+					</section>
+
+					<!-- Slide 5.2: New Zealand cattle -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://commons.wikimedia.org/wiki/File:Cattle_stop_sign_-_New_Zealand.jpg">Wikimedia</a></p>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Cattle_stop_sign_-_New_Zealand.jpg" alt="cattle" style="width: 75%">
+
+						<aside class="notes">
+							In New Zealand, millions of dollars are spent each year to maintain low levels of bovine tuberculosis in their cattle.<br><br>
+						</aside>
+					</section>
+
+					<!-- Slide 5.3: New Zealand possums -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brushtail_Possum_-_AndrewMercer_IMG40144.jpg">Wikimedia</a></p>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Brushtail_Possum_-_AndrewMercer_IMG40135.jpg" alt="possum" style="width: 75%">
+
+						<aside class="notes">
+							The possum is thought to be mostly to blame. Its a species that was introduced for the fur trade<br><br>
+
+							There are now 30 million possums in New Zealand and they are often found to have bovine tuberculosis.<br><br>
+
+							Our research wanted to investigate their role in more detail - were they really spreading infection to cattle?
+						</aside>
+					</section>
+
+					<!-- Slide 5.4: sampling locations - quite hard to see! White outline-->
+					<section>
+						<img src="images/newzealand_sampling.png" alt="cattle" style="width: 70%">
+
+						<aside class="notes">
+							A team in New Zealand had sampled hundreds of infected cattle and wildlife across the country.<br><br>
+
+							Unfortunately, to address the question of transmission we needed samples from cattle and wildlife living in the same area at the same time.<br><br>
+
+							We found that when estimated the direction of transmission between cattle and wildlife it was highly influenced by our sampling design. So in the end we had to discard that aim and simply describe the data available.<br><br>
+
+							Being present at the time of sampling is often impossible, but what's important is recognising what questions we can ask with the data available.
+						</aside>
+					</section>
+
+					<!-- Slide 5.5: NZ article -->
+					<section data-background-iframe="articles/NZ_article.pdf" data-background-interactive data-preload></section>
+				</section>
+
+				<!-- Section 6 -->
+				<section>
+					<!-- Slide 6.1: woodchester -->
+					<section>
+						<h2>Cattle, badgers, and bTB in Woodchester Park</h2>
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRESENTATIVENESS</p>
+
+						<aside class="notes">
+
+							Learning from our work in New Zealand, we conducted similar research in England.<br><br>
+
+							In England, there is a much bigger bovine tuberculosis problem with thousands of cattle being culled every year. Instead of possums being implicated, badgers are thought to spread infection to cattle<br><br>
+
+							Our research aimed to address a critical unanswered question, how frequently was infection transmitted between cattle and badgers.<br><br>
+
+							What was essential in this work was understanding the representativeness of our analyses. Where were the results of our work relevant? In our case this had important implications as our work could be used as the basis for cattle and badger population culling operations across the country.
+						</aside>
+					</section>
+					
+					<!-- Slide 6.2: news articles -->
+					<section>
+						<div class="r-stack">
+							<img src="images/BTB_bbc.png" width="550" height="auto">
+							<img class="fragment" src="images/BTB_guardian.png"  width="650" height="auto">
+							<img class="fragment" src="images/BTB_gov.png" width="450" height="auto">
+						</div>
+						
+						<aside class="notes">
+							A big part of the bovine tuberculosis problem in England is policital.<br><br>
+
+							Almost every week there is some controversy about the different control options in the UK.<br><br>
+						</aside>
+					</section>
+
+					<!-- Slide 6.3: embed google map -->
+					<section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1QGnW6j9L3AXn0YM0rUoQc2-qQm3epdXV" data-background-interactive data-preload>
+						<aside class="notes">
+							We need to be sure we had high quality data underpinning our analyses.
+							
+							So, learning from New Zealand, we gather hundreds of samples from infected cattle and badgers living in a tiny area in the South West of England - Woodchester Park.<br><br>
+
+							With these data we were able calculate how frequently the infection was spreading from badgers to cattle and vice versa.<br><br>
+
+							Importantly though, we sampled a tiny area in the South West of England. Our results, while important, couldn't tell us much about what was going on in the rest of the country.<br><br>
+
+							It was essential to highlight that our project was the start of understanding the direction of transmission between badgers and cattle and more studies were needed to inform the national control strategy.
+						</aside>
+					</section>
+
+					<!-- Slide 6.4: WP article -->
+					<section data-background-iframe="articles/WP_article.pdf" data-background-interactive data-preload></section>	
+				</section>
+
+				<!-- Section 7 -->
+				<section>
+					<!-- Slide 7.1: cote d'ivoire -->
+					<section>
+						<h2>Mapping HIV in C&ocircte d'Ivoire</h2>
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ANONYMITY</p>
+
+						<aside class="notes">
+							A project I'm currently working on, really highlights the importance of anonymity.<br><br>
+
+							I've joined a team hoping to map HIV risk in adolescents in Cote d'Ivoire in West Africa.<br><br>
+
+							Every five or so years, comprehensive national surveys are conducted to quantify HIV prevalence.<br><br>
+
+							We want to see whether we can delve into these data to establish indicators of risk that was more readily available and more regularly updated to get more rapid signals of risk.
+						</aside>
+					</section>
+
+					<!-- Slide 7.2: population density -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Data source: <a href="https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-civ">Data for good</a></p>
+						<img src="images/cotedivoire_popDensity.png" alt="density" style="width: 70%">
+
+						<aside class="notes">
+							However, there are two important aspects we are considering while we are planning this project:<br><br>
+
+							1. How can we protect those vulnerable groups we aim to identify? From stigma, for example. Here we need to carefully consider the needs of our stakeholders and ensure access to our results is carefully restricted.<br>
+
+							2. With highly sensitive data like HIV test results and socio-economic status, how can we protect our data subjects identities? As we work with sensitive data we need to consider these sensitivities in how we store, analyse and report our data.
+						</aside>
+					</section>
+
+					<!-- Slide 7.3: displacement -->
+					<section>
+						<img src="images/displacedRandomLocations.png" alt="displacement" style="width: 50%">
+
+						<aside class="notes">
+							Methods such as random displacement can be used to protect individuals by masking their locations. For example, for national HIV surveys the locations of individual's tested are randomly displaced by 2km in urban areas or 5km in rural areas to ensure it isn't possible to trace the results back to the individuals tested.<br><br>
+
+							Any anonymisation method weighs the importance of anonymity against the utility of the data.
+						</aside>
+					</section>
+				</section>
+
+				<!-- Slide 8: summing up -->
+				<section>
+					<h2>Data ethics themes</h2>
+					<ul>
+						<li>Accuracy</li>
+						<li>Sampling</li>
+						<li>Representiveness</li>
+						<li>Anonymity</li>
+					</ul>
+
+					<aside class="notes">
+						Hopefully each of these projects has highlighted a key theme that we must consider in our data science projects.<br><br>
+
+						We must capture the accuracy of our results and the uncertainty around that.<br><br>
+
+						We must consider the appropriateness of our sampling to address our question.<br><br>
+
+						As we report our results we must carefully layout where they are relevant.<br><br>
+
+						We have an obligation to consider the sensitivity of our data and store, process, and report it appropriately.
+					</aside>
+				</section>
+
+				<!-- Section 9 -->
+				<section>
+					<!-- Slide 9.1: RAP -->
+					<section>
+						<h2>Reproducible data science</h2>
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRODUCIBILITY</p>
+						<aside class="notes">
+							Lastly, I want to touch on a really important aspect of my work in the data science campus.<br><br>
+
+							As a team we are teaching about what the use and importance of reproducible data science, which underpins all aspects of data ethics.
+						</aside>
+					</section>
+
+					<!-- Slide 9.2: transparency -->
+					<section>
+						<pre><code class="json" data-trim data-line-numbers="19-24">
+							{
+								"title": "Cote d'Ivoire: High Resolution Population Density Maps + Demographic Estimates. Population and Youth (15-24)",
+								"source": "Facebook",
+								"url": "https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-civ",
+								"type": "tif/csv",
+								"date-of-dataset": "01-07-2019",
+								"date-accessed": "23-03-2020"
+							  }
+						</code></pre>
+
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE TRANSPARENT</p>
+
+						<aside class="notes">
+							We must be transparent in our project, clearly documenting our data, coding, analyses, and results.
+						</aside>
+					</section>
+
+					<!-- Slide 9.3: open -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="http://doi.org/10.5281/zenodo.3233986">The Turing Way</a></p>
+						<img src="images/Community.png" alt="open" style="width: 75%; background-color:white;">
+
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE OPEN</p>
+
+						<aside class="notes">
+							We must be open. Not working in silos, but publicising our projects, joining the open-source community of sharing with and learning from others.
+						</aside>
+					</section>
+
+					<!-- Slide 9.4: reproducible -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="http://doi.org/10.5281/zenodo.3233986">The Turing Way</a></p>
+						<img src="images/ReproducibleDefinitionGrid.jpg" alt="reproducible" style="width: 75%">
+
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE MORE THAN REPRODUCIBLE</p>
+
+						<aside class="notes">
+							It isn't enough to be reproducible, we must build tools that can be easily understand, used, and adapted.
+						</aside>
+					</section>
+				</section>
+
+				<!-- Slide 10: resources -->
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li>Humanitarian Data Science and Ethics Group project planning decision <a href="https://5f2cd2ba-741c-4b29-ae47-00a8291b1d3c.filesusr.com/ugd/d1cf5c_42aaabed14e04ed786c7941df0fe4484.pdf">tree</a></li>
+						<li>Open Data Institute data ethics <a href="https://theodi.org/wp-content/uploads/2019/07/ODI-Data-Ethics-Canvas-2019-05.pdf">canvas</a></li>
+						<li>Teaching <a href="https://github.com/datasciencecampus/gov-uk-rap-materials"> materials</a> for reproducible data science</li>
+						<li>The RAP <a href="https://ukgovdatascience.github.io/rap-website/companion-index.html">companion</a> - a book about Reproducible Analytical Pipelines</li>
+						<li>UK government Data Ethics <a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework">Framework</a></li>
+						<li>A <a href="https://www.butterfly.com.au/blog/website-development/clean-high-quality-code-a-guide-on-how-to-become-a-better-programmer">guide</a> to how to become a better programmer</li>
+					</ul>
+
+					<aside class="notes">
+						I'll finish by sharing a few resources. I've barely scratched the surface of data ethics and hopefully some of these will highlight the many other important aspects to consider.
+					</aside>
+				</section>
+
+				<!-- Slide 11: END -->
+				<section data-background="branding/background.png">
+
+					<div style="position: fixed; top: 750%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>THANKS FOR LISTENING!</h2>
+						<p>Email: <a href="mailto:crispelljoseph@gmail.com">crispelljoseph@gmail.com</a><br>
+						   Website: <a href="https://josephcrispell.github.io/">josephcrispell.github.io</a><br>
+						   Twitter: <a href="https://twitter.com/JosephCrispell">@JosephCrispell</a><br>
+						   Presentation available <a href="https://github.com/JosephCrispell/reveal.js/tree/master/data-ethics-in-practice">here</a>.
+						</p>
+					</div>
+
+					<aside class="notes">
+						Thanks very much for listening.
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal/reveal.js"></script>
+		<script src="reveal/notes.js"></script>
+		<script src="reveal/markdown.js"></script>
+		<script src="reveal/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
