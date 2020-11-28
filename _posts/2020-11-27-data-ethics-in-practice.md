@@ -18,6 +18,47 @@ Here are the slides I put together:
 <iframe src="https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html#/" width="100%" height="480" style="border:none;">Browser not compatible.</iframe>
 
 <br>
+Here's a sneak peak at the [`index.html`](https://github.com/JosephCrispell/reveal.js/blob/master/data-ethics-in-practice/index.html) that makes the above presentation:
+
+```html
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Set the presentation title -->
+		<title>Data ethics in practice</title>
+
+		<!-- Add a favicon-->
+		<link type="image/x-icon" rel="shortcut icon" href="logos/DataScienceCampus_logo_square.png" />
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<!-- Slide 1: title -->
+				<section data-background="branding/background.png">
+
+					<div style="position: fixed; top: 750%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Data ethics in practice</h2>
+						<p>Created by <a href="https://josephcrispell.github.io/">Joseph Crispell</a> using <a href="https://revealjs.com/">reveal.js</a></p>
+					</div>
+
+					<aside class="notes">
+                        Hi everyone<br><br>
+                        ...
+
+```
+
+<br>
 I've also put a recording of my presentation on [youtube](https://www.youtube.com/embed/vcZUtzn3z70):
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/vcZUtzn3z70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
