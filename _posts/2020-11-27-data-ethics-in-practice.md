@@ -14,7 +14,7 @@ I've tried plenty of different ways to create presentations (like [powerpoint](h
 
 The [reveal.js](https://revealjs.com/) framework represents a wacky new way to create presentations - by writing them directly in [`html`](https://www.w3schools.com/html/html_intro.asp) and it is completely free and open-source!!🎉
 
-Here are the slides I put together:
+Here are the [slides](https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html) I put together:
 <iframe src="https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html#/" width="100%" height="480" style="border:none;">Browser not compatible.</iframe>
 
 <br>
