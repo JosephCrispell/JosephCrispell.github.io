@@ -222,86 +222,117 @@
 
   <section class="post-content">
   
-	<p>Here’s the thumbnails for each of my blog posts. Click an image to go to it’s blog post. 📷</p>
+	<style>
+.grid-item:hover {
+  opacity: 0.3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.gridText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+
+<p>Here’s the thumbnails for each of my blog posts. Click an image to go to it’s blog post. 📷</p>
 
 <div id="masonry" class="grid">
     <div class="grid-sizer"></div>
     <div class="gutter-sizer"></div>
     
         <a href="/2020/11/27/data-ethics-in-practice.html">
-            <img src="/assets/img/blog/dataEthicsInPractice/thumbnail.png" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/dataEthicsInPractice/thumbnail.png" alt="" class="grid-item" style="padding: 0;" title="Data ethics in practice with reveal.js" />
         </a>
     
         <a href="/2020/10/30/github-actions.html">
-            <img src="/assets/img/blog/githubActions/thumbnail.png" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/githubActions/thumbnail.png" alt="" class="grid-item" style="padding: 0;" title="Getting started with GitHub Actions" />
         </a>
     
         <a href="/2020/10/23/radar-chart.html">
-            <img src="/assets/img/blog/radarChart/thumbnail.png" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/radarChart/thumbnail.png" alt="" class="grid-item" style="padding: 0;" title="Mapping my skills development with a radar chart" />
         </a>
     
         <a href="/2020/09/05/googletrans.html">
-            <img src="/assets/img/blog/googletrans/GoogleTranslation.gif" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/googletrans/GoogleTranslation.gif" alt="" class="grid-item" style="padding: 0;" title="Using python's googletrans library in R" />
         </a>
     
         <a href="/2020/06/20/google-scripts.html">
-            <img src="/assets/img/blog/GoogleAppsScript/feature.jpg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/GoogleAppsScript/feature.jpg" alt="" class="grid-item" style="padding: 0;" title="Getting started with Google Apps Script" />
         </a>
     
         <a href="/2019/07/20/openstreetmaps.html">
-            <img src="/assets/img/blog/osm/thumbnail.png" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/osm/thumbnail.png" alt="" class="grid-item" style="padding: 0;" title="Open Street Map tiles in R" />
         </a>
     
         <a href="/2019/06/04/progress-bar.html">
-            <img src="/assets/img/blog/progressBar/thumbnail.gif" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/progressBar/thumbnail.gif" alt="" class="grid-item" style="padding: 0;" title="Creating a progress bar in R" />
         </a>
     
         <a href="/2019/02/07/speadPoints.html">
-            <img src="/assets/img/blog/spreadPoints/spreadPoints.png" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/spreadPoints/spreadPoints.png" alt="" class="grid-item" style="padding: 0;" title="spreadPoints()" />
         </a>
     
         <a href="/2019/02/07/benVorlich.html">
-            <img src="/assets/img/blog/benVorlich/OnTheWayUp.JPG" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/benVorlich/OnTheWayUp.JPG" alt="" class="grid-item" style="padding: 0;" title="Ben Vorlich hike" />
         </a>
     
         <a href="/2018/09/11/creating-R-package.html">
-            <img src="/assets/img/blog/packageR/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/packageR/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Creating an R package" />
         </a>
     
         <a href="/2018/08/27/multi-threading-R.html">
-            <img src="/assets/img/blog/multiThreadingInR/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/multiThreadingInR/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Multi-threading in R" />
         </a>
     
         <a href="/2018/07/25/newick.html">
-            <img src="/assets/img/blog/newick/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/newick/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Parsing newick formatted phylogenetic tree" />
         </a>
     
         <a href="/2018/05/09/building-computer.html">
-            <img src="/assets/img/blog/buildingComputer/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/buildingComputer/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Building a computer" />
         </a>
     
         <a href="/2018/05/04/multi-threading-Java.html">
-            <img src="/assets/img/blog/multiThreadingInJava/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/multiThreadingInJava/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Multi-threading in Java" />
         </a>
     
         <a href="/2018/04/03/addTextLabels.html">
-            <img src="/assets/img/blog/addTextLabels/addTextLabels.gif" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/addTextLabels/addTextLabels.gif" alt="" class="grid-item" style="padding: 0;" title="addTextLabels()" />
         </a>
     
         <a href="/2018/01/31/bicycleStand.html">
-            <img src="/assets/img/blog/bicycleStand/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/bicycleStand/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Building a bicycle stand" />
         </a>
     
         <a href="/2017/10/11/things-to-remember.html">
-            <img src="/assets/img/blog/thingsToRemeber/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/thingsToRemeber/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Things to remember" />
         </a>
     
         <a href="/2017/08/03/blast.html">
-            <img src="/assets/img/blog/blast/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/blast/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Creating a local BLAST database" />
         </a>
     
         <a href="/2017/04/06/sra.html">
-            <img src="/assets/img/blog/sra/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" />
+            <img src="/assets/img/blog/sra/thumbnail.svg" alt="" class="grid-item" style="padding: 0;" title="Submitting FASTQ files to Sequence Read Archive (SRA)" />
         </a>
     
 </div>
