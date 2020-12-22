@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    <script defer=true src="/assets/js/particle.js"></script>
+
+    <!-- Slideshow -->
+    <script defer=true src="/assets/js/slideshow.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/WebsiteLogo.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2020/12/21/ubuntu-wsl.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Joseph Crispell" href="http://localhost:4000/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829558-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109829558-1');
+</script>
+
+<!-- Page analysis (analytics.js) -->
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-109829558-1', 'auto');
+  ga('send', 'pageview');
+</script>
+ <!-- End Google Analytics -->
+
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Windows Subsystem for Linux (Ubuntu WSL) | Joseph Crispell</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Windows Subsystem for Linux (Ubuntu WSL)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊" />
+<meta property="og:description" content="Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊" />
+<link rel="canonical" href="http://localhost:4000/2020/12/21/ubuntu-wsl.html" />
+<meta property="og:url" content="http://localhost:4000/2020/12/21/ubuntu-wsl.html" />
+<meta property="og:site_name" content="Joseph Crispell" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-21T00:00:00+00:00" />
+<script type="application/ld+json">
+{"headline":"Windows Subsystem for Linux (Ubuntu WSL)","dateModified":"2020-12-21T00:00:00+00:00","datePublished":"2020-12-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/12/21/ubuntu-wsl.html"},"image":"http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png","description":"Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊","@type":"BlogPosting","url":"http://localhost:4000/2020/12/21/ubuntu-wsl.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/WebsiteLogo.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Joseph Crispell" href="/">
+        Joseph Crispell
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+  <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    	<i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Blog" title="Blog" href="/blog/">
+                     Blog 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Gallery" title="Gallery" href="/gallery/">
+                     Gallery 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Projects" title="Projects" href="/projects/">
+                     Projects 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2020/12/21/ubuntu-wsl.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Windows Subsystem for Linux (Ubuntu WSL)" />
+<meta property="og:description"  content="Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊
+" />
+<meta property="og:image"        content="assets/img/blog/ubuntuWSL/thumbnail.png" />
+
+
+<article class="feature-image">
+
+  
+  <header id="main">
+
+  </header>
+  
+
+  <center>
+    
+      <h1 id="Windows+Subsystem+for+Linux+%28Ubuntu+WSL%29" class="title">Windows Subsystem for Linux (Ubuntu WSL)</h1>
+
+      <p class="meta">
+        December 21, 2020
+      </p>
+    
+  </center>
+  
+  <section class="post-content">
+
+  
+      <p>Today I set about trying to bring a little <a href="https://www.linux.com/what-is-linux/"><code class="language-plaintext highlighter-rouge">linux</code></a> joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊</p>
+
+<blockquote>
+  <p>If you can, work in a linux, it’s free, <a href="https://opensource.com/resources/what-open-source">open-source</a>, and powerful - putting you in complete control of your computer. 💻 If you can’t, and your stuck on a Windows 10 computer at work, then this post is for you!</p>
+</blockquote>
+
+<p>Microsoft, recognising the brilliance of linux, created the Windows Subsystem Linux (WSL) to allow a linux subsystem to work within your Windows computer. Essentially a linux terminal can be used to install and run linux tools on your Windows file system! 📁</p>
+
+<p>Linux comes in many <a href="https://www.tecmint.com/linux-distro-for-power-users/">flavours</a>, one of the most population (and my favourite) is <a href="https://ubuntu.com/">Ubuntu</a>.</p>
+
+<p>Today, I am going to walk through the steps I took to install <a href="">Ubuntu</a> on my Windows 10 machine:</p>
+
+<ol>
+  <li>Enable the Windows Subsystem Linux (WSL) by typing the following into your command line (or powershell):
+    <pre><code class="language-dos">  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+    <p>With the a Windows update after May 2020 run thr following <strong>instead</strong>:
+  <code class="language-plaintext highlighter-rouge">dos
+  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+ </code><br /><br /></p>
+  </li>
+  <li>Install the Ubuntu App - I couldn’t download the app via Microsoft store so I did the following:
+    <ul>
+      <li>Selected “Ubuntu 20.04” from <a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">here</a></li>
+      <li>Then used the following command to install the file in the command line:
+  <code class="language-plaintext highlighter-rouge">dos
+  Add-AppxPackage .\[insertFileNameHereWithoutSuffix].appx
+ </code><br /><br /></li>
+    </ul>
+  </li>
+  <li>
+    <p>Start the Ubuntu app (I typed “Ubuntu” into the Windows search)<br /><br /></p>
+  </li>
+  <li>
+    <p>Create a username and password (doesn’t need to match Windows credentials)<br /><br /></p>
+  </li>
+  <li>Added <code class="language-plaintext highlighter-rouge">cd /mnt/c/Users/username/</code> to <code class="language-plaintext highlighter-rouge">.bashrc</code> so my Ubuntu terminal always starts in Windows file system (replace “username” with your own). Open your <code class="language-plaintext highlighter-rouge">.bashrc</code> to edit with the following:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  nano <span class="nt">-c</span> ~/.bashrc
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Couple of notes for using nano:</p>
+  <ul>
+    <li>Quickly skip to the end with <code class="language-plaintext highlighter-rouge">Ctrl + V</code></li>
+    <li>You can’t use your mouse!</li>
+    <li>Once you have made your edits press <code class="language-plaintext highlighter-rouge">Ctrl + X</code> then <code class="language-plaintext highlighter-rouge">Y</code> to save changes and exit</li>
+  </ul>
+</blockquote>
+
+<p>Now you’re all set! 👍</p>
+
+<hr />
+
+<p>Lastly, I wanted to use my Ubuntu terminal to work with git so I did a few extra steps:</p>
+
+<blockquote>
+  <p>Importantly, to work with git in the Windows Subsystem Linux, I needed to use SSH based repositories. This meant I had to make new clones of my repos, which were set up as https!</p>
+</blockquote>
+
+<ol>
+  <li>Set up your global configuration parameters:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git config <span class="nt">--global</span> user.name <span class="s2">"Joseph Crispell"</span>
+  <span class="nv">$ </span>git config <span class="nt">--global</span> user.email <span class="s2">"myemail@hero.com"</span>
+</code></pre></div>    </div>
+    <p><strong>Skip to step 6. if you use SSH for git repositories on your Windows machine</strong><br /><br /></p>
+  </li>
+  <li>I created a new ssh key with the following:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cd</span> ~
+  <span class="nb">mkdir</span> .ssh
+  <span class="nb">cd</span> .ssh
+  ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"your_email@example.com"</span>
+</code></pre></div>    </div>
+    <p>Create a name for your key. I called mine <code class="language-plaintext highlighter-rouge">id_rsa</code>, not sure why!<br /><br /></p>
+  </li>
+  <li>Added my SSH key to my ssh-agent:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">eval</span> <span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span>
+  ssh-add ~/.ssh/id_rsa
+</code></pre></div>    </div>
+    <p>Change <code class="language-plaintext highlighter-rouge">id_rsa</code> to whatever you called your SSH key.<br /><br /></p>
+  </li>
+  <li>Add the new SSH key to GitHub account:
+    <ul>
+      <li>Head to <a href="https://github.com/">github</a></li>
+      <li>Click into your settings</li>
+      <li>Select SSH and GPG keys</li>
+      <li>Click “New SSH Key”</li>
+      <li>Create a name for your SSH key and paste the contents of <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> into the box provided<br /><br /></li>
+    </ul>
+  </li>
+  <li>Copy your SSH key from Ubuntu to Windows:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cd</span> ~/.ssh
+  <span class="nb">cp </span>id_rsa<span class="k">*</span> /mnt/c/Users/username/.ssh/
+</code></pre></div>    </div>
+    <p>Again, remember to change <code class="language-plaintext highlighter-rouge">id_rsa</code> to whatever you named your key.<br /><br /></p>
+  </li>
+  <li>[OPTIONAL] <em>If you already used ssh on your Windows computer for git repositories</em>, you can copy the Windows SSH key onto your Ubuntu system with:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cd</span> ~
+  <span class="nb">mkdir</span> .ssh
+  <span class="nb">cd</span> .ssh
+  <span class="nb">cp</span> /mnt/c/Users/username/.ssh/id_rsa<span class="k">*</span> <span class="nb">.</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>I must admit that it took me much longer than it should of to figure out the above steps, despite a lot of useful resources online:</p>
+<ul>
+  <li><a href="https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview">Install Ubuntu on Windows 10</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">Manually install Ubuntu App</a></li>
+  <li><a href="https://peteoshea.co.uk/setup-git-in-wsl/">Set up git for Windows Subsystem Linux</a></li>
+  <li><a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></li>
+</ul>
+
+<p>For the moment, I’m mainly going to use my Ubuntu terminal for managing my <code class="language-plaintext highlighter-rouge">git</code> repositories. So, really it isn’t too necessary but I wanted to get Ubuntu back into my life but the linux terminal is incredibly helpful for developing code and I’m sure to use it more and more from now on! 🐧 🎉</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Windows+Subsystem+for+Linux+%28Ubuntu+WSL%29%20http%3A%2F%2Flocalhost%3A4000%2F2020%2F12%2F21%2Fubuntu-wsl.html+from+%40josephcrispell" target="_blank" title="">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+               
+        <li>
+            <a href="mailto:?subject=Windows+Subsystem+for+Linux+%28Ubuntu+WSL%29%20%7C%20Joseph+Crispell&body=:%20http://localhost:4000/2020/12/21/ubuntu-wsl.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#ubuntu">
+      <p><i class="fa fa-tag fa-fw"></i> ubuntu</p>
+    </a>
+    
+    <a class="button" href="/tags#windows">
+      <p><i class="fa fa-tag fa-fw"></i> windows</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+
+    
+    <div id="next-post">
+        <a alt="Data ethics in practice with reveal.js" href="/2020/11/27/data-ethics-in-practice.html">
+            <p>Next post</p>
+            Data ethics in practice with reveal.js
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/blog/ubuntuWSL/thumbnail.png');
+    
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+
+      Built with <a href="https://jekyllrb.com/">Jekyll</a> using the <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a> and <a href='https://github.com/nrandecker/particle'>particle</a> themes. See code on <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">github</a>.
+
+    </p>
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:crispelljoseph@gmail.com"><i class="icon fa fa-envelope"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/josephcrispell"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+      <a aria-label="My Github" target="_blank" href="https://github.com/josephcrispell"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My Citations" target="_blank" href="https://scholar.google.co.uk/citations?user=uiHtAYAAAAAJ"><i class="icon fa fa-google" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+
+  </body>
+</html>

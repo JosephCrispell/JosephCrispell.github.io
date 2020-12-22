@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-28T20:12:28+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Data ethics in practice with reveal.js</title><link href="http://localhost:4000/2020/11/27/data-ethics-in-practice.html" rel="alternate" type="text/html" title="Data ethics in practice with reveal.js" /><published>2020-11-27T00:00:00+00:00</published><updated>2020-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2020/11/27/data-ethics-in-practice</id><content type="html" xml:base="http://localhost:4000/2020/11/27/data-ethics-in-practice.html">&lt;p&gt;I had a great opportunity to talk about data ethics in practice at the &lt;a href=&quot;https://www.scotlandis.com/blog/events/scotsoft-2020/&quot;&gt;ScotSoft2020&lt;/a&gt; conference. I decided this would be the perfect chance to try out the amazing &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; html presentation framework.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-22T21:07:53+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Windows Subsystem for Linux (Ubuntu WSL)</title><link href="http://localhost:4000/2020/12/21/ubuntu-wsl.html" rel="alternate" type="text/html" title="Windows Subsystem for Linux (Ubuntu WSL)" /><published>2020-12-21T00:00:00+00:00</published><updated>2020-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2020/12/21/ubuntu-wsl</id><content type="html" xml:base="http://localhost:4000/2020/12/21/ubuntu-wsl.html">&lt;p&gt;Today I set about trying to bring a little &lt;a href=&quot;https://www.linux.com/what-is-linux/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linux&lt;/code&gt;&lt;/a&gt; joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you can, work in a linux, it’s free, &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;, and powerful - putting you in complete control of your computer. 💻 If you can’t, and your stuck on a Windows 10 computer at work, then this post is for you!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Microsoft, recognising the brilliance of linux, created the Windows Subsystem Linux (WSL) to allow a linux subsystem to work within your Windows computer. Essentially a linux terminal can be used to install and run linux tools on your Windows file system! 📁&lt;/p&gt;
+
+&lt;p&gt;Linux comes in many &lt;a href=&quot;https://www.tecmint.com/linux-distro-for-power-users/&quot;&gt;flavours&lt;/a&gt;, one of the most population (and my favourite) is &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today, I am going to walk through the steps I took to install &lt;a href=&quot;&quot;&gt;Ubuntu&lt;/a&gt; on my Windows 10 machine:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Enable the Windows Subsystem Linux (WSL) by typing the following into your command line (or powershell):
+    &lt;pre&gt;&lt;code class=&quot;language-dos&quot;&gt;  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;With the a Windows update after May 2020 run thr following &lt;strong&gt;instead&lt;/strong&gt;:
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dos
+  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+ &lt;/code&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install the Ubuntu App - I couldn’t download the app via Microsoft store so I did the following:
+    &lt;ul&gt;
+      &lt;li&gt;Selected “Ubuntu 20.04” from &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-manual&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Then used the following command to install the file in the command line:
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dos
+  Add-AppxPackage .\[insertFileNameHereWithoutSuffix].appx
+ &lt;/code&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start the Ubuntu app (I typed “Ubuntu” into the Windows search)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a username and password (doesn’t need to match Windows credentials)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd /mnt/c/Users/username/&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; so my Ubuntu terminal always starts in Windows file system (replace “username” with your own). Open your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; to edit with the following:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  nano &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Couple of notes for using nano:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Quickly skip to the end with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + V&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;You can’t use your mouse!&lt;/li&gt;
+    &lt;li&gt;Once you have made your edits press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + X&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; to save changes and exit&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now you’re all set! 👍&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Lastly, I wanted to use my Ubuntu terminal to work with git so I did a few extra steps:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Importantly, to work with git in the Windows Subsystem Linux, I needed to use SSH based repositories. This meant I had to make new clones of my repos, which were set up as https!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set up your global configuration parameters:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Joseph Crispell&quot;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;myemail@hero.com&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;strong&gt;Skip to step 6. if you use SSH for git repositories on your Windows machine&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;I created a new ssh key with the following:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
+  ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Create a name for your key. I called mine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;, not sure why!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Added my SSH key to my ssh-agent:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;ssh-agent &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+  ssh-add ~/.ssh/id_rsa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you called your SSH key.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add the new SSH key to GitHub account:
+    &lt;ul&gt;
+      &lt;li&gt;Head to &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Click into your settings&lt;/li&gt;
+      &lt;li&gt;Select SSH and GPG keys&lt;/li&gt;
+      &lt;li&gt;Click “New SSH Key”&lt;/li&gt;
+      &lt;li&gt;Create a name for your SSH key and paste the contents of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; into the box provided&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Copy your SSH key from Ubuntu to Windows:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh
+  &lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /mnt/c/Users/username/.ssh/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Again, remember to change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you named your key.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;[OPTIONAL] &lt;em&gt;If you already used ssh on your Windows computer for git repositories&lt;/em&gt;, you can copy the Windows SSH key onto your Ubuntu system with:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
+  &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; /mnt/c/Users/username/.ssh/id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I must admit that it took me much longer than it should of to figure out the above steps, despite a lot of useful resources online:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview&quot;&gt;Install Ubuntu on Windows 10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-manual&quot;&gt;Manually install Ubuntu App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://peteoshea.co.uk/setup-git-in-wsl/&quot;&gt;Set up git for Windows Subsystem Linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh&quot;&gt;Connecting to GitHub with SSH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the moment, I’m mainly going to use my Ubuntu terminal for managing my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; repositories. So, really it isn’t too necessary but I wanted to get Ubuntu back into my life but the linux terminal is incredibly helpful for developing code and I’m sure to use it more and more from now on! 🐧 🎉&lt;/p&gt;</content><author><name></name></author><category term="ubuntu" /><category term="windows" /><summary type="html">Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Data ethics in practice with reveal.js</title><link href="http://localhost:4000/2020/11/27/data-ethics-in-practice.html" rel="alternate" type="text/html" title="Data ethics in practice with reveal.js" /><published>2020-11-27T00:00:00+00:00</published><updated>2020-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2020/11/27/data-ethics-in-practice</id><content type="html" xml:base="http://localhost:4000/2020/11/27/data-ethics-in-practice.html">&lt;p&gt;I had a great opportunity to talk about data ethics in practice at the &lt;a href=&quot;https://www.scotlandis.com/blog/events/scotsoft-2020/&quot;&gt;ScotSoft2020&lt;/a&gt; conference. I decided this would be the perfect chance to try out the amazing &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; html presentation framework.&lt;/p&gt;
 
 &lt;p&gt;I’ve tried plenty of different ways to create presentations (like &lt;a href=&quot;https://office.live.com/start/powerpoint.aspx&quot;&gt;powerpoint&lt;/a&gt;, &lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html&quot;&gt;Rmarkdown&lt;/a&gt;, &lt;a href=&quot;https://www.google.co.uk/slides/about/&quot;&gt;google slides&lt;/a&gt; and &lt;a href=&quot;https://www.latextemplates.com/cat/presentations&quot;&gt;LaTeX&lt;/a&gt;) and I’m always keen to try out new (ideally &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;) tools.&lt;/p&gt;
 
@@ -407,47 +521,7 @@ I’m not great at writing &lt;code class=&quot;language-plaintext highlighter-r
 
 &lt;p&gt;Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loops. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r&lt;/code&gt; blew my mind and should work in most languages! The modulus (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%%&lt;/code&gt;) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.&lt;/p&gt;
 
-&lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
-
-&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
-
-&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-       
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Split the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
-  &lt;li&gt;Assign each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
-  &lt;li&gt;Examine each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
- a. Count the points in current bin&lt;br /&gt;
- b. Split the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
- c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Plot the points with modified &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
-
-&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;iframe src=&quot;https://www.google.com/maps/d/embed?mid=1cSersw6rEKk8DgMkhu3idM_rHfg&amp;amp;z=13&quot; width=&quot;100%&quot; height=&quot;480&quot; style=&quot;border:none;&quot;&gt;Browser not compatible.&lt;/iframe&gt;
 
@@ -500,124 +574,44 @@ I’m not great at writing &lt;code class=&quot;language-plaintext highlighter-r
 
 &lt;/div&gt;
 
-&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt; ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Creating an R package</title><link href="http://localhost:4000/2018/09/11/creating-R-package.html" rel="alternate" type="text/html" title="Creating an R package" /><published>2018-09-11T00:00:00+01:00</published><updated>2018-09-11T00:00:00+01:00</updated><id>http://localhost:4000/2018/09/11/creating-R-package</id><content type="html" xml:base="http://localhost:4000/2018/09/11/creating-R-package.html">&lt;p&gt;Today I’m going to write about creating an &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/&quot;&gt;Writing an R package from scratch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://r-pkgs.had.co.nz/description.html&quot;&gt;Hadley Wickham’s R package documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt; ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Why bother?&lt;/strong&gt; If you’re like me and you still haven’t embraced creating your own R packages then you’ll be asking this question. It is going to save you &lt;em&gt;SO MUCH&lt;/em&gt; time and make your code cleaner and easier to use. Get on with it!&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Why does it save you time?&lt;/strong&gt; Functions in an R package are in one place and documented. Packages are easy for other people to install and use.&lt;/p&gt;
+&lt;p&gt;There is still work to be done on this function but give it a go and let me know what you think. You just need to download my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package:&lt;/p&gt;
 
-&lt;p&gt;Lastly, &lt;strong&gt;packages are the building blocks of the R world&lt;/strong&gt;. By creating your own, you’ve joined the community of people continuing to make R the amazing language that it is. So let’s get started!&lt;/p&gt;
-
-&lt;p&gt;To get started, you’ll need to install and load a couple of packages:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install necessary packages&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Install the devtools package to install packages from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;digest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;klutometis/roxygen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load them&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;roxygen2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install my basicPLotteR package directly from GitHub&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Load it!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basicPlotteR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Generate some example points - drawn from exponential distribution&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot a boxplot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;las&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot the points spread along the X axis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spreadPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Then create the package folder:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/spreadPoints/spreadPoints.png&quot; alt=&quot;spreadPoints() at work!&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file.path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function works with the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Split the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis into equally sized bins&lt;/li&gt;
+  &lt;li&gt;Assign each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; point into a bin&lt;/li&gt;
+  &lt;li&gt;Examine each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; axis bin:&lt;br /&gt;
+ a. Count the points in current bin&lt;br /&gt;
+ b. Split the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt; axis space available, to give the same amount of space to each point&lt;br /&gt;
+ c. Working from the middle, work out left and right assigning each point a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; coordinate&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Plot the points with modified &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; values&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;I’m creating an R package for the code I wrote for a few functions I’ve developed to help with plotting in R. My package is going to be called &lt;a href=&quot;https://josephcrispell.github.io/projects/basicplotter&quot;&gt;basicPlotteR&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well hopefully that’s a helpful addition to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.&lt;/p&gt;
 
-&lt;p&gt;So, we’ve created our package directory. If you navigate to the directory you’ll find the following:&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/&lt;/code&gt; - The directory where you are going to put the code for your R functions. Each function can have it’s own file (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;functionName.R&lt;/code&gt;), or you can chuck all your functions into a single file (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packageName.R&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR.Rproj&lt;/code&gt; - Some information for R about your package&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DESCRIPTION&lt;/code&gt; - Take a look, it’s got the information about your package. See the contents of this file below.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NAMESPACE&lt;/code&gt; - A file telling R which functions to provide documentation for with the R package.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; - A file to be used if you’re putting your package on github, as the name suggests it’s what you don’t want to put on github.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.Rbuildignore&lt;/code&gt; - A file noting what is to be ignored when you’re building the R package.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The DESCRIPTION file. It has the following lines, which I have edited for my package:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Package: basicPlotteR
-Title: A collection of tools to help with base R plotting
-Version: 0.0.0.9000
-Authors@R: person(&quot;Joseph&quot;, &quot;Crispell&quot;, email = &quot;JosephCrispell@gmail.com&quot;, role = &quot;cre&quot;)
-Description: An R package containing all the tools I have developed to make plotting with base R a little easier
-Depends: R (&amp;gt;= 3.4.4)
-License: GPL-3
-Encoding: UTF-8
-LazyData: true
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Right, back to working on the package. The first thing we want to do is add some functions. Here is a general format for a function:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cd&quot;&gt;#' Short title for function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' Longer description of the function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @param first An object of class &quot;?&quot;. Describe each input parameter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @param second An object of class &quot;?&quot;. Describe each input parameter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @keywords Add some good keywords for your function here&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @return Returns an object of class &quot;?&quot;. Describe what the function returns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @export&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @examples&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' # Add some code here illustrating how to use the function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;functionName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Some code here&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-	&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The code for the function is the same as for any function, but there is lot’s of information about the function above it. The weird &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#'&lt;/code&gt; is a special comment that roxygen recognises. Roxygen is the package that we’re using for our build.&lt;/p&gt;
-
-&lt;p&gt;Functions can be saved in a R script and put in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/&lt;/code&gt; directory. I’ve created a single R script for each of the tools in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; package.&lt;/p&gt;
-
-&lt;p&gt;Flip! It takes a wee while to add the roxygen descriptions above each function - documentation is really important and useful though so it’s worth it!&lt;/p&gt;
-
-&lt;p&gt;Once you’re finished adding your functions, save the file and run the following code to update the package:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And you’re done!! 🎉 It is amazingly straight forward and I should be doing it with all my R code.&lt;/p&gt;
-
-&lt;p&gt;Here are a few extra notes of things I’ve learnt when building my packages:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;When using functions from other packages in your own functions, use the following format: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packageName::functionName()&lt;/code&gt;. Also, add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@import packageName&lt;/code&gt; tag into the roxygen information.&lt;/li&gt;
-  &lt;li&gt;For an internal function, a function that is used within your package but you don’t want others to see it or use it. Remove the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@export&lt;/code&gt; tag and add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@keywords internal&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;To format code into roxygen function documentation lines, use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\code{}&lt;/code&gt; container&lt;/li&gt;
-  &lt;li&gt;If you want to attach data to your package, do the following:
-    &lt;ul&gt;
-      &lt;li&gt;Save each object of interest alone in a file: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;objectName.RData&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Create a directory: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/data/&lt;/code&gt; and put all the RData files in it&lt;/li&gt;
-      &lt;li&gt;Add roxygen information into the functions file as if it were a function using the following:
-        &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cd&quot;&gt;#' Description of the object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @name objectName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @docType data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @author Joseph Crispell \email{crispelljoseph@@gmail.com}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;cd&quot;&gt;#' @keywords data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Any data attached to a package can be loaded using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data(&quot;objectName&quot;)&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I am now hosting my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt; R package on github (I created a &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;repository&lt;/a&gt; with all my package files in it). You can install it and give it a go with the following code:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Load the devtools library&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Install the basicPlotteR package&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JosephCrispell/basicPlotteR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So that’s how to create an R package. Start converting your R scripts now! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="basicPlotteR" /><summary type="html">Today I’m going to write about creating an R package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package: Writing an R package from scratch Hadley Wickham’s R package documentation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/packageR/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/packageR/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="package" /><category term="plot" /><category term="base" /><category term="github" /><summary type="html">I’ve created a new R function called spreadPoints, in my basicPlotteR package.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/spreadPoints/spreadPoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
