@@ -36,7 +36,7 @@ public class MyThread extends Thread{
   // Define a run method - this will execute when thread started
   public void run(){
 
-    // Complete your task here - using the inputs provided
+    // Complete your task here - using the inputs provided into MyThread
     ...
   }
 
@@ -76,7 +76,7 @@ public class MultiThreading{
     }
 
     // Check the threads are finished
-    waitUntilAllFinished(threads)
+    waitUntilAllFinished(threads);
 
     // Do something with the output from each thread
     for(MyThread thread : threads){

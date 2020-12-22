@@ -258,7 +258,7 @@
   <span class="c1">// Define a run method - this will execute when thread started</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(){</span>
 
-    <span class="c1">// Complete your task here - using the inputs provided</span>
+    <span class="c1">// Complete your task here - using the inputs provided into MyThread</span>
     <span class="o">...</span>
   <span class="o">}</span>
 
@@ -297,7 +297,7 @@
     <span class="o">}</span>
 
     <span class="c1">// Check the threads are finished</span>
-    <span class="n">waitUntilAllFinished</span><span class="o">(</span><span class="n">threads</span><span class="o">)</span>
+    <span class="n">waitUntilAllFinished</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
 
     <span class="c1">// Do something with the output from each thread</span>
     <span class="k">for</span><span class="o">(</span><span class="nc">MyThread</span> <span class="n">thread</span> <span class="o">:</span> <span class="n">threads</span><span class="o">){</span>
