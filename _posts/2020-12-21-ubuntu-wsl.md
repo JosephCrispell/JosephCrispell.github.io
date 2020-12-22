@@ -109,3 +109,5 @@ I must admit that it took me much longer than it should of to figure out the abo
 - [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 For the moment, I'm mainly going to use my Ubuntu terminal for managing my `git` repositories. So, really it isn't too necessary but I wanted to get Ubuntu back into my life but the linux terminal is incredibly helpful for developing code and I'm sure to use it more and more from now on! 🐧 🎉
+
+Oh, one last thing - you'll find your Windows file system at `/mnt/c/Users/yourWindowsUsername/` - you're welcome! 😉
