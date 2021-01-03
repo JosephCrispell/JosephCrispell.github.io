@@ -8,7 +8,7 @@ image: "assets/img/blog/cleaningEmails/thumbnail.svg"
 tags: [google, emails, javascript]
 ---
 
-So Joanna was stuck with >17,000 unread emails in her gmail account and I'm struggling to handle it! 😕 So I figured I could use [Google Apps Script](https://www.google.com/script/start/) code to help.
+So Joanna was stuck with more than 17,000 unread emails in her gmail account and I'm struggling to handle it! 😕 So I figured I could use [Google Apps Script](https://www.google.com/script/start/) code to help.
 
 Google Apps Script is a programming language based on [javascript] that's designed to work with the all the different Google apps (gmail, docs, sheets, etc.). I've [previously](https://josephcrispell.github.io/2020/06/20/google-scripts.html) used Google Apps Script to work with Google sheets.
 
@@ -89,6 +89,6 @@ If you think the above code would be useful, then you'll need to do the followin
 - Paste in the three functions above into the `Code.gs` script
 - Change the `searchString` to suit your needs
 - Test run the script to check all is well
-- If needed, set a trigger to schedule (click the alarm symbol in the left menu) to running the `removeOldEbayEmails()` function multiple times (*note that there are quotas on the number of services you can use in a day, for I quickly ran into this*)
+- If needed, set a trigger to schedule (click the alarm symbol in the left menu) to running the `removeOldEbayEmails()` function multiple times (*note that there are quotas on the number of services you can use in a day, which I quickly ran into*)
 
 So far I've removed ~8,000 of Joanna's emails and set my script to run overnight so hopefully I'll a few more thousand overnight! 🎉 🗑️

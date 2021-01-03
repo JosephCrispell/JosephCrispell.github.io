@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-22T21:20:26+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Windows Subsystem for Linux (Ubuntu WSL)</title><link href="http://localhost:4000/2020/12/21/ubuntu-wsl.html" rel="alternate" type="text/html" title="Windows Subsystem for Linux (Ubuntu WSL)" /><published>2020-12-21T00:00:00+00:00</published><updated>2020-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2020/12/21/ubuntu-wsl</id><content type="html" xml:base="http://localhost:4000/2020/12/21/ubuntu-wsl.html">&lt;p&gt;Today I set about trying to bring a little &lt;a href=&quot;https://www.linux.com/what-is-linux/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linux&lt;/code&gt;&lt;/a&gt; joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-03T21:56:58+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Cleaning up emails in gmail with Google Apps Script</title><link href="http://localhost:4000/2021/01/03/cleaning-emails.html" rel="alternate" type="text/html" title="Cleaning up emails in gmail with Google Apps Script" /><published>2021-01-03T00:00:00+00:00</published><updated>2021-01-03T00:00:00+00:00</updated><id>http://localhost:4000/2021/01/03/cleaning-emails</id><content type="html" xml:base="http://localhost:4000/2021/01/03/cleaning-emails.html">&lt;p&gt;So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt; code to help.&lt;/p&gt;
+
+&lt;p&gt;Google Apps Script is a programming language based on [javascript] that’s designed to work with the all the different Google apps (gmail, docs, sheets, etc.). I’ve &lt;a href=&quot;https://josephcrispell.github.io/2020/06/20/google-scripts.html&quot;&gt;previously&lt;/a&gt; used Google Apps Script to work with Google sheets.&lt;/p&gt;
+
+&lt;p&gt;Today, I’ve been writing some code to remove all the unread ebay alerts from Joanna’s account. Here’s the function I wrote to do it:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;removeOldEbayEmails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Define the search string to identify emails &lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;label:inbox is:unread from:ebay@ebay.co.uk older_than:1m subject:NEW!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Get all threads matching search string&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getThreadsMatchingSearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Check whether thread search returned some results&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Mark as read and remove threads&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;moveThreadsToTrash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I built the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;searchString&lt;/code&gt; based gmail’s searching key words (loads of info &lt;a href=&quot;https://support.google.com/mail/answer/7190?hl=en-GB&quot;&gt;here&lt;/a&gt;). The search string does the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;label:inbox&lt;/code&gt; - look in your inbox&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;is:unread&lt;/code&gt; - select unread emails&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;from:ebay@ebay.co.uk&lt;/code&gt; - select emails from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ebay@ebay.co.uk&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;older_than:1m&lt;/code&gt; - select emails older than 1 month&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subject:NEW!&lt;/code&gt; - select emails with “NEW!” in the subject line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wrote the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getThreadsMatchingSearch()&lt;/code&gt; function to use a search term to retrieve email threads (email receive/reply chains):&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getThreadsMatchingSearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Get all threads matching search string&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GmailApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Found &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; threads (conversations of emails) matching search string (&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;). Note that size limited to 500.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Warning! Unable to complete email search: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getThreadsMatchingSearch()&lt;/code&gt; function uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GmailApp.search()&lt;/code&gt; function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas &lt;a href=&quot;https://developers.google.com/apps-script/guides/services/quotas&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Importantly, the maximum number of threads returned is fixed at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500&lt;/code&gt;. If you’ve got more than this to handle, you can use a trigger to set multiple runs of your function.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once I have retrieved the threads, I use this function to move them to the trash:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moveThreadsToTrash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;batchSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Work through the threads in batches (100 is the limit that batch operations can work on)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;batchSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Select the current batch of threads&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;batchSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Move the threads to the trash&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;GmailApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;moveThreadsToTrash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Moved &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; threads to trash.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Warning! Unable to move threads to trash: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GmailApp.search()&lt;/code&gt; function the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GmailApp.moveThreadsToTrash()&lt;/code&gt; function has a quota limit so I’ve wrapped it in a try catch. It also has a batch size limit of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100&lt;/code&gt; so I’ve worked through the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;threads&lt;/code&gt; array in batches of 100 (thanks to &lt;a href=&quot;https://gist.github.com/gene1wood/0f455239490e5342fa49&quot;&gt;this&lt;/a&gt; GitHub code).&lt;/p&gt;
+
+&lt;p&gt;If you think the above code would be useful, then you’ll need to do the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Open up the Google Apps Script &lt;a href=&quot;https://script.google.com/home/start&quot;&gt;editor&lt;/a&gt; (click on the New blank project)&lt;/li&gt;
+  &lt;li&gt;Paste in the three functions above into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Code.gs&lt;/code&gt; script&lt;/li&gt;
+  &lt;li&gt;Change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;searchString&lt;/code&gt; to suit your needs&lt;/li&gt;
+  &lt;li&gt;Test run the script to check all is well&lt;/li&gt;
+  &lt;li&gt;If needed, set a trigger to schedule (click the alarm symbol in the left menu) to running the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;removeOldEbayEmails()&lt;/code&gt; function multiple times (&lt;em&gt;note that there are quotas on the number of services you can use in a day, which I quickly ran into&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So far I’ve removed ~8,000 of Joanna’s emails and set my script to run overnight so hopefully I’ll a few more thousand overnight! 🎉 🗑️&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="emails" /><category term="javascript" /><summary type="html">So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use Google Apps Script code to help.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cleaningEmails/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cleaningEmails/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Windows Subsystem for Linux (Ubuntu WSL)</title><link href="http://localhost:4000/2020/12/21/ubuntu-wsl.html" rel="alternate" type="text/html" title="Windows Subsystem for Linux (Ubuntu WSL)" /><published>2020-12-21T00:00:00+00:00</published><updated>2020-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2020/12/21/ubuntu-wsl</id><content type="html" xml:base="http://localhost:4000/2020/12/21/ubuntu-wsl.html">&lt;p&gt;Today I set about trying to bring a little &lt;a href=&quot;https://www.linux.com/what-is-linux/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linux&lt;/code&gt;&lt;/a&gt; joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;If you can, work in a linux, it’s free, &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;, and powerful - putting you in complete control of your computer. 💻 If you can’t, and your stuck on a Windows 10 computer at work, then this post is for you!&lt;/p&gt;
@@ -523,60 +609,7 @@ I’m not great at writing &lt;code class=&quot;language-plaintext highlighter-r
 
 &lt;p&gt;Each of the methods of monitoring your progress are useful in different situations. Whilst the last two options look great, they are only useful inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loops. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r&lt;/code&gt; blew my mind and should work in most languages! The modulus (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%%&lt;/code&gt;) is probably the one I use the most, allows me to check my progress without printing hundreds or thousands of lines to the screen.&lt;/p&gt;
 
-&lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben Vorlich hike</title><link href="http://localhost:4000/2019/02/07/benVorlich.html" rel="alternate" type="text/html" title="Ben Vorlich hike" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/benVorlich</id><content type="html" xml:base="http://localhost:4000/2019/02/07/benVorlich.html">&lt;p&gt;A couple of weeks ago my good friend &lt;a href=&quot;https://stevenmcgeecallender.com/home.php&quot;&gt;Steven McGee Callender&lt;/a&gt; planned a hiking trip in the Arrochar Alps. He managed to get me, &lt;a href=&quot;https://twitter.com/amyjthompson&quot;&gt;Amy Thompson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/JustinPurefoy&quot;&gt;Justin Purefoy&lt;/a&gt; to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/ben-vorlich-lomond.shtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://www.google.com/maps/d/embed?mid=1cSersw6rEKk8DgMkhu3idM_rHfg&amp;amp;z=13&quot; width=&quot;100%&quot; height=&quot;480&quot; style=&quot;border:none;&quot;&gt;Browser not compatible.&lt;/iframe&gt;
-
-&lt;p&gt;Despite mixed opinions about whether we’d reach the top by the people we met along the way, we all made it. We enjoyed some spectacular views and deep snow.&lt;/p&gt;
-
-&lt;div class=&quot;slideshow-container&quot;&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/Carpark.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Just about to head off!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/Icicles.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Spotted a frozen burst pipe&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/SnowFree.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;On the steep section!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/OnTheWayUp.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Past the snow line!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/Snow.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Deep snow!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/BenVorlich_Thumbnail.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Testing Steven's photography&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/NearTheTop.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Almost there!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mySlides fade&quot;&gt;
-        &lt;img src=&quot;/assets/img/blog/benVorlich/Top.JPG&quot; style=&quot;width:100%&quot; /&gt;
-        &lt;div class=&quot;slideCaption&quot;&gt;Made it!&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a class=&quot;prevSlide&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
-    &lt;a class=&quot;nextSlide&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Loads of amazing hikes around Loch Lomond to enjoy, check them out &lt;a href=&quot;https://www.walkhighlands.co.uk/lochlomond/&quot;&gt;here&lt;/a&gt; ⛰️&lt;/p&gt;</content><author><name></name></author><category term="hike" /><summary type="html">A couple of weeks ago my good friend Steven McGee Callender planned a hiking trip in the Arrochar Alps. He managed to get me, Amy Thompson and Justin Purefoy to join him. We selected Ben Vorlich as an achievable goal for an inexperienced crew. We parked up on the North West edge of Loch Lomond and set off on the route described here.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/benVorlich/OnTheWayUp.JPG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+&lt;p&gt;Anyone who would like to use and see the code for my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;progress()&lt;/code&gt; function, you’ll find it &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR/blob/master/R/progress.R&quot;&gt;here&lt;/a&gt; on github. It is part of my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;basicPlotteR&lt;/a&gt; package.&lt;/p&gt;</content><author><name></name></author><category term="R" /><category term="progress" /><category term="basicPlotteR" /><summary type="html">We’ve all been stuck waiting for a for loop to finish, or a particularly complex function. Over the years I have come across a few revelations when it comes to tracking the progress of my R code. Here they are in the order I found them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/progressBar/thumbnail.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">spreadPoints()</title><link href="http://localhost:4000/2019/02/07/speadPoints.html" rel="alternate" type="text/html" title="spreadPoints()" /><published>2019-02-07T00:00:00+00:00</published><updated>2019-02-07T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/07/speadPoints</id><content type="html" xml:base="http://localhost:4000/2019/02/07/speadPoints.html">&lt;p&gt;I’ve created a new &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints&lt;/code&gt;, in my &lt;a href=&quot;https://github.com/JosephCrispell/basicPlotteR&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basicPlotteR&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
 
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spreadPoints()&lt;/code&gt; function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the &lt;a href=&quot;https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stripchart&lt;/code&gt;&lt;/a&gt;, but it doesn’t spread points randomly. Here it is at work in R:&lt;/p&gt;
 
