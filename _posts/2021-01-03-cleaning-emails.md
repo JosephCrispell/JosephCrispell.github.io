@@ -56,7 +56,7 @@ function getThreadsMatchingSearch(searchString){
 }
 ```
 
-The `getThreadsMatchingSearch()` function uses the `GmailApp.search()` function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas [here](https://developers.google.com/apps-script/guides/services/quotas)). 
+The `getThreadsMatchingSearch()` function uses the [`GmailApp.search()`](https://developers.google.com/apps-script/reference/gmail/gmail-app#search(String)) function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas [here](https://developers.google.com/apps-script/guides/services/quotas)). 
 
 >Importantly, the maximum number of threads returned is fixed at `500`. If you've got more than this to handle, you can use a trigger to set multiple runs of your function.
 
@@ -82,7 +82,7 @@ function moveThreadsToTrash(threads, batchSize=100){
 }
 ```
 
-As with the `GmailApp.search()` function the `GmailApp.moveThreadsToTrash()` function has a quota limit so I've wrapped it in a try catch. It also has a batch size limit of `100` so I've worked through the `threads` array in batches of 100 (thanks to [this](https://gist.github.com/gene1wood/0f455239490e5342fa49) GitHub code).
+As with the `GmailApp.search()` function the [`GmailApp.moveThreadsToTrash()`](https://developers.google.com/apps-script/reference/gmail/gmail-app#moveThreadsToTrash(GmailThread)) function has a quota limit so I've wrapped it in a try catch. It also has a batch size limit of `100` so I've worked through the `threads` array in batches of 100 (thanks to [this](https://gist.github.com/gene1wood/0f455239490e5342fa49) GitHub code).
 
 If you think the above code would be useful, then you'll need to do the following:
 - Open up the Google Apps Script [editor](https://script.google.com/home/start) (click on the New blank project)

@@ -282,7 +282,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">getThreadsMatchingSearch()</code> function uses the <code class="language-plaintext highlighter-rouge">GmailApp.search()</code> function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas <a href="https://developers.google.com/apps-script/guides/services/quotas">here</a>).</p>
+<p>The <code class="language-plaintext highlighter-rouge">getThreadsMatchingSearch()</code> function uses the <a href="https://developers.google.com/apps-script/reference/gmail/gmail-app#search(String)"><code class="language-plaintext highlighter-rouge">GmailApp.search()</code></a> function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas <a href="https://developers.google.com/apps-script/guides/services/quotas">here</a>).</p>
 
 <blockquote>
   <p>Importantly, the maximum number of threads returned is fixed at <code class="language-plaintext highlighter-rouge">500</code>. If you’ve got more than this to handle, you can use a trigger to set multiple runs of your function.</p>
@@ -309,7 +309,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>As with the <code class="language-plaintext highlighter-rouge">GmailApp.search()</code> function the <code class="language-plaintext highlighter-rouge">GmailApp.moveThreadsToTrash()</code> function has a quota limit so I’ve wrapped it in a try catch. It also has a batch size limit of <code class="language-plaintext highlighter-rouge">100</code> so I’ve worked through the <code class="language-plaintext highlighter-rouge">threads</code> array in batches of 100 (thanks to <a href="https://gist.github.com/gene1wood/0f455239490e5342fa49">this</a> GitHub code).</p>
+<p>As with the <code class="language-plaintext highlighter-rouge">GmailApp.search()</code> function the <a href="https://developers.google.com/apps-script/reference/gmail/gmail-app#moveThreadsToTrash(GmailThread)"><code class="language-plaintext highlighter-rouge">GmailApp.moveThreadsToTrash()</code></a> function has a quota limit so I’ve wrapped it in a try catch. It also has a batch size limit of <code class="language-plaintext highlighter-rouge">100</code> so I’ve worked through the <code class="language-plaintext highlighter-rouge">threads</code> array in batches of 100 (thanks to <a href="https://gist.github.com/gene1wood/0f455239490e5342fa49">this</a> GitHub code).</p>
 
 <p>If you think the above code would be useful, then you’ll need to do the following:</p>
 <ul>
