@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-03T22:01:25+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Cleaning up emails in gmail with Google Apps Script</title><link href="http://localhost:4000/2021/01/03/cleaning-emails.html" rel="alternate" type="text/html" title="Cleaning up emails in gmail with Google Apps Script" /><published>2021-01-03T00:00:00+00:00</published><updated>2021-01-03T00:00:00+00:00</updated><id>http://localhost:4000/2021/01/03/cleaning-emails</id><content type="html" xml:base="http://localhost:4000/2021/01/03/cleaning-emails.html">&lt;p&gt;So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt; code to help.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-04T17:06:17+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joseph Crispell</title><subtitle>Blog about things that interest me</subtitle><entry><title type="html">Cleaning up emails in gmail with Google Apps Script</title><link href="http://localhost:4000/2021/01/03/cleaning-emails.html" rel="alternate" type="text/html" title="Cleaning up emails in gmail with Google Apps Script" /><published>2021-01-03T00:00:00+00:00</published><updated>2021-01-03T00:00:00+00:00</updated><id>http://localhost:4000/2021/01/03/cleaning-emails</id><content type="html" xml:base="http://localhost:4000/2021/01/03/cleaning-emails.html">&lt;p&gt;So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use &lt;a href=&quot;https://www.google.com/script/start/&quot;&gt;Google Apps Script&lt;/a&gt; code to help.&lt;/p&gt;
 
 &lt;p&gt;Google Apps Script is a programming language based on [javascript] that’s designed to work with the all the different Google apps (gmail, docs, sheets, etc.). I’ve &lt;a href=&quot;https://josephcrispell.github.io/2020/06/20/google-scripts.html&quot;&gt;previously&lt;/a&gt; used Google Apps Script to work with Google sheets.&lt;/p&gt;
 
@@ -87,84 +87,89 @@
 &lt;p&gt;So far I’ve removed ~8,000 of Joanna’s emails and set my script to run overnight so hopefully I’ll a few more thousand overnight! 🎉 🗑️&lt;/p&gt;</content><author><name></name></author><category term="google" /><category term="emails" /><category term="javascript" /><summary type="html">So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use Google Apps Script code to help.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cleaningEmails/thumbnail.svg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cleaningEmails/thumbnail.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Windows Subsystem for Linux (Ubuntu WSL)</title><link href="http://localhost:4000/2020/12/21/ubuntu-wsl.html" rel="alternate" type="text/html" title="Windows Subsystem for Linux (Ubuntu WSL)" /><published>2020-12-21T00:00:00+00:00</published><updated>2020-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2020/12/21/ubuntu-wsl</id><content type="html" xml:base="http://localhost:4000/2020/12/21/ubuntu-wsl.html">&lt;p&gt;Today I set about trying to bring a little &lt;a href=&quot;https://www.linux.com/what-is-linux/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linux&lt;/code&gt;&lt;/a&gt; joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;If you can, work in a linux, it’s free, &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;, and powerful - putting you in complete control of your computer. 💻 If you can’t, and your stuck on a Windows 10 computer at work, then this post is for you!&lt;/p&gt;
+  &lt;p&gt;If you can, work in a linux, it’s free, &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;, and powerful - putting you in complete control of your computer. 💻 If you can’t, and you are stuck on a Windows 10 computer at work, then this post is for you!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Microsoft, recognising the brilliance of linux, created the Windows Subsystem Linux (WSL) to allow a linux subsystem to work within your Windows computer. Essentially a linux terminal can be used to install and run linux tools on your Windows file system! 📁&lt;/p&gt;
 
-&lt;p&gt;Linux comes in many &lt;a href=&quot;https://www.tecmint.com/linux-distro-for-power-users/&quot;&gt;flavours&lt;/a&gt;, one of the most population (and my favourite) is &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Linux comes in many &lt;a href=&quot;https://www.tecmint.com/linux-distro-for-power-users/&quot;&gt;flavours&lt;/a&gt;, one of the most popular (and my favourite) is &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Today, I am going to walk through the steps I took to install &lt;a href=&quot;&quot;&gt;Ubuntu&lt;/a&gt; on my Windows 10 machine:&lt;/p&gt;
+&lt;p&gt;Today, I am going to walk through the steps I took to install &lt;a href=&quot;https://ubuntu.com/community/mission&quot;&gt;Ubuntu&lt;/a&gt; on my Windows 10 machine:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Enable the Windows Subsystem Linux (WSL) by typing the following into your command line (or powershell):
-    &lt;pre&gt;&lt;code class=&quot;language-dos&quot;&gt;  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;With the a Windows update after May 2020 run thr following &lt;strong&gt;instead&lt;/strong&gt;:
-  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dos
-  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
- &lt;/code&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;⚠️ With the a Windows update after May 2020 run the following &lt;strong&gt;instead&lt;/strong&gt;:&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Install the Ubuntu App - I couldn’t download the app via Microsoft store so I did the following:
     &lt;ul&gt;
       &lt;li&gt;Selected “Ubuntu 20.04” from &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-manual&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Then used the following command to install the file in the command line:
-  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dos
-  Add-AppxPackage .\[insertFileNameHereWithoutSuffix].appx
- &lt;/code&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Add-AppxPackage .\[insertFileNameHereWithoutSuffix].appx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Start the Ubuntu app (I typed “Ubuntu” into the Windows search)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;Start the Ubuntu app (I typed “Ubuntu” into the Windows search and double clicked Ubuntu to start)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Create a username and password (doesn’t need to match Windows credentials)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd /mnt/c/Users/username/&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; so my Ubuntu terminal always starts in Windows file system (replace “username” with your own). Open your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; to edit with the following:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  nano &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; ~/.bashrc
+  &lt;li&gt;Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd /mnt/c/Users/username/&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; so my Ubuntu terminal always starts in Windows file system (replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;username&quot;&lt;/code&gt; with your Windows username). To edit your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file, open it with the following:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; nano &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Make your way to the end of the file (use the down arrow or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + V&lt;/code&gt;). Add the following text:&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;# Move to the Windows file system&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/c/Users/username/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + X&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; to save changes and exit.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Couple of notes for using nano:&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Quickly skip to the end with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + V&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;You can’t use your mouse!&lt;/li&gt;
-    &lt;li&gt;Once you have made your edits press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + X&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; to save changes and exit&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
 &lt;p&gt;Now you’re all set! 👍&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note that you’ll find your Windows file system at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt/c/Users/yourWindowsUsername/&lt;/code&gt; - you’re welcome! 😉&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Lastly, I wanted to use my Ubuntu terminal to work with git so I did a few extra steps:&lt;/p&gt;
+&lt;p&gt;Lastly, I wanted to use my Ubuntu terminal to work with &lt;a href=&quot;https://git-scm.com/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/a&gt; so I did a few extra steps:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Importantly, to work with git in the Windows Subsystem Linux, I needed to use SSH based repositories. This meant I had to make new clones of my repos, which were set up as https!&lt;/p&gt;
+  &lt;p&gt;Importantly, to work with git in the Windows Subsystem Linux, I needed to use &lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh&quot;&gt;SSH based repositories&lt;/a&gt;. This meant I had to make new clones of my repos, which were set up as https!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Set up your global configuration parameters:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Joseph Crispell&quot;&lt;/span&gt;
-  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;myemail@hero.com&quot;&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Joseph Crispell&quot;&lt;/span&gt;
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;myemail@hero.com&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;strong&gt;Skip to step 6. if you use SSH for git repositories on your Windows machine&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Skip to step 6. if you use SSH for git repositories on your Windows machine&lt;/strong&gt;
+ &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;I created a new ssh key with the following:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
-  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
-  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
-  ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+ &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
+ &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
+ ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Create a name for your key. I called mine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;, not sure why!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;Create a name for your key. I called mine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;, not sure why!
+ &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Added my SSH key to my ssh-agent:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;ssh-agent &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-  ssh-add ~/.ssh/id_rsa
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;ssh-agent &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+ ssh-add ~/.ssh/id_rsa
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you called your SSH key.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;Change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you called your SSH key.
+ &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Add the new SSH key to GitHub account:
     &lt;ul&gt;
@@ -172,21 +177,24 @@
       &lt;li&gt;Click into your settings&lt;/li&gt;
       &lt;li&gt;Select SSH and GPG keys&lt;/li&gt;
       &lt;li&gt;Click “New SSH Key”&lt;/li&gt;
-      &lt;li&gt;Create a name for your SSH key and paste the contents of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; into the box provided&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Create a name for your SSH key and paste the contents of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; into the box provided
+ &lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Copy your SSH key from Ubuntu to Windows:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh
-  &lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /mnt/c/Users/username/.ssh/
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh
+ &lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /mnt/c/Users/username/.ssh/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Again, remember to change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you named your key.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;Again, remember to change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; to whatever you named your key. You also need to change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;username&quot;&lt;/code&gt; in the path to your Windows username.
+ &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;[OPTIONAL] &lt;em&gt;If you already used ssh on your Windows computer for git repositories&lt;/em&gt;, you can copy the Windows SSH key onto your Ubuntu system with:
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
-  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
-  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
-  &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; /mnt/c/Users/username/.ssh/id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+ &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
+ &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
+ &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; /mnt/c/Users/username/.ssh/id_rsa&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Remember to change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;username&quot;&lt;/code&gt; in the path to your Windows username.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -198,9 +206,7 @@
   &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh&quot;&gt;Connecting to GitHub with SSH&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For the moment, I’m mainly going to use my Ubuntu terminal for managing my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; repositories. So, really it isn’t too necessary but I wanted to get Ubuntu back into my life but the linux terminal is incredibly helpful for developing code and I’m sure to use it more and more from now on! 🐧 🎉&lt;/p&gt;
-
-&lt;p&gt;Oh, one last thing - you’ll find your Windows file system at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt/c/Users/yourWindowsUsername/&lt;/code&gt; - you’re welcome! 😉&lt;/p&gt;</content><author><name></name></author><category term="ubuntu" /><category term="windows" /><summary type="html">Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Data ethics in practice with reveal.js</title><link href="http://localhost:4000/2020/11/27/data-ethics-in-practice.html" rel="alternate" type="text/html" title="Data ethics in practice with reveal.js" /><published>2020-11-27T00:00:00+00:00</published><updated>2020-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2020/11/27/data-ethics-in-practice</id><content type="html" xml:base="http://localhost:4000/2020/11/27/data-ethics-in-practice.html">&lt;p&gt;I had a great opportunity to talk about data ethics in practice at the &lt;a href=&quot;https://www.scotlandis.com/blog/events/scotsoft-2020/&quot;&gt;ScotSoft2020&lt;/a&gt; conference. I decided this would be the perfect chance to try out the amazing &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; html presentation framework.&lt;/p&gt;
+&lt;p&gt;For the moment, I’m mainly going to use my Ubuntu terminal for managing my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; repositories. So really it isn’t too necessary but I wanted to get Ubuntu back into my life and the linux terminal is incredibly helpful for developing code and I’m sure to use it more and more from now on! 🐧 🎉&lt;/p&gt;</content><author><name></name></author><category term="ubuntu" /><category term="windows" /><summary type="html">Today I set about trying to bring a little linux joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/ubuntuWSL/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Data ethics in practice with reveal.js</title><link href="http://localhost:4000/2020/11/27/data-ethics-in-practice.html" rel="alternate" type="text/html" title="Data ethics in practice with reveal.js" /><published>2020-11-27T00:00:00+00:00</published><updated>2020-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2020/11/27/data-ethics-in-practice</id><content type="html" xml:base="http://localhost:4000/2020/11/27/data-ethics-in-practice.html">&lt;p&gt;I had a great opportunity to talk about data ethics in practice at the &lt;a href=&quot;https://www.scotlandis.com/blog/events/scotsoft-2020/&quot;&gt;ScotSoft2020&lt;/a&gt; conference. I decided this would be the perfect chance to try out the amazing &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; html presentation framework.&lt;/p&gt;
 
 &lt;p&gt;I’ve tried plenty of different ways to create presentations (like &lt;a href=&quot;https://office.live.com/start/powerpoint.aspx&quot;&gt;powerpoint&lt;/a&gt;, &lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html&quot;&gt;Rmarkdown&lt;/a&gt;, &lt;a href=&quot;https://www.google.co.uk/slides/about/&quot;&gt;google slides&lt;/a&gt; and &lt;a href=&quot;https://www.latextemplates.com/cat/presentations&quot;&gt;LaTeX&lt;/a&gt;) and I’m always keen to try out new (ideally &lt;a href=&quot;https://opensource.com/resources/what-open-source&quot;&gt;open-source&lt;/a&gt;) tools.&lt;/p&gt;
 
