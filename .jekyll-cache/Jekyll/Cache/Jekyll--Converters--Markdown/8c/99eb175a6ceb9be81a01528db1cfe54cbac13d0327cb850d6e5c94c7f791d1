@@ -1,0 +1,124 @@
+I"#<p>Today I set about trying to bring a little <a href="https://www.linux.com/what-is-linux/"><code class="language-plaintext highlighter-rouge">linux</code></a> joy into my Windows work life. Although Windows 10 is the world’s most popular operating system, it isn’t mine! 😊</p>
+
+<blockquote>
+  <p>If you can, work in a linux, it’s free, <a href="https://opensource.com/resources/what-open-source">open-source</a>, and powerful - putting you in complete control of your computer. 💻 If you can’t, and you are stuck on a Windows 10 computer at work, then this post is for you!</p>
+</blockquote>
+
+<p>Microsoft, recognising the brilliance of linux, created the Windows Subsystem Linux (WSL) to allow a linux subsystem to work within your Windows computer. Essentially a linux terminal can be used to install and run linux tools on your Windows file system! 📁</p>
+
+<p>Linux comes in many <a href="https://www.tecmint.com/linux-distro-for-power-users/">flavours</a>, one of the most popular (and my favourite) is <a href="https://ubuntu.com/">Ubuntu</a>.</p>
+
+<p>Today, I am going to walk through the steps I took to install <a href="https://ubuntu.com/community/mission">Ubuntu</a> on my Windows 10 machine:</p>
+
+<ol>
+  <li>Enable the Windows Subsystem Linux (WSL) by typing the following into your command line (or powershell):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre></div>    </div>
+
+    <p>⚠️ With the a Windows update after May 2020 run the following <strong>instead</strong>:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre></div>    </div>
+    <p><br /></p>
+  </li>
+  <li>Install the Ubuntu App - I couldn’t download the app via Microsoft store so I did the following:
+    <ul>
+      <li>Selected “Ubuntu 20.04” from <a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">here</a></li>
+      <li>Then used the following command to install the file in the command line:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Add-AppxPackage .\[insertFileNameHereWithoutSuffix].appx
+</code></pre></div>        </div>
+        <p><br /></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Start the Ubuntu app (I typed “Ubuntu” into the Windows search and double clicked Ubuntu to start)<br /><br /></p>
+  </li>
+  <li>
+    <p>Create a username and password (doesn’t need to match Windows credentials)<br /><br /></p>
+  </li>
+  <li>Added <code class="language-plaintext highlighter-rouge">cd /mnt/c/Users/username/</code> to <code class="language-plaintext highlighter-rouge">.bashrc</code> so my Ubuntu terminal always starts in Windows file system (replace <code class="language-plaintext highlighter-rouge">"username"</code> with your Windows username). To edit your <code class="language-plaintext highlighter-rouge">.bashrc</code> file, open it with the following:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nano <span class="nt">-c</span> ~/.bashrc
+</code></pre></div>    </div>
+    <p>Make your way to the end of the file (use the down arrow or <code class="language-plaintext highlighter-rouge">Ctrl + V</code>). Add the following text:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c"># Move to the Windows file system</span>
+ <span class="nb">cd</span> /mnt/c/Users/username/
+</code></pre></div>    </div>
+    <p>Press <code class="language-plaintext highlighter-rouge">Ctrl + X</code> then <code class="language-plaintext highlighter-rouge">Y</code> to save changes and exit.</p>
+  </li>
+</ol>
+
+<p>Now you’re all set! 👍</p>
+
+<blockquote>
+  <p>Note that you’ll find your Windows file system at <code class="language-plaintext highlighter-rouge">/mnt/c/Users/yourWindowsUsername/</code> - you’re welcome! 😉</p>
+</blockquote>
+
+<hr />
+
+<p>Lastly, I wanted to use my Ubuntu terminal to work with <a href="https://git-scm.com/"><code class="language-plaintext highlighter-rouge">git</code></a> so I did a few extra steps:</p>
+
+<blockquote>
+  <p>Importantly, to work with git in the Windows Subsystem Linux, I needed to use <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">SSH based repositories</a>. This meant I had to make new clones of my repos, which were set up as https!</p>
+</blockquote>
+
+<ol>
+  <li>Set up your global configuration parameters:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git config <span class="nt">--global</span> user.name <span class="s2">"Joseph Crispell"</span>
+ <span class="nv">$ </span>git config <span class="nt">--global</span> user.email <span class="s2">"myemail@hero.com"</span>
+</code></pre></div>    </div>
+    <p><strong>Skip to step 6. if you use SSH for git repositories on your Windows machine</strong>
+ <br /></p>
+  </li>
+  <li>I created a new ssh key with the following:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> ~
+ <span class="nb">mkdir</span> .ssh
+ <span class="nb">cd</span> .ssh
+ ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"your_email@example.com"</span>
+</code></pre></div>    </div>
+    <p>Create a name for your key. I called mine <code class="language-plaintext highlighter-rouge">id_rsa</code>, not sure why!
+ <br /></p>
+  </li>
+  <li>Added my SSH key to my ssh-agent:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">eval</span> <span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span>
+ ssh-add ~/.ssh/id_rsa
+</code></pre></div>    </div>
+    <p>Change <code class="language-plaintext highlighter-rouge">id_rsa</code> to whatever you called your SSH key.
+ <br /></p>
+  </li>
+  <li>Add the new SSH key to GitHub account:
+    <ul>
+      <li>Head to <a href="https://github.com/">github</a></li>
+      <li>Click into your settings</li>
+      <li>Select SSH and GPG keys</li>
+      <li>Click “New SSH Key”</li>
+      <li>Create a name for your SSH key and paste the contents of <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> into the box provided
+ <br /></li>
+    </ul>
+  </li>
+  <li>Copy your SSH key from Ubuntu to Windows:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> ~/.ssh
+ <span class="nb">cp </span>id_rsa<span class="k">*</span> /mnt/c/Users/username/.ssh/
+</code></pre></div>    </div>
+    <p>Again, remember to change <code class="language-plaintext highlighter-rouge">id_rsa</code> to whatever you named your key. You also need to change <code class="language-plaintext highlighter-rouge">"username"</code> in the path to your Windows username.
+ <br /></p>
+  </li>
+  <li>[OPTIONAL] <em>If you already used ssh on your Windows computer for git repositories</em>, you can copy the Windows SSH key onto your Ubuntu system with:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> ~
+ <span class="nb">mkdir</span> .ssh
+ <span class="nb">cd</span> .ssh
+ <span class="nb">cp</span> /mnt/c/Users/username/.ssh/id_rsa<span class="k">*</span> <span class="nb">.</span>
+</code></pre></div>    </div>
+    <p>Remember to change <code class="language-plaintext highlighter-rouge">"username"</code> in the path to your Windows username.</p>
+  </li>
+</ol>
+
+<p>I must admit that it took me much longer than it should of to figure out the above steps, despite a lot of useful resources online:</p>
+<ul>
+  <li><a href="https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview">Install Ubuntu on Windows 10</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">Manually install Ubuntu App</a></li>
+  <li><a href="https://peteoshea.co.uk/setup-git-in-wsl/">Set up git for Windows Subsystem Linux</a></li>
+  <li><a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></li>
+</ul>
+
+<p>For the moment, I’m mainly going to use my Ubuntu terminal for managing my <code class="language-plaintext highlighter-rouge">git</code> repositories. So really it isn’t too necessary but I wanted to get Ubuntu back into my life and the linux terminal is incredibly helpful for developing code and I’m sure to use it more and more from now on! 🐧 🎉</p>
+:ET

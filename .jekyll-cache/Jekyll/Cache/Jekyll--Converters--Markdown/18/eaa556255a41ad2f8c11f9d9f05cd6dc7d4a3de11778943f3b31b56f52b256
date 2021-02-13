@@ -1,0 +1,20 @@
+I"<p>My website is a place for me to take note of my interests, both inside and outside of work. I’ll keep adding to, and improving, it!</p>
+
+<p>Most recently I’ve re-designed my website, changing from a simple html and css structure to a more complex <a href="https://jekyllrb.com/">Jekyll</a> themed website. Jekyll still uses html and css, but it also does some clever automated steps behind the scenes to make blogging a little easier.</p>
+
+<p>To build my new Jekyll based website, I chose a couple of Jekyll themes (from <a href="https://jekyllrb.com/">here</a>) and spent a bit of time extracting the bits of these that I liked and combining them into my own. The two templates I used were:</p>
+
+<ul>
+  <li>The <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> theme to give me the blogging template (posts, projects, tagging and searching)</li>
+  <li>And the <a href="https://github.com/nrandecker/particle">particle</a> theme for the (interactive!!) front page, which uses the amazing <a href="https://vincentgarreau.com/particles.js/"><code class="language-plaintext highlighter-rouge">particle.js</code></a> library.</li>
+</ul>
+
+<p>Jekyll works really well with github pages, so I was able to branch my existing website repository and get to work on the new one. Take a look at the code <a href="https://github.com/JosephCrispell/JosephCrispell.github.io">here</a>.</p>
+
+<p>I owe a lot of thanks to the documentation of the <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> and <a href="https://github.com/nrandecker/particle">particle</a> themes, helping me to understand how a Jekyll page works. Nothing better than a well commented and structured piece of open-source code!! ❤️</p>
+
+<p>The next project for this website is to clean up all the code, removing anything unnecessary for my website and then I plan on releasing it as a website template. There are so many cool templates out there, and maybe mine could be one of them! 😀</p>
+
+<p>Take a look around and let me know what you think.</p>
+
+:ET

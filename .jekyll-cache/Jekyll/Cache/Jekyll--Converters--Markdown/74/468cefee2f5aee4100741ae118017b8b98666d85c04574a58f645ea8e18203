@@ -1,0 +1,6 @@
+I"<p>Today I’m going to write about creating an <a href="https://www.r-project.org/">R</a> package 📦. It’s very easy, and something I should have learnt a long time ago. Before I start, here are a couple of very good tutorials for creating an R package:</p>
+<ul>
+  <li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Writing an R package from scratch</a></li>
+  <li><a href="http://r-pkgs.had.co.nz/description.html">Hadley Wickham’s R package documentation</a></li>
+</ul>
+:ET

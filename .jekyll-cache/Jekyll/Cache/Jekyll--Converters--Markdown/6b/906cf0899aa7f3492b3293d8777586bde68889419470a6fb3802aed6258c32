@@ -1,0 +1,95 @@
+I"5<!-- projects Grid Section -->
+
+<div class="projects-grid">
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/newzealand">
+            <div class="caption" title="Possums, cows, and bovine tuberculosis in New Zealand">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/newZealandLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/homoplasyfinder">
+            <div class="caption" title="homoplasyFinder">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/homoplasyFinderLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/basicplotter">
+            <div class="caption" title="basicPlotteR">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/basicPlotteRLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/teaching">
+            <div class="caption" title="My teaching projects">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/teachingProjectsLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/phylohelper">
+            <div class="caption" title="phyloHelpeR">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/phyloHelpeRLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/woodchester">
+            <div class="caption" title="Badgers, cattle, and bovine tuberculosis in South West England">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/woodchesterLogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/btbgenie">
+            <div class="caption" title="Bovine TuBerculosis Genomics IrEland">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/BTBGENIELogo.png" />
+        </a>
+    </div>
+    
+    <div class="projects-cell">
+        <a class="projects-link" data-keyboard="true" href="/projects/website">
+            <div class="caption" title="Website">
+                <div class="caption-content">
+                    <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+            </div>
+            <img alt="" class="" src="/assets/img/projects/websiteLogo.png" />
+        </a>
+    </div>
+    
+</div>
+
+:ET

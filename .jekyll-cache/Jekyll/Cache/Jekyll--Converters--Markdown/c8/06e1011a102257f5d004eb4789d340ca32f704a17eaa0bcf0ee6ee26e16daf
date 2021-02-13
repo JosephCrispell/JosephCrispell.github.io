@@ -1,0 +1,4 @@
+I"g<p>Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!!</p>
+
+<p>A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>. The Newick format looks like this:</p>
+:ET

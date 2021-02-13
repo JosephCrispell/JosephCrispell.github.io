@@ -1,0 +1,44 @@
+I"�<p>Today, after a huge amount of work over many years, our research using genomics to look at how often <em>Mycobacterium bovis</em> was transmitted within and between cattle and badgers in Woodchester Park has been published!</p>
+
+<blockquote>
+  <p><em>Mycobacterium bovis</em> is a bacteria that infects cattle causing bovine tuberculosis. It costs the UK goverment tens of millions of pounds every year to control. It can infect many different species. In fact, in the UK, badger populations are can be infected and research has shown that infection can spread between cattle and badgers.</p>
+</blockquote>
+
+<p>Take a look at the article <a href="https://doi.org/10.7554/eLife.45833">here</a>! You can also read a nice summary in <a href="https://www.theguardian.com/uk-news/2019/dec/17/tb-infection-from-cow-to-cow-more-likely-than-transmission-by-badger?utm_term=Autofeed&amp;CMP=twt_gu&amp;utm_medium=&amp;utm_source=Twitter#Echobox=1576571830">The Guardian</a>.</p>
+
+<p>Woodchester Park, shown below, is a reserve in the south west of England. In this park there is a mixture of fertile farmland pasture, woodland and small ponds - the perfect place for a badger to live! 🦡</p>
+
+<p><img src="/assets/img/projects/woodchesterPark.png" alt="Woodchester Park" /></p>
+
+<p>Around three hundred badgers live in Woodchester Park in small social groups of 5-12 individuals. There are also cattle that graze on the fields in and around the park.</p>
+
+<p>Our research used samples of <em>Mycobacterium bovis</em> bacteria from infected cattle and badgers living in and around Woodchester Park. We sequenced the genomes of these bacteria and  found that the badgers and cattle were infected with very similar strains of the bacteria, sometimes even the exact same strain! This meant that infection was being transmitted between the badgers and cattle, and it must have been happening quite frequently.</p>
+
+<blockquote>
+  <p>But who was giving it to whom?</p>
+</blockquote>
+
+<p>To estimate how often infection was transmitted from cattle to badgers, and in the other direction, we used a tool called <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4534465/pdf/pgen.1005421.pdf">BASTA</a>.</p>
+
+<p><img src="/assets/img/projects/woodchesterRates.png" alt="Transmission Rates" /></p>
+
+<blockquote>
+  <p>We found that badgers were transmitting infection to cattle more frequently. We also found that transmission between animals of the same species was more common. So cattle were more likely to infect other cattle and badgers other badgers, than cattle infect badgers or <em>vice versa</em>.</p>
+</blockquote>
+
+<p>Our research relied upon a very large collaboration between institutions across the United Kingdom and Republic of Ireland. The main institutions involved were:</p>
+<ul>
+  <li><a href="https://www.gla.ac.uk/">University of Glasgow</a></li>
+  <li><a href="https://www.ed.ac.uk/">University of Edinburgh</a></li>
+  <li><a href="https://www.ucd.ie/">University College Dublin</a></li>
+  <li><a href="https://www.afbini.gov.uk/">Agri-Food and Biosciences Institute</a></li>
+  <li><a href="https://www.gov.uk/government/organisations/animal-and-plant-health-agency">Animal &amp; Plant Health Agency</a></li>
+</ul>
+
+<blockquote>
+  <p><strong>Our data was only from Woodchester Park, a small area in the South West of England. Without further research, we don’t know if what we found here is true elsewhere.</strong></p>
+</blockquote>
+
+<p>Take a look at the <a href="https://doi.org/10.7554/eLife.45833">paper</a>! 🦡🐄🦠🧬</p>
+
+:ET

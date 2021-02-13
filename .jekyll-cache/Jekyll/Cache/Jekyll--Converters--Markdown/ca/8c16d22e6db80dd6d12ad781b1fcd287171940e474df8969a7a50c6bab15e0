@@ -1,0 +1,24 @@
+I"#<p><code class="language-plaintext highlighter-rouge">basicPlotteR</code> is an R package designed to help you making plots in <code class="language-plaintext highlighter-rouge">base</code> R. The <code class="language-plaintext highlighter-rouge">base</code> R package is the package that comes with R, it contains all those functions that makes R what it is.</p>
+
+<p>There are loads of plotting functions available in the <code class="language-plaintext highlighter-rouge">base</code> R package. I try to use these as much as possible as I think they give me the most flexibility in how I create my plots. I designed <code class="language-plaintext highlighter-rouge">basicPlotteR</code> package to be a collection of additional plotting functions that add a little bit extra to the <code class="language-plaintext highlighter-rouge">base</code> plotting functions.</p>
+
+<p>I’ll keep adding functions to <code class="language-plaintext highlighter-rouge">basicPlotteR</code>, for the moment though my favourite is <code class="language-plaintext highlighter-rouge">addTextLabels()</code>. It mimics the <code class="language-plaintext highlighter-rouge">base</code> R function <code class="language-plaintext highlighter-rouge">text()</code> by adding text labels to an existing plot, but it re-positions text to avoiding any overlapping.</p>
+
+<p><img src="/assets/img/projects/addTextLabels.gif" alt="addTextLabels" title="addTextLabels() function at work!" /></p>
+
+<p>There are loads more functions to play around with. Download the package and get started with the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install the devtools R package - for downloading packages from github
+install.packages("devtools")
+
+# Install basicPlotteR
+devtools::install_github("JosephCrispell/basicPlotteR")
+
+# Load the basicPlotteR package
+library(basicPlotteR)
+
+...
+</code></pre></div></div>
+
+<p>To learn more, take a look at the github page <a href="https://github.com/JosephCrispell/basicPlotteR">here</a>.</p>
+:ET

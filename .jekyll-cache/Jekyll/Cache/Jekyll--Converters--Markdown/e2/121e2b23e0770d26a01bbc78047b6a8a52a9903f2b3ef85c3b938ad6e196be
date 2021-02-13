@@ -1,0 +1,18 @@
+I"<p>Joanna and I are headed up to Northern Ireland today, Lydia (Joanna’s sister) is getting married. Today I was working on some Java code I wrote a few years ago to parse a Newick formatted phylogenetic tree. Whilst it is fresh in my mind, I thought I’d write a quick post - also the bus takes ages!!</p>
+
+<p>A phylogenetic tree, describing the ancestral relationships between a set of nucleotide sequences, can be stored can be stored in a Newick format. A detailed description of this format can be found <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>. The Newick format looks like this:</p>
+
+<p><img src="/assets/img/blog/newick/thumbnail.svg" alt="plot layout" /></p>
+
+<p>In the above diagram, each node of the phylogenetic tree can be represented as a simple string of characters (brackets, tip names, and branch lengths). Each string of characters details what is below the node. The string of characters (or label) for the root node (at the base of the rooted phylogenetic tree) describes the entire phylogenetic tree.</p>
+
+<p>So that means, the whole phylogenetic tree can be stored using only the root label:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(B:3, (C:1, (A:1, D:2):2):1);
+</code></pre></div></div>
+
+<p>My Java program (I’m still improving it, but it is available <a href="https://en.wikipedia.org/wiki/Newick_format">here</a>) is designed to read this format and store the phylogenetic tree as a set of traversable (easy to move among) nodes. The trick to doing this, is in counting your brackets!!</p>
+
+<p>An amazingly simple (in hindsight) format that was developed in the 1980s and remains the standard phylogenetic tree format today. Perfect timing, that’s the bus just pulling into Belfast.</p>
+
+:ET

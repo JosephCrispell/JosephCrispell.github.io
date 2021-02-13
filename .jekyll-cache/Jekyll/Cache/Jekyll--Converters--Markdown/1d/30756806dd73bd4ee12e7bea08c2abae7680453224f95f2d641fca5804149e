@@ -1,0 +1,89 @@
+I"�<p>Today is the day I’ve started using <a href="https://docs.github.com/en/free-pro-team@latest/actions">GitHub Actions</a>. I found the following two resources really helpful:</p>
+
+<ul>
+  <li><a href="https://github.com/r-lib/actions/tree/master/examples">Workflows specifically designed for R code</a></li>
+  <li><a href="https://www.rostrum.blog/2020/08/09/ghactions-pkgs/">A great blog post about R workflows in action</a></li>
+</ul>
+
+<p>GitHub Actions allow you to create workflows that will execute tasks on a certain action, like <a href="https://docs.github.com/en/free-pro-team@latest/github/using-git/pushing-commits-to-a-remote-repository"><code class="language-plaintext highlighter-rouge">push</code></a>ing changes onto GitHub.</p>
+
+<p>Each time you complete an action (<code class="language-plaintext highlighter-rouge">push</code> changes to your repository), the workflow will be executed. For example, today I’ve added a workflow (<a href="https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow">Quickstart Continuous Integration workflow</a>) to my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package, which does the following:</p>
+
+<ul>
+  <li>Boots up a mac OS computer</li>
+  <li>Checks R is installed</li>
+  <li>Installs two packages:
+    <ul>
+      <li><a href="https://cran.r-project.org/package=remotes"><code class="language-plaintext highlighter-rouge">remotes</code></a> for installing packages from GitHub</li>
+      <li><a href="https://cran.r-project.org/web/packages/rcmdcheck/index.html">rcmdcheck</a> - for checking R code</li>
+    </ul>
+  </li>
+  <li>Installs my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package</li>
+  <li>Runs <code class="language-plaintext highlighter-rouge">rcmdcheck()</code> from the <a href="https://cran.r-project.org/web/packages/rcmdcheck/index.html">rcmdcheck</a> package, which:
+    <ul>
+      <li>Checks all the function documentation</li>
+      <li>Runs all the examples for the functions to check they work</li>
+      <li>Checks all functions dependencies</li>
+      <li>Checks the R package structure</li>
+      <li>And many more!!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>With this workflow in place, every time I edit the code for my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package, the above checks will be run and I’ll know straight away if I have caused any problems!</p>
+
+<p>GitHub Actions require a <a href="https://www.tutorialspoint.com/yaml/yaml_basics.htm">YAML</a> formatted file to define the workflow. The <em>Quickstart Continuous Integration workflow</em> (available <a href="https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow">here</a>) looks like this:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+      <span class="pi">-</span> <span class="s">master</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+      <span class="pi">-</span> <span class="s">master</span>
+
+<span class="na">name</span><span class="pi">:</span> <span class="s">R-CMD-check</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">R-CMD-check</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">macOS-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">r-lib/actions/setup-r@v1</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">install.packages(c("remotes", "rcmdcheck"))</span>
+          <span class="s">remotes::install_deps(dependencies = TRUE)</span>
+        <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")</span>
+        <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
+</code></pre></div></div>
+
+<p>I saved the above YAML code in a file called <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/.github/workflows/R-CMD-check.yaml"><code class="language-plaintext highlighter-rouge">.github/workflows/R-CMD-check.yaml</code></a> in my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> repository. Note, that I had to create the <code class="language-plaintext highlighter-rouge">.github</code> and <code class="language-plaintext highlighter-rouge">workflows</code> folders and explicitely push them onto GitHub using <code class="language-plaintext highlighter-rouge">git add .github/workflows/R-CMD-check.yaml</code>.</p>
+
+<p>With the workflow pushed online, GitHub automatically started running the workflow!</p>
+
+<p><img src="/assets/img/blog/githubActions/thumbnail.png" alt="actions" /></p>
+
+<p>As the above screenshot shows, the code for my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package needed some tidying up to get it to pass the <code class="language-plaintext highlighter-rouge">rcmdcheck()</code> checks! 😨</p>
+
+<p>But I got there in the end!!! 🎉</p>
+
+<p><img src="/assets/img/blog/githubActions/badge.png" alt="actions" /></p>
+
+<p>I added the status badge to the repository <a href="https://github.com/JosephCrispell/basicPlotteR/blob/master/README.md"><code class="language-plaintext highlighter-rouge">README.md</code></a> using the following markdown code in the top line:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![R build status](https://github.com/JosephCrispell/basicPlotteR/workflows/R-CMD-check/badge.svg)](https://github.com/JosephCrispell/basicPlotteR/actions?workflow=R-CMD-check)
+</code></pre></div></div>
+<p>A couple of things you’ll notice in the above code:</p>
+
+<ul>
+  <li>The extra <code class="language-plaintext highlighter-rouge">[</code> at the start - I think this is needed!</li>
+  <li>The path to the <code class="language-plaintext highlighter-rouge">badge.svg</code> file is in my repository but you’ll no trace of it - I am not sure why this is but the badge is working, so I’ll not question it! 🤔</li>
+</ul>
+
+<p>Well, I’ve been amazed by the power of <a href="https://docs.github.com/en/free-pro-team@latest/actions">GitHub Actions</a> and I’ve only just started! I can’t wait to introduce more complex checks and add workflows to all my repositories!!!</p>
+
+<p>Oh, and Happy Halloween!!! 🧡</p>
+:ET

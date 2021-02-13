@@ -1,0 +1,112 @@
+I"�&<p>Today I’m heading to Milan, Italy, to meet up with Joanna, who’s been over there for the last couple of days for a meeting. To pass the time in the airport, I wrote this post about multithreading in Java.</p>
+
+<p>Multithreading, as the name suggests, involves running multiple threads. A thread can be thought of as something that can run a single task. Multithreading is using multiple threads to complete multiple tasks in parrallel.</p>
+
+<p>Up until last week I hadn’t used any multithreading, but I got stuck trying to speed up some code and I thought it was time to learn. Also I built myself a new computer with 6 cores!</p>
+
+<p>Multithreading in Java is amazingly well supported (although the code below looks pretty daunting) and it uses the <code class="language-plaintext highlighter-rouge">Thread</code> class. The <code class="language-plaintext highlighter-rouge">Thread</code> class, like any other Java class, can be modified (extended) to suit a particular task. Here is a general class structure for a task to be completed in parallel:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create the class and give it a name</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="nc">Thread</span><span class="o">{</span>
+
+  <span class="c1">// Initialise variables you want to be able to access throughout class here</span>
+  <span class="kd">public</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span><span class="o">;</span>
+
+  <span class="c1">// Define how the current class can be created</span>
+  <span class="kd">public</span> <span class="nf">MyThread</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span><span class="o">){</span>
+
+    <span class="c1">// Assign a name to the current thread - using the position</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+
+    <span class="c1">// Store other inputs here</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="n">input</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a run method - this will execute when thread started</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(){</span>
+
+    <span class="c1">// Complete your task here - using the inputs provided into MyThread</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Create a method to retrieve whatever your task creates</span>
+  <span class="kd">public</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="nf">getInput</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">input</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Once you’ve created your <code class="language-plaintext highlighter-rouge">Thread</code> class, then you need conduct your multithreading. You’ll need a different class, which might look something like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Create the class and give it a name</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MultiThreading</span><span class="o">{</span>
+
+  <span class="c1">// Define your main method - the place where you'll do the multithreading</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+
+    <span class="c1">// Define the number of threads to be created (if more than number of</span>
+    <span class="c1">// threads available, Java will automatically queue)</span>
+    <span class="kt">int</span> <span class="n">numberOfThreads</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+
+    <span class="c1">// Initialise an array to store each thread object</span>
+    <span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyThread</span><span class="o">[</span><span class="n">numberOfThreads</span><span class="o">];</span>
+
+    <span class="c1">// Define inputs for the thread to work on here;</span>
+    <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="o">[</span><span class="no">TYPE</span><span class="o">]</span> <span class="o">...;</span>
+
+    <span class="c1">// Create each thread</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">numberOfThreads</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+
+      <span class="c1">// Create and start the current thread</span>
+      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyThread</span><span class="o">(</span><span class="s">"thread-"</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span>
+      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">start</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Check the threads are finished</span>
+    <span class="n">waitUntilAllFinished</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
+
+    <span class="c1">// Do something with the output from each thread</span>
+    <span class="k">for</span><span class="o">(</span><span class="nc">MyThread</span> <span class="n">thread</span> <span class="o">:</span> <span class="n">threads</span><span class="o">){</span>
+      <span class="o">...</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a method to check whether threads are finished</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">finished</span><span class="o">(</span><span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span><span class="o">){</span>
+
+    <span class="c1">// Initialise a variable to record whether all finished</span>
+    <span class="kt">boolean</span> <span class="n">finished</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+    <span class="c1">// Examine each of the threads to see if any aren't finished</span>
+    <span class="k">for</span><span class="o">(</span><span class="nc">ExaminePosition</span> <span class="n">thread</span> <span class="o">:</span> <span class="n">threads</span><span class="o">){</span>
+
+      <span class="c1">// Check if current thread finished</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">thread</span><span class="o">.</span><span class="na">isAlive</span><span class="o">()</span> <span class="o">==</span> <span class="kc">true</span><span class="o">){</span>
+
+        <span class="n">finished</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">finished</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Define a method to wait until threads finished</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">waitUntilAllFinished</span><span class="o">(</span><span class="nc">MyThread</span><span class="o">[]</span> <span class="n">threads</span><span class="o">){</span>
+
+    <span class="c1">// Initialise a variable to record whether all threads finished</span>
+    <span class="kt">boolean</span> <span class="n">allFinished</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+    <span class="c1">// Keep checking the threads until they're all finished</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">allFinished</span> <span class="o">==</span> <span class="kc">false</span><span class="o">){</span>
+
+      <span class="c1">// Check whether all threads finished</span>
+      <span class="n">allFinished</span> <span class="o">=</span> <span class="n">finished</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The above class looks pretty long, but I’ve added in some extra functions to check and wait until threads are finished. The code I’ve given is a skeleton for getting started with multithreading in Java. Thanks for reading, and good luck if you’re going to be doing some multithreading of your own. I’m off to Milan!</p>
+:ET

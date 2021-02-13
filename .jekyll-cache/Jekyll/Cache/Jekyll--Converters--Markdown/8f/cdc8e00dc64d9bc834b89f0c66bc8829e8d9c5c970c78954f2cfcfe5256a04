@@ -1,0 +1,2 @@
+I"D<p>I’ve recently been exploring a survey dataset that is in French. I found a python library <a href="https://pypi.org/project/googletrans/"><code class="language-plaintext highlighter-rouge">googletrans</code></a> that uses the <a href="https://translate.google.com/">Google Translate Ajax API</a> to translate text.</p>
+:ET

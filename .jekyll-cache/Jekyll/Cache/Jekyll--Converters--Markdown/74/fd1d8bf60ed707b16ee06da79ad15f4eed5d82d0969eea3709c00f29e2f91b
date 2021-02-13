@@ -1,0 +1,42 @@
+I"b<p>I’ve created a new <a href="https://www.r-project.org/">R</a> function called <code class="language-plaintext highlighter-rouge">spreadPoints</code>, in my <a href="https://github.com/JosephCrispell/basicPlotteR"><code class="language-plaintext highlighter-rouge">basicPlotteR</code></a> package.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">spreadPoints()</code> function is designed to add points onto an existing boxplot. The points are spread out to avoid overlap. It works a lot like the <a href="https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/stripchart"><code class="language-plaintext highlighter-rouge">stripchart</code></a>, but it doesn’t spread points randomly. Here it is at work in R:</p>
+
+<p>There is still work to be done on this function but give it a go and let me know what you think. You just need to download my <code class="language-plaintext highlighter-rouge">basicPlotteR</code> package:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install the devtools package to install packages from GitHub</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Install my basicPLotteR package directly from GitHub</span><span class="w">
+</span><span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"JosephCrispell/basicPlotteR"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Load it!</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">basicPlotteR</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Generate some example points - drawn from exponential distribution</span><span class="w">
+</span><span class="n">values</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w">
+ 
+</span><span class="c1"># Plot a boxplot</span><span class="w">
+</span><span class="n">boxplot</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="w">  </span><span class="n">ylab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">frame</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">las</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">)</span><span class="w">
+       
+</span><span class="c1"># Plot the points spread along the X axis</span><span class="w">
+</span><span class="n">spreadPoints</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/img/blog/spreadPoints/spreadPoints.png" alt="spreadPoints() at work!" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">spreadPoints()</code> function works with the following steps:</p>
+<ol>
+  <li>Split the <code class="language-plaintext highlighter-rouge">Y</code> axis into equally sized bins</li>
+  <li>Assign each <code class="language-plaintext highlighter-rouge">Y</code> point into a bin</li>
+  <li>Examine each <code class="language-plaintext highlighter-rouge">Y</code> axis bin:<br />
+ a. Count the points in current bin<br />
+ b. Split the <code class="language-plaintext highlighter-rouge">X</code> axis space available, to give the same amount of space to each point<br />
+ c. Working from the middle, work out left and right assigning each point a new <code class="language-plaintext highlighter-rouge">Y</code> coordinate<br /></li>
+  <li>Plot the points with modified <code class="language-plaintext highlighter-rouge">Y</code> values</li>
+</ol>
+
+<p>Well hopefully that’s a helpful addition to the <code class="language-plaintext highlighter-rouge">basicPlotteR</code> package. Showing the underlying points on a boxplot is very important, particularly when there are only a few points available and I wanted a method that was non-random.</p>
+
+<p>Still plenty of work to do on this, so give it a go and let me knwo what you think! 😊</p>
+:ET

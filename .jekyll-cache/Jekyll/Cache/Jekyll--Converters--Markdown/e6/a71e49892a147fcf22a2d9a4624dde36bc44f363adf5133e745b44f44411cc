@@ -1,0 +1,36 @@
+I"�<p>Firstly, what is a homoplasy? It is a trait (for example, a nucleotide at a position in an alignment) that is shared between tips that their immediate common ancestor doesn’t have.</p>
+
+<p>See the left hand side of the figure below, there are tips with a <code class="language-plaintext highlighter-rouge">T</code> (thymine) nucleotide that are surrounded by tips with an <code class="language-plaintext highlighter-rouge">A</code> (adenine).</p>
+
+<p><img src="/assets/img/projects/homoplasyFinder_definition.png" alt="Homoplasy" title="Defining a homoplasy" /></p>
+
+<p>Homoplasies are interesting because they make sequences seem more similar than they evolutionarily are - complicating phylogenetic analyses.</p>
+
+<p>Homoplasies can also help us to understand evolution, perhaps there is a benefit to a particular mutation or trait. By identifying homoplasies, we can hone in our search to mutations causing antibiotic resistance, for example.</p>
+
+<p>From the right handside of the figure above, we can see how you can identify homoplasies. Read more about how <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a> uses the <code class="language-plaintext highlighter-rouge">consistency index</code> to identify <a href="https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000245">here</a>.</p>
+
+<p>Soon after I moved to Dublin, I decided to build <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a>. An R package that we can use to identify homoplasies on a phylogeny using a nucleotide alignment.</p>
+
+<p>After a quick look (I should have spent longer! 😳), I couldn’t find a tool so I decided to created my own.</p>
+
+<p>I spent a bit of time trying to figure out how to make my tool so that it could automatically identify homoplasies and came up a pretty good solution (I thought!). So, I created the <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a> tool and then spent much longer figuring out whether it worked!</p>
+
+<p>To my surprise, it did work and, happy with my creation, I proceeded to create an R package and write an article. I submitted my article and month later all my hopes were dashed!</p>
+
+<p>The article was rejected… 😭</p>
+
+<p>After a wee bit (a lot) of grumping, I realised that my manuscript was rejected for a very good reason. I hadn’t read about the <em>consistency index</em> - a beautifully simple method for identifying homoplasies that was defined in the 1970s (read the <a href="http://garfield.library.upenn.edu/classics1987/A1987H855200001.pdf">article</a>). Well, I had read about it but I hadn’t understood it! The consistency index is a measure of how consistent each site in a set of genetic sequences is with a given phylogeny. The consistency index can be thought of as a measure of how homoplasious a site is</p>
+
+<p>I took a break from <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a>, trying to bury this embarrassing affair.</p>
+
+<p>Then after a month or two, I decided to re-make <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a> using the consistency index. I also had a thorough look for tools that could identify homoplasies and I found a few.</p>
+
+<p>Unsurprisingly, my new and improved <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a> turned out to be much faster than my previous version and, surprisingly, it was also faster, after some improvements, than the tools I found that did the same thing! (This still worries me a little, maybe I am cheating in some way!)</p>
+
+<p>So, with renewed hope, I updated my manuscript and submitted to a different journal. Following some very helpful reviewers comments it got published!! 🎉</p>
+
+<p>A year on and I am still doing a bit of work on <a href="https://github.com/JosephCrispell/homoplasyFinder/wiki">HomoplasyFinder</a> and hopefully I will continue to.</p>
+
+<p>Give it a go and let me know what you think!</p>
+:ET

@@ -1,0 +1,88 @@
+I"�)<p>So Joanna was stuck with more than 17,000 unread emails in her gmail account and I’m struggling to handle it! 😕 So I figured I could use <a href="https://www.google.com/script/start/">Google Apps Script</a> code to help.</p>
+
+<p>Google Apps Script is a programming language based on [javascript] that’s designed to work with the all the different Google apps (gmail, docs, sheets, etc.). I’ve <a href="https://josephcrispell.github.io/2020/06/20/google-scripts.html">previously</a> used Google Apps Script to work with Google sheets.</p>
+
+<p>Today, I’ve been writing some code to remove all the unread ebay alerts from Joanna’s account. Here’s the function I wrote to do it:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">removeOldEbayEmails</span><span class="p">(){</span>
+
+  <span class="c1">// Define the search string to identify emails </span>
+  <span class="kd">var</span> <span class="nx">searchString</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">label:inbox is:unread from:ebay@ebay.co.uk older_than:1m subject:NEW!</span><span class="dl">"</span><span class="p">;</span>
+
+  <span class="c1">// Get all threads matching search string</span>
+  <span class="kd">var</span> <span class="nx">threads</span> <span class="o">=</span> <span class="nx">getThreadsMatchingSearch</span><span class="p">(</span><span class="nx">searchString</span><span class="p">);</span>
+
+  <span class="c1">// Check whether thread search returned some results</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">threads</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">threads</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="c1">// Mark as read and remove threads</span>
+    <span class="nx">moveThreadsToTrash</span><span class="p">(</span><span class="nx">threads</span><span class="p">);</span>
+  <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>I built the <code class="language-plaintext highlighter-rouge">searchString</code> based gmail’s searching key words (loads of info <a href="https://support.google.com/mail/answer/7190?hl=en-GB">here</a>). The search string does the following:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">label:inbox</code> - look in your inbox</li>
+  <li><code class="language-plaintext highlighter-rouge">is:unread</code> - select unread emails</li>
+  <li><code class="language-plaintext highlighter-rouge">from:ebay@ebay.co.uk</code> - select emails from <code class="language-plaintext highlighter-rouge">ebay@ebay.co.uk</code></li>
+  <li><code class="language-plaintext highlighter-rouge">older_than:1m</code> - select emails older than 1 month</li>
+  <li><code class="language-plaintext highlighter-rouge">subject:NEW!</code> - select emails with “NEW!” in the subject line</li>
+</ul>
+
+<p>I wrote the <code class="language-plaintext highlighter-rouge">getThreadsMatchingSearch()</code> function to use a search term to retrieve email threads (email receive/reply chains):</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getThreadsMatchingSearch</span><span class="p">(</span><span class="nx">searchString</span><span class="p">){</span>
+
+  <span class="c1">// Get all threads matching search string</span>
+  <span class="k">try</span><span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">threads</span> <span class="o">=</span> <span class="nx">GmailApp</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchString</span><span class="p">);</span>
+  <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Found </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">threads</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> threads (conversations of emails) matching search string (</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">searchString</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">). Note that size limited to 500.</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+    <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Warning! Unable to complete email search: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+  <span class="p">}</span> 
+
+  <span class="k">return</span><span class="p">(</span><span class="nx">threads</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">getThreadsMatchingSearch()</code> function uses the <a href="https://developers.google.com/apps-script/reference/gmail/gmail-app#search(String)"><code class="language-plaintext highlighter-rouge">GmailApp.search()</code></a> function and wraps it in a try catch because Google sets a limit on the number of searches (see more info on the quotas <a href="https://developers.google.com/apps-script/guides/services/quotas">here</a>).</p>
+
+<blockquote>
+  <p>Importantly, the maximum number of threads returned is fixed at <code class="language-plaintext highlighter-rouge">500</code>. If you’ve got more than this to handle, you can use a trigger to set multiple runs of your function.</p>
+</blockquote>
+
+<p>Once I have retrieved the threads, I use this function to move them to the trash:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">moveThreadsToTrash</span><span class="p">(</span><span class="nx">threads</span><span class="p">,</span> <span class="nx">batchSize</span><span class="o">=</span><span class="mi">100</span><span class="p">){</span>
+
+  <span class="c1">// Work through the threads in batches (100 is the limit that batch operations can work on)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">threads</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span> <span class="o">+=</span> <span class="nx">batchSize</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Select the current batch of threads</span>
+    <span class="kd">var</span> <span class="nx">batch</span> <span class="o">=</span> <span class="nx">threads</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="nx">j</span><span class="o">+</span><span class="nx">batchSize</span><span class="p">);</span>
+    
+    <span class="c1">// Move the threads to the trash</span>
+    <span class="k">try</span><span class="p">{</span>
+      <span class="nx">GmailApp</span><span class="p">.</span><span class="nx">moveThreadsToTrash</span><span class="p">(</span><span class="nx">batch</span><span class="p">);</span>
+      <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Moved </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">threads</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> threads to trash.</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+      <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Warning! Unable to move threads to trash: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>    
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As with the <code class="language-plaintext highlighter-rouge">GmailApp.search()</code> function the <a href="https://developers.google.com/apps-script/reference/gmail/gmail-app#moveThreadsToTrash(GmailThread)"><code class="language-plaintext highlighter-rouge">GmailApp.moveThreadsToTrash()</code></a> function has a quota limit so I’ve wrapped it in a try catch. It also has a batch size limit of <code class="language-plaintext highlighter-rouge">100</code> so I’ve worked through the <code class="language-plaintext highlighter-rouge">threads</code> array in batches of 100 (thanks to <a href="https://gist.github.com/gene1wood/0f455239490e5342fa49">this</a> GitHub code).</p>
+
+<p>If you think the above code would be useful, then you’ll need to do the following:</p>
+<ul>
+  <li>Open up the Google Apps Script <a href="https://script.google.com/home/start">editor</a> (click on the New blank project)</li>
+  <li>Paste in the three functions above into the <code class="language-plaintext highlighter-rouge">Code.gs</code> script</li>
+  <li>Change the <code class="language-plaintext highlighter-rouge">searchString</code> to suit your needs</li>
+  <li>Test run the script to check all is well</li>
+  <li>If needed, set a trigger to schedule (click the alarm symbol in the left menu) to running the <code class="language-plaintext highlighter-rouge">removeOldEbayEmails()</code> function multiple times (<em>note that there are quotas on the number of services you can use in a day, which I quickly ran into</em>)</li>
+</ul>
+
+<p>So far I’ve removed ~8,000 of Joanna’s emails and set my script to run overnight so hopefully I’ll a few more thousand overnight! 🎉 🗑️</p>
+:ET

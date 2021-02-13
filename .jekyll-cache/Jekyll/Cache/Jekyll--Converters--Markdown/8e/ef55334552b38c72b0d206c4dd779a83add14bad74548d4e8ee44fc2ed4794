@@ -1,0 +1,165 @@
+I"S><p>Today I am on the train to Belfast to meet with collaborators at the <a href="https://www.afbini.gov.uk/">AFBINI</a>. To pass the time I am taking advantage of the free wifi to add a post to store some useful pieces of code I always forget.💡</p>
+
+<p>I am always forgetting simple coding solutions that I need often; I constantly find myself googling something I had looked up just a few days before and the top links are always purple (visited).</p>
+
+<p>Below are some of the commands that I most frequently forget, although I find them extremely useful: 🤔</p>
+
+<ul>
+  <li>Unpacking a file whose name ends with “.tar.gz” in Ubuntu</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Options used:</span>
+<span class="c"># x    Extract files in tar</span>
+<span class="c"># v    Verbose - print out progress information</span>
+<span class="c"># z    Unzip file (Use if file ends with ".gz")</span>
+<span class="c"># f    Filename will follow</span>
+<span class="nb">tar</span> <span class="nt">-xvzf</span> fileName.tar.gz
+</code></pre></div></div>
+
+<ul>
+  <li>Reading a table into R whilst avoiding some annoying R habits</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Options used:</span><span class="w">
+</span><span class="c1"># header=TRUE    There will be column titles in first line of file</span><span class="w">
+</span><span class="c1"># stringsAsFactors=FALSE    Don't convert strings (words/names) into factors (categories)</span><span class="w">
+</span><span class="c1"># check.names=FALSE    Don't let R run checks on column names</span><span class="w">
+</span><span class="c1"># Note that check.names = TRUE removes spaces and special chracters - USE WISELY!</span><span class="w">
+</span><span class="n">tableName</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">check.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Read a file into R line by line (only feasible for small file!)</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Open a connection to a file to read (open="r")</span><span class="w">
+</span><span class="n">connection</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">file</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">open</span><span class="o">=</span><span class="s2">"r"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Get all lines from file and store in vector</span><span class="w">
+</span><span class="n">fileLines</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Close file connection</span><span class="w">
+</span><span class="n">close</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Loop through each of the lines in file</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">fileLines</span><span class="p">){</span><span class="w">
+    </span><span class="n">...</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Set the plotting margin sizes in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Setting margin sizes: c(bottom, left, top, right)</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5.1</span><span class="p">,</span><span class="w"> </span><span class="m">4.1</span><span class="p">,</span><span class="w"> </span><span class="m">4.1</span><span class="p">,</span><span class="w"> </span><span class="m">2.1</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Initialise array of zeros in perl</li>
+</ul>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise an array of 10 zeros</span>
+<span class="k">my</span> <span class="nv">@arrayName</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="nv">x</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Remove special characters from string in perl</li>
+</ul>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">my</span> <span class="nv">$stringName</span> <span class="o">=</span> <span class="p">"</span><span class="s2">Some string</span><span class="p">";</span>
+<span class="nv">$stringName</span> <span class="o">=~</span> <span class="sr">s/\R//g</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Change path to Java jre for Eclipse after Java update - not a piece of code but useful for Java coding!</p>
+
+    <ul>
+      <li>Edit the <code class="language-plaintext highlighter-rouge">C:/Program Files/Java/jre1.X.X_X/bin</code> line in <code class="language-plaintext highlighter-rouge">eclipse.ini</code> file.</li>
+      <li>The eclipse.ini file can be found in the <code class="language-plaintext highlighter-rouge">C:\Users\Joseph Crispell\eclipse\java-mars\eclipse\</code> folder on my Windows machine</li>
+      <li>NOTE: if you remove this line and the line (<code class="language-plaintext highlighter-rouge">-vm</code>) before, you’ll never have to do this again!</li>
+    </ul>
+  </li>
+  <li>
+    <p>Change the amount of memory assigned to heap space for the Java virtual maachine used in Eclipse. The heap space is the memory used in the creation and removal of variables - I think!</p>
+
+    <ul>
+      <li>Edit the two lines beginning <code class="language-plaintext highlighter-rouge">-Xm</code> in eclipse.ini file</li>
+      <li><code class="language-plaintext highlighter-rouge">-Xms</code> refers to the initial amount of memory to assign to the heap space</li>
+      <li><code class="language-plaintext highlighter-rouge">-Xmx</code> refers to the maximum amount of memory to assign to the heap space</li>
+    </ul>
+  </li>
+  <li>
+    <p>Function to change the alpha value of colour in R</p>
+  </li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">setAlpha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">colour</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">){</span><span class="w">
+
+    </span><span class="c1"># Convert the input colour into rgb values</span><span class="w">
+    </span><span class="n">rgbValues</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">col2rgb</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1"># Place rgb values within rgb function and insert alpha value</span><span class="w">
+    </span><span class="c1"># Note that col2rgb returns rgbvlues from 0 to 255</span><span class="w">
+    </span><span class="n">rgbColour</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rgb</span><span class="p">(</span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"green"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">rgbValues</span><span class="p">[</span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="m">255</span><span class="p">,</span><span class="w"> </span><span class="n">maxColorValue</span><span class="o">=</span><span class="m">255</span><span class="p">)</span><span class="w">
+
+    </span><span class="nf">return</span><span class="p">(</span><span class="n">rgbColour</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Get current date in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">today</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">Sys.Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">"%d-%m-%y"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Laying out plots in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set the layout of the plots within the plotting window</span><span class="w">
+</span><span class="n">layout</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Set the margin sizes</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Create the plots</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">){</span><span class="w">
+    </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">xaxt</span><span class="o">=</span><span class="s2">"n"</span><span class="p">,</span><span class="w"> </span><span class="n">yaxt</span><span class="o">=</span><span class="s2">"n"</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+         </span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/img/blog/thingsToRemeber/plottingLayout.png" alt="plot layout" /></p>
+
+<ul>
+  <li>Syncing a github repository</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="k">*</span>
+git add <span class="nb">.</span> <span class="nt">-A</span> <span class="c"># Removes deleted files</span>
+git commit <span class="nt">-m</span> <span class="s2">"Write commit message here"</span>
+git push
+</code></pre></div></div>
+
+<ul>
+  <li>Get axis limits of current plot in R</li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Returns vector: c(xMin, xMax, yMin, yMax)</span><span class="w">
+</span><span class="n">axisLimits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">par</span><span class="p">(</span><span class="s2">"usr"</span><span class="p">)</span><span class="w"> 
+</span></code></pre></div></div>
+
+<ul>
+  <li>Overwriting your progress statements in R using <code class="language-plaintext highlighter-rouge">\r</code></li>
+</ul>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise for loop to demonstrate progress printing</span><span class="w">
+ </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">){</span><span class="w">
+
+    </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span><span class="w">
+    </span><span class="n">cat</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"\rFinished step "</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">" of "</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+:ET

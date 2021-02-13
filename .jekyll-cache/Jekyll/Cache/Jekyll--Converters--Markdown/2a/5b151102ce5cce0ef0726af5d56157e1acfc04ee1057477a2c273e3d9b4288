@@ -1,0 +1,59 @@
+I"
+<p>I had a great opportunity to talk about data ethics in practice at the <a href="https://www.scotlandis.com/blog/events/scotsoft-2020/">ScotSoft2020</a> conference. I decided this would be the perfect chance to try out the amazing <a href="https://revealjs.com/">reveal.js</a> html presentation framework.</p>
+
+<p>I’ve tried plenty of different ways to create presentations (like <a href="https://office.live.com/start/powerpoint.aspx">powerpoint</a>, <a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">Rmarkdown</a>, <a href="https://www.google.co.uk/slides/about/">google slides</a> and <a href="https://www.latextemplates.com/cat/presentations">LaTeX</a>) and I’m always keen to try out new (ideally <a href="https://opensource.com/resources/what-open-source">open-source</a>) tools.</p>
+
+<p>The <a href="https://revealjs.com/">reveal.js</a> framework represents a wacky new way to create presentations - by writing them directly in <a href="https://www.w3schools.com/html/html_intro.asp"><code class="language-plaintext highlighter-rouge">html</code></a> and it is completely free and open-source!!🎉</p>
+
+<p>Here are the <a href="https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html">slides</a> I put together:</p>
+<iframe src="https://josephcrispell.github.io/standalone/data-ethics-in-practice/index.html#/" width="100%" height="480" style="border:none;">Browser not compatible.</iframe>
+
+<p><br />
+Here’s a sneak peak at the <a href="https://github.com/JosephCrispell/reveal.js/blob/master/data-ethics-in-practice/index.html"><code class="language-plaintext highlighter-rouge">index.html</code></a> that makes the above presentation:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"</span><span class="nt">&gt;</span>
+
+		<span class="c">&lt;!-- Set the presentation title --&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Data ethics in practice<span class="nt">&lt;/title&gt;</span>
+
+		<span class="c">&lt;!-- Add a favicon--&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"logos/DataScienceCampus_logo_square.png"</span> <span class="nt">/&gt;</span>
+
+		<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"../dist/reset.css"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"../dist/reveal.css"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"../dist/theme/black.css"</span> <span class="na">id=</span><span class="s">"theme"</span><span class="nt">&gt;</span>
+
+		<span class="c">&lt;!-- Theme used for syntax highlighted code --&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"../plugin/highlight/monokai.css"</span> <span class="na">id=</span><span class="s">"highlight-theme"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"reveal"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slides"</span><span class="nt">&gt;</span>
+				
+				<span class="c">&lt;!-- Slide 1: title --&gt;</span>
+				<span class="nt">&lt;section</span> <span class="na">data-background=</span><span class="s">"branding/background.png"</span><span class="nt">&gt;</span>
+
+					<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"position: fixed; top: 750%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px; font-size: 20px; text-align: left;"</span><span class="nt">&gt;</span>
+						<span class="nt">&lt;h2&gt;</span>Data ethics in practice<span class="nt">&lt;/h2&gt;</span>
+						<span class="nt">&lt;p&gt;</span>Created by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://josephcrispell.github.io/"</span><span class="nt">&gt;</span>Joseph Crispell<span class="nt">&lt;/a&gt;</span> using <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://revealjs.com/"</span><span class="nt">&gt;</span>reveal.js<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+
+					<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"notes"</span><span class="nt">&gt;</span>
+                        Hi everyone<span class="nt">&lt;br&gt;&lt;br&gt;</span>
+                        ...
+
+</code></pre></div></div>
+
+<p><br />
+I’ve also put a recording of my presentation on <a href="https://www.youtube.com/embed/vcZUtzn3z70">youtube</a>:</p>
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/vcZUtzn3z70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p><br />
+I’m not great at writing <code class="language-plaintext highlighter-rouge">html</code>, so it took me a while to get used to the reveal.js framework. Once I did though, I found it amazing and I learnt a lot! 💡</p>
+
+<p>If you’re keen to try itself then head over the <a href="https://revealjs.com/">reveal.js</a> page. Also, here’s the <a href="https://github.com/JosephCrispell/reveal.js/tree/master/data-ethics-in-practice">code</a> for my data ethics presentation on GitHub.</p>
+:ET

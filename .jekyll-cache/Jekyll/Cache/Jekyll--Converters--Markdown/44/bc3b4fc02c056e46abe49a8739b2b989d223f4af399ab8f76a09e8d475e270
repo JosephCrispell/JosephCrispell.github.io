@@ -1,0 +1,90 @@
+I"{<p><a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> files are the files containing the raw sequencing data that are produced by Next Generation Sequencing platforms such as those made by Illumina. These files contain all the information produced by a sequencing run and are used in all downstream analyses.</p>
+
+<p>As there is a drive to make research accessible, making these FASTQ files publicly available is becoming increasingly common. Here I provide a short outline of how to go about uploading FASTQ files to the <a href="https://www.ncbi.nlm.nih.gov/sra/">Sequence Read Archive</a>.</p>
+
+<p>A more detailed description of this uploading process can be found <a href="https://darencard.net/2014/02/11/sra/">here</a>.</p>
+
+<ol>
+  <li>
+    <p>Create an NCBI account <a href="https://www.ncbi.nlm.nih.gov/account/">here</a></p>
+  </li>
+  <li>Initialise a Bioproject
+    <ul>
+      <li>Go to the <a href="https://submit.ncbi.nlm.nih.gov/subs/bioproject/">Bioproject page</a></li>
+      <li>Login to your NCBI account</li>
+      <li>Create a New Submission and fill in the required fields, leaving the Biosample field blank</li>
+    </ul>
+  </li>
+  <li>Initialise a Biosample
+    <ul>
+      <li>Go to the <a href="https://submit.ncbi.nlm.nih.gov/subs/biosample/">Biosample page</a></li>
+      <li>Download the batch submission template as a TSV (tab separated values) file and fill in the required fields</li>
+      <li>Create a New Submission and fill in the required fields, including uploading the TSV file</li>
+      <li>Wait for the submission to be accepted</li>
+      <li>Click on “Download attributes file with BioSample accessions” to get the assigned accession numbers</li>
+    </ul>
+  </li>
+  <li>Prepare metadata file for Sequence Read Archive submission
+    <ul>
+      <li>Download a SRA_metadata_acc.xlsx file (I had to begin a <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission</a>).</li>
+      <li>Fill in the required fields - using Bioproject number (PRJNA…) and Biosample accessions</li>
+      <li>You used to need the FASTQ file md5sum values (BUT I DIDN’T FOR MY RECENT SUBMISSION)</li>
+      <li>You can get md5sum values using the following UNIX command: <code class="language-plaintext highlighter-rouge">md5sum [fileName]</code></li>
+      <li>Create a Sequence Read Archive submission, if you haven’t already, and fill in the required fields</li>
+      <li>At this point you can upload the metadata file you created in step 4</li>
+    </ul>
+  </li>
+  <li>Log onto SRA server
+    <ul>
+      <li>If your files are &lt;10GB and you have less than 300 of them, upload your FASTQ files via the web browser. This is so much easier! Or:</li>
+      <li>On the <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA page</a> click on the FTP upload link</li>
+      <li>Note the server address, username, password and folder to navigate to</li>
+      <li>On a UNIX machine navigate to the folder containing (only) your FASTQ files</li>
+      <li>Log onto the server</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp <span class="nt">-i</span>
+open <span class="o">[</span>server address]
+</code></pre></div></div>
+
+<ol>
+  <li>Upload the FASTQ files
+    <ul>
+      <li>Note that once logged into server directories are hidden - use full path to folder</li>
+      <li>Once in correct folder create new directory</li>
+      <li>Upload all FASTQ files</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Navigate to server directory</span>
+<span class="nb">cd</span> <span class="o">[</span>path to folder]
+
+<span class="c"># Make a new directory to store FASTQ files in</span>
+<span class="nb">mkdir</span> <span class="o">[</span>new directory name]
+<span class="nb">cd</span> <span class="o">[</span>new directory name]
+
+<span class="c"># Copy all FASTQ files into new directory</span>
+mput <span class="k">*</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Completing the Sequence Read Archive submission
+    <ul>
+      <li>Go back to the Sequence Read Archive submission page</li>
+      <li>On the data uploading tab the folder you created to upload your FASTQ files into should exist.</li>
+      <li>Select this folder and click continue.</li>
+      <li>If no errors appear, it means all the FASTQ files were successfully linked to the metadata you provided and you can submit!</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Took me more than a few attempts to get this to work. If you run into any issues there is a dedicated NCBI team who are happy to help. Here are their emails:</p>
+<ul>
+  <li><a href="mailto:bioprojecthelp@ncbi.nlm.nih.gov">bioprojecthelp@ncbi.nlm.nih.gov</a></li>
+  <li><a href="mailto:biosamplehelp@ncbi.nlm.nih.gov">biosamplehelp@ncbi.nlm.nih.gov</a></li>
+  <li><a href="mailto:srahelp@ncbi.nlm.nih.gov">srahelp@ncbi.nlm.nih.gov</a></li>
+</ul>
+:ET

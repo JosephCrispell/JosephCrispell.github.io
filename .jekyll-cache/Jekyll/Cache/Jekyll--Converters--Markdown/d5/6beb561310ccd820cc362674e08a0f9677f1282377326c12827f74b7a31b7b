@@ -1,0 +1,35 @@
+I"�<p>I’ve recently been exploring a survey dataset that is in French. I found a python library <a href="https://pypi.org/project/googletrans/"><code class="language-plaintext highlighter-rouge">googletrans</code></a> that uses the <a href="https://translate.google.com/">Google Translate Ajax API</a> to translate text.</p>
+
+<p>For me, the appeal of <code class="language-plaintext highlighter-rouge">googletrans</code> is that it works out of the box without an API key, unlike it’s R counterpart <a href="https://cran.r-project.org/web/packages/translateR/translateR.pdf">TranslateR</a>. Ideally though, I’d still like to translate text in R…</p>
+
+<p>The amazing <a href="https://rstudio.github.io/reticulate/"><code class="language-plaintext highlighter-rouge">reticulate</code></a> package in R provides a way of running python code from R. 🎉</p>
+
+<p>So, we can create a simple python function to translate text and store it in a python script (<code class="language-plaintext highlighter-rouge">TranslateUsingGoogleTrans.py</code>):</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">translateTo</span><span class="p">):</span>
+
+  <span class="c1"># Load the googletrans library
+</span>  <span class="kn">from</span> <span class="nn">googletrans</span> <span class="kn">import</span> <span class="n">Translator</span>
+
+  <span class="c1"># Initialise the translator
+</span>  <span class="n">translator</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">()</span>
+
+  <span class="c1"># Translate the text provided
+</span>  <span class="k">return</span> <span class="n">translator</span><span class="p">.</span><span class="n">translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="n">translateTo</span><span class="p">).</span><span class="n">text</span>
+</code></pre></div></div>
+
+<p>Then we can use that code in R to translate some text:</p>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">reticulate</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Source the python translation code</span><span class="w">
+</span><span class="n">source_python</span><span class="p">(</span><span class="s2">"TranslateUsingGoogleTrans.py"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Translate some text</span><span class="w">
+</span><span class="n">text</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Je suis étonné que cela fonctionne si bien!"</span><span class="w">
+</span><span class="n">translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="s1">'en'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; [1] "I am amazed that it works so well!"</code></p>
+
+<p>I’m amazed at how well the <code class="language-plaintext highlighter-rouge">googletrans</code> package works and excited to adapt the code above for my survey data. I’ve also hopefully demonstrated how easy it is to link python and R code with <code class="language-plaintext highlighter-rouge">reticulate</code>, which I often use to take advantage of some of python’s amazing libraries! 😊</p>
+:ET

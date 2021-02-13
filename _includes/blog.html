@@ -17,7 +17,7 @@
             </h1>
 
             <p class="meta">
-              {{ post.date | date: "%B %-d, %Y" }}
+              {{ post.date | date: "%B %-d, %Y" }} &middot; {% include read-time.html content=post.content %}
             </p>
           </header>
           {% if site.excerpt or site.theme_settings.excerpt %}

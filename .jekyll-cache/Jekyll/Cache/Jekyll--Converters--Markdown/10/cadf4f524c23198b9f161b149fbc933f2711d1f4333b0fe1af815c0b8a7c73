@@ -1,0 +1,13 @@
+I"<<p>I’ve been working with phylogenies in R for a long time. I find the <a href="https://cran.r-project.org/web/packages/ape/ape.pdf"><code class="language-plaintext highlighter-rouge">ape</code></a> and <a href="https://cran.r-project.org/web/packages/phytools/phytools.pdf"><code class="language-plaintext highlighter-rouge">phytools</code></a> to be the most useful.</p>
+
+<p>The <a href="https://github.com/JosephCrispell/phyloHelpeR/tree/master/R"><code class="language-plaintext highlighter-rouge">phyloHelpeR</code></a> is an R package to make a home for some of the functions I use a lot when building and plotting phylogenies in R. At the moment it is home to the following functions:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tanglePlot()</code> a function to plot two phylogenies based on the same sequences opposite one another so you can see how they differ.</li>
+  <li><code class="language-plaintext highlighter-rouge">runRAXML()</code> a function to interact with the command line phylogenetic tree building tool <a href="https://cme.h-its.org/exelixis/web/software/raxml/">RAxML</a></li>
+  <li><code class="language-plaintext highlighter-rouge">addSNPScale()</code> a function to add a scale to a phylogeny whos branch lengths are scaled to the number of <strong>S</strong>ingle <strong>N</strong>ucleotide <strong>P</strong>olymorphisms.</li>
+</ul>
+
+<p>As you can see, this R package is a work in progress… As I don’t work on phylogenetics anymore my contributions will be slow but hopefully I’ll still add a few more helpful functions. 👍</p>
+
+:ET

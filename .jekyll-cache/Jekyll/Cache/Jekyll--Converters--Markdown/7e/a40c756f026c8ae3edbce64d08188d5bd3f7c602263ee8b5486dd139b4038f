@@ -1,0 +1,34 @@
+I"%<p>Recently I have been working with maps - trying to understand where all my samples are coming from. To do this I wanted to plot my sampling locations on top of a map. After fiddling with a number of different ways to get maps in <a href="https://www.r-project.org/">R</a>, I have happily fallen upon the <a href="https://cran.r-project.org/web/packages/OpenStreetMap/index.html"><code class="language-plaintext highlighter-rouge">OpenStreetMap</code></a> package.</p>
+
+<p>A great package that can return a map in a variety of styles. Also, all the maps are <a href="https://opensource.org/">open source</a> and available to everyone for free!! Here is some code to get you started:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load required libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">OpenStreetMap</span><span class="p">)</span><span class="w"> </span><span class="c1"># I had to run sudo R CMD javareconf to get rJava to load</span><span class="w">
+
+</span><span class="c1"># Note latitude and longitude of location</span><span class="w">
+</span><span class="n">upperLeft</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">56.022457</span><span class="p">,</span><span class="m">-4.5969357</span><span class="p">)</span><span class="w">
+</span><span class="n">lowerRight</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">56.014888</span><span class="p">,</span><span class="m">-4.5780147</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Get a satellite image of area of interest</span><span class="w">
+</span><span class="n">map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">openmap</span><span class="p">(</span><span class="n">upperLeft</span><span class="o">=</span><span class="n">upperLeft</span><span class="p">,</span><span class="w">
+               </span><span class="n">lowerRight</span><span class="o">=</span><span class="n">lowerRight</span><span class="p">,</span><span class="w">
+               </span><span class="n">type</span><span class="o">=</span><span class="s2">"bing"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Plot the map</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map</span><span class="p">)</span><span class="w">         
+</span></code></pre></div></div>
+<p>You’ll get the following image - this is where Joanna and I got engaged! 💍 On the shores of Loch Lomond, just outside Glasgow.</p>
+
+<p><img src="/assets/img/blog/osm/thumbnail.png" alt="print" /></p>
+
+<p>Using the <code class="language-plaintext highlighter-rouge">type</code> parameter of the <code class="language-plaintext highlighter-rouge">openmap()</code> function, you can change the style of the map being returned. The “bing” option returns a satellite image of the map - my favourite!</p>
+
+<p>Sometimes, if a particular area isn’t available in a certain style, you’ll get an error something like this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Error in osmtile(x%%nX, y, zoom, type) : could not obtain tile: ...</code></p>
+
+<p>You can try different options for the <code class="language-plaintext highlighter-rouge">type</code> parameter to fix this issue. I quite like the <code class="language-plaintext highlighter-rouge">"opencyclemap"</code> option. <a href="https://www.r-bloggers.com/the-openstreetmap-package-opens-up/">Here</a> is a great tutorial that you can a bit more help from. Enjoy!</p>
+
+<p>One thing you’ll have to get use to is hopping between different map projections (like latitude and longitudes, national grids, or spherical mercator projections). The <code class="language-plaintext highlighter-rouge">openproj()</code> is a handy function for converting between projections.</p>
+
+:ET

@@ -1,0 +1,6 @@
+I"æ<p><a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> files are the files containing the raw sequencing data that are produced by Next Generation Sequencing platforms such as those made by Illumina. These files contain all the information produced by a sequencing run and are used in all downstream analyses.</p>
+
+<p>As there is a drive to make research accessible, making these FASTQ files publicly available is becoming increasingly common. Here I provide a short outline of how to go about uploading FASTQ files to the <a href="https://www.ncbi.nlm.nih.gov/sra/">Sequence Read Archive</a>.</p>
+
+<p>A more detailed description of this uploading process can be found <a href="https://darencard.net/2014/02/11/sra/">here</a>.</p>
+:ET

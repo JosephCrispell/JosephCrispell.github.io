@@ -1,0 +1,12 @@
+I"�<p>Teaching data science is one of my passions. Here is where I am going to keep a note of the teaching materials that I’ve developed.</p>
+
+<p>So far, here’s the online materials that I’ve created:</p>
+
+<ul>
+  <li><a href="https://github.com/JosephCrispell/pathogenGenomicsWorkshop">Pathogen Genomics Workshop</a> - a workshop designed around an R package. I’m trying to introduce the topic of building phylogenetic trees in R.</li>
+  <li>An <a href="https://github.com/datasciencecampus/gov-uk-rap-materials/blob/master/gov-uk-rap-materials_intro-to-rap.pdf">introduction</a> to creating a <strong>R</strong>eproducible <strong>A</strong>nalytical <strong>P</strong>ipeline (<strong>RAP</strong>). Well worth a look and built using the Rmarkdown <a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">ioslides</a> presentation tool.</li>
+  <li>A quick <a href="https://github.com/datasciencecampus/gov-uk-rap-materials/blob/master/gov-uk-rap-materials_intro-to-RMySQL.Rmd">tutorial</a> about using the <a href="https://cran.r-project.org/web/packages/RMySQL/index.html"><code class="language-plaintext highlighter-rouge">RMySQL</code></a> R package. <a href="https://cran.r-project.org/web/packages/RMySQL/index.html"><code class="language-plaintext highlighter-rouge">RMySQL</code></a> is a cool package that allows you to interact with a local SQL server from within R.</li>
+</ul>
+
+<p>Hopefully I’ll continue adding to these materials. Let me know what you think!</p>
+:ET

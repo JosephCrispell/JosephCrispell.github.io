@@ -1,0 +1,26 @@
+I"#<p><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a> is a powerful tool that can be used to compare genetic sequences. <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a> works by comparing a genetic sequence of nucleotides (<code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">C</code>, <code class="language-plaintext highlighter-rouge">G</code>, and <code class="language-plaintext highlighter-rouge">T</code>) to a database of sequences.</p>
+
+<p>In the UNIX environment <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a> can easily be installed using the following code:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install BLAST</span><span class="w">
+</span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">ncbi</span><span class="o">-</span><span class="n">blast</span><span class="o">+</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Once installed <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a> can be executed from the UNIX terminal. You can either compare your sequences to all the nucleotide data available in the online databases, using the following code:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Compare query sequences to online databases</span><span class="w">
+</span><span class="n">blastn</span><span class="w"> </span><span class="o">-</span><span class="n">query</span><span class="w"> </span><span class="n">querySequences.fasta</span><span class="w"> </span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">blastOutput.txt</span><span class="w"> </span><span class="o">-</span><span class="n">db</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="n">remote</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or you can create a local database on your computer containing the sequences that you are interested in comparing your query sequences against, using the following code:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make local database</span><span class="w">
+</span><span class="n">makeblastdb</span><span class="w"> </span><span class="o">-</span><span class="k">in</span><span class="w"> </span><span class="n">databaseSequences.fasta</span><span class="w"> </span><span class="o">-</span><span class="n">parse_seqids</span><span class="w"> </span><span class="o">-</span><span class="n">dbtype</span><span class="w"> </span><span class="n">nucl</span><span class="w">
+</span></code></pre></div></div>
+
+<p>With your local database created, you can compare your query sequences against it using the following code:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Compare sequences to local database</span><span class="w">
+</span><span class="n">blastn</span><span class="w"> </span><span class="o">-</span><span class="n">query</span><span class="w"> </span><span class="n">querySequences.fasta</span><span class="w"> </span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">blastOutput.txt</span><span class="w"> </span><span class="o">-</span><span class="n">db</span><span class="w"> </span><span class="n">databaseSequences</span><span class="w"> </span><span class="o">-</span><span class="n">outfmt</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></code></pre></div></div>
+:ET
