@@ -34,6 +34,7 @@ With this workflow in place, every time I edit the code for my [basicPlotteR](ht
 
 GitHub Actions require a [YAML](https://www.tutorialspoint.com/yaml/yaml_basics.htm) formatted file to define the workflow. The *Quickstart Continuous Integration workflow* (available [here](https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow)) looks like this:
 ```yaml
+# Define when the action is to be triggered
 on:
   push:
     branches:
@@ -47,16 +48,24 @@ on:
 name: R-CMD-check
 
 jobs:
-  R-CMD-check:
-    runs-on: macOS-latest
+  R-CMD-check: # Name of job
+    runs-on: macOS-latest # Define OS you want to run action on, you can have multiple!
     steps:
+
+      # Checkout (download) repository 
       - uses: actions/checkout@v2
+
+      # Install R
       - uses: r-lib/actions/setup-r@v1
+      
+      # Install required packages
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
+      
+      # Run the rcmdcheck function on R package repository
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}

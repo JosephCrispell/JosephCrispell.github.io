@@ -274,7 +274,8 @@
 <p>With this workflow in place, every time I edit the code for my <a href="https://github.com/JosephCrispell/basicPlotteR">basicPlotteR</a> package, the above checks will be run and I’ll know straight away if I have caused any problems!</p>
 
 <p>GitHub Actions require a <a href="https://www.tutorialspoint.com/yaml/yaml_basics.htm">YAML</a> formatted file to define the workflow. The <em>Quickstart Continuous Integration workflow</em> (available <a href="https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow">here</a>) looks like this:</p>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define when the action is to be triggered</span>
+<span class="na">on</span><span class="pi">:</span>
   <span class="na">push</span><span class="pi">:</span>
     <span class="na">branches</span><span class="pi">:</span>
       <span class="pi">-</span> <span class="s">main</span>
@@ -287,16 +288,24 @@
 <span class="na">name</span><span class="pi">:</span> <span class="s">R-CMD-check</span>
 
 <span class="na">jobs</span><span class="pi">:</span>
-  <span class="na">R-CMD-check</span><span class="pi">:</span>
-    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">macOS-latest</span>
+  <span class="na">R-CMD-check</span><span class="pi">:</span> <span class="c1"># Name of job</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">macOS-latest</span> <span class="c1"># Define OS you want to run action on, you can have multiple!</span>
     <span class="na">steps</span><span class="pi">:</span>
+
+      <span class="c1"># Checkout (download) repository </span>
       <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+
+      <span class="c1"># Install R</span>
       <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">r-lib/actions/setup-r@v1</span>
+      
+      <span class="c1"># Install required packages</span>
       <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
         <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
           <span class="s">install.packages(c("remotes", "rcmdcheck"))</span>
           <span class="s">remotes::install_deps(dependencies = TRUE)</span>
         <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
+      
+      <span class="c1"># Run the rcmdcheck function on R package repository</span>
       <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check</span>
         <span class="na">run</span><span class="pi">:</span> <span class="s">rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")</span>
         <span class="na">shell</span><span class="pi">:</span> <span class="s">Rscript {0}</span>
