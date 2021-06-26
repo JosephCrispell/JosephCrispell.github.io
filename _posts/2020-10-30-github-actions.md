@@ -87,10 +87,7 @@ I added the status badge to the repository [`README.md`](https://github.com/Jose
 ```
 [![R build status](https://github.com/JosephCrispell/basicPlotteR/workflows/R-CMD-check/badge.svg)](https://github.com/JosephCrispell/basicPlotteR/actions?workflow=R-CMD-check)
 ```
-A couple of things you'll notice in the above code:
-
-- The extra `[` at the start - I think this is needed!
-- The path to the `badge.svg` file is in my repository but you'll no trace of it - I am not sure why this is but the badge is working, so I'll not question it! 🤔
+The path to the `badge.svg` file is in my repository but you'll find no trace of it - I am not sure why this is but the badge is working, so I'll not question it! 🤔
 
 Well, I've been amazed by the power of [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) and I've only just started! I can't wait to introduce more complex checks and add workflows to all my repositories!!! 
 
