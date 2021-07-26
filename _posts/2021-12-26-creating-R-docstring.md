@@ -59,7 +59,7 @@ calculate_mean <- function(numeric_vector){
   # Calculate mean
   mean_value <- total / n
 
-	return(mean_value)
+  return(mean_value)
 }
 ```
 
