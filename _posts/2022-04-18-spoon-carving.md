@@ -20,7 +20,7 @@ I used the following tools:
 - Brass back tenon saw - this is a really rigid saw with many fine teeth making it easier to make precise straight cuts
 - Range of cloth backed sand paper
 
-The photos below show the process to create the spoon, I haven't made one of these before and it had been a long time since I had even whittled anything, so it took me a long time! Thankfully, I got a lot of help from my brother Daniel who has [made and sold many beautiful whale spoons](https://www.etsy.com/uk/listing/851342680/handcarved-locally-sourced-highland?ref=shop_review) ☺️.
+The photos below show the process to create the spoon, I haven't made one of these before and it had been a long time since I had even whittled anything, so it took me a long time! Thankfully, I got a lot of help from my brother Daniel who has [made and sold many beautiful whale spoons](https://www.etsy.com/uk/listing/851342680/handcarved-locally-sourced-highland?ref=shop_review) 😊.
 
 <div class="slideshow-container">
 
@@ -50,7 +50,7 @@ The photos below show the process to create the spoon, I haven't made one of the
     </div>
 
     <div class="mySlides fade">
-        <img src="/assets/img/blog/whaleSpoon/whale_spoon_6.jpg" style="width:100%">
+        <img src="/assets/img/blog/whaleSpoon/whale_spoon_6_tools.jpg" style="width:100%">
         <div class="slideCaption">All the tools 🛠️</div>
     </div>
 
