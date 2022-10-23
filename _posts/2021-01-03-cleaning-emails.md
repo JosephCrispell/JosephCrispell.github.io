@@ -73,7 +73,7 @@ function moveThreadsToTrash(threads, batchSize=100){
     // Move the threads to the trash
     try{
       GmailApp.moveThreadsToTrash(batch);
-      Logger.log("Moved " + threads.length + " threads to trash.");
+      Logger.log("Moved " + batch.length + " threads to trash.");
     }
     catch(error){
       Logger.log("Warning! Unable to move threads to trash: " + error.message);
