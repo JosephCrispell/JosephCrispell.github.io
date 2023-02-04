@@ -4,7 +4,7 @@ title: Badgers, cattle, and bovine tuberculosis in South West England
 feature-img: "assets/img/projects/woodchesterLogo.png"
 img: "assets/img/projects/woodchesterLogo.png"
 date: 16 Dec 2019
-tags: [genomics, bovine tuberculosis, PhD, research, Mycobacterium bovis, badgers, cattle]
+tags: [genomics, bovine tuberculosis, PhD, research, Mycobacterium bovis, badgers, cattle, woodchester]
 ---
 
 Today, after a huge amount of work over many years, our research using genomics to look at how often *Mycobacterium bovis* was transmitted within and between cattle and badgers in Woodchester Park has been published!
