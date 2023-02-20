@@ -98,9 +98,10 @@ Datasets currently present in secure folder:
 ```
 
 ## - I haven't provided a guide for replicating the work
-README.md
-wiki
-Host docs somewhere
+
+There are amazing tools that go alongside a repository for documenting our projects and I haven't used them for the repositories associated with this project. It is important to:
+- Have a clear and concise [`README.md`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) file in your repository that describes the codebase in the repository and sets our important things for the user to know. See some [great examples](https://github.com/matiassingers/awesome-readme)! 💕
+- Create a [wiki](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis) for a more thorough documentation or your project. A wiki is a simple set of web pages that are directly linked to your repo and great place to store detail on what your project is and how people can use it. Here's my one for [HomoplasyFinder](https://github.com/JosephCrispell/homoplasyFinder/wiki)!
 
 ## - A lack of code modularisation and documentation
 Functions, libraries, docstrings, unit testing
