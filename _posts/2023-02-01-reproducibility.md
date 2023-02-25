@@ -114,11 +114,15 @@ There are amazing tools that can go alongside a repository for documenting our p
 
 ---
 ## - A lack of code modularisation and documentation
-Functions, libraries, docstrings, unit testing
-
+My code is lacking some key features of reproducible coding (or what's present could be improved):
+- Modularisation, breaking the code down into functions, libraries, and classes. By doing this we make our code more understandable and maintainable (read more about [modular code](https://best-practice-and-impact.github.io/qa-of-code-guidance/modular_code.html))
+- Documenting my functions using [docstrings](https://realpython.com/documenting-python-code/#documenting-your-python-code-base-using-docstrings) that clearly describe what a function does, what its input parameters are, and what it provides as output
+- Approaches to checking the code is working as expected:
+   - Add in if statements and checks the parameters are of the correct type, format, and structure with informative error messages when they aren't
+   - Add in some simpled [unit testing](https://towardsdatascience.com/unit-testing-in-r-68ab9cc8d211) - this is code that you write to check your code is running as expected. We can build up the amouint of unit testing code and each time we change our codebase we can run the unit tests to ensure our code is still behaving as we would expect
 ---
 ## - I've used full file paths throughout the codebase that are specific to my, now non-existent, computer
-relative paths
+I've used absolute file paths throughout my codebase, these are file paths that say specifically on my computer where the file is. It is always better to use [relative paths](https://www.itgeared.com/html-absolute-relative-path-links/#:~:text=Relative%20paths%20are%20very%20useful,not%20include%20the%20domain%20name.) that aren't specific to any compuyter but are relative to the location of the code.
 
 # Some final thoughts
 
