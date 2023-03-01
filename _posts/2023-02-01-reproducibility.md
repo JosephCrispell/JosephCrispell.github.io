@@ -34,9 +34,7 @@ In the process of exploring and mapping the codebase, I've noted a few limitatio
 
 # How I could improve in the future
 
-All of the above issues are avoidable and, over the last few years, I've started to better understand how to do this.
-
-As pointers for myself and others, I'll briefly address each of the above limitations here and consider how I can avoid them in the future.
+All of the above issues are avoidable and, over the last few years, I've started to better understand how to do this. As pointers for myself and others, I'll briefly address each of the above limitations here and consider how I can avoid them in the future.
 
 ---
 ## - I used multiple languages (Java, perl, python, R, and bash)
@@ -106,7 +104,6 @@ Datasets currently present in data folder:
 
 ---
 ## - I haven't provided a guide for replicating the work
-
 There are amazing tools that can go alongside a repository for documenting our projects. Unfortuanetly, I haven't used them for the repositories associated with this project 😭. It is important to:
 - Have a clear and concise [`README.md`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) file in your repository that describes the codebase and sets out important things for the user to know. See some [great examples](https://github.com/matiassingers/awesome-readme)! 💕
 - Create a [wiki](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis) for more thorough documentation of your project. A wiki is a simple set of web pages that are directly linked to your repo. Here's my one for [HomoplasyFinder](https://github.com/JosephCrispell/homoplasyFinder/wiki)!
@@ -115,17 +112,18 @@ There are amazing tools that can go alongside a repository for documenting our p
 ---
 ## - A lack of code modularisation and documentation
 My code is lacking some key features of reproducible coding (or what's present could be improved):
+
 - Modularisation, breaking the code down into functions, libraries, and classes. By doing this we make our code more understandable and maintainable (read more about [modular code](https://best-practice-and-impact.github.io/qa-of-code-guidance/modular_code.html))
 - Documenting my functions using docstrings ([python](https://realpython.com/documenting-python-code/#documenting-your-python-code-base-using-docstrings) and [R](https://josephcrispell.github.io/2021/07/26/creating-R-docstring.html) docstring help) that clearly describe what a function does, what its input parameters are, and what it provides as output
 - Approaches to checking the code is working as expected:
    - Add in `if` statements and checks that the parameters are of the correct type, format, and structure with informative error messages
    - Add in some simple [unit testing](https://towardsdatascience.com/unit-testing-in-r-68ab9cc8d211) - this is code that you write to check your code is running as expected that we can run each time with change our code
+
 ---
 ## - I've used full file paths throughout the codebase that are specific to my, now non-existent, computer
 I've used absolute file paths throughout my codebase, these are file paths that say specifically on **my computer** where the file is. It is always better to use [relative paths](https://www.itgeared.com/html-absolute-relative-path-links/#:~:text=Relative%20paths%20are%20very%20useful,not%20include%20the%20domain%20name.) that aren't specific to any compuyter but are relative to the location of the code.
 
 # Some final thoughts
-
 There are many more issues with the codebase. Making our projects more reproducible is always an area for development. 
 
 Hopefully each of my projects gets easier to reproduce and I'll stress that it is a critical first step to make the code publicly available - being a part of the open-source community. (I've always loved this image below from the [The Turing Way: handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/welcome.html) that illustrates this!)
