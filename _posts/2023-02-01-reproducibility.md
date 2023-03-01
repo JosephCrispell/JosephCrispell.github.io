@@ -8,9 +8,7 @@ image: "assets/img/blog/reproducibility/miro_map.png"
 tags: [reproduciblity, woodchester, coding standards]
 ---
 
-It's been a while (over a year) since my last blog post! I'm hoping to get back into the swing of writing them fairly regularly but we'll see! 😄
-
-In this post, I want to talk a little about reproducibility (how easy it is to repeat and adapt projects) and reflect on one of my own projects.
+It's been a while (over a year) since my last blog post! I'm hoping to get back into the swing of writing them fairly regularly but we'll see! 😄 In this post, I want to talk a little about reproducibility (how easy it is to repeat and adapt projects) and reflect on one of my own projects.
 
 # The problem
 
