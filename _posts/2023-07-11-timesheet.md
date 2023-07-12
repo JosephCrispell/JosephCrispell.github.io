@@ -45,7 +45,20 @@ To get me started I wanted the simplest possible python package structure that I
 ```
 
 Some cool things to note:
-- You can install a reactive version of your package (with the above structure) with `pip3 install -e .` in the package directory and the package will automatically update as you change the code
-- Local imports of modules and classes work really well using `from my_package import my_package_module_or_class`
+- You can install a reactive version of your package (with the above structure) with:
+  ```bash
+  pip3 install -e .
+  ```
+  in the package directory and the package will automatically update as you change the code
+- Local imports of modules and classes work really well using:
+  ```python
+  from my_package import my_package_module_or_class
+  ``` 
 
 # Modular object oriented programming
+
+# Unit testing with high coverage
+
+# Good documentation
+mermaid
+tree generator
