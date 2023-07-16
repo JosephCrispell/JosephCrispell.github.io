@@ -40,6 +40,7 @@ python3 scripts/command_line_interface.py --file outputs/timesheet.csv --start
 ```
 
 Which updates a timesheet with a simple Comma Separated Values (CSV) structure:
+
 |date      |start_time|end_time|time_worked|notes          |
 |----------|----------|--------|-----------|---------------|
 |2023-03-13|08:24     |12:00   |03:36      |nothing of note|
@@ -153,8 +154,10 @@ I talked about my writing [docstrings](https://realpython.com/documenting-python
 
 For `timesheet`, I've set `Sphinx` up to create some simple documentation web pages by pulling all my code information from `timesheet`'s structure and docstrings (see the [`timesheet/docs`](https://github.com/JosephCrispell/timesheet/tree/main/docs) folder to get an idea of how it's setup). In the future, I'll get the `timesheet` docs hosted on one of the many docs hosting services like [readthedocs](https://readthedocs.org/).
 
-I also spent a fair bit of time on the [`timesheet/README.md`](https://github.com/JosephCrispell/timesheet) (hopefully it shows) adding information on what `timesheet` is and how to use it. I added some cool features like an interactive [workflow](https://github.com/JosephCrispell/timesheet#workflow) diagram created using [mermaid](https://mermaid.js.org/) (to show the structure of the codebase and how it interacts:
-![mermaid workflow diagram](assets/img/blog/timesheet/mermaid.png)) and a [nice folder structure diagram](https://github.com/JosephCrispell/timesheet#package-structure) that I built using Visual Studio Code's [file-tree-generator](https://marketplace.visualstudio.com/items?itemName=Shinotatwu-DS.file-tree-generator) extension (like the one I have shown above).
+I also spent a fair bit of time on the [`timesheet/README.md`](https://github.com/JosephCrispell/timesheet) (hopefully it shows) adding information on what `timesheet` is and how to use it. I added some cool features like an interactive [workflow](https://github.com/JosephCrispell/timesheet#workflow) diagram created using [mermaid](https://mermaid.js.org/) (to show the structure of the codebase and how it interacts):
+![mermaid workflow diagram]({{ "/assets/img/blog/timesheet/mermaid.png" | relative_url}}) 
+
+and a [nice folder structure diagram](https://github.com/JosephCrispell/timesheet#package-structure) that I built using Visual Studio Code's [file-tree-generator](https://marketplace.visualstudio.com/items?itemName=Shinotatwu-DS.file-tree-generator) extension (like the one I have shown above).
 
 # Next steps
 
