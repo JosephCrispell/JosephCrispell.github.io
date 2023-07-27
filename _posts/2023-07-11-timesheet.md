@@ -16,10 +16,10 @@ I've been working on a simple python package called [`timesheet`](https://github
 
 `timesheet` has a simple command line interface:
 ```bash
-python3 scripts/command_line_interface.py --help
+python3 -m timesheet --help
 ```
 ```
-usage: command_line_interface.py [-h] [-f [timesheet_file_path]] [-r] [-s [hh:mm]] [-e [hh:mm]]
+usage: timesheet [-h] [-f [timesheet_file_path]] [-r] [-s [hh:mm]] [-e [hh:mm]]
 
 Welcome to timesheet, a tool to help you log the hours you work. You are using the command line interface for timesheet.
 
@@ -36,7 +36,7 @@ options:
 
 So you would add a start time with:
 ```bash
-python3 scripts/command_line_interface.py --file outputs/timesheet.csv --start
+python3 -m timesheet --file outputs/timesheet.csv --start
 ```
 
 Which updates a timesheet with a simple Comma Separated Values (CSV) structure:
@@ -78,6 +78,7 @@ To get me started, I wanted the simplest possible python package structure that 
  ┃ ┗ Unit testing functions in here
  ┣ 📂my_package
  ┃ ┣ 📜__init__.py # required so python code registered within package
+ ┃ ┣ 📜__main__.py # script called when you call package (python -m my_package)
  ┃ ┗ Package classes and modules in here
  ┣ 📜.gitignore # files to ignore (e.g. data folder)
  ┣ 📜.pre-commit-config.yaml # pre-commit workflow
@@ -101,7 +102,7 @@ The structure above will work nicely for all my python projects and hopefully en
 ## Modular object oriented programming
 
 I spoke about the value of modularisation in my [previous blog post on reproducibility](https://josephcrispell.github.io/2023/02/01/reproducibility.html). Here's how I've put that into practice in `timesheet`:
-- `timesheet` is both modular with functions associated with different aspects of `timesheet` being stored in separate scripts (each are then linked together and used via local `import`s):
+- `timesheet` is both modular with functions associated with different aspects of `timesheet` being stored in separate scripts (each are then linked together and used via local `import`s). For example:
    - [`timesheet/data_functions.py`](https://github.com/JosephCrispell/timesheet/blob/main/timesheet/data_functions.py) - functions for working with the clocking in/out data
    - [`timesheet/timesheet.py`](https://github.com/JosephCrispell/timesheet/blob/main/timesheet/timesheet.py) - a Timesheet [class/object](https://www.w3schools.com/python/python_classes.asp) for storing and interacting with timesheet data
    - [`timesheet/command_line_interface_functions.py`](https://github.com/JosephCrispell/timesheet/blob/main/timesheet/command_line_interface_functions.py) - functions for `timesheet`'s command line interface
