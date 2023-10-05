@@ -14,14 +14,15 @@ While I was creating my [`timesheet`](https://josephcrispell.github.io/2023/07/1
 - [`coverage-badge`](https://pypi.org/project/coverage-badge/) - generates badge as image
 - [`readme-coverage-badger`](https://pypi.org/project/readme-coverage-badger/) - adds coverage badge to README if you have already run tests
 - https://coveralls.io/ - generates coverage badge for readme but is an external tool that builds and tests codebase
-- https://smarie.github.io/python-genbadge/ - generates svg badge for a wide range of packages
+- https://smarie.github.io/python-genbadge/ - generates svg badge for a wide range of packages and requires coverage report to be generated prior to running
 
 For me, the main advantages of my `coverage_shield` python package are:
 
-- It's was and is a great opportunity for me to learn more about building a python package
-- It runs on your local machine with a simple command line interface
-- It runs unit tests, generates coverage report, adds/updates badge in README.md file, and pushes updates via `git` (if you want it to)
-- It uses the [shields.io url structure]() to show badge rather than creating an image of a badge that you have to store in repo
+- It was and is a great opportunity for me to learn more about building a python package
+- Runs on your local machine with a simple command line interface
+- Runs unit tests, generates coverage report, adds/updates badge in README.md file, and pushes updates via `git` (if you want it to)
+- Uses the [shields.io url structure](https://shields.io/badges) to show badge rather than creating an image of a badge that you have to store in repo
+- Has a continuous colour scale (using a [seaborn colour palette](https://seaborn.pydata.org/tutorial/color_palettes.html)) from red, through yellow, to green
 
 
 Some next steps:
