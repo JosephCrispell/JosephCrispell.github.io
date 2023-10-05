@@ -24,13 +24,6 @@ For me, the main advantages of my `coverage_shield` python package are:
 - Uses the [shields.io url structure](https://shields.io/badges) to show badge rather than creating an image of a badge that you have to store in repo
 - Has a continuous colour scale (using a [seaborn colour palette](https://seaborn.pydata.org/tutorial/color_palettes.html)) from red, through yellow, to green
 
-
-Some next steps:
-
-- Getting it to work with pytest as well as unittest
-- Releasing the first version
-
-
 # How it works
 
 `timesheet` has a simple command line interface:
