@@ -26,27 +26,31 @@ For me, the main advantages of my `coverage_shield` python package are:
 
 # How it works
 
-`timesheet` has a simple command line interface:
+`coverage_shield` has a simple command line interface:
 ```bash
-python3 -m timesheet --help
+python3 -m coverage_shield --help
 ```
 ```
-usage: timesheet [-h] [-f [timesheet_file_path]] [-r] [-s [hh:mm]] [-e [hh:mm]]
+usage: coverage_shield [-h] [-d [directory]] [-r [readme_path]] [-t [tester]] [-g]
 
-Welcome to timesheet, a tool to help you log the hours you work. You are using the command line interface for timesheet.
+Welcome to coverage_shield! A tool to create and maintain a python package unit test coverage badge in README.md
 
 options:
   -h, --help            show this help message and exit
-  -f [timesheet_file_path], --file [timesheet_file_path]
-                        Provide file for timesheet (note if not created this will create file). (default: outputs/timesheet.csv)
-  -r, --reset           Reset the timesheet file provided with file (-f/--file) argument. (default: False)
-  -s [hh:mm], --start [hh:mm]
-                        Add start time (hh:mm) to timesheet file provided with file (-f/--file) argument. (default: None)
-  -e [hh:mm], --end [hh:mm]
-                        Add end time (hh:mm) to timesheet file provided with file (-f/--file) argument. (default: None)
+  -d [directory], --directory [directory]
+                        Provide path to directory to run coverage_shield in. (default: .)
+  -r [readme_path], --readme [readme_path]
+                        Provide path to README.md relative to directory provided. (default: README.md)
+  -t [tester], --tester [tester]
+                        Provide name of unit test python package you want to use. Accepts either "unittest" or "pytest" (default: unittest)
+  -g, --git_push        Stage, commit, and push the updated README file (-r/--readme) using git. (default: False)
   ```
 
-So you would add a start time with:
+So you would run it on your python package repository with:
 ```bash
-python3 -m timesheet --file outputs/timesheet.csv --start
+python3 -m coverage_shield
 ```
+
+# Shields io
+
+
