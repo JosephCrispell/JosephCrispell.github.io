@@ -55,4 +55,10 @@ python3 -m coverage_shield
 
 The [shields.io url structure](https://shields.io/badges) is the key. Using shields.io you can build a url with a simple structure like: `https://img.shields.io/badge/[name_of_badge]-[value]-[colour]`.
 
-So `https://img.shields.io/badge/coverage-30%25-orange` gives: https://img.shields.io/badge/coverage-30%25-orange
+So `https://img.shields.io/badge/coverage-30%25-orange` gives: https://img.shields.io/badge/coverage-30%25-orange.
+
+Once you have the url structure it is just a case of calculating your unit test coverage and inserting it into the url along with a colour (based on the coverage value) - and that's what `coverage_shield` does! 💡
+
+# Wrapping up
+
+`coverage_shield` was another great opportunity for me to learn more about building python packages. I am hoping to use it a lot in future projects and maybe others will find it useful too. If you want to learn more about `coverage_shield` please and take a look at the [repo](https://github.com/JosephCrispell/coverage_shield) and give it a try!
