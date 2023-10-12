@@ -8,8 +8,6 @@ image: "assets/img/blog/timesheet/timesheet_blog_thumbnail.svg"
 tags: [python, pip, package, timesheet, unittest, docs]
 ---
 
-# Summary
-
 I've been working on a simple python package called [`timesheet`](https://github.com/JosephCrispell/timesheet), it's a tool to help you track the hours you work in a simple spreadsheet. My previously role had a brilliant flexible working strategy that relied on tracking the hours you worked, when I decided to leave that role I wanted to take a bit of it with me so I created `timesheet`.
 
 # How it works
