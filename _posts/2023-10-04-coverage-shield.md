@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create and update your python package unittest coverage badge with coverage_shield - a python package I built
+title: Create and update your python package unit test coverage badge with coverage_shield
 date: 04 Oct 2023
 feature-img: "assets/img/blog/coverageShield/coverage_shield_thumbnail.png"
 thumbnail: "assets/img/blog/coverageShield/coverage_shield_thumbnail.png"
@@ -28,7 +28,7 @@ For me, the main advantages of my `coverage_shield` python package are:
 
 `coverage_shield` has a simple command line interface:
 ```bash
-python3 -m coverage_shield --help
+python -m coverage_shield --help
 ```
 ```
 usage: coverage_shield [-h] [-d [directory]] [-r [readme_path]] [-t [tester]] [-g]
@@ -48,14 +48,14 @@ options:
 
 So you would run it on your python package repository with:
 ```bash
-python3 -m coverage_shield
+python -m coverage_shield
 ```
 
 # Shields io
 
 The [shields.io url structure](https://shields.io/badges) is the key. Using shields.io you can build a url with a simple structure like: `https://img.shields.io/badge/[name_of_badge]-[value]-[colour]`.
 
-So `https://img.shields.io/badge/coverage-30%25-orange` gives: https://img.shields.io/badge/coverage-30%25-orange.
+So `https://img.shields.io/badge/coverage-30%25-orange` gives: ![plans]({{ "/assets/img/blog/coverageShield/badge.png" | relative_url}})
 
 Once you have the url structure it is just a case of calculating your unit test coverage and inserting it into the url along with a colour (based on the coverage value) - and that's what `coverage_shield` does! 💡
 
