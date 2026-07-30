@@ -10,7 +10,7 @@ tags: [R, package, plot, base, github]
 
 We're frequently wanting to label points in our scatter plots but they almost always overlap! 😠 Enter my `addTextLabels()` function.
 
-`addTextLabels()` is part of my [`basicPlotteR`]({{ site.baseurl }}/projects/basicPlotter) R package and allows you to add non-overlapping labels to points on a plot.
+`addTextLabels()` is part of my [`basicPlotteR`](https://github.com/JosephCrispell/basicPlotteR) R package and allows you to add non-overlapping labels to points on a plot.
 
 The [gif](https://en.wikipedia.org/wiki/GIF) below shows `addTextLabels()` in action and compares it to the `base` R  function
 

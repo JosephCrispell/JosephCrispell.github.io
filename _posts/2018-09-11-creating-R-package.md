@@ -39,7 +39,7 @@ create(packageDirectory)
 setwd(packageDirectory)
 ```
 
-I'm creating an R package for the code I wrote for a few functions I've developed to help with plotting in R. My package is going to be called [basicPlotteR](https://josephcrispell.github.io/projects/basicplotter).
+I'm creating an R package for the code I wrote for a few functions I've developed to help with plotting in R. My package is going to be called [basicPlotteR](https://github.com/JosephCrispell/basicPlotteR).
 
 So, we've created our package directory. If you navigate to the directory you'll find the following:<br>
 - `R/` - The directory where you are going to put the code for your R functions. Each function can have it's own file (`functionName.R`), or you can chuck all your functions into a single file (`packageName.R`)

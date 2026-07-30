@@ -12,7 +12,7 @@ It's been a while (over a year) since my last blog post! I'm hoping to get back 
 
 # The problem
 
-A few months ago someone reached out wanting to extend my [research using genomics to examine the transmission of *Mycobacterium bovis* (the bacteria that causes bovine tuberculosis) between cattle and badgers in South West England](https://elifesciences.org/articles/45833) (also see short summary in my [blog](https://josephcrispell.github.io/projects/woodchester)). Unfortunately, although my are publicly available on my [GitHub account](https://github.com/JosephCrispell), repeating this work is not easy.
+A few months ago someone reached out wanting to extend my [research using genomics to examine the transmission of *Mycobacterium bovis* (the bacteria that causes bovine tuberculosis) between cattle and badgers in South West England](https://elifesciences.org/articles/45833) (also see short summary in my [blog](https://josephcrispell.github.io/2019/12/16/woodchester.html)). Unfortunately, although my are publicly available on my [GitHub account](https://github.com/JosephCrispell), repeating this work is not easy.
 
 I wanted to reflect on why this is a difficult task and how I can improve the reproducibility of my work.
 
