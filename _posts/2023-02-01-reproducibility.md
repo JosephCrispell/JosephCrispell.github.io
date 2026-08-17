@@ -126,6 +126,6 @@ There are many more issues with the codebase. Making our projects more reproduci
 
 Hopefully each of my projects gets easier to reproduce and I'll stress that it is a critical first step to make the code publicly available - being a part of the open-source community. (I've always loved this image below from the [The Turing Way: handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/welcome.html) that illustrates this!)
 
-![Join the open source community (Image credit: Turing Way)](https://github.com/alan-turing-institute/the-turing-way/raw/main/book/website/figures/community.jpg)
+![Join the open source community (Image credit: Turing Way)](https://github.com/the-turing-way/the-turing-way/blob/main/book/figures/community.jpg)
 
 Don't be afraid to put your code out there, it will always need improving but at least you are giving others the opportunity to see, use, adapt, and learn from it! ♻
