@@ -8,7 +8,7 @@ image: "assets/img/blog/stampedPrint/stamped_print.png"
 tags: [python, r, function, docstring, print]
 ---
 
-Well it's been quite a few years since my last post and I thought I start back with a nice quick post about print statements! 🤣
+Well it's been quite a few years since my last post and I thought I would start back with a nice quick post about print statements! 🤣
 
 I've found it really helpful to attach timestamps to my print statements in my code, it helps me quickly (and crudely) see how long each step in my code has taken. I use a simple function in both R and python to do this and I really enjoy how even though the functions are written in different languages they look and feel very similar!
 
